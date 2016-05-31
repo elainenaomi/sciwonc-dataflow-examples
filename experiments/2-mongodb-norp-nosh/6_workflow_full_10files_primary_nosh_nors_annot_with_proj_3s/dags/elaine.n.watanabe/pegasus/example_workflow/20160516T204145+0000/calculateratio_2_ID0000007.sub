@@ -1,0 +1,43 @@
+######################################################################
+# PEGASUS WMS GENERATED SUBMIT FILE
+# DAG : example_workflow, Index = 0, Count = 1
+# SUBMIT FILE NAME : calculateratio_2_ID0000007.sub
+######################################################################
+stream_error  = false
+stream_output = false
+environment = "CONDOR_JOBID=$(cluster).$(process) PEGASUS_WF_UUID=a1fccd97-4529-4c15-b000-aa9194d0cdc8 PEGASUS_WF_LABEL=example_workflow PEGASUS_DAG_JOB_ID=calculateratio_2_ID0000007 PEGASUS_SITE=condorpool "
++TransferOutput = ""
+copy_to_spool = false
+error = /home/elaine.n.watanabe/sbbd/experiments/2-mongodb-norp-nosh/6_workflow_full_10files_primary_nosh_nors_annot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160516T204145+0000/calculateratio_2_ID0000007.err
+executable = /home/elaine.n.watanabe/sbbd/experiments/2-mongodb-norp-nosh/6_workflow_full_10files_primary_nosh_nors_annot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160516T204145+0000/calculateratio_2_ID0000007.sh
+initialdir = /home/elaine.n.watanabe/sbbd/experiments/2-mongodb-norp-nosh/6_workflow_full_10files_primary_nosh_nors_annot_with_proj_3s/work/elaine.n.watanabe/pegasus/example_workflow/20160516T204145+0000
+log = /home/elaine.n.watanabe/sbbd/experiments/2-mongodb-norp-nosh/6_workflow_full_10files_primary_nosh_nors_annot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160516T204145+0000/example_workflow-0.log
+notification = NEVER
+output = /home/elaine.n.watanabe/sbbd/experiments/2-mongodb-norp-nosh/6_workflow_full_10files_primary_nosh_nors_annot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160516T204145+0000/calculateratio_2_ID0000007.out
+periodic_release = False
+periodic_remove = (JobStatus == 5) && ((CurrentTime - EnteredCurrentStatus) > 1800)
+priority = 40
+should_transfer_files = YES
+submit_event_user_notes = pool:condorpool
+transfer_executable = true
+transfer_input_files = example_workflow-calculateratio_2-1.0,ConfigDB_Calc_MaxMinCPU_2.py,ConfigDB_Calc_MedianCPU_2.py,ConfigDB_Calc_AverageCPU_2.py,ConfigDB_TaskEvent_2.py,/usr/share/pegasus/sh/pegasus-lite-common.sh,/home/elaine.n.watanabe/sbbd/experiments/2-mongodb-norp-nosh/6_workflow_full_10files_primary_nosh_nors_annot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160516T204145+0000/pegasus-worker-4.6.0-x86_64_ubuntu_14.tar.gz
+universe = vanilla
+when_to_transfer_output = ON_EXIT
++pegasus_generator = "Pegasus"
++pegasus_root_wf_uuid = "a1fccd97-4529-4c15-b000-aa9194d0cdc8"
++pegasus_wf_uuid = "a1fccd97-4529-4c15-b000-aa9194d0cdc8"
++pegasus_version = "4.6.0"
++pegasus_wf_name = "example_workflow-0"
++pegasus_wf_time = "20160516T204145+0000"
++pegasus_wf_xformation = "example_workflow::calculateratio_2:1.0"
++pegasus_wf_dax_job_id = "ID0000007"
++pegasus_wf_dag_job_id = "calculateratio_2_ID0000007"
++pegasus_job_class = 1
++pegasus_site = "condorpool"
++pegasus_job_runtime = 0
++pegasus_cores = 1
++pegasus_cluster_size = 1
+queue
+######################################################################
+# END OF SUBMIT FILE
+######################################################################

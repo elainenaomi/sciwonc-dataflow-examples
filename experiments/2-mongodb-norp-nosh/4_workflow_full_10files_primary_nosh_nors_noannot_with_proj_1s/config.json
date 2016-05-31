@@ -1,0 +1,61 @@
+{
+    "namespace":"example_workflow",
+    "os":"linux",
+    "arch":"x86_64",
+    "tasks":[
+        {
+          "taskName": "DataStoreInit",
+          "prefixFolder" : "init_",
+          "prefixTask": "DataStoreInit",
+          "prefixConfig": "Config"
+        },
+        {
+            "taskName": "MedianCPU",
+            "typeOperation": "ALL",
+            "prefixFolder" : "mediancpu_",
+            "prefixTask": "MedianCPU",
+            "prefixConfig": "Config",
+            "dependency": ["init_"]
+        },
+        {
+            "taskName": "MaxMinCPU",
+            "typeOperation": "ALL",
+            "prefixFolder" : "maxmincpu_",
+            "prefixTask": "MaxMinCPU",
+            "prefixConfig": "Config",
+            "dependency": ["init_"]
+        },
+        {
+            "taskName": "AverageCPU",
+            "typeOperation": "ALL",
+            "prefixFolder" : "averagecpu_",
+            "prefixTask": "AverageCPU",
+            "prefixConfig": "Config",
+            "dependency": ["init_"]
+        },
+        {
+            "taskName": "CalculateRatioCpuMemory",
+            "typeOperation": "BY_UNIT",
+            "prefixFolder" : "calculateratio_",
+            "prefixTask": "CalculateRatioCpuMemory",
+            "prefixConfig": "Config",
+            "dependency": ["averagecpu_","maxmincpu_","mediancpu_"]
+        },
+        {
+            "taskName": "AverageRatioEvent",
+            "typeOperation": "BY_COLUMN",
+            "prefixFolder" : "averageratio_",
+            "prefixTask": "AverageRatioEvent",
+            "prefixConfig": "Config",
+            "dependency": ["calculateratio_"]
+        },
+        {
+            "taskName": "MaxMinRatioEvent",
+            "typeOperation": "ALL",
+            "prefixFolder" : "maxminratio_",
+            "prefixTask": "MaxMinRatioEvent",
+            "prefixConfig": "Config",
+            "dependency": ["averageratio_"]
+        }
+    ]
+}

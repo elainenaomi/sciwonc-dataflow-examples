@@ -1,0 +1,43 @@
+######################################################################
+# PEGASUS WMS GENERATED SUBMIT FILE
+# DAG : example_workflow, Index = 0, Count = 1
+# SUBMIT FILE NAME : calculateratio_3_ID0000008.sub
+######################################################################
+stream_error  = false
+stream_output = false
+environment = "CONDOR_JOBID=$(cluster).$(process) PEGASUS_WF_UUID=f85fc982-bf38-4c8b-8fb8-2aa99f37bd5e PEGASUS_WF_LABEL=example_workflow PEGASUS_DAG_JOB_ID=calculateratio_3_ID0000008 PEGASUS_SITE=condorpool "
++TransferOutput = ""
+copy_to_spool = false
+error = /home/elaine.n.watanabe/sciwonc-dataflow-examples/full_mongo/workflow_full_10files_primary_3sh_opt_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160502T165017+0000/calculateratio_3_ID0000008.err
+executable = /home/elaine.n.watanabe/sciwonc-dataflow-examples/full_mongo/workflow_full_10files_primary_3sh_opt_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160502T165017+0000/calculateratio_3_ID0000008.sh
+initialdir = /home/elaine.n.watanabe/sciwonc-dataflow-examples/full_mongo/workflow_full_10files_primary_3sh_opt_with_proj_3s_rg/work/elaine.n.watanabe/pegasus/example_workflow/20160502T165017+0000
+log = /home/elaine.n.watanabe/sciwonc-dataflow-examples/full_mongo/workflow_full_10files_primary_3sh_opt_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160502T165017+0000/example_workflow-0.log
+notification = NEVER
+output = /home/elaine.n.watanabe/sciwonc-dataflow-examples/full_mongo/workflow_full_10files_primary_3sh_opt_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160502T165017+0000/calculateratio_3_ID0000008.out
+periodic_release = False
+periodic_remove = (JobStatus == 5) && ((CurrentTime - EnteredCurrentStatus) > 1800)
+priority = 40
+should_transfer_files = YES
+submit_event_user_notes = pool:condorpool
+transfer_executable = true
+transfer_input_files = ConfigDB_Calc_MedianCPU_3.py,ConfigDB_Calc_AverageCPU_3.py,ConfigDB_Calc_MaxMinCPU_3.py,ConfigDB_TaskEvent_3.py,example_workflow-calculateratio_3-1.0,/usr/share/pegasus/sh/pegasus-lite-common.sh,/home/elaine.n.watanabe/sciwonc-dataflow-examples/full_mongo/workflow_full_10files_primary_3sh_opt_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160502T165017+0000/pegasus-worker-4.6.0-x86_64_ubuntu_14.tar.gz
+universe = vanilla
+when_to_transfer_output = ON_EXIT
++pegasus_generator = "Pegasus"
++pegasus_root_wf_uuid = "f85fc982-bf38-4c8b-8fb8-2aa99f37bd5e"
++pegasus_wf_uuid = "f85fc982-bf38-4c8b-8fb8-2aa99f37bd5e"
++pegasus_version = "4.6.0"
++pegasus_wf_name = "example_workflow-0"
++pegasus_wf_time = "20160502T165017+0000"
++pegasus_wf_xformation = "example_workflow::calculateratio_3:1.0"
++pegasus_wf_dax_job_id = "ID0000008"
++pegasus_wf_dag_job_id = "calculateratio_3_ID0000008"
++pegasus_job_class = 1
++pegasus_site = "condorpool"
++pegasus_job_runtime = 0
++pegasus_cores = 1
++pegasus_cluster_size = 1
+queue
+######################################################################
+# END OF SUBMIT FILE
+######################################################################

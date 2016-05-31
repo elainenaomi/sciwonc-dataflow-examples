@@ -1,0 +1,70 @@
+
+# Job            - name of the job
+# Try            - number representing the job instance run count
+# Site           - site where the job ran
+# Kickstart      - actual duration of the job instance in seconds on the
+#                  remote compute node
+# Mult           - multiplier factor specified by the user
+# Kickstart-Mult - Kickstart time multiplied by the multiplier factor
+# CPU-Time       - remote cpu time computed as the stime + utime
+# Post           - postscript time as reported by DAGMan
+# CondorQTime    - time between submission by DAGMan and the remote Grid
+#                  submission. It is an estimate of the time spent in the
+#                  condor q on the submit node
+# Resource       - time between the remote Grid submission and start of
+#                  remote execution. It is an estimate of the time job
+#                  spent in the remote queue
+# Runtime        - time spent on the resource as seen by Condor DAGMan.
+#                  Is always >= Kickstart
+# Seqexec        - time taken for the completion of a clustered job
+# Seqexec-Delay  - time difference between the time for the completion
+#                  of a clustered job and sum of all the individual
+#                  tasks Kickstart time
+# Exitcode       - exitcode for this job
+# Hostname       - name of the host where the job ran, as reported by
+#                  Kickstart
+# 66edd82d-fb90-4d38-968c-c30800089317 (example_workflow)
+Job                                         Try Site       Kickstart Mult Kickstart-Mult CPU-Time Post CondorQTime Resource Runtime Seqexec Seqexec-Delay Exitcode Hostname                                        
+create_dir_example_workflow_0_local         1   local      0.0       1    0.0            -        5.0  5.0         -        0.0     -       -             0        None                                            
+stage_worker_local_example_workflow_0_local 1   local      0.0       1    0.0            -        -    5.0         -        0.0     -       -             0        None                                            
+stage_in_local_local_0_0                    1   local      2.141     1    2.141          0.06     5.0  0.0         -        5.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_remote_local_2_1                   1   local      4.243     1    4.243          0.08     5.0  5.0         -        5.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_local_local_1_1                    1   local      2.278     1    2.278          0.06     5.0  5.0         -        0.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_local_local_4_0                    1   local      2.286     1    2.286          0.06     5.0  5.0         -        0.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_local_local_1_0                    1   local      4.245     1    4.245          0.06     5.0  5.0         -        5.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_local_local_2_0                    1   local      4.323     1    4.323          0.064    5.0  5.0         -        5.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_local_local_2_1                    1   local      4.348     1    4.348          0.064    5.0  5.0         -        5.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_remote_local_1_1                   1   local      2.323     1    2.323          0.06     5.0  5.0         -        0.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_remote_local_4_0                   1   local      2.324     1    2.324          0.06     5.0  5.0         -        0.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_remote_local_1_0                   1   local      4.344     1    4.344          0.06     5.0  5.0         -        5.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_local_local_3_1                    1   local      4.377     1    4.377          0.064    5.0  5.0         -        5.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_local_local_3_0                    1   local      4.36      1    4.36           0.064    5.0  5.0         -        5.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_remote_local_2_0                   1   local      4.365     1    4.365          0.08     5.0  5.0         -        5.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_remote_local_3_1                   1   local      4.378     1    4.378          0.064    5.0  5.0         -        5.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+stage_in_remote_local_3_0                   1   local      4.37      1    4.37           0.064    5.0  5.0         -        5.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+init_0_ID0000001                            1   condorpool 0.67      1    0.67           0.072    5.0  15.0        -        0.0     -       -             0        slave-a47n.c.primal-sunup-91419.internal        
+mediancpu_0_ID0000002                       1   condorpool 299.236   1    299.236        279.724  5.0  5.0         -        301.0   -       -             0        slave-a47n.c.primal-sunup-91419.internal        
+clean_up_local_level_3_0                    1   local      2.065     1    2.065          0.052    5.0  10.0        -        0.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+averagecpu_0_ID0000004                      1   condorpool 334.537   1    334.537        320.804  5.0  30.0        -        336.0   -       -             0        slave-skzh.c.primal-sunup-91419.internal        
+maxmincpu_0_ID0000003                       1   condorpool 135.542   1    135.542        121.092  5.0  30.0        -        136.0   -       -             0        slave-oazy.c.primal-sunup-91419.internal        
+clean_up_local_level_4_1                    1   local      4.069     1    4.069          0.06     5.0  5.0         -        0.0     -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+clean_up_local_level_4_0                    1   local      8.166     1    8.166          0.068    5.0  0.0         -        11.0    -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 
+calculateratio_6_ID0000011                  1   condorpool 1431.798  1    1431.798       490.148  5.0  6.0         -        1436.0  -       -             1        slave-skzh.c.primal-sunup-91419.internal        
+calculateratio_5_ID0000010                  1   condorpool 1493.708  1    1493.708       511.488  5.0  26.0        -        1497.0  -       -             1        slave-a47n.c.primal-sunup-91419.internal        
+calculateratio_8_ID0000013                  1   condorpool 1467.322  1    1467.322       517.664  5.0  26.0        -        1471.0  -       -             1        slave-oazy.c.primal-sunup-91419.internal        
+calculateratio_4_ID0000009                  1   condorpool 1544.667  1    1544.667       536.792  5.0  26.0        -        1547.0  -       -             1        slave-wqi3.c.primal-sunup-91419.internal        
+calculateratio_7_ID0000012                  1   condorpool 1534.876  1    1534.876       535.9    5.0  20.0        -        1537.0  -       -             1        slave-xci3.c.primal-sunup-91419.internal        
+calculateratio_1_ID0000006                  1   condorpool 1471.552  1    1471.552       548.864  5.0  20.0        -        1471.0  -       -             1        slave-gfmu.c.primal-sunup-91419.internal        
+calculateratio_2_ID0000007                  1   condorpool 1469.747  1    1469.747       546.18   5.0  20.0        -        1471.0  -       -             1        slave-0kde.c.primal-sunup-91419.internal        
+calculateratio_0_ID0000005                  1   condorpool 1500.047  1    1500.047       528.68   5.0  20.0        -        1502.0  -       -             1        slave-s94r.c.primal-sunup-91419.internal        
+calculateratio_3_ID0000008                  1   condorpool 1608.316  1    1608.316       541.732  5.0  20.0        -        1612.0  -       -             1        slave-xs3w.c.primal-sunup-91419.internal        
+calculateratio_6_ID0000011                  2   condorpool 2614.781  1    2614.781       983.368  5.0  5.0         -        2619.0  -       -             0        slave-skzh.c.primal-sunup-91419.internal        
+calculateratio_8_ID0000013                  2   condorpool 2718.769  1    2718.769       1037.728 5.0  5.0         -        2723.0  -       -             0        slave-oazy.c.primal-sunup-91419.internal        
+calculateratio_2_ID0000007                  2   condorpool 2800.41   1    2800.41        1154.876 5.0  5.0         -        2803.0  -       -             0        slave-gfmu.c.primal-sunup-91419.internal        
+calculateratio_1_ID0000006                  2   condorpool 2556.439  1    2556.439       1014.72  5.0  25.0        -        2558.0  -       -             0        slave-a47n.c.primal-sunup-91419.internal        
+calculateratio_5_ID0000010                  2   condorpool 2767.873  1    2767.873       1082.26  5.0  20.0        -        2768.0  -       -             0        slave-0kde.c.primal-sunup-91419.internal        
+calculateratio_0_ID0000005                  2   condorpool 2715.939  1    2715.939       1060.604 5.0  15.0        -        2718.0  -       -             0        slave-s94r.c.primal-sunup-91419.internal        
+calculateratio_7_ID0000012                  2   condorpool 2722.069  1    2722.069       1101.292 5.0  5.0         -        2723.0  -       -             0        slave-xci3.c.primal-sunup-91419.internal        
+calculateratio_4_ID0000009                  2   condorpool 2476.023  1    2476.023       947.804  5.0  15.0        -        2478.0  -       -             1        slave-wqi3.c.primal-sunup-91419.internal        
+calculateratio_3_ID0000008                  2   condorpool 2640.861  1    2640.861       1073.52  5.0  5.0         -        2643.0  -       -             0        slave-xs3w.c.primal-sunup-91419.internal        
+clean_up_local_level_5_1                    1   local      14.075    1    14.075         0.08     5.0  5.0         -        10.0    -       -             0        pegasus-vm-master.c.primal-sunup-91419.internal 

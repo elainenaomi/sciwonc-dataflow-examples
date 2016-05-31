@@ -1,0 +1,198 @@
+######################################################################
+# PEGASUS WMS GENERATED DAG FILE
+# DAG example_workflow
+# Index = 0, Count = 1
+######################################################################
+MAXJOBS cleanup 4
+
+JOB create_dir_example_workflow_0_local create_dir_example_workflow_0_local.sub
+SCRIPT POST create_dir_example_workflow_0_local /usr/bin/pegasus-exitcode  -r $RETURN /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/create_dir_example_workflow_0_local.out
+RETRY create_dir_example_workflow_0_local 1
+
+JOB stage_worker_local_example_workflow_0_local stage_worker_local_example_workflow_0_local.sub
+RETRY stage_worker_local_example_workflow_0_local 1
+CATEGORY stage_worker_local_example_workflow_0_local stage-in
+
+JOB stage_in_local_local_0_0 stage_in_local_local_0_0.sub
+SCRIPT POST stage_in_local_local_0_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/stage_in_local_local_0_0.out
+RETRY stage_in_local_local_0_0 1
+CATEGORY stage_in_local_local_0_0 stage-in
+
+JOB stage_in_remote_local_2_1 stage_in_remote_local_2_1.sub
+SCRIPT POST stage_in_remote_local_2_1 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/stage_in_remote_local_2_1.out
+RETRY stage_in_remote_local_2_1 1
+CATEGORY stage_in_remote_local_2_1 stage-in
+
+JOB stage_in_local_local_1_1 stage_in_local_local_1_1.sub
+SCRIPT POST stage_in_local_local_1_1 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/stage_in_local_local_1_1.out
+RETRY stage_in_local_local_1_1 1
+CATEGORY stage_in_local_local_1_1 stage-in
+
+JOB stage_in_local_local_4_0 stage_in_local_local_4_0.sub
+SCRIPT POST stage_in_local_local_4_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/stage_in_local_local_4_0.out
+RETRY stage_in_local_local_4_0 1
+CATEGORY stage_in_local_local_4_0 stage-in
+
+JOB stage_in_local_local_1_0 stage_in_local_local_1_0.sub
+SCRIPT POST stage_in_local_local_1_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/stage_in_local_local_1_0.out
+RETRY stage_in_local_local_1_0 1
+CATEGORY stage_in_local_local_1_0 stage-in
+
+JOB stage_in_local_local_2_0 stage_in_local_local_2_0.sub
+SCRIPT POST stage_in_local_local_2_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/stage_in_local_local_2_0.out
+RETRY stage_in_local_local_2_0 1
+CATEGORY stage_in_local_local_2_0 stage-in
+
+JOB stage_in_remote_local_1_1 stage_in_remote_local_1_1.sub
+SCRIPT POST stage_in_remote_local_1_1 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/stage_in_remote_local_1_1.out
+RETRY stage_in_remote_local_1_1 1
+CATEGORY stage_in_remote_local_1_1 stage-in
+
+JOB stage_in_remote_local_4_0 stage_in_remote_local_4_0.sub
+SCRIPT POST stage_in_remote_local_4_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/stage_in_remote_local_4_0.out
+RETRY stage_in_remote_local_4_0 1
+CATEGORY stage_in_remote_local_4_0 stage-in
+
+JOB stage_in_remote_local_1_0 stage_in_remote_local_1_0.sub
+SCRIPT POST stage_in_remote_local_1_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/stage_in_remote_local_1_0.out
+RETRY stage_in_remote_local_1_0 1
+CATEGORY stage_in_remote_local_1_0 stage-in
+
+JOB stage_in_local_local_3_0 stage_in_local_local_3_0.sub
+SCRIPT POST stage_in_local_local_3_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/stage_in_local_local_3_0.out
+RETRY stage_in_local_local_3_0 1
+CATEGORY stage_in_local_local_3_0 stage-in
+
+JOB stage_in_remote_local_2_0 stage_in_remote_local_2_0.sub
+SCRIPT POST stage_in_remote_local_2_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/stage_in_remote_local_2_0.out
+RETRY stage_in_remote_local_2_0 1
+CATEGORY stage_in_remote_local_2_0 stage-in
+
+JOB stage_in_remote_local_3_0 stage_in_remote_local_3_0.sub
+SCRIPT POST stage_in_remote_local_3_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/stage_in_remote_local_3_0.out
+RETRY stage_in_remote_local_3_0 1
+CATEGORY stage_in_remote_local_3_0 stage-in
+
+JOB init_0_ID0000001 init_0_ID0000001.sub
+SCRIPT POST init_0_ID0000001 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/init_0_ID0000001.out
+RETRY init_0_ID0000001 1
+
+JOB mediancpu_0_ID0000002 mediancpu_0_ID0000002.sub
+SCRIPT POST mediancpu_0_ID0000002 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/mediancpu_0_ID0000002.out
+RETRY mediancpu_0_ID0000002 1
+
+JOB clean_up_local_level_3_0 clean_up_local_level_3_0.sub
+SCRIPT POST clean_up_local_level_3_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/clean_up_local_level_3_0.out
+RETRY clean_up_local_level_3_0 1
+CATEGORY clean_up_local_level_3_0 cleanup
+
+JOB averagecpu_0_ID0000004 averagecpu_0_ID0000004.sub
+SCRIPT POST averagecpu_0_ID0000004 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/averagecpu_0_ID0000004.out
+RETRY averagecpu_0_ID0000004 1
+
+JOB maxmincpu_0_ID0000003 maxmincpu_0_ID0000003.sub
+SCRIPT POST maxmincpu_0_ID0000003 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/maxmincpu_0_ID0000003.out
+RETRY maxmincpu_0_ID0000003 1
+
+JOB clean_up_local_level_4_0 clean_up_local_level_4_0.sub
+SCRIPT POST clean_up_local_level_4_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/clean_up_local_level_4_0.out
+RETRY clean_up_local_level_4_0 1
+CATEGORY clean_up_local_level_4_0 cleanup
+
+JOB clean_up_local_level_4_1 clean_up_local_level_4_1.sub
+SCRIPT POST clean_up_local_level_4_1 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/clean_up_local_level_4_1.out
+RETRY clean_up_local_level_4_1 1
+CATEGORY clean_up_local_level_4_1 cleanup
+
+JOB calculateratio_0_ID0000005 calculateratio_0_ID0000005.sub
+SCRIPT POST calculateratio_0_ID0000005 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/calculateratio_0_ID0000005.out
+RETRY calculateratio_0_ID0000005 1
+
+JOB averageratio_0_ID0000006 averageratio_0_ID0000006.sub
+SCRIPT POST averageratio_0_ID0000006 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/averageratio_0_ID0000006.out
+RETRY averageratio_0_ID0000006 1
+
+JOB clean_up_local_level_5_0 clean_up_local_level_5_0.sub
+SCRIPT POST clean_up_local_level_5_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/clean_up_local_level_5_0.out
+RETRY clean_up_local_level_5_0 1
+CATEGORY clean_up_local_level_5_0 cleanup
+
+JOB maxminratio_0_ID0000007 maxminratio_0_ID0000007.sub
+SCRIPT POST maxminratio_0_ID0000007 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/maxminratio_0_ID0000007.out
+RETRY maxminratio_0_ID0000007 1
+
+JOB clean_up_local_level_6_0 clean_up_local_level_6_0.sub
+SCRIPT POST clean_up_local_level_6_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/clean_up_local_level_6_0.out
+RETRY clean_up_local_level_6_0 1
+CATEGORY clean_up_local_level_6_0 cleanup
+
+JOB clean_up_local_level_7_0 clean_up_local_level_7_0.sub
+SCRIPT POST clean_up_local_level_7_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sbbd/experiments/3-mongodb-rp-1sh/7_workflow_full_10files_primary_1sh_noannot_with_proj_3s/dags/elaine.n.watanabe/pegasus/example_workflow/20160507T141603+0000/clean_up_local_level_7_0.out
+RETRY clean_up_local_level_7_0 1
+CATEGORY clean_up_local_level_7_0 cleanup
+
+JOB cleanup_example_workflow_0_local cleanup_example_workflow_0_local.sub
+RETRY cleanup_example_workflow_0_local 1
+
+PARENT  clean_up_local_level_4_1 CHILD cleanup_example_workflow_0_local
+PARENT  clean_up_local_level_4_0 CHILD cleanup_example_workflow_0_local
+PARENT  averageratio_0_ID0000006 CHILD maxminratio_0_ID0000007
+PARENT  averageratio_0_ID0000006 CHILD clean_up_local_level_6_0
+PARENT  maxminratio_0_ID0000007 CHILD clean_up_local_level_7_0
+PARENT  stage_in_local_local_4_0 CHILD maxminratio_0_ID0000007
+PARENT  clean_up_local_level_6_0 CHILD cleanup_example_workflow_0_local
+PARENT  clean_up_local_level_5_0 CHILD cleanup_example_workflow_0_local
+PARENT  calculateratio_0_ID0000005 CHILD averageratio_0_ID0000006
+PARENT  calculateratio_0_ID0000005 CHILD clean_up_local_level_5_0
+PARENT  mediancpu_0_ID0000002 CHILD clean_up_local_level_4_0
+PARENT  mediancpu_0_ID0000002 CHILD calculateratio_0_ID0000005
+PARENT  stage_in_local_local_0_0 CHILD init_0_ID0000001
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_0_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_remote_local_2_1
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_1_1
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_4_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_1_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_2_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_remote_local_1_1
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_remote_local_1_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_remote_local_4_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_3_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_remote_local_2_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_remote_local_3_0
+PARENT  stage_in_remote_local_2_1 CHILD calculateratio_0_ID0000005
+PARENT  init_0_ID0000001 CHILD mediancpu_0_ID0000002
+PARENT  init_0_ID0000001 CHILD clean_up_local_level_3_0
+PARENT  init_0_ID0000001 CHILD averagecpu_0_ID0000004
+PARENT  init_0_ID0000001 CHILD maxmincpu_0_ID0000003
+PARENT  clean_up_local_level_7_0 CHILD cleanup_example_workflow_0_local
+PARENT  stage_in_local_local_2_0 CHILD calculateratio_0_ID0000005
+PARENT  stage_in_remote_local_1_1 CHILD averagecpu_0_ID0000004
+PARENT  stage_in_remote_local_1_0 CHILD mediancpu_0_ID0000002
+PARENT  stage_in_remote_local_1_0 CHILD maxmincpu_0_ID0000003
+PARENT  averagecpu_0_ID0000004 CHILD clean_up_local_level_4_0
+PARENT  averagecpu_0_ID0000004 CHILD calculateratio_0_ID0000005
+PARENT  stage_in_local_local_3_0 CHILD averageratio_0_ID0000006
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_local_local_0_0
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_remote_local_2_1
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_local_local_1_1
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_local_local_4_0
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_local_local_1_0
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_local_local_2_0
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_remote_local_1_1
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_remote_local_4_0
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_remote_local_1_0
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_local_local_3_0
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_remote_local_2_0
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_remote_local_3_0
+PARENT  maxmincpu_0_ID0000003 CHILD clean_up_local_level_4_1
+PARENT  maxmincpu_0_ID0000003 CHILD calculateratio_0_ID0000005
+PARENT  stage_in_local_local_1_1 CHILD averagecpu_0_ID0000004
+PARENT  clean_up_local_level_3_0 CHILD cleanup_example_workflow_0_local
+PARENT  stage_in_local_local_1_0 CHILD mediancpu_0_ID0000002
+PARENT  stage_in_local_local_1_0 CHILD maxmincpu_0_ID0000003
+PARENT  stage_in_remote_local_4_0 CHILD maxminratio_0_ID0000007
+PARENT  stage_in_remote_local_2_0 CHILD calculateratio_0_ID0000005
+PARENT  stage_in_remote_local_3_0 CHILD averageratio_0_ID0000006
+######################################################################
+# End of DAG
+######################################################################

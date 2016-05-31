@@ -1,0 +1,1733 @@
+05/23/16 01:55:50 ******************************************************
+05/23/16 01:55:50 ** condor_scheduniv_exec.4443.0 (CONDOR_DAGMAN) STARTING UP
+05/23/16 01:55:50 ** /usr/bin/condor_dagman
+05/23/16 01:55:50 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+05/23/16 01:55:50 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+05/23/16 01:55:50 ** $CondorVersion: 8.4.4 Feb 03 2016 BuildID: 355883 $
+05/23/16 01:55:50 ** $CondorPlatform: x86_64_Ubuntu14 $
+05/23/16 01:55:50 ** PID = 93937
+05/23/16 01:55:50 ** Log last touched time unavailable (No such file or directory)
+05/23/16 01:55:50 ******************************************************
+05/23/16 01:55:50 Using config source: /etc/condor/condor_config
+05/23/16 01:55:50 Using local config sources: 
+05/23/16 01:55:50    /etc/condor/condor_config.local
+05/23/16 01:55:50 config Macros = 62, Sorted = 62, StringBytes = 1974, TablesBytes = 2272
+05/23/16 01:55:50 CLASSAD_CACHING is ENABLED
+05/23/16 01:55:50 Daemon Log is logging: D_ALWAYS D_ERROR
+05/23/16 01:55:50 DaemonCore: No command port requested.
+05/23/16 01:55:50 DAGMAN_USE_STRICT setting: 1
+05/23/16 01:55:50 DAGMAN_VERBOSITY setting: 3
+05/23/16 01:55:50 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+05/23/16 01:55:50 DAGMAN_DEBUG_CACHE_ENABLE setting: False
+05/23/16 01:55:50 DAGMAN_SUBMIT_DELAY setting: 0
+05/23/16 01:55:50 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+05/23/16 01:55:50 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+05/23/16 01:55:50 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 5
+05/23/16 01:55:50 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+05/23/16 01:55:50 DAGMAN_DEFAULT_PRIORITY setting: 0
+05/23/16 01:55:50 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+05/23/16 01:55:50 allow_events (DAGMAN_ALLOW_EVENTS) setting: 114
+05/23/16 01:55:50 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+05/23/16 01:55:50 DAGMAN_RETRY_NODE_FIRST setting: False
+05/23/16 01:55:50 DAGMAN_MAX_JOBS_IDLE setting: 1000
+05/23/16 01:55:50 DAGMAN_MAX_JOBS_SUBMITTED setting: 0
+05/23/16 01:55:50 DAGMAN_MAX_PRE_SCRIPTS setting: 20
+05/23/16 01:55:50 DAGMAN_MAX_POST_SCRIPTS setting: 20
+05/23/16 01:55:50 DAGMAN_ALLOW_LOG_ERROR setting: False
+05/23/16 01:55:50 DAGMAN_MUNGE_NODE_NAMES setting: True
+05/23/16 01:55:50 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+05/23/16 01:55:50 DAGMAN_SUBMIT_DEPTH_FIRST setting: False
+05/23/16 01:55:50 DAGMAN_ALWAYS_RUN_POST setting: True
+05/23/16 01:55:50 DAGMAN_ABORT_DUPLICATES setting: True
+05/23/16 01:55:50 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+05/23/16 01:55:50 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+05/23/16 01:55:50 DAGMAN_AUTO_RESCUE setting: True
+05/23/16 01:55:50 DAGMAN_MAX_RESCUE_NUM setting: 100
+05/23/16 01:55:50 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+05/23/16 01:55:50 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+05/23/16 01:55:50 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+05/23/16 01:55:50 DAGMAN_MAX_JOB_HOLDS setting: 100
+05/23/16 01:55:50 DAGMAN_HOLD_CLAIM_TIME setting: 20
+05/23/16 01:55:50 ALL_DEBUG setting: 
+05/23/16 01:55:50 DAGMAN_DEBUG setting: 
+05/23/16 01:55:50 DAGMAN_SUPPRESS_JOB_LOGS setting: False
+05/23/16 01:55:50 argv[0] == "condor_scheduniv_exec.4443.0"
+05/23/16 01:55:50 argv[1] == "-Lockfile"
+05/23/16 01:55:50 argv[2] == "example_workflow-0.dag.lock"
+05/23/16 01:55:50 argv[3] == "-AutoRescue"
+05/23/16 01:55:50 argv[4] == "1"
+05/23/16 01:55:50 argv[5] == "-DoRescueFrom"
+05/23/16 01:55:50 argv[6] == "0"
+05/23/16 01:55:50 argv[7] == "-Dag"
+05/23/16 01:55:50 argv[8] == "example_workflow-0.dag"
+05/23/16 01:55:50 argv[9] == "-MaxPost"
+05/23/16 01:55:50 argv[10] == "20"
+05/23/16 01:55:50 argv[11] == "-Suppress_notification"
+05/23/16 01:55:50 argv[12] == "-CsdVersion"
+05/23/16 01:55:50 argv[13] == "$CondorVersion: 8.4.4 Feb 03 2016 BuildID: 355883 $"
+05/23/16 01:55:50 argv[14] == "-Dagman"
+05/23/16 01:55:50 argv[15] == "/usr/bin/condor_dagman"
+05/23/16 01:55:50 Warning: failed to get attribute DAGNodeName
+05/23/16 01:55:50 Default node log file is: </home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log>
+05/23/16 01:55:50 DAG Lockfile will be written to example_workflow-0.dag.lock
+05/23/16 01:55:50 DAG Input file is example_workflow-0.dag
+05/23/16 01:55:50 Parsing 1 dagfiles
+05/23/16 01:55:50 Parsing example_workflow-0.dag ...
+05/23/16 01:55:50 Warning: category stage-in has no throttle value set
+05/23/16 01:55:50 Dag contains 49 total jobs
+05/23/16 01:55:50 Sleeping for 3 seconds to ensure ProcessId uniqueness
+05/23/16 01:55:53 Bootstrapping...
+05/23/16 01:55:53 Number of pre-completed nodes: 0
+05/23/16 01:55:53 MultiLogFiles: truncating log file /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:55:53 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:55:53 Of 49 nodes total:
+05/23/16 01:55:53  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:55:53   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:55:53     0       0        0       0       2         47        0
+05/23/16 01:55:53 0 job proc(s) currently held
+05/23/16 01:55:53 Registering condor_event_timer...
+05/23/16 01:55:54 Submitting Condor Node create_dir_example_workflow_0_local job(s)...
+05/23/16 01:55:54 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:55:54 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:55:54 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:55:54 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'create_dir_example_workflow_0_local -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'create_dir_example_workflow_0_local -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never create_dir_example_workflow_0_local.sub
+05/23/16 01:55:54 From submit: Submitting job(s).
+05/23/16 01:55:54 From submit: 1 job(s) submitted to cluster 4444.
+05/23/16 01:55:54 	assigned Condor ID (4444.0.0)
+05/23/16 01:55:54 Submitting Condor Node stage_worker_local_example_workflow_0_local job(s)...
+05/23/16 01:55:54 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:55:54 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:55:54 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:55:54 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_worker_local_example_workflow_0_local -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_worker_local_example_workflow_0_local -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_worker_local_example_workflow_0_local.sub
+05/23/16 01:55:54 From submit: Submitting job(s).
+05/23/16 01:55:54 From submit: 1 job(s) submitted to cluster 4445.
+05/23/16 01:55:54 	assigned Condor ID (4445.0.0)
+05/23/16 01:55:54 Just submitted 2 jobs this cycle...
+05/23/16 01:55:54 Currently monitoring 1 Condor log file(s)
+05/23/16 01:55:54 Reassigning the id of job create_dir_example_workflow_0_local from (4444.0.0) to (4444.0.0)
+05/23/16 01:55:54 Event: ULOG_SUBMIT for Condor Node create_dir_example_workflow_0_local (4444.0.0)
+05/23/16 01:55:54 Number of idle job procs: 1
+05/23/16 01:55:54 Reassigning the id of job stage_worker_local_example_workflow_0_local from (4445.0.0) to (4445.0.0)
+05/23/16 01:55:54 Event: ULOG_SUBMIT for Condor Node stage_worker_local_example_workflow_0_local (4445.0.0)
+05/23/16 01:55:54 Number of idle job procs: 2
+05/23/16 01:55:54 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:55:54 Of 49 nodes total:
+05/23/16 01:55:54  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:55:54   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:55:54     0       0        2       0       0         47        0
+05/23/16 01:55:54 0 job proc(s) currently held
+05/23/16 01:55:59 Currently monitoring 1 Condor log file(s)
+05/23/16 01:55:59 Event: ULOG_EXECUTE for Condor Node create_dir_example_workflow_0_local (4444.0.0)
+05/23/16 01:55:59 Number of idle job procs: 1
+05/23/16 01:55:59 Event: ULOG_EXECUTE for Condor Node stage_worker_local_example_workflow_0_local (4445.0.0)
+05/23/16 01:55:59 Number of idle job procs: 0
+05/23/16 01:55:59 Event: ULOG_JOB_TERMINATED for Condor Node stage_worker_local_example_workflow_0_local (4445.0.0)
+05/23/16 01:55:59 Number of idle job procs: 0
+05/23/16 01:55:59 Node stage_worker_local_example_workflow_0_local job proc (4445.0.0) completed successfully.
+05/23/16 01:55:59 Node stage_worker_local_example_workflow_0_local job completed
+05/23/16 01:55:59 Event: ULOG_JOB_TERMINATED for Condor Node create_dir_example_workflow_0_local (4444.0.0)
+05/23/16 01:55:59 Number of idle job procs: 0
+05/23/16 01:55:59 Node create_dir_example_workflow_0_local job proc (4444.0.0) completed successfully.
+05/23/16 01:55:59 Node create_dir_example_workflow_0_local job completed
+05/23/16 01:55:59 Running POST script of Node create_dir_example_workflow_0_local...
+05/23/16 01:55:59 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:55:59 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:55:59 Of 49 nodes total:
+05/23/16 01:55:59  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:55:59   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:55:59     1       0        0       1       0         47        0
+05/23/16 01:55:59 0 job proc(s) currently held
+05/23/16 01:55:59 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4444.0.0)
+05/23/16 01:56:04 Currently monitoring 1 Condor log file(s)
+05/23/16 01:56:04 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node create_dir_example_workflow_0_local (4444.0.0)
+05/23/16 01:56:04 POST Script of Node create_dir_example_workflow_0_local completed successfully.
+05/23/16 01:56:04 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:56:04 Of 49 nodes total:
+05/23/16 01:56:04  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:56:04   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:56:04     2       0        0       0      15         32        0
+05/23/16 01:56:04 0 job proc(s) currently held
+05/23/16 01:56:09 Submitting Condor Node stage_in_local_local_0_0 job(s)...
+05/23/16 01:56:09 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:09 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:09 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:09 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_0_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_0_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_local_local_0_0.sub
+05/23/16 01:56:09 From submit: Submitting job(s).
+05/23/16 01:56:09 From submit: 1 job(s) submitted to cluster 4446.
+05/23/16 01:56:09 	assigned Condor ID (4446.0.0)
+05/23/16 01:56:09 Submitting Condor Node stage_in_remote_local_2_1 job(s)...
+05/23/16 01:56:09 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:09 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:09 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:09 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_2_1 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_2_1 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_remote_local_2_1.sub
+05/23/16 01:56:09 From submit: Submitting job(s).
+05/23/16 01:56:09 From submit: 1 job(s) submitted to cluster 4447.
+05/23/16 01:56:09 	assigned Condor ID (4447.0.0)
+05/23/16 01:56:09 Submitting Condor Node stage_in_local_local_1_1 job(s)...
+05/23/16 01:56:09 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:09 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:09 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:09 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_1_1 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_1_1 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_local_local_1_1.sub
+05/23/16 01:56:09 From submit: Submitting job(s).
+05/23/16 01:56:09 From submit: 1 job(s) submitted to cluster 4448.
+05/23/16 01:56:10 	assigned Condor ID (4448.0.0)
+05/23/16 01:56:10 Submitting Condor Node stage_in_local_local_4_0 job(s)...
+05/23/16 01:56:10 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:10 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:10 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:10 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_4_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_4_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_local_local_4_0.sub
+05/23/16 01:56:10 From submit: Submitting job(s).
+05/23/16 01:56:10 From submit: 1 job(s) submitted to cluster 4449.
+05/23/16 01:56:10 	assigned Condor ID (4449.0.0)
+05/23/16 01:56:10 Submitting Condor Node stage_in_local_local_1_0 job(s)...
+05/23/16 01:56:10 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:10 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:10 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:10 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_1_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_1_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_local_local_1_0.sub
+05/23/16 01:56:10 From submit: Submitting job(s).
+05/23/16 01:56:10 From submit: 1 job(s) submitted to cluster 4450.
+05/23/16 01:56:10 	assigned Condor ID (4450.0.0)
+05/23/16 01:56:10 Just submitted 5 jobs this cycle...
+05/23/16 01:56:10 Currently monitoring 1 Condor log file(s)
+05/23/16 01:56:10 Reassigning the id of job stage_in_local_local_0_0 from (4446.0.0) to (4446.0.0)
+05/23/16 01:56:10 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_0_0 (4446.0.0)
+05/23/16 01:56:10 Number of idle job procs: 1
+05/23/16 01:56:10 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_0_0 (4446.0.0)
+05/23/16 01:56:10 Number of idle job procs: 0
+05/23/16 01:56:10 Reassigning the id of job stage_in_remote_local_2_1 from (4447.0.0) to (4447.0.0)
+05/23/16 01:56:10 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_2_1 (4447.0.0)
+05/23/16 01:56:10 Number of idle job procs: 1
+05/23/16 01:56:10 Reassigning the id of job stage_in_local_local_1_1 from (4448.0.0) to (4448.0.0)
+05/23/16 01:56:10 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_1_1 (4448.0.0)
+05/23/16 01:56:10 Number of idle job procs: 2
+05/23/16 01:56:10 Reassigning the id of job stage_in_local_local_4_0 from (4449.0.0) to (4449.0.0)
+05/23/16 01:56:10 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_4_0 (4449.0.0)
+05/23/16 01:56:10 Number of idle job procs: 3
+05/23/16 01:56:10 Reassigning the id of job stage_in_local_local_1_0 from (4450.0.0) to (4450.0.0)
+05/23/16 01:56:10 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_1_0 (4450.0.0)
+05/23/16 01:56:10 Number of idle job procs: 4
+05/23/16 01:56:10 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:56:10 Of 49 nodes total:
+05/23/16 01:56:10  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:56:10   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:56:10     2       0        5       0      10         32        0
+05/23/16 01:56:10 0 job proc(s) currently held
+05/23/16 01:56:15 Submitting Condor Node stage_in_local_local_2_0 job(s)...
+05/23/16 01:56:15 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:15 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:15 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:15 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_2_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_2_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_local_local_2_0.sub
+05/23/16 01:56:15 From submit: Submitting job(s).
+05/23/16 01:56:15 From submit: 1 job(s) submitted to cluster 4451.
+05/23/16 01:56:15 	assigned Condor ID (4451.0.0)
+05/23/16 01:56:15 Submitting Condor Node stage_in_local_local_2_1 job(s)...
+05/23/16 01:56:15 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:15 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:15 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:15 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_2_1 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_2_1 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_local_local_2_1.sub
+05/23/16 01:56:15 From submit: Submitting job(s).
+05/23/16 01:56:15 From submit: 1 job(s) submitted to cluster 4452.
+05/23/16 01:56:15 	assigned Condor ID (4452.0.0)
+05/23/16 01:56:15 Submitting Condor Node stage_in_remote_local_1_1 job(s)...
+05/23/16 01:56:15 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:15 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:15 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:15 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_1_1 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_1_1 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_remote_local_1_1.sub
+05/23/16 01:56:15 From submit: Submitting job(s).
+05/23/16 01:56:15 From submit: 1 job(s) submitted to cluster 4453.
+05/23/16 01:56:15 	assigned Condor ID (4453.0.0)
+05/23/16 01:56:15 Submitting Condor Node stage_in_remote_local_4_0 job(s)...
+05/23/16 01:56:15 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:15 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:15 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:15 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_4_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_4_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_remote_local_4_0.sub
+05/23/16 01:56:15 From submit: Submitting job(s).
+05/23/16 01:56:15 From submit: 1 job(s) submitted to cluster 4454.
+05/23/16 01:56:15 	assigned Condor ID (4454.0.0)
+05/23/16 01:56:15 Submitting Condor Node stage_in_remote_local_1_0 job(s)...
+05/23/16 01:56:15 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:15 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:15 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:15 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_1_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_1_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_remote_local_1_0.sub
+05/23/16 01:56:15 From submit: Submitting job(s).
+05/23/16 01:56:15 From submit: 1 job(s) submitted to cluster 4455.
+05/23/16 01:56:15 	assigned Condor ID (4455.0.0)
+05/23/16 01:56:15 Just submitted 5 jobs this cycle...
+05/23/16 01:56:15 Currently monitoring 1 Condor log file(s)
+05/23/16 01:56:15 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_0_0 (4446.0.0)
+05/23/16 01:56:15 Number of idle job procs: 4
+05/23/16 01:56:15 Node stage_in_local_local_0_0 job proc (4446.0.0) completed successfully.
+05/23/16 01:56:15 Node stage_in_local_local_0_0 job completed
+05/23/16 01:56:15 Running POST script of Node stage_in_local_local_0_0...
+05/23/16 01:56:15 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:15 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_1_1 (4448.0.0)
+05/23/16 01:56:15 Number of idle job procs: 3
+05/23/16 01:56:15 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_4_0 (4449.0.0)
+05/23/16 01:56:15 Number of idle job procs: 2
+05/23/16 01:56:15 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_1_0 (4450.0.0)
+05/23/16 01:56:15 Number of idle job procs: 1
+05/23/16 01:56:15 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_2_1 (4447.0.0)
+05/23/16 01:56:15 Number of idle job procs: 0
+05/23/16 01:56:15 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_1_1 (4448.0.0)
+05/23/16 01:56:15 Number of idle job procs: 0
+05/23/16 01:56:15 Node stage_in_local_local_1_1 job proc (4448.0.0) completed successfully.
+05/23/16 01:56:15 Node stage_in_local_local_1_1 job completed
+05/23/16 01:56:15 Running POST script of Node stage_in_local_local_1_1...
+05/23/16 01:56:15 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:15 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_4_0 (4449.0.0)
+05/23/16 01:56:15 Number of idle job procs: 0
+05/23/16 01:56:15 Node stage_in_local_local_4_0 job proc (4449.0.0) completed successfully.
+05/23/16 01:56:15 Node stage_in_local_local_4_0 job completed
+05/23/16 01:56:15 Running POST script of Node stage_in_local_local_4_0...
+05/23/16 01:56:15 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:15 Reassigning the id of job stage_in_local_local_2_0 from (4451.0.0) to (4451.0.0)
+05/23/16 01:56:15 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_2_0 (4451.0.0)
+05/23/16 01:56:15 Number of idle job procs: 1
+05/23/16 01:56:15 Reassigning the id of job stage_in_local_local_2_1 from (4452.0.0) to (4452.0.0)
+05/23/16 01:56:15 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_2_1 (4452.0.0)
+05/23/16 01:56:15 Number of idle job procs: 2
+05/23/16 01:56:15 Reassigning the id of job stage_in_remote_local_1_1 from (4453.0.0) to (4453.0.0)
+05/23/16 01:56:15 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_1_1 (4453.0.0)
+05/23/16 01:56:15 Number of idle job procs: 3
+05/23/16 01:56:15 Reassigning the id of job stage_in_remote_local_4_0 from (4454.0.0) to (4454.0.0)
+05/23/16 01:56:15 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_4_0 (4454.0.0)
+05/23/16 01:56:15 Number of idle job procs: 4
+05/23/16 01:56:15 Reassigning the id of job stage_in_remote_local_1_0 from (4455.0.0) to (4455.0.0)
+05/23/16 01:56:15 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_1_0 (4455.0.0)
+05/23/16 01:56:15 Number of idle job procs: 5
+05/23/16 01:56:15 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:56:15 Of 49 nodes total:
+05/23/16 01:56:15  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:56:15   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:56:15     2       0        7       3       5         32        0
+05/23/16 01:56:15 0 job proc(s) currently held
+05/23/16 01:56:15 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4446.0.0)
+05/23/16 01:56:15 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4449.0.0)
+05/23/16 01:56:15 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4448.0.0)
+05/23/16 01:56:20 Submitting Condor Node stage_in_local_local_3_1 job(s)...
+05/23/16 01:56:20 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:20 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:20 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:20 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_3_1 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_3_1 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_local_local_3_1.sub
+05/23/16 01:56:20 From submit: Submitting job(s).
+05/23/16 01:56:20 From submit: 1 job(s) submitted to cluster 4456.
+05/23/16 01:56:20 	assigned Condor ID (4456.0.0)
+05/23/16 01:56:20 Submitting Condor Node stage_in_local_local_3_0 job(s)...
+05/23/16 01:56:20 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:20 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:20 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:20 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_3_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_3_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_local_local_3_0.sub
+05/23/16 01:56:20 From submit: Submitting job(s).
+05/23/16 01:56:20 From submit: 1 job(s) submitted to cluster 4457.
+05/23/16 01:56:20 	assigned Condor ID (4457.0.0)
+05/23/16 01:56:20 Submitting Condor Node stage_in_remote_local_2_0 job(s)...
+05/23/16 01:56:20 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:20 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:20 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:20 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_2_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_2_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_remote_local_2_0.sub
+05/23/16 01:56:20 From submit: Submitting job(s).
+05/23/16 01:56:20 From submit: 1 job(s) submitted to cluster 4458.
+05/23/16 01:56:20 	assigned Condor ID (4458.0.0)
+05/23/16 01:56:20 Submitting Condor Node stage_in_remote_local_3_1 job(s)...
+05/23/16 01:56:20 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:20 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:20 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:20 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_3_1 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_3_1 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_remote_local_3_1.sub
+05/23/16 01:56:20 From submit: Submitting job(s).
+05/23/16 01:56:20 From submit: 1 job(s) submitted to cluster 4459.
+05/23/16 01:56:20 	assigned Condor ID (4459.0.0)
+05/23/16 01:56:20 Submitting Condor Node stage_in_remote_local_3_0 job(s)...
+05/23/16 01:56:20 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:20 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:20 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:20 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_3_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_3_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local,stage_worker_local_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never stage_in_remote_local_3_0.sub
+05/23/16 01:56:20 From submit: Submitting job(s).
+05/23/16 01:56:20 From submit: 1 job(s) submitted to cluster 4460.
+05/23/16 01:56:20 	assigned Condor ID (4460.0.0)
+05/23/16 01:56:20 Just submitted 5 jobs this cycle...
+05/23/16 01:56:20 Currently monitoring 1 Condor log file(s)
+05/23/16 01:56:20 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_0_0 (4446.0.0)
+05/23/16 01:56:20 POST Script of Node stage_in_local_local_0_0 completed successfully.
+05/23/16 01:56:20 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_4_0 (4449.0.0)
+05/23/16 01:56:20 POST Script of Node stage_in_local_local_4_0 completed successfully.
+05/23/16 01:56:20 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_1_1 (4448.0.0)
+05/23/16 01:56:20 POST Script of Node stage_in_local_local_1_1 completed successfully.
+05/23/16 01:56:20 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_1_0 (4450.0.0)
+05/23/16 01:56:20 Number of idle job procs: 5
+05/23/16 01:56:20 Node stage_in_local_local_1_0 job proc (4450.0.0) completed successfully.
+05/23/16 01:56:20 Node stage_in_local_local_1_0 job completed
+05/23/16 01:56:20 Running POST script of Node stage_in_local_local_1_0...
+05/23/16 01:56:20 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:20 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_2_1 (4447.0.0)
+05/23/16 01:56:20 Number of idle job procs: 5
+05/23/16 01:56:20 Node stage_in_remote_local_2_1 job proc (4447.0.0) completed successfully.
+05/23/16 01:56:20 Node stage_in_remote_local_2_1 job completed
+05/23/16 01:56:20 Running POST script of Node stage_in_remote_local_2_1...
+05/23/16 01:56:20 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:20 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_2_0 (4451.0.0)
+05/23/16 01:56:20 Number of idle job procs: 4
+05/23/16 01:56:20 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_2_1 (4452.0.0)
+05/23/16 01:56:20 Number of idle job procs: 3
+05/23/16 01:56:20 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_1_1 (4453.0.0)
+05/23/16 01:56:20 Number of idle job procs: 2
+05/23/16 01:56:20 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_4_0 (4454.0.0)
+05/23/16 01:56:20 Number of idle job procs: 1
+05/23/16 01:56:20 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_1_0 (4455.0.0)
+05/23/16 01:56:20 Number of idle job procs: 0
+05/23/16 01:56:20 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_4_0 (4454.0.0)
+05/23/16 01:56:20 Number of idle job procs: 0
+05/23/16 01:56:20 Node stage_in_remote_local_4_0 job proc (4454.0.0) completed successfully.
+05/23/16 01:56:20 Node stage_in_remote_local_4_0 job completed
+05/23/16 01:56:20 Running POST script of Node stage_in_remote_local_4_0...
+05/23/16 01:56:20 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:20 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_1_1 (4453.0.0)
+05/23/16 01:56:20 Number of idle job procs: 0
+05/23/16 01:56:20 Node stage_in_remote_local_1_1 job proc (4453.0.0) completed successfully.
+05/23/16 01:56:20 Node stage_in_remote_local_1_1 job completed
+05/23/16 01:56:20 Running POST script of Node stage_in_remote_local_1_1...
+05/23/16 01:56:20 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:20 Reassigning the id of job stage_in_local_local_3_1 from (4456.0.0) to (4456.0.0)
+05/23/16 01:56:20 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_3_1 (4456.0.0)
+05/23/16 01:56:20 Number of idle job procs: 1
+05/23/16 01:56:20 Reassigning the id of job stage_in_local_local_3_0 from (4457.0.0) to (4457.0.0)
+05/23/16 01:56:20 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_3_0 (4457.0.0)
+05/23/16 01:56:20 Number of idle job procs: 2
+05/23/16 01:56:20 Reassigning the id of job stage_in_remote_local_2_0 from (4458.0.0) to (4458.0.0)
+05/23/16 01:56:20 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_2_0 (4458.0.0)
+05/23/16 01:56:20 Number of idle job procs: 3
+05/23/16 01:56:20 Reassigning the id of job stage_in_remote_local_3_1 from (4459.0.0) to (4459.0.0)
+05/23/16 01:56:20 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_3_1 (4459.0.0)
+05/23/16 01:56:20 Number of idle job procs: 4
+05/23/16 01:56:20 Reassigning the id of job stage_in_remote_local_3_0 from (4460.0.0) to (4460.0.0)
+05/23/16 01:56:20 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_3_0 (4460.0.0)
+05/23/16 01:56:20 Number of idle job procs: 5
+05/23/16 01:56:20 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:56:20 Of 49 nodes total:
+05/23/16 01:56:20  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:56:20   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:56:20     5       0        8       4       1         31        0
+05/23/16 01:56:20 0 job proc(s) currently held
+05/23/16 01:56:20 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4450.0.0)
+05/23/16 01:56:20 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4447.0.0)
+05/23/16 01:56:20 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4454.0.0)
+05/23/16 01:56:20 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4453.0.0)
+05/23/16 01:56:25 Submitting Condor Node init_0_ID0000001 job(s)...
+05/23/16 01:56:25 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:25 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:25 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:25 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'init_0_ID0000001 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'init_0_ID0000001 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_0_0" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never init_0_ID0000001.sub
+05/23/16 01:56:25 From submit: Submitting job(s).
+05/23/16 01:56:25 From submit: 1 job(s) submitted to cluster 4461.
+05/23/16 01:56:25 	assigned Condor ID (4461.0.0)
+05/23/16 01:56:25 Just submitted 1 job this cycle...
+05/23/16 01:56:25 Currently monitoring 1 Condor log file(s)
+05/23/16 01:56:25 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_1_0 (4450.0.0)
+05/23/16 01:56:25 POST Script of Node stage_in_local_local_1_0 completed successfully.
+05/23/16 01:56:25 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_2_1 (4447.0.0)
+05/23/16 01:56:25 POST Script of Node stage_in_remote_local_2_1 completed successfully.
+05/23/16 01:56:25 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_4_0 (4454.0.0)
+05/23/16 01:56:25 POST Script of Node stage_in_remote_local_4_0 completed successfully.
+05/23/16 01:56:25 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_1_1 (4453.0.0)
+05/23/16 01:56:25 POST Script of Node stage_in_remote_local_1_1 completed successfully.
+05/23/16 01:56:25 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_2_0 (4451.0.0)
+05/23/16 01:56:25 Number of idle job procs: 5
+05/23/16 01:56:25 Node stage_in_local_local_2_0 job proc (4451.0.0) completed successfully.
+05/23/16 01:56:25 Node stage_in_local_local_2_0 job completed
+05/23/16 01:56:25 Running POST script of Node stage_in_local_local_2_0...
+05/23/16 01:56:25 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:25 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_2_1 (4452.0.0)
+05/23/16 01:56:25 Number of idle job procs: 5
+05/23/16 01:56:25 Node stage_in_local_local_2_1 job proc (4452.0.0) completed successfully.
+05/23/16 01:56:25 Node stage_in_local_local_2_1 job completed
+05/23/16 01:56:25 Running POST script of Node stage_in_local_local_2_1...
+05/23/16 01:56:25 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:25 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_1_0 (4455.0.0)
+05/23/16 01:56:25 Number of idle job procs: 5
+05/23/16 01:56:25 Node stage_in_remote_local_1_0 job proc (4455.0.0) completed successfully.
+05/23/16 01:56:25 Node stage_in_remote_local_1_0 job completed
+05/23/16 01:56:25 Running POST script of Node stage_in_remote_local_1_0...
+05/23/16 01:56:25 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:25 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_3_1 (4456.0.0)
+05/23/16 01:56:25 Number of idle job procs: 4
+05/23/16 01:56:25 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_3_0 (4457.0.0)
+05/23/16 01:56:25 Number of idle job procs: 3
+05/23/16 01:56:25 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_2_0 (4458.0.0)
+05/23/16 01:56:25 Number of idle job procs: 2
+05/23/16 01:56:25 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_3_1 (4459.0.0)
+05/23/16 01:56:25 Number of idle job procs: 1
+05/23/16 01:56:25 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_3_0 (4460.0.0)
+05/23/16 01:56:25 Number of idle job procs: 0
+05/23/16 01:56:25 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_3_1 (4456.0.0)
+05/23/16 01:56:25 Number of idle job procs: 0
+05/23/16 01:56:25 Node stage_in_local_local_3_1 job proc (4456.0.0) completed successfully.
+05/23/16 01:56:25 Node stage_in_local_local_3_1 job completed
+05/23/16 01:56:25 Running POST script of Node stage_in_local_local_3_1...
+05/23/16 01:56:25 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:25 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_3_0 (4457.0.0)
+05/23/16 01:56:25 Number of idle job procs: 0
+05/23/16 01:56:25 Node stage_in_local_local_3_0 job proc (4457.0.0) completed successfully.
+05/23/16 01:56:25 Node stage_in_local_local_3_0 job completed
+05/23/16 01:56:25 Running POST script of Node stage_in_local_local_3_0...
+05/23/16 01:56:25 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:25 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_2_0 (4458.0.0)
+05/23/16 01:56:25 Number of idle job procs: 0
+05/23/16 01:56:25 Node stage_in_remote_local_2_0 job proc (4458.0.0) completed successfully.
+05/23/16 01:56:25 Node stage_in_remote_local_2_0 job completed
+05/23/16 01:56:25 Running POST script of Node stage_in_remote_local_2_0...
+05/23/16 01:56:25 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:25 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_3_1 (4459.0.0)
+05/23/16 01:56:25 Number of idle job procs: 0
+05/23/16 01:56:25 Node stage_in_remote_local_3_1 job proc (4459.0.0) completed successfully.
+05/23/16 01:56:25 Node stage_in_remote_local_3_1 job completed
+05/23/16 01:56:25 Running POST script of Node stage_in_remote_local_3_1...
+05/23/16 01:56:25 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:25 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_3_0 (4460.0.0)
+05/23/16 01:56:25 Number of idle job procs: 0
+05/23/16 01:56:25 Node stage_in_remote_local_3_0 job proc (4460.0.0) completed successfully.
+05/23/16 01:56:25 Node stage_in_remote_local_3_0 job completed
+05/23/16 01:56:25 Running POST script of Node stage_in_remote_local_3_0...
+05/23/16 01:56:25 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:25 Reassigning the id of job init_0_ID0000001 from (4461.0.0) to (4461.0.0)
+05/23/16 01:56:25 Event: ULOG_SUBMIT for Condor Node init_0_ID0000001 (4461.0.0)
+05/23/16 01:56:25 Number of idle job procs: 1
+05/23/16 01:56:25 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:56:25 Of 49 nodes total:
+05/23/16 01:56:25  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:56:25   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:56:25     9       0        1       8       0         31        0
+05/23/16 01:56:25 0 job proc(s) currently held
+05/23/16 01:56:26 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4452.0.0)
+05/23/16 01:56:26 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4451.0.0)
+05/23/16 01:56:26 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4455.0.0)
+05/23/16 01:56:26 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4456.0.0)
+05/23/16 01:56:26 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4457.0.0)
+05/23/16 01:56:26 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4458.0.0)
+05/23/16 01:56:26 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4460.0.0)
+05/23/16 01:56:26 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4459.0.0)
+05/23/16 01:56:30 Currently monitoring 1 Condor log file(s)
+05/23/16 01:56:30 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_2_1 (4452.0.0)
+05/23/16 01:56:30 POST Script of Node stage_in_local_local_2_1 completed successfully.
+05/23/16 01:56:30 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_2_0 (4451.0.0)
+05/23/16 01:56:30 POST Script of Node stage_in_local_local_2_0 completed successfully.
+05/23/16 01:56:30 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_1_0 (4455.0.0)
+05/23/16 01:56:30 POST Script of Node stage_in_remote_local_1_0 completed successfully.
+05/23/16 01:56:30 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_3_1 (4456.0.0)
+05/23/16 01:56:30 POST Script of Node stage_in_local_local_3_1 completed successfully.
+05/23/16 01:56:30 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_3_0 (4457.0.0)
+05/23/16 01:56:30 POST Script of Node stage_in_local_local_3_0 completed successfully.
+05/23/16 01:56:30 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_2_0 (4458.0.0)
+05/23/16 01:56:30 POST Script of Node stage_in_remote_local_2_0 completed successfully.
+05/23/16 01:56:30 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_3_0 (4460.0.0)
+05/23/16 01:56:30 POST Script of Node stage_in_remote_local_3_0 completed successfully.
+05/23/16 01:56:30 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_3_1 (4459.0.0)
+05/23/16 01:56:30 POST Script of Node stage_in_remote_local_3_1 completed successfully.
+05/23/16 01:56:30 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:56:30 Of 49 nodes total:
+05/23/16 01:56:30  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:56:30   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:56:30    17       0        1       0       0         31        0
+05/23/16 01:56:30 0 job proc(s) currently held
+05/23/16 01:56:40 Currently monitoring 1 Condor log file(s)
+05/23/16 01:56:40 Event: ULOG_EXECUTE for Condor Node init_0_ID0000001 (4461.0.0)
+05/23/16 01:56:40 Number of idle job procs: 0
+05/23/16 01:56:40 Event: ULOG_JOB_TERMINATED for Condor Node init_0_ID0000001 (4461.0.0)
+05/23/16 01:56:40 Number of idle job procs: 0
+05/23/16 01:56:40 Node init_0_ID0000001 job proc (4461.0.0) completed successfully.
+05/23/16 01:56:40 Node init_0_ID0000001 job completed
+05/23/16 01:56:40 Running POST script of Node init_0_ID0000001...
+05/23/16 01:56:40 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:56:40 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:56:40 Of 49 nodes total:
+05/23/16 01:56:40  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:56:40   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:56:40    17       0        0       1       0         31        0
+05/23/16 01:56:40 0 job proc(s) currently held
+05/23/16 01:56:40 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4461.0.0)
+05/23/16 01:56:45 Currently monitoring 1 Condor log file(s)
+05/23/16 01:56:45 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node init_0_ID0000001 (4461.0.0)
+05/23/16 01:56:45 POST Script of Node init_0_ID0000001 completed successfully.
+05/23/16 01:56:45 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:56:45 Of 49 nodes total:
+05/23/16 01:56:45  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:56:45   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:56:45    18       0        0       0       4         27        0
+05/23/16 01:56:45 0 job proc(s) currently held
+05/23/16 01:56:50 Submitting Condor Node mediancpu_0_ID0000002 job(s)...
+05/23/16 01:56:50 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:50 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:50 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:50 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'mediancpu_0_ID0000002 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'mediancpu_0_ID0000002 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_1_0,stage_in_remote_local_1_0,init_0_ID0000001" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never mediancpu_0_ID0000002.sub
+05/23/16 01:56:50 From submit: Submitting job(s).
+05/23/16 01:56:50 From submit: 1 job(s) submitted to cluster 4462.
+05/23/16 01:56:50 	assigned Condor ID (4462.0.0)
+05/23/16 01:56:50 Submitting Condor Node clean_up_local_level_3_0 job(s)...
+05/23/16 01:56:50 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:50 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:50 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:50 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_3_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_3_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"init_0_ID0000001" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never clean_up_local_level_3_0.sub
+05/23/16 01:56:50 From submit: Submitting job(s).
+05/23/16 01:56:50 From submit: 1 job(s) submitted to cluster 4463.
+05/23/16 01:56:50 	assigned Condor ID (4463.0.0)
+05/23/16 01:56:50 Submitting Condor Node averagecpu_0_ID0000004 job(s)...
+05/23/16 01:56:50 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:50 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:50 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:50 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averagecpu_0_ID0000004 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'averagecpu_0_ID0000004 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_1_1,stage_in_remote_local_1_1,init_0_ID0000001" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never averagecpu_0_ID0000004.sub
+05/23/16 01:56:50 From submit: Submitting job(s).
+05/23/16 01:56:50 From submit: 1 job(s) submitted to cluster 4464.
+05/23/16 01:56:50 	assigned Condor ID (4464.0.0)
+05/23/16 01:56:50 Submitting Condor Node maxmincpu_0_ID0000003 job(s)...
+05/23/16 01:56:50 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:56:50 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:56:50 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:56:50 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'maxmincpu_0_ID0000003 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'maxmincpu_0_ID0000003 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_1_0,stage_in_remote_local_1_0,init_0_ID0000001" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never maxmincpu_0_ID0000003.sub
+05/23/16 01:56:50 From submit: Submitting job(s).
+05/23/16 01:56:50 From submit: 1 job(s) submitted to cluster 4465.
+05/23/16 01:56:50 	assigned Condor ID (4465.0.0)
+05/23/16 01:56:50 Just submitted 4 jobs this cycle...
+05/23/16 01:56:50 Currently monitoring 1 Condor log file(s)
+05/23/16 01:56:50 Reassigning the id of job mediancpu_0_ID0000002 from (4462.0.0) to (4462.0.0)
+05/23/16 01:56:50 Event: ULOG_SUBMIT for Condor Node mediancpu_0_ID0000002 (4462.0.0)
+05/23/16 01:56:50 Number of idle job procs: 1
+05/23/16 01:56:50 Reassigning the id of job clean_up_local_level_3_0 from (4463.0.0) to (4463.0.0)
+05/23/16 01:56:50 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_3_0 (4463.0.0)
+05/23/16 01:56:50 Number of idle job procs: 2
+05/23/16 01:56:50 Reassigning the id of job averagecpu_0_ID0000004 from (4464.0.0) to (4464.0.0)
+05/23/16 01:56:50 Event: ULOG_SUBMIT for Condor Node averagecpu_0_ID0000004 (4464.0.0)
+05/23/16 01:56:50 Number of idle job procs: 3
+05/23/16 01:56:50 Reassigning the id of job maxmincpu_0_ID0000003 from (4465.0.0) to (4465.0.0)
+05/23/16 01:56:50 Event: ULOG_SUBMIT for Condor Node maxmincpu_0_ID0000003 (4465.0.0)
+05/23/16 01:56:50 Number of idle job procs: 4
+05/23/16 01:56:50 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:56:50 Of 49 nodes total:
+05/23/16 01:56:50  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:56:50   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:56:50    18       0        4       0       0         27        0
+05/23/16 01:56:50 0 job proc(s) currently held
+05/23/16 01:56:55 Currently monitoring 1 Condor log file(s)
+05/23/16 01:56:55 Event: ULOG_EXECUTE for Condor Node mediancpu_0_ID0000002 (4462.0.0)
+05/23/16 01:56:55 Number of idle job procs: 3
+05/23/16 01:56:55 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_3_0 (4463.0.0)
+05/23/16 01:56:55 Number of idle job procs: 2
+05/23/16 01:57:00 Currently monitoring 1 Condor log file(s)
+05/23/16 01:57:00 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_3_0 (4463.0.0)
+05/23/16 01:57:00 Number of idle job procs: 2
+05/23/16 01:57:00 Node clean_up_local_level_3_0 job proc (4463.0.0) completed successfully.
+05/23/16 01:57:00 Node clean_up_local_level_3_0 job completed
+05/23/16 01:57:00 Running POST script of Node clean_up_local_level_3_0...
+05/23/16 01:57:00 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:57:00 Event: ULOG_EXECUTE for Condor Node averagecpu_0_ID0000004 (4464.0.0)
+05/23/16 01:57:00 Number of idle job procs: 1
+05/23/16 01:57:00 Event: ULOG_EXECUTE for Condor Node maxmincpu_0_ID0000003 (4465.0.0)
+05/23/16 01:57:00 Number of idle job procs: 0
+05/23/16 01:57:00 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:57:00 Of 49 nodes total:
+05/23/16 01:57:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:57:00   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:57:00    18       0        3       1       0         27        0
+05/23/16 01:57:00 0 job proc(s) currently held
+05/23/16 01:57:00 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4463.0.0)
+05/23/16 01:57:05 Currently monitoring 1 Condor log file(s)
+05/23/16 01:57:05 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_3_0 (4463.0.0)
+05/23/16 01:57:05 POST Script of Node clean_up_local_level_3_0 completed successfully.
+05/23/16 01:57:05 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:57:05 Of 49 nodes total:
+05/23/16 01:57:05  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:57:05   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:57:05    19       0        3       0       0         27        0
+05/23/16 01:57:05 0 job proc(s) currently held
+05/23/16 01:59:20 Currently monitoring 1 Condor log file(s)
+05/23/16 01:59:20 Event: ULOG_JOB_TERMINATED for Condor Node maxmincpu_0_ID0000003 (4465.0.0)
+05/23/16 01:59:20 Number of idle job procs: 0
+05/23/16 01:59:20 Node maxmincpu_0_ID0000003 job proc (4465.0.0) completed successfully.
+05/23/16 01:59:20 Node maxmincpu_0_ID0000003 job completed
+05/23/16 01:59:20 Running POST script of Node maxmincpu_0_ID0000003...
+05/23/16 01:59:20 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:59:20 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:59:20 Of 49 nodes total:
+05/23/16 01:59:20  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:59:20   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:59:20    19       0        2       1       0         27        0
+05/23/16 01:59:20 0 job proc(s) currently held
+05/23/16 01:59:20 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4465.0.0)
+05/23/16 01:59:25 Currently monitoring 1 Condor log file(s)
+05/23/16 01:59:25 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node maxmincpu_0_ID0000003 (4465.0.0)
+05/23/16 01:59:25 POST Script of Node maxmincpu_0_ID0000003 completed successfully.
+05/23/16 01:59:25 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:59:25 Of 49 nodes total:
+05/23/16 01:59:25  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:59:25   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:59:25    20       0        2       0       1         26        0
+05/23/16 01:59:25 0 job proc(s) currently held
+05/23/16 01:59:30 Submitting Condor Node clean_up_local_level_4_1 job(s)...
+05/23/16 01:59:30 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 01:59:30 Masking the events recorded in the DAGMAN workflow log
+05/23/16 01:59:30 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 01:59:30 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_4_1 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_4_1 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"maxmincpu_0_ID0000003" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never clean_up_local_level_4_1.sub
+05/23/16 01:59:30 From submit: Submitting job(s).
+05/23/16 01:59:30 From submit: 1 job(s) submitted to cluster 4466.
+05/23/16 01:59:30 	assigned Condor ID (4466.0.0)
+05/23/16 01:59:30 Just submitted 1 job this cycle...
+05/23/16 01:59:30 Currently monitoring 1 Condor log file(s)
+05/23/16 01:59:30 Reassigning the id of job clean_up_local_level_4_1 from (4466.0.0) to (4466.0.0)
+05/23/16 01:59:30 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_4_1 (4466.0.0)
+05/23/16 01:59:30 Number of idle job procs: 1
+05/23/16 01:59:30 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:59:30 Of 49 nodes total:
+05/23/16 01:59:30  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:59:30   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:59:30    20       0        3       0       0         26        0
+05/23/16 01:59:30 0 job proc(s) currently held
+05/23/16 01:59:35 Currently monitoring 1 Condor log file(s)
+05/23/16 01:59:35 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_4_1 (4466.0.0)
+05/23/16 01:59:35 Number of idle job procs: 0
+05/23/16 01:59:35 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_4_1 (4466.0.0)
+05/23/16 01:59:35 Number of idle job procs: 0
+05/23/16 01:59:35 Node clean_up_local_level_4_1 job proc (4466.0.0) completed successfully.
+05/23/16 01:59:35 Node clean_up_local_level_4_1 job completed
+05/23/16 01:59:35 Running POST script of Node clean_up_local_level_4_1...
+05/23/16 01:59:35 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 01:59:35 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:59:35 Of 49 nodes total:
+05/23/16 01:59:35  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:59:35   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:59:35    20       0        2       1       0         26        0
+05/23/16 01:59:35 0 job proc(s) currently held
+05/23/16 01:59:35 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4466.0.0)
+05/23/16 01:59:40 Currently monitoring 1 Condor log file(s)
+05/23/16 01:59:40 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_4_1 (4466.0.0)
+05/23/16 01:59:40 POST Script of Node clean_up_local_level_4_1 completed successfully.
+05/23/16 01:59:40 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 01:59:40 Of 49 nodes total:
+05/23/16 01:59:40  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 01:59:40   ===     ===      ===     ===     ===        ===      ===
+05/23/16 01:59:40    21       0        2       0       0         26        0
+05/23/16 01:59:40 0 job proc(s) currently held
+05/23/16 02:02:56 Currently monitoring 1 Condor log file(s)
+05/23/16 02:02:56 Event: ULOG_JOB_TERMINATED for Condor Node averagecpu_0_ID0000004 (4464.0.0)
+05/23/16 02:02:56 Number of idle job procs: 0
+05/23/16 02:02:56 Node averagecpu_0_ID0000004 job proc (4464.0.0) completed successfully.
+05/23/16 02:02:56 Node averagecpu_0_ID0000004 job completed
+05/23/16 02:02:56 Running POST script of Node averagecpu_0_ID0000004...
+05/23/16 02:02:56 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 02:02:56 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:02:56 Of 49 nodes total:
+05/23/16 02:02:56  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:02:56   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:02:56    21       0        1       1       0         26        0
+05/23/16 02:02:56 0 job proc(s) currently held
+05/23/16 02:02:56 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4464.0.0)
+05/23/16 02:03:01 Currently monitoring 1 Condor log file(s)
+05/23/16 02:03:01 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averagecpu_0_ID0000004 (4464.0.0)
+05/23/16 02:03:01 POST Script of Node averagecpu_0_ID0000004 completed successfully.
+05/23/16 02:03:01 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:03:01 Of 49 nodes total:
+05/23/16 02:03:01  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:03:01   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:03:01    22       0        1       0       0         26        0
+05/23/16 02:03:01 0 job proc(s) currently held
+05/23/16 02:03:06 Currently monitoring 1 Condor log file(s)
+05/23/16 02:03:06 Event: ULOG_JOB_TERMINATED for Condor Node mediancpu_0_ID0000002 (4462.0.0)
+05/23/16 02:03:06 Number of idle job procs: 0
+05/23/16 02:03:06 Node mediancpu_0_ID0000002 job proc (4462.0.0) completed successfully.
+05/23/16 02:03:06 Node mediancpu_0_ID0000002 job completed
+05/23/16 02:03:06 Running POST script of Node mediancpu_0_ID0000002...
+05/23/16 02:03:06 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 02:03:06 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:03:06 Of 49 nodes total:
+05/23/16 02:03:06  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:03:06   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:03:06    22       0        0       1       0         26        0
+05/23/16 02:03:06 0 job proc(s) currently held
+05/23/16 02:03:06 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4462.0.0)
+05/23/16 02:03:11 Currently monitoring 1 Condor log file(s)
+05/23/16 02:03:11 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node mediancpu_0_ID0000002 (4462.0.0)
+05/23/16 02:03:11 POST Script of Node mediancpu_0_ID0000002 completed successfully.
+05/23/16 02:03:11 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:03:11 Of 49 nodes total:
+05/23/16 02:03:11  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:03:11   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:03:11    23       0        0       0      10         16        0
+05/23/16 02:03:11 0 job proc(s) currently held
+05/23/16 02:03:16 Submitting Condor Node clean_up_local_level_4_0 job(s)...
+05/23/16 02:03:16 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 02:03:16 Masking the events recorded in the DAGMAN workflow log
+05/23/16 02:03:16 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 02:03:16 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_4_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_4_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"mediancpu_0_ID0000002,averagecpu_0_ID0000004" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never clean_up_local_level_4_0.sub
+05/23/16 02:03:16 From submit: Submitting job(s).
+05/23/16 02:03:16 From submit: 1 job(s) submitted to cluster 4467.
+05/23/16 02:03:16 	assigned Condor ID (4467.0.0)
+05/23/16 02:03:16 Submitting Condor Node calculateratio_6_ID0000011 job(s)...
+05/23/16 02:03:16 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 02:03:16 Masking the events recorded in the DAGMAN workflow log
+05/23/16 02:03:16 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 02:03:16 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'calculateratio_6_ID0000011 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'calculateratio_6_ID0000011 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_2_1,stage_in_local_local_2_0,stage_in_remote_local_2_0,mediancpu_0_ID0000002,averagecpu_0_ID0000004,maxmincpu_0_ID0000003" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never calculateratio_6_ID0000011.sub
+05/23/16 02:03:16 From submit: Submitting job(s).
+05/23/16 02:03:16 From submit: 1 job(s) submitted to cluster 4468.
+05/23/16 02:03:16 	assigned Condor ID (4468.0.0)
+05/23/16 02:03:16 Submitting Condor Node calculateratio_5_ID0000010 job(s)...
+05/23/16 02:03:16 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 02:03:16 Masking the events recorded in the DAGMAN workflow log
+05/23/16 02:03:16 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 02:03:16 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'calculateratio_5_ID0000010 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'calculateratio_5_ID0000010 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_2_1,stage_in_local_local_2_1,stage_in_remote_local_2_0,mediancpu_0_ID0000002,averagecpu_0_ID0000004,maxmincpu_0_ID0000003" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never calculateratio_5_ID0000010.sub
+05/23/16 02:03:16 From submit: Submitting job(s).
+05/23/16 02:03:16 From submit: 1 job(s) submitted to cluster 4469.
+05/23/16 02:03:16 	assigned Condor ID (4469.0.0)
+05/23/16 02:03:16 Submitting Condor Node calculateratio_8_ID0000013 job(s)...
+05/23/16 02:03:16 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 02:03:16 Masking the events recorded in the DAGMAN workflow log
+05/23/16 02:03:16 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 02:03:16 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'calculateratio_8_ID0000013 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'calculateratio_8_ID0000013 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_2_1,stage_in_local_local_2_0,stage_in_remote_local_2_0,mediancpu_0_ID0000002,averagecpu_0_ID0000004,maxmincpu_0_ID0000003" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never calculateratio_8_ID0000013.sub
+05/23/16 02:03:16 From submit: Submitting job(s).
+05/23/16 02:03:16 From submit: 1 job(s) submitted to cluster 4470.
+05/23/16 02:03:16 	assigned Condor ID (4470.0.0)
+05/23/16 02:03:16 Submitting Condor Node calculateratio_4_ID0000009 job(s)...
+05/23/16 02:03:16 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 02:03:16 Masking the events recorded in the DAGMAN workflow log
+05/23/16 02:03:16 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 02:03:16 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'calculateratio_4_ID0000009 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'calculateratio_4_ID0000009 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_2_1,stage_in_local_local_2_1,stage_in_remote_local_2_0,mediancpu_0_ID0000002,averagecpu_0_ID0000004,maxmincpu_0_ID0000003" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never calculateratio_4_ID0000009.sub
+05/23/16 02:03:16 From submit: Submitting job(s).
+05/23/16 02:03:16 From submit: 1 job(s) submitted to cluster 4471.
+05/23/16 02:03:16 	assigned Condor ID (4471.0.0)
+05/23/16 02:03:16 Just submitted 5 jobs this cycle...
+05/23/16 02:03:16 Currently monitoring 1 Condor log file(s)
+05/23/16 02:03:16 Reassigning the id of job clean_up_local_level_4_0 from (4467.0.0) to (4467.0.0)
+05/23/16 02:03:16 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_4_0 (4467.0.0)
+05/23/16 02:03:16 Number of idle job procs: 1
+05/23/16 02:03:16 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_4_0 (4467.0.0)
+05/23/16 02:03:16 Number of idle job procs: 0
+05/23/16 02:03:16 Reassigning the id of job calculateratio_6_ID0000011 from (4468.0.0) to (4468.0.0)
+05/23/16 02:03:16 Event: ULOG_SUBMIT for Condor Node calculateratio_6_ID0000011 (4468.0.0)
+05/23/16 02:03:16 Number of idle job procs: 1
+05/23/16 02:03:16 Reassigning the id of job calculateratio_5_ID0000010 from (4469.0.0) to (4469.0.0)
+05/23/16 02:03:16 Event: ULOG_SUBMIT for Condor Node calculateratio_5_ID0000010 (4469.0.0)
+05/23/16 02:03:16 Number of idle job procs: 2
+05/23/16 02:03:16 Reassigning the id of job calculateratio_8_ID0000013 from (4470.0.0) to (4470.0.0)
+05/23/16 02:03:16 Event: ULOG_SUBMIT for Condor Node calculateratio_8_ID0000013 (4470.0.0)
+05/23/16 02:03:16 Number of idle job procs: 3
+05/23/16 02:03:16 Reassigning the id of job calculateratio_4_ID0000009 from (4471.0.0) to (4471.0.0)
+05/23/16 02:03:16 Event: ULOG_SUBMIT for Condor Node calculateratio_4_ID0000009 (4471.0.0)
+05/23/16 02:03:16 Number of idle job procs: 4
+05/23/16 02:03:16 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:03:16 Of 49 nodes total:
+05/23/16 02:03:16  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:03:16   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:03:16    23       0        5       0       5         16        0
+05/23/16 02:03:16 0 job proc(s) currently held
+05/23/16 02:03:21 Submitting Condor Node calculateratio_7_ID0000012 job(s)...
+05/23/16 02:03:21 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 02:03:21 Masking the events recorded in the DAGMAN workflow log
+05/23/16 02:03:21 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 02:03:21 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'calculateratio_7_ID0000012 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'calculateratio_7_ID0000012 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_2_1,stage_in_local_local_2_0,stage_in_remote_local_2_0,mediancpu_0_ID0000002,averagecpu_0_ID0000004,maxmincpu_0_ID0000003" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never calculateratio_7_ID0000012.sub
+05/23/16 02:03:21 From submit: Submitting job(s).
+05/23/16 02:03:21 From submit: 1 job(s) submitted to cluster 4472.
+05/23/16 02:03:21 	assigned Condor ID (4472.0.0)
+05/23/16 02:03:21 Submitting Condor Node calculateratio_1_ID0000006 job(s)...
+05/23/16 02:03:21 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 02:03:21 Masking the events recorded in the DAGMAN workflow log
+05/23/16 02:03:21 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 02:03:21 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'calculateratio_1_ID0000006 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'calculateratio_1_ID0000006 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_2_1,stage_in_local_local_2_1,stage_in_remote_local_2_0,mediancpu_0_ID0000002,averagecpu_0_ID0000004,maxmincpu_0_ID0000003" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never calculateratio_1_ID0000006.sub
+05/23/16 02:03:21 From submit: Submitting job(s).
+05/23/16 02:03:21 From submit: 1 job(s) submitted to cluster 4473.
+05/23/16 02:03:21 	assigned Condor ID (4473.0.0)
+05/23/16 02:03:21 Submitting Condor Node calculateratio_2_ID0000007 job(s)...
+05/23/16 02:03:21 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 02:03:21 Masking the events recorded in the DAGMAN workflow log
+05/23/16 02:03:21 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 02:03:21 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'calculateratio_2_ID0000007 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'calculateratio_2_ID0000007 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_2_1,stage_in_local_local_2_0,stage_in_remote_local_2_0,mediancpu_0_ID0000002,averagecpu_0_ID0000004,maxmincpu_0_ID0000003" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never calculateratio_2_ID0000007.sub
+05/23/16 02:03:21 From submit: Submitting job(s).
+05/23/16 02:03:21 From submit: 1 job(s) submitted to cluster 4474.
+05/23/16 02:03:21 	assigned Condor ID (4474.0.0)
+05/23/16 02:03:21 Submitting Condor Node calculateratio_0_ID0000005 job(s)...
+05/23/16 02:03:21 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 02:03:21 Masking the events recorded in the DAGMAN workflow log
+05/23/16 02:03:21 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 02:03:21 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'calculateratio_0_ID0000005 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'calculateratio_0_ID0000005 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_2_1,stage_in_local_local_2_1,stage_in_remote_local_2_0,mediancpu_0_ID0000002,averagecpu_0_ID0000004,maxmincpu_0_ID0000003" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never calculateratio_0_ID0000005.sub
+05/23/16 02:03:21 From submit: Submitting job(s).
+05/23/16 02:03:21 From submit: 1 job(s) submitted to cluster 4475.
+05/23/16 02:03:21 	assigned Condor ID (4475.0.0)
+05/23/16 02:03:21 Submitting Condor Node calculateratio_3_ID0000008 job(s)...
+05/23/16 02:03:21 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 02:03:21 Masking the events recorded in the DAGMAN workflow log
+05/23/16 02:03:21 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 02:03:21 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'calculateratio_3_ID0000008 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'calculateratio_3_ID0000008 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_2_1,stage_in_local_local_2_0,stage_in_remote_local_2_0,mediancpu_0_ID0000002,averagecpu_0_ID0000004,maxmincpu_0_ID0000003" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never calculateratio_3_ID0000008.sub
+05/23/16 02:03:21 From submit: Submitting job(s).
+05/23/16 02:03:21 From submit: 1 job(s) submitted to cluster 4476.
+05/23/16 02:03:21 	assigned Condor ID (4476.0.0)
+05/23/16 02:03:21 Just submitted 5 jobs this cycle...
+05/23/16 02:03:21 Currently monitoring 1 Condor log file(s)
+05/23/16 02:03:21 Event: ULOG_EXECUTE for Condor Node calculateratio_6_ID0000011 (4468.0.0)
+05/23/16 02:03:21 Number of idle job procs: 3
+05/23/16 02:03:21 Reassigning the id of job calculateratio_7_ID0000012 from (4472.0.0) to (4472.0.0)
+05/23/16 02:03:21 Event: ULOG_SUBMIT for Condor Node calculateratio_7_ID0000012 (4472.0.0)
+05/23/16 02:03:21 Number of idle job procs: 4
+05/23/16 02:03:21 Reassigning the id of job calculateratio_1_ID0000006 from (4473.0.0) to (4473.0.0)
+05/23/16 02:03:21 Event: ULOG_SUBMIT for Condor Node calculateratio_1_ID0000006 (4473.0.0)
+05/23/16 02:03:21 Number of idle job procs: 5
+05/23/16 02:03:21 Reassigning the id of job calculateratio_2_ID0000007 from (4474.0.0) to (4474.0.0)
+05/23/16 02:03:21 Event: ULOG_SUBMIT for Condor Node calculateratio_2_ID0000007 (4474.0.0)
+05/23/16 02:03:21 Number of idle job procs: 6
+05/23/16 02:03:21 Reassigning the id of job calculateratio_0_ID0000005 from (4475.0.0) to (4475.0.0)
+05/23/16 02:03:21 Event: ULOG_SUBMIT for Condor Node calculateratio_0_ID0000005 (4475.0.0)
+05/23/16 02:03:21 Number of idle job procs: 7
+05/23/16 02:03:21 Reassigning the id of job calculateratio_3_ID0000008 from (4476.0.0) to (4476.0.0)
+05/23/16 02:03:21 Event: ULOG_SUBMIT for Condor Node calculateratio_3_ID0000008 (4476.0.0)
+05/23/16 02:03:21 Number of idle job procs: 8
+05/23/16 02:03:21 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:03:21 Of 49 nodes total:
+05/23/16 02:03:21  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:03:21   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:03:21    23       0       10       0       0         16        0
+05/23/16 02:03:21 0 job proc(s) currently held
+05/23/16 02:03:26 Currently monitoring 1 Condor log file(s)
+05/23/16 02:03:26 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_4_0 (4467.0.0)
+05/23/16 02:03:26 Number of idle job procs: 8
+05/23/16 02:03:26 Node clean_up_local_level_4_0 job proc (4467.0.0) completed successfully.
+05/23/16 02:03:26 Node clean_up_local_level_4_0 job completed
+05/23/16 02:03:26 Running POST script of Node clean_up_local_level_4_0...
+05/23/16 02:03:26 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 02:03:26 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:03:26 Of 49 nodes total:
+05/23/16 02:03:26  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:03:26   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:03:26    23       0        9       1       0         16        0
+05/23/16 02:03:26 0 job proc(s) currently held
+05/23/16 02:03:26 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4467.0.0)
+05/23/16 02:03:31 Currently monitoring 1 Condor log file(s)
+05/23/16 02:03:31 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_4_0 (4467.0.0)
+05/23/16 02:03:31 POST Script of Node clean_up_local_level_4_0 completed successfully.
+05/23/16 02:03:31 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:03:31 Of 49 nodes total:
+05/23/16 02:03:31  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:03:31   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:03:31    24       0        9       0       0         16        0
+05/23/16 02:03:31 0 job proc(s) currently held
+05/23/16 02:03:41 Currently monitoring 1 Condor log file(s)
+05/23/16 02:03:41 Event: ULOG_EXECUTE for Condor Node calculateratio_8_ID0000013 (4470.0.0)
+05/23/16 02:03:41 Number of idle job procs: 7
+05/23/16 02:03:41 Event: ULOG_EXECUTE for Condor Node calculateratio_0_ID0000005 (4475.0.0)
+05/23/16 02:03:41 Number of idle job procs: 6
+05/23/16 02:03:41 Event: ULOG_EXECUTE for Condor Node calculateratio_7_ID0000012 (4472.0.0)
+05/23/16 02:03:41 Number of idle job procs: 5
+05/23/16 02:03:41 Event: ULOG_EXECUTE for Condor Node calculateratio_3_ID0000008 (4476.0.0)
+05/23/16 02:03:41 Number of idle job procs: 4
+05/23/16 02:03:41 Event: ULOG_EXECUTE for Condor Node calculateratio_5_ID0000010 (4469.0.0)
+05/23/16 02:03:41 Number of idle job procs: 3
+05/23/16 02:03:41 Event: ULOG_EXECUTE for Condor Node calculateratio_2_ID0000007 (4474.0.0)
+05/23/16 02:03:41 Number of idle job procs: 2
+05/23/16 02:03:41 Event: ULOG_EXECUTE for Condor Node calculateratio_4_ID0000009 (4471.0.0)
+05/23/16 02:03:41 Number of idle job procs: 1
+05/23/16 02:03:41 Event: ULOG_EXECUTE for Condor Node calculateratio_1_ID0000006 (4473.0.0)
+05/23/16 02:03:41 Number of idle job procs: 0
+05/23/16 02:13:42 601 seconds since last log event
+05/23/16 02:13:42 Pending DAG nodes:
+05/23/16 02:13:42   Node calculateratio_6_ID0000011, Condor ID 4468, status STATUS_SUBMITTED
+05/23/16 02:13:42   Node calculateratio_5_ID0000010, Condor ID 4469, status STATUS_SUBMITTED
+05/23/16 02:13:42   Node calculateratio_8_ID0000013, Condor ID 4470, status STATUS_SUBMITTED
+05/23/16 02:13:42   Node calculateratio_4_ID0000009, Condor ID 4471, status STATUS_SUBMITTED
+05/23/16 02:13:42   Node calculateratio_7_ID0000012, Condor ID 4472, status STATUS_SUBMITTED
+05/23/16 02:13:42   Node calculateratio_1_ID0000006, Condor ID 4473, status STATUS_SUBMITTED
+05/23/16 02:13:42   Node calculateratio_2_ID0000007, Condor ID 4474, status STATUS_SUBMITTED
+05/23/16 02:13:42   Node calculateratio_0_ID0000005, Condor ID 4475, status STATUS_SUBMITTED
+05/23/16 02:13:42   Node calculateratio_3_ID0000008, Condor ID 4476, status STATUS_SUBMITTED
+05/23/16 02:23:43 1202 seconds since last log event
+05/23/16 02:23:43 Pending DAG nodes:
+05/23/16 02:23:43   Node calculateratio_6_ID0000011, Condor ID 4468, status STATUS_SUBMITTED
+05/23/16 02:23:43   Node calculateratio_5_ID0000010, Condor ID 4469, status STATUS_SUBMITTED
+05/23/16 02:23:43   Node calculateratio_8_ID0000013, Condor ID 4470, status STATUS_SUBMITTED
+05/23/16 02:23:43   Node calculateratio_4_ID0000009, Condor ID 4471, status STATUS_SUBMITTED
+05/23/16 02:23:43   Node calculateratio_7_ID0000012, Condor ID 4472, status STATUS_SUBMITTED
+05/23/16 02:23:43   Node calculateratio_1_ID0000006, Condor ID 4473, status STATUS_SUBMITTED
+05/23/16 02:23:43   Node calculateratio_2_ID0000007, Condor ID 4474, status STATUS_SUBMITTED
+05/23/16 02:23:43   Node calculateratio_0_ID0000005, Condor ID 4475, status STATUS_SUBMITTED
+05/23/16 02:23:43   Node calculateratio_3_ID0000008, Condor ID 4476, status STATUS_SUBMITTED
+05/23/16 02:33:43 1802 seconds since last log event
+05/23/16 02:33:43 Pending DAG nodes:
+05/23/16 02:33:43   Node calculateratio_6_ID0000011, Condor ID 4468, status STATUS_SUBMITTED
+05/23/16 02:33:43   Node calculateratio_5_ID0000010, Condor ID 4469, status STATUS_SUBMITTED
+05/23/16 02:33:43   Node calculateratio_8_ID0000013, Condor ID 4470, status STATUS_SUBMITTED
+05/23/16 02:33:43   Node calculateratio_4_ID0000009, Condor ID 4471, status STATUS_SUBMITTED
+05/23/16 02:33:43   Node calculateratio_7_ID0000012, Condor ID 4472, status STATUS_SUBMITTED
+05/23/16 02:33:43   Node calculateratio_1_ID0000006, Condor ID 4473, status STATUS_SUBMITTED
+05/23/16 02:33:43   Node calculateratio_2_ID0000007, Condor ID 4474, status STATUS_SUBMITTED
+05/23/16 02:33:43   Node calculateratio_0_ID0000005, Condor ID 4475, status STATUS_SUBMITTED
+05/23/16 02:33:43   Node calculateratio_3_ID0000008, Condor ID 4476, status STATUS_SUBMITTED
+05/23/16 02:43:44 2403 seconds since last log event
+05/23/16 02:43:44 Pending DAG nodes:
+05/23/16 02:43:44   Node calculateratio_6_ID0000011, Condor ID 4468, status STATUS_SUBMITTED
+05/23/16 02:43:44   Node calculateratio_5_ID0000010, Condor ID 4469, status STATUS_SUBMITTED
+05/23/16 02:43:44   Node calculateratio_8_ID0000013, Condor ID 4470, status STATUS_SUBMITTED
+05/23/16 02:43:44   Node calculateratio_4_ID0000009, Condor ID 4471, status STATUS_SUBMITTED
+05/23/16 02:43:44   Node calculateratio_7_ID0000012, Condor ID 4472, status STATUS_SUBMITTED
+05/23/16 02:43:44   Node calculateratio_1_ID0000006, Condor ID 4473, status STATUS_SUBMITTED
+05/23/16 02:43:44   Node calculateratio_2_ID0000007, Condor ID 4474, status STATUS_SUBMITTED
+05/23/16 02:43:44   Node calculateratio_0_ID0000005, Condor ID 4475, status STATUS_SUBMITTED
+05/23/16 02:43:44   Node calculateratio_3_ID0000008, Condor ID 4476, status STATUS_SUBMITTED
+05/23/16 02:52:04 Currently monitoring 1 Condor log file(s)
+05/23/16 02:52:04 Event: ULOG_JOB_TERMINATED for Condor Node calculateratio_7_ID0000012 (4472.0.0)
+05/23/16 02:52:04 Number of idle job procs: 0
+05/23/16 02:52:04 Node calculateratio_7_ID0000012 job proc (4472.0.0) completed successfully.
+05/23/16 02:52:04 Node calculateratio_7_ID0000012 job completed
+05/23/16 02:52:04 Running POST script of Node calculateratio_7_ID0000012...
+05/23/16 02:52:04 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 02:52:04 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:52:04 Of 49 nodes total:
+05/23/16 02:52:04  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:52:04   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:52:04    24       0        8       1       0         16        0
+05/23/16 02:52:04 0 job proc(s) currently held
+05/23/16 02:52:04 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4472.0.0)
+05/23/16 02:52:09 Currently monitoring 1 Condor log file(s)
+05/23/16 02:52:09 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node calculateratio_7_ID0000012 (4472.0.0)
+05/23/16 02:52:09 POST Script of Node calculateratio_7_ID0000012 completed successfully.
+05/23/16 02:52:09 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:52:09 Of 49 nodes total:
+05/23/16 02:52:09  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:52:09   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:52:09    25       0        8       0       0         16        0
+05/23/16 02:52:09 0 job proc(s) currently held
+05/23/16 02:52:39 Currently monitoring 1 Condor log file(s)
+05/23/16 02:52:39 Event: ULOG_JOB_TERMINATED for Condor Node calculateratio_1_ID0000006 (4473.0.0)
+05/23/16 02:52:39 Number of idle job procs: 0
+05/23/16 02:52:39 Node calculateratio_1_ID0000006 job proc (4473.0.0) completed successfully.
+05/23/16 02:52:39 Node calculateratio_1_ID0000006 job completed
+05/23/16 02:52:39 Running POST script of Node calculateratio_1_ID0000006...
+05/23/16 02:52:39 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 02:52:39 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:52:39 Of 49 nodes total:
+05/23/16 02:52:39  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:52:39   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:52:39    25       0        7       1       0         16        0
+05/23/16 02:52:39 0 job proc(s) currently held
+05/23/16 02:52:39 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4473.0.0)
+05/23/16 02:52:44 Currently monitoring 1 Condor log file(s)
+05/23/16 02:52:44 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node calculateratio_1_ID0000006 (4473.0.0)
+05/23/16 02:52:44 POST Script of Node calculateratio_1_ID0000006 completed successfully.
+05/23/16 02:52:44 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:52:44 Of 49 nodes total:
+05/23/16 02:52:44  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:52:44   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:52:44    26       0        7       0       0         16        0
+05/23/16 02:52:44 0 job proc(s) currently held
+05/23/16 02:54:30 Currently monitoring 1 Condor log file(s)
+05/23/16 02:54:30 Event: ULOG_JOB_TERMINATED for Condor Node calculateratio_3_ID0000008 (4476.0.0)
+05/23/16 02:54:30 Number of idle job procs: 0
+05/23/16 02:54:30 Node calculateratio_3_ID0000008 job proc (4476.0.0) completed successfully.
+05/23/16 02:54:30 Node calculateratio_3_ID0000008 job completed
+05/23/16 02:54:30 Running POST script of Node calculateratio_3_ID0000008...
+05/23/16 02:54:30 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 02:54:30 Event: ULOG_JOB_TERMINATED for Condor Node calculateratio_8_ID0000013 (4470.0.0)
+05/23/16 02:54:30 Number of idle job procs: 0
+05/23/16 02:54:30 Node calculateratio_8_ID0000013 job proc (4470.0.0) completed successfully.
+05/23/16 02:54:30 Node calculateratio_8_ID0000013 job completed
+05/23/16 02:54:30 Running POST script of Node calculateratio_8_ID0000013...
+05/23/16 02:54:30 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 02:54:30 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:54:30 Of 49 nodes total:
+05/23/16 02:54:30  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:54:30   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:54:30    26       0        5       2       0         16        0
+05/23/16 02:54:30 0 job proc(s) currently held
+05/23/16 02:54:30 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4470.0.0)
+05/23/16 02:54:30 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4476.0.0)
+05/23/16 02:54:35 Currently monitoring 1 Condor log file(s)
+05/23/16 02:54:35 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node calculateratio_8_ID0000013 (4470.0.0)
+05/23/16 02:54:35 POST Script of Node calculateratio_8_ID0000013 completed successfully.
+05/23/16 02:54:35 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node calculateratio_3_ID0000008 (4476.0.0)
+05/23/16 02:54:35 POST Script of Node calculateratio_3_ID0000008 completed successfully.
+05/23/16 02:54:35 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:54:35 Of 49 nodes total:
+05/23/16 02:54:35  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:54:35   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:54:35    28       0        5       0       0         16        0
+05/23/16 02:54:35 0 job proc(s) currently held
+05/23/16 02:55:05 Currently monitoring 1 Condor log file(s)
+05/23/16 02:55:05 Event: ULOG_JOB_TERMINATED for Condor Node calculateratio_5_ID0000010 (4469.0.0)
+05/23/16 02:55:05 Number of idle job procs: 0
+05/23/16 02:55:05 Node calculateratio_5_ID0000010 job proc (4469.0.0) completed successfully.
+05/23/16 02:55:05 Node calculateratio_5_ID0000010 job completed
+05/23/16 02:55:05 Running POST script of Node calculateratio_5_ID0000010...
+05/23/16 02:55:05 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 02:55:05 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:55:05 Of 49 nodes total:
+05/23/16 02:55:05  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:55:05   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:55:05    28       0        4       1       0         16        0
+05/23/16 02:55:05 0 job proc(s) currently held
+05/23/16 02:55:05 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4469.0.0)
+05/23/16 02:55:10 Currently monitoring 1 Condor log file(s)
+05/23/16 02:55:10 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node calculateratio_5_ID0000010 (4469.0.0)
+05/23/16 02:55:10 POST Script of Node calculateratio_5_ID0000010 completed successfully.
+05/23/16 02:55:10 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:55:10 Of 49 nodes total:
+05/23/16 02:55:10  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:55:10   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:55:10    29       0        4       0       0         16        0
+05/23/16 02:55:10 0 job proc(s) currently held
+05/23/16 02:55:55 Currently monitoring 1 Condor log file(s)
+05/23/16 02:55:55 Event: ULOG_JOB_TERMINATED for Condor Node calculateratio_6_ID0000011 (4468.0.0)
+05/23/16 02:55:55 Number of idle job procs: 0
+05/23/16 02:55:55 Node calculateratio_6_ID0000011 job proc (4468.0.0) completed successfully.
+05/23/16 02:55:55 Node calculateratio_6_ID0000011 job completed
+05/23/16 02:55:55 Running POST script of Node calculateratio_6_ID0000011...
+05/23/16 02:55:55 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 02:55:55 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:55:55 Of 49 nodes total:
+05/23/16 02:55:55  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:55:55   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:55:55    29       0        3       1       0         16        0
+05/23/16 02:55:55 0 job proc(s) currently held
+05/23/16 02:55:55 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4468.0.0)
+05/23/16 02:56:00 Currently monitoring 1 Condor log file(s)
+05/23/16 02:56:00 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node calculateratio_6_ID0000011 (4468.0.0)
+05/23/16 02:56:00 POST Script of Node calculateratio_6_ID0000011 completed successfully.
+05/23/16 02:56:00 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:56:00 Of 49 nodes total:
+05/23/16 02:56:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:56:00   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:56:00    30       0        3       0       0         16        0
+05/23/16 02:56:00 0 job proc(s) currently held
+05/23/16 02:56:30 Currently monitoring 1 Condor log file(s)
+05/23/16 02:56:30 Event: ULOG_JOB_TERMINATED for Condor Node calculateratio_2_ID0000007 (4474.0.0)
+05/23/16 02:56:30 Number of idle job procs: 0
+05/23/16 02:56:30 Node calculateratio_2_ID0000007 job proc (4474.0.0) completed successfully.
+05/23/16 02:56:30 Node calculateratio_2_ID0000007 job completed
+05/23/16 02:56:30 Running POST script of Node calculateratio_2_ID0000007...
+05/23/16 02:56:30 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 02:56:30 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:56:30 Of 49 nodes total:
+05/23/16 02:56:30  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:56:30   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:56:30    30       0        2       1       0         16        0
+05/23/16 02:56:30 0 job proc(s) currently held
+05/23/16 02:56:30 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4474.0.0)
+05/23/16 02:56:35 Currently monitoring 1 Condor log file(s)
+05/23/16 02:56:35 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node calculateratio_2_ID0000007 (4474.0.0)
+05/23/16 02:56:35 POST Script of Node calculateratio_2_ID0000007 completed successfully.
+05/23/16 02:56:35 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 02:56:35 Of 49 nodes total:
+05/23/16 02:56:35  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 02:56:35   ===     ===      ===     ===     ===        ===      ===
+05/23/16 02:56:35    31       0        2       0       0         16        0
+05/23/16 02:56:35 0 job proc(s) currently held
+05/23/16 03:00:20 Currently monitoring 1 Condor log file(s)
+05/23/16 03:00:20 Event: ULOG_JOB_TERMINATED for Condor Node calculateratio_0_ID0000005 (4475.0.0)
+05/23/16 03:00:20 Number of idle job procs: 0
+05/23/16 03:00:20 Node calculateratio_0_ID0000005 job proc (4475.0.0) completed successfully.
+05/23/16 03:00:20 Node calculateratio_0_ID0000005 job completed
+05/23/16 03:00:20 Running POST script of Node calculateratio_0_ID0000005...
+05/23/16 03:00:20 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:00:20 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:00:20 Of 49 nodes total:
+05/23/16 03:00:20  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:00:20   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:00:20    31       0        1       1       0         16        0
+05/23/16 03:00:20 0 job proc(s) currently held
+05/23/16 03:00:20 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4475.0.0)
+05/23/16 03:00:25 Currently monitoring 1 Condor log file(s)
+05/23/16 03:00:25 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node calculateratio_0_ID0000005 (4475.0.0)
+05/23/16 03:00:25 POST Script of Node calculateratio_0_ID0000005 completed successfully.
+05/23/16 03:00:25 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:00:25 Of 49 nodes total:
+05/23/16 03:00:25  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:00:25   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:00:25    32       0        1       0       1         15        0
+05/23/16 03:00:25 0 job proc(s) currently held
+05/23/16 03:00:30 Submitting Condor Node clean_up_local_level_5_1 job(s)...
+05/23/16 03:00:30 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:00:30 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:00:30 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:00:30 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_5_1 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_5_1 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"calculateratio_7_ID0000012,calculateratio_2_ID0000007,calculateratio_0_ID0000005,calculateratio_3_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never clean_up_local_level_5_1.sub
+05/23/16 03:00:30 From submit: Submitting job(s).
+05/23/16 03:00:30 From submit: 1 job(s) submitted to cluster 4477.
+05/23/16 03:00:30 	assigned Condor ID (4477.0.0)
+05/23/16 03:00:30 Just submitted 1 job this cycle...
+05/23/16 03:00:30 Currently monitoring 1 Condor log file(s)
+05/23/16 03:00:30 Reassigning the id of job clean_up_local_level_5_1 from (4477.0.0) to (4477.0.0)
+05/23/16 03:00:30 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_5_1 (4477.0.0)
+05/23/16 03:00:30 Number of idle job procs: 1
+05/23/16 03:00:30 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:00:30 Of 49 nodes total:
+05/23/16 03:00:30  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:00:30   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:00:30    32       0        2       0       0         15        0
+05/23/16 03:00:30 0 job proc(s) currently held
+05/23/16 03:00:35 Currently monitoring 1 Condor log file(s)
+05/23/16 03:00:35 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_5_1 (4477.0.0)
+05/23/16 03:00:35 Number of idle job procs: 0
+05/23/16 03:00:45 Currently monitoring 1 Condor log file(s)
+05/23/16 03:00:45 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_5_1 (4477.0.0)
+05/23/16 03:00:45 Number of idle job procs: 0
+05/23/16 03:00:45 Node clean_up_local_level_5_1 job proc (4477.0.0) completed successfully.
+05/23/16 03:00:45 Node clean_up_local_level_5_1 job completed
+05/23/16 03:00:45 Running POST script of Node clean_up_local_level_5_1...
+05/23/16 03:00:45 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:00:45 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:00:45 Of 49 nodes total:
+05/23/16 03:00:45  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:00:45   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:00:45    32       0        1       1       0         15        0
+05/23/16 03:00:45 0 job proc(s) currently held
+05/23/16 03:00:45 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4477.0.0)
+05/23/16 03:00:50 Currently monitoring 1 Condor log file(s)
+05/23/16 03:00:50 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_5_1 (4477.0.0)
+05/23/16 03:00:50 POST Script of Node clean_up_local_level_5_1 completed successfully.
+05/23/16 03:00:50 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:00:50 Of 49 nodes total:
+05/23/16 03:00:50  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:00:50   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:00:50    33       0        1       0       0         15        0
+05/23/16 03:00:50 0 job proc(s) currently held
+05/23/16 03:01:00 Currently monitoring 1 Condor log file(s)
+05/23/16 03:01:00 Event: ULOG_JOB_TERMINATED for Condor Node calculateratio_4_ID0000009 (4471.0.0)
+05/23/16 03:01:00 Number of idle job procs: 0
+05/23/16 03:01:00 Node calculateratio_4_ID0000009 job proc (4471.0.0) completed successfully.
+05/23/16 03:01:00 Node calculateratio_4_ID0000009 job completed
+05/23/16 03:01:00 Running POST script of Node calculateratio_4_ID0000009...
+05/23/16 03:01:00 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:01:00 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:01:00 Of 49 nodes total:
+05/23/16 03:01:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:01:00   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:01:00    33       0        0       1       0         15        0
+05/23/16 03:01:00 0 job proc(s) currently held
+05/23/16 03:01:00 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4471.0.0)
+05/23/16 03:01:05 Currently monitoring 1 Condor log file(s)
+05/23/16 03:01:05 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node calculateratio_4_ID0000009 (4471.0.0)
+05/23/16 03:01:05 POST Script of Node calculateratio_4_ID0000009 completed successfully.
+05/23/16 03:01:05 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:01:05 Of 49 nodes total:
+05/23/16 03:01:05  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:01:05   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:01:05    34       0        0       0      10          5        0
+05/23/16 03:01:05 0 job proc(s) currently held
+05/23/16 03:01:10 Submitting Condor Node clean_up_local_level_5_0 job(s)...
+05/23/16 03:01:10 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:01:10 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:01:10 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:01:10 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_5_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_5_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"calculateratio_6_ID0000011,calculateratio_5_ID0000010,calculateratio_8_ID0000013,calculateratio_4_ID0000009,calculateratio_1_ID0000006" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never clean_up_local_level_5_0.sub
+05/23/16 03:01:10 From submit: Submitting job(s).
+05/23/16 03:01:10 From submit: 1 job(s) submitted to cluster 4478.
+05/23/16 03:01:10 	assigned Condor ID (4478.0.0)
+05/23/16 03:01:10 Submitting Condor Node averageratio_6_ID0000020 job(s)...
+05/23/16 03:01:10 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:01:10 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:01:10 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:01:10 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averageratio_6_ID0000020 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'averageratio_6_ID0000020 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_3_0,stage_in_remote_local_3_0,calculateratio_6_ID0000011,calculateratio_5_ID0000010,calculateratio_8_ID0000013,calculateratio_4_ID0000009,calculateratio_7_ID0000012,calculateratio_1_ID0000006,calculateratio_2_ID0000007,calculateratio_0_ID0000005,calculateratio_3_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never averageratio_6_ID0000020.sub
+05/23/16 03:01:10 From submit: Submitting job(s).
+05/23/16 03:01:10 From submit: 1 job(s) submitted to cluster 4479.
+05/23/16 03:01:10 	assigned Condor ID (4479.0.0)
+05/23/16 03:01:10 Submitting Condor Node averageratio_4_ID0000018 job(s)...
+05/23/16 03:01:10 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:01:10 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:01:10 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:01:10 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averageratio_4_ID0000018 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'averageratio_4_ID0000018 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_3_1,stage_in_remote_local_3_1,calculateratio_6_ID0000011,calculateratio_5_ID0000010,calculateratio_8_ID0000013,calculateratio_4_ID0000009,calculateratio_7_ID0000012,calculateratio_1_ID0000006,calculateratio_2_ID0000007,calculateratio_0_ID0000005,calculateratio_3_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never averageratio_4_ID0000018.sub
+05/23/16 03:01:10 From submit: Submitting job(s).
+05/23/16 03:01:10 From submit: 1 job(s) submitted to cluster 4480.
+05/23/16 03:01:10 	assigned Condor ID (4480.0.0)
+05/23/16 03:01:10 Submitting Condor Node averageratio_5_ID0000019 job(s)...
+05/23/16 03:01:10 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:01:10 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:01:10 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:01:10 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averageratio_5_ID0000019 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'averageratio_5_ID0000019 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_3_0,stage_in_remote_local_3_0,calculateratio_6_ID0000011,calculateratio_5_ID0000010,calculateratio_8_ID0000013,calculateratio_4_ID0000009,calculateratio_7_ID0000012,calculateratio_1_ID0000006,calculateratio_2_ID0000007,calculateratio_0_ID0000005,calculateratio_3_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never averageratio_5_ID0000019.sub
+05/23/16 03:01:10 From submit: Submitting job(s).
+05/23/16 03:01:10 From submit: 1 job(s) submitted to cluster 4481.
+05/23/16 03:01:10 	assigned Condor ID (4481.0.0)
+05/23/16 03:01:10 Submitting Condor Node averageratio_7_ID0000021 job(s)...
+05/23/16 03:01:10 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:01:10 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:01:10 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:01:10 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averageratio_7_ID0000021 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'averageratio_7_ID0000021 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_3_1,stage_in_remote_local_3_1,calculateratio_6_ID0000011,calculateratio_5_ID0000010,calculateratio_8_ID0000013,calculateratio_4_ID0000009,calculateratio_7_ID0000012,calculateratio_1_ID0000006,calculateratio_2_ID0000007,calculateratio_0_ID0000005,calculateratio_3_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never averageratio_7_ID0000021.sub
+05/23/16 03:01:10 From submit: Submitting job(s).
+05/23/16 03:01:10 From submit: 1 job(s) submitted to cluster 4482.
+05/23/16 03:01:10 	assigned Condor ID (4482.0.0)
+05/23/16 03:01:10 Just submitted 5 jobs this cycle...
+05/23/16 03:01:10 Currently monitoring 1 Condor log file(s)
+05/23/16 03:01:10 Reassigning the id of job clean_up_local_level_5_0 from (4478.0.0) to (4478.0.0)
+05/23/16 03:01:10 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_5_0 (4478.0.0)
+05/23/16 03:01:10 Number of idle job procs: 1
+05/23/16 03:01:10 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_5_0 (4478.0.0)
+05/23/16 03:01:10 Number of idle job procs: 0
+05/23/16 03:01:10 Reassigning the id of job averageratio_6_ID0000020 from (4479.0.0) to (4479.0.0)
+05/23/16 03:01:10 Event: ULOG_SUBMIT for Condor Node averageratio_6_ID0000020 (4479.0.0)
+05/23/16 03:01:10 Number of idle job procs: 1
+05/23/16 03:01:10 Reassigning the id of job averageratio_4_ID0000018 from (4480.0.0) to (4480.0.0)
+05/23/16 03:01:10 Event: ULOG_SUBMIT for Condor Node averageratio_4_ID0000018 (4480.0.0)
+05/23/16 03:01:10 Number of idle job procs: 2
+05/23/16 03:01:10 Reassigning the id of job averageratio_5_ID0000019 from (4481.0.0) to (4481.0.0)
+05/23/16 03:01:10 Event: ULOG_SUBMIT for Condor Node averageratio_5_ID0000019 (4481.0.0)
+05/23/16 03:01:10 Number of idle job procs: 3
+05/23/16 03:01:10 Reassigning the id of job averageratio_7_ID0000021 from (4482.0.0) to (4482.0.0)
+05/23/16 03:01:10 Event: ULOG_SUBMIT for Condor Node averageratio_7_ID0000021 (4482.0.0)
+05/23/16 03:01:10 Number of idle job procs: 4
+05/23/16 03:01:10 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:01:10 Of 49 nodes total:
+05/23/16 03:01:10  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:01:10   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:01:10    34       0        5       0       5          5        0
+05/23/16 03:01:10 0 job proc(s) currently held
+05/23/16 03:01:15 Submitting Condor Node averageratio_1_ID0000015 job(s)...
+05/23/16 03:01:15 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:01:15 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:01:15 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:01:15 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averageratio_1_ID0000015 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'averageratio_1_ID0000015 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_3_0,stage_in_remote_local_3_0,calculateratio_6_ID0000011,calculateratio_5_ID0000010,calculateratio_8_ID0000013,calculateratio_4_ID0000009,calculateratio_7_ID0000012,calculateratio_1_ID0000006,calculateratio_2_ID0000007,calculateratio_0_ID0000005,calculateratio_3_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never averageratio_1_ID0000015.sub
+05/23/16 03:01:15 From submit: Submitting job(s).
+05/23/16 03:01:15 From submit: 1 job(s) submitted to cluster 4483.
+05/23/16 03:01:15 	assigned Condor ID (4483.0.0)
+05/23/16 03:01:15 Submitting Condor Node averageratio_3_ID0000017 job(s)...
+05/23/16 03:01:15 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:01:15 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:01:15 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:01:15 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averageratio_3_ID0000017 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'averageratio_3_ID0000017 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_3_1,stage_in_remote_local_3_1,calculateratio_6_ID0000011,calculateratio_5_ID0000010,calculateratio_8_ID0000013,calculateratio_4_ID0000009,calculateratio_7_ID0000012,calculateratio_1_ID0000006,calculateratio_2_ID0000007,calculateratio_0_ID0000005,calculateratio_3_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never averageratio_3_ID0000017.sub
+05/23/16 03:01:15 From submit: Submitting job(s).
+05/23/16 03:01:15 From submit: 1 job(s) submitted to cluster 4484.
+05/23/16 03:01:15 	assigned Condor ID (4484.0.0)
+05/23/16 03:01:15 Submitting Condor Node averageratio_2_ID0000016 job(s)...
+05/23/16 03:01:15 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:01:15 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:01:15 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:01:15 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averageratio_2_ID0000016 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'averageratio_2_ID0000016 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_3_0,stage_in_remote_local_3_0,calculateratio_6_ID0000011,calculateratio_5_ID0000010,calculateratio_8_ID0000013,calculateratio_4_ID0000009,calculateratio_7_ID0000012,calculateratio_1_ID0000006,calculateratio_2_ID0000007,calculateratio_0_ID0000005,calculateratio_3_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never averageratio_2_ID0000016.sub
+05/23/16 03:01:15 From submit: Submitting job(s).
+05/23/16 03:01:15 From submit: 1 job(s) submitted to cluster 4485.
+05/23/16 03:01:15 	assigned Condor ID (4485.0.0)
+05/23/16 03:01:15 Submitting Condor Node averageratio_0_ID0000014 job(s)...
+05/23/16 03:01:15 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:01:15 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:01:15 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:01:15 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averageratio_0_ID0000014 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'averageratio_0_ID0000014 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_3_1,stage_in_remote_local_3_1,calculateratio_6_ID0000011,calculateratio_5_ID0000010,calculateratio_8_ID0000013,calculateratio_4_ID0000009,calculateratio_7_ID0000012,calculateratio_1_ID0000006,calculateratio_2_ID0000007,calculateratio_0_ID0000005,calculateratio_3_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never averageratio_0_ID0000014.sub
+05/23/16 03:01:15 From submit: Submitting job(s).
+05/23/16 03:01:15 From submit: 1 job(s) submitted to cluster 4486.
+05/23/16 03:01:15 	assigned Condor ID (4486.0.0)
+05/23/16 03:01:15 Submitting Condor Node averageratio_8_ID0000022 job(s)...
+05/23/16 03:01:15 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:01:15 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:01:15 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:01:15 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averageratio_8_ID0000022 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'averageratio_8_ID0000022 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_3_0,stage_in_remote_local_3_0,calculateratio_6_ID0000011,calculateratio_5_ID0000010,calculateratio_8_ID0000013,calculateratio_4_ID0000009,calculateratio_7_ID0000012,calculateratio_1_ID0000006,calculateratio_2_ID0000007,calculateratio_0_ID0000005,calculateratio_3_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never averageratio_8_ID0000022.sub
+05/23/16 03:01:15 From submit: Submitting job(s).
+05/23/16 03:01:15 From submit: 1 job(s) submitted to cluster 4487.
+05/23/16 03:01:15 	assigned Condor ID (4487.0.0)
+05/23/16 03:01:15 Just submitted 5 jobs this cycle...
+05/23/16 03:01:15 Currently monitoring 1 Condor log file(s)
+05/23/16 03:01:15 Reassigning the id of job averageratio_1_ID0000015 from (4483.0.0) to (4483.0.0)
+05/23/16 03:01:15 Event: ULOG_SUBMIT for Condor Node averageratio_1_ID0000015 (4483.0.0)
+05/23/16 03:01:15 Number of idle job procs: 5
+05/23/16 03:01:15 Reassigning the id of job averageratio_3_ID0000017 from (4484.0.0) to (4484.0.0)
+05/23/16 03:01:15 Event: ULOG_SUBMIT for Condor Node averageratio_3_ID0000017 (4484.0.0)
+05/23/16 03:01:15 Number of idle job procs: 6
+05/23/16 03:01:15 Reassigning the id of job averageratio_2_ID0000016 from (4485.0.0) to (4485.0.0)
+05/23/16 03:01:15 Event: ULOG_SUBMIT for Condor Node averageratio_2_ID0000016 (4485.0.0)
+05/23/16 03:01:15 Number of idle job procs: 7
+05/23/16 03:01:15 Reassigning the id of job averageratio_0_ID0000014 from (4486.0.0) to (4486.0.0)
+05/23/16 03:01:15 Event: ULOG_SUBMIT for Condor Node averageratio_0_ID0000014 (4486.0.0)
+05/23/16 03:01:15 Number of idle job procs: 8
+05/23/16 03:01:15 Reassigning the id of job averageratio_8_ID0000022 from (4487.0.0) to (4487.0.0)
+05/23/16 03:01:15 Event: ULOG_SUBMIT for Condor Node averageratio_8_ID0000022 (4487.0.0)
+05/23/16 03:01:15 Number of idle job procs: 9
+05/23/16 03:01:15 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:01:15 Of 49 nodes total:
+05/23/16 03:01:15  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:01:15   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:01:15    34       0       10       0       0          5        0
+05/23/16 03:01:15 0 job proc(s) currently held
+05/23/16 03:01:25 Currently monitoring 1 Condor log file(s)
+05/23/16 03:01:25 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_5_0 (4478.0.0)
+05/23/16 03:01:25 Number of idle job procs: 9
+05/23/16 03:01:25 Node clean_up_local_level_5_0 job proc (4478.0.0) completed successfully.
+05/23/16 03:01:25 Node clean_up_local_level_5_0 job completed
+05/23/16 03:01:25 Running POST script of Node clean_up_local_level_5_0...
+05/23/16 03:01:25 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:01:25 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:01:25 Of 49 nodes total:
+05/23/16 03:01:25  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:01:25   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:01:25    34       0        9       1       0          5        0
+05/23/16 03:01:25 0 job proc(s) currently held
+05/23/16 03:01:25 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4478.0.0)
+05/23/16 03:01:30 Currently monitoring 1 Condor log file(s)
+05/23/16 03:01:30 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_5_0 (4478.0.0)
+05/23/16 03:01:30 POST Script of Node clean_up_local_level_5_0 completed successfully.
+05/23/16 03:01:30 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:01:30 Of 49 nodes total:
+05/23/16 03:01:30  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:01:30   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:01:30    35       0        9       0       0          5        0
+05/23/16 03:01:30 0 job proc(s) currently held
+05/23/16 03:01:35 Currently monitoring 1 Condor log file(s)
+05/23/16 03:01:35 Event: ULOG_EXECUTE for Condor Node averageratio_6_ID0000020 (4479.0.0)
+05/23/16 03:01:35 Number of idle job procs: 8
+05/23/16 03:01:35 Event: ULOG_EXECUTE for Condor Node averageratio_0_ID0000014 (4486.0.0)
+05/23/16 03:01:35 Number of idle job procs: 7
+05/23/16 03:01:35 Event: ULOG_EXECUTE for Condor Node averageratio_7_ID0000021 (4482.0.0)
+05/23/16 03:01:35 Number of idle job procs: 6
+05/23/16 03:01:35 Event: ULOG_EXECUTE for Condor Node averageratio_5_ID0000019 (4481.0.0)
+05/23/16 03:01:35 Number of idle job procs: 5
+05/23/16 03:01:35 Event: ULOG_EXECUTE for Condor Node averageratio_4_ID0000018 (4480.0.0)
+05/23/16 03:01:35 Number of idle job procs: 4
+05/23/16 03:01:35 Event: ULOG_EXECUTE for Condor Node averageratio_1_ID0000015 (4483.0.0)
+05/23/16 03:01:35 Number of idle job procs: 3
+05/23/16 03:01:35 Event: ULOG_EXECUTE for Condor Node averageratio_3_ID0000017 (4484.0.0)
+05/23/16 03:01:35 Number of idle job procs: 2
+05/23/16 03:01:35 Event: ULOG_EXECUTE for Condor Node averageratio_2_ID0000016 (4485.0.0)
+05/23/16 03:01:35 Number of idle job procs: 1
+05/23/16 03:01:35 Event: ULOG_EXECUTE for Condor Node averageratio_8_ID0000022 (4487.0.0)
+05/23/16 03:01:35 Number of idle job procs: 0
+05/23/16 03:01:35 Event: ULOG_JOB_TERMINATED for Condor Node averageratio_6_ID0000020 (4479.0.0)
+05/23/16 03:01:35 Number of idle job procs: 0
+05/23/16 03:01:35 Node averageratio_6_ID0000020 job proc (4479.0.0) completed successfully.
+05/23/16 03:01:35 Node averageratio_6_ID0000020 job completed
+05/23/16 03:01:35 Running POST script of Node averageratio_6_ID0000020...
+05/23/16 03:01:35 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:01:35 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:01:35 Of 49 nodes total:
+05/23/16 03:01:35  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:01:35   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:01:35    35       0        8       1       0          5        0
+05/23/16 03:01:35 0 job proc(s) currently held
+05/23/16 03:01:35 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4479.0.0)
+05/23/16 03:01:40 Currently monitoring 1 Condor log file(s)
+05/23/16 03:01:40 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averageratio_6_ID0000020 (4479.0.0)
+05/23/16 03:01:40 POST Script of Node averageratio_6_ID0000020 completed successfully.
+05/23/16 03:01:40 Event: ULOG_JOB_TERMINATED for Condor Node averageratio_7_ID0000021 (4482.0.0)
+05/23/16 03:01:40 Number of idle job procs: 0
+05/23/16 03:01:40 Node averageratio_7_ID0000021 job proc (4482.0.0) completed successfully.
+05/23/16 03:01:40 Node averageratio_7_ID0000021 job completed
+05/23/16 03:01:40 Running POST script of Node averageratio_7_ID0000021...
+05/23/16 03:01:40 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:01:40 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:01:40 Of 49 nodes total:
+05/23/16 03:01:40  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:01:40   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:01:40    36       0        7       1       0          5        0
+05/23/16 03:01:40 0 job proc(s) currently held
+05/23/16 03:01:40 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4482.0.0)
+05/23/16 03:01:45 Currently monitoring 1 Condor log file(s)
+05/23/16 03:01:45 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averageratio_7_ID0000021 (4482.0.0)
+05/23/16 03:01:45 POST Script of Node averageratio_7_ID0000021 completed successfully.
+05/23/16 03:01:45 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:01:45 Of 49 nodes total:
+05/23/16 03:01:45  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:01:45   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:01:45    37       0        7       0       0          5        0
+05/23/16 03:01:45 0 job proc(s) currently held
+05/23/16 03:01:55 Currently monitoring 1 Condor log file(s)
+05/23/16 03:01:55 Event: ULOG_JOB_TERMINATED for Condor Node averageratio_8_ID0000022 (4487.0.0)
+05/23/16 03:01:55 Number of idle job procs: 0
+05/23/16 03:01:55 Node averageratio_8_ID0000022 job proc (4487.0.0) completed successfully.
+05/23/16 03:01:55 Node averageratio_8_ID0000022 job completed
+05/23/16 03:01:55 Running POST script of Node averageratio_8_ID0000022...
+05/23/16 03:01:55 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:01:55 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:01:55 Of 49 nodes total:
+05/23/16 03:01:55  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:01:55   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:01:55    37       0        6       1       0          5        0
+05/23/16 03:01:55 0 job proc(s) currently held
+05/23/16 03:01:55 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4487.0.0)
+05/23/16 03:02:00 Currently monitoring 1 Condor log file(s)
+05/23/16 03:02:00 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averageratio_8_ID0000022 (4487.0.0)
+05/23/16 03:02:00 POST Script of Node averageratio_8_ID0000022 completed successfully.
+05/23/16 03:02:00 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:02:00 Of 49 nodes total:
+05/23/16 03:02:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:02:00   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:02:00    38       0        6       0       0          5        0
+05/23/16 03:02:00 0 job proc(s) currently held
+05/23/16 03:02:30 Currently monitoring 1 Condor log file(s)
+05/23/16 03:02:30 Event: ULOG_JOB_TERMINATED for Condor Node averageratio_3_ID0000017 (4484.0.0)
+05/23/16 03:02:30 Number of idle job procs: 0
+05/23/16 03:02:30 Node averageratio_3_ID0000017 job proc (4484.0.0) completed successfully.
+05/23/16 03:02:30 Node averageratio_3_ID0000017 job completed
+05/23/16 03:02:30 Running POST script of Node averageratio_3_ID0000017...
+05/23/16 03:02:30 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:02:30 Event: ULOG_JOB_TERMINATED for Condor Node averageratio_2_ID0000016 (4485.0.0)
+05/23/16 03:02:30 Number of idle job procs: 0
+05/23/16 03:02:30 Node averageratio_2_ID0000016 job proc (4485.0.0) completed successfully.
+05/23/16 03:02:30 Node averageratio_2_ID0000016 job completed
+05/23/16 03:02:30 Running POST script of Node averageratio_2_ID0000016...
+05/23/16 03:02:30 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:02:30 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:02:30 Of 49 nodes total:
+05/23/16 03:02:30  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:02:30   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:02:30    38       0        4       2       0          5        0
+05/23/16 03:02:30 0 job proc(s) currently held
+05/23/16 03:02:30 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4484.0.0)
+05/23/16 03:02:30 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4485.0.0)
+05/23/16 03:02:35 Currently monitoring 1 Condor log file(s)
+05/23/16 03:02:35 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averageratio_3_ID0000017 (4484.0.0)
+05/23/16 03:02:35 POST Script of Node averageratio_3_ID0000017 completed successfully.
+05/23/16 03:02:35 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averageratio_2_ID0000016 (4485.0.0)
+05/23/16 03:02:35 POST Script of Node averageratio_2_ID0000016 completed successfully.
+05/23/16 03:02:35 Event: ULOG_JOB_TERMINATED for Condor Node averageratio_5_ID0000019 (4481.0.0)
+05/23/16 03:02:35 Number of idle job procs: 0
+05/23/16 03:02:35 Node averageratio_5_ID0000019 job proc (4481.0.0) completed successfully.
+05/23/16 03:02:35 Node averageratio_5_ID0000019 job completed
+05/23/16 03:02:35 Running POST script of Node averageratio_5_ID0000019...
+05/23/16 03:02:35 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:02:35 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:02:35 Of 49 nodes total:
+05/23/16 03:02:35  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:02:35   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:02:35    40       0        3       1       0          5        0
+05/23/16 03:02:35 0 job proc(s) currently held
+05/23/16 03:02:35 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4481.0.0)
+05/23/16 03:02:40 Currently monitoring 1 Condor log file(s)
+05/23/16 03:02:40 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averageratio_5_ID0000019 (4481.0.0)
+05/23/16 03:02:40 POST Script of Node averageratio_5_ID0000019 completed successfully.
+05/23/16 03:02:40 Event: ULOG_JOB_TERMINATED for Condor Node averageratio_4_ID0000018 (4480.0.0)
+05/23/16 03:02:40 Number of idle job procs: 0
+05/23/16 03:02:40 Node averageratio_4_ID0000018 job proc (4480.0.0) completed successfully.
+05/23/16 03:02:40 Node averageratio_4_ID0000018 job completed
+05/23/16 03:02:40 Running POST script of Node averageratio_4_ID0000018...
+05/23/16 03:02:40 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:02:40 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:02:40 Of 49 nodes total:
+05/23/16 03:02:40  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:02:40   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:02:40    41       0        2       1       0          5        0
+05/23/16 03:02:40 0 job proc(s) currently held
+05/23/16 03:02:41 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4480.0.0)
+05/23/16 03:02:45 Currently monitoring 1 Condor log file(s)
+05/23/16 03:02:45 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averageratio_4_ID0000018 (4480.0.0)
+05/23/16 03:02:45 POST Script of Node averageratio_4_ID0000018 completed successfully.
+05/23/16 03:02:45 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:02:45 Of 49 nodes total:
+05/23/16 03:02:45  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:02:45   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:02:45    42       0        2       0       0          5        0
+05/23/16 03:02:45 0 job proc(s) currently held
+05/23/16 03:03:00 Currently monitoring 1 Condor log file(s)
+05/23/16 03:03:00 Event: ULOG_JOB_TERMINATED for Condor Node averageratio_1_ID0000015 (4483.0.0)
+05/23/16 03:03:00 Number of idle job procs: 0
+05/23/16 03:03:00 Node averageratio_1_ID0000015 job proc (4483.0.0) completed successfully.
+05/23/16 03:03:00 Node averageratio_1_ID0000015 job completed
+05/23/16 03:03:00 Running POST script of Node averageratio_1_ID0000015...
+05/23/16 03:03:00 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:03:00 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:03:00 Of 49 nodes total:
+05/23/16 03:03:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:03:00   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:03:00    42       0        1       1       0          5        0
+05/23/16 03:03:00 0 job proc(s) currently held
+05/23/16 03:03:00 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4483.0.0)
+05/23/16 03:03:05 Currently monitoring 1 Condor log file(s)
+05/23/16 03:03:05 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averageratio_1_ID0000015 (4483.0.0)
+05/23/16 03:03:05 POST Script of Node averageratio_1_ID0000015 completed successfully.
+05/23/16 03:03:05 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:03:05 Of 49 nodes total:
+05/23/16 03:03:05  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:03:05   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:03:05    43       0        1       0       1          4        0
+05/23/16 03:03:05 0 job proc(s) currently held
+05/23/16 03:03:10 Submitting Condor Node clean_up_local_level_6_0 job(s)...
+05/23/16 03:03:10 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:03:10 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:03:10 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:03:10 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_6_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_6_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"averageratio_6_ID0000020,averageratio_4_ID0000018,averageratio_5_ID0000019,averageratio_7_ID0000021,averageratio_1_ID0000015" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never clean_up_local_level_6_0.sub
+05/23/16 03:03:10 From submit: Submitting job(s).
+05/23/16 03:03:10 From submit: 1 job(s) submitted to cluster 4488.
+05/23/16 03:03:10 	assigned Condor ID (4488.0.0)
+05/23/16 03:03:10 Just submitted 1 job this cycle...
+05/23/16 03:03:10 Currently monitoring 1 Condor log file(s)
+05/23/16 03:03:10 Event: ULOG_JOB_TERMINATED for Condor Node averageratio_0_ID0000014 (4486.0.0)
+05/23/16 03:03:10 Number of idle job procs: 0
+05/23/16 03:03:10 Node averageratio_0_ID0000014 job proc (4486.0.0) completed successfully.
+05/23/16 03:03:10 Node averageratio_0_ID0000014 job completed
+05/23/16 03:03:10 Running POST script of Node averageratio_0_ID0000014...
+05/23/16 03:03:10 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:03:10 Reassigning the id of job clean_up_local_level_6_0 from (4488.0.0) to (4488.0.0)
+05/23/16 03:03:10 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_6_0 (4488.0.0)
+05/23/16 03:03:10 Number of idle job procs: 1
+05/23/16 03:03:10 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:03:10 Of 49 nodes total:
+05/23/16 03:03:10  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:03:10   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:03:10    43       0        1       1       0          4        0
+05/23/16 03:03:10 0 job proc(s) currently held
+05/23/16 03:03:10 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4486.0.0)
+05/23/16 03:03:15 Currently monitoring 1 Condor log file(s)
+05/23/16 03:03:15 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_6_0 (4488.0.0)
+05/23/16 03:03:15 Number of idle job procs: 0
+05/23/16 03:03:15 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averageratio_0_ID0000014 (4486.0.0)
+05/23/16 03:03:15 POST Script of Node averageratio_0_ID0000014 completed successfully.
+05/23/16 03:03:15 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:03:15 Of 49 nodes total:
+05/23/16 03:03:15  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:03:15   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:03:15    44       0        1       0       2          2        0
+05/23/16 03:03:15 0 job proc(s) currently held
+05/23/16 03:03:20 Submitting Condor Node maxminratio_0_ID0000023 job(s)...
+05/23/16 03:03:20 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:03:20 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:03:20 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:03:20 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'maxminratio_0_ID0000023 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'maxminratio_0_ID0000023 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_4_0,stage_in_remote_local_4_0,averageratio_6_ID0000020,averageratio_4_ID0000018,averageratio_5_ID0000019,averageratio_7_ID0000021,averageratio_1_ID0000015,averageratio_3_ID0000017,averageratio_2_ID0000016,averageratio_0_ID0000014,averageratio_8_ID0000022" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never maxminratio_0_ID0000023.sub
+05/23/16 03:03:20 From submit: Submitting job(s).
+05/23/16 03:03:20 From submit: 1 job(s) submitted to cluster 4489.
+05/23/16 03:03:20 	assigned Condor ID (4489.0.0)
+05/23/16 03:03:20 Submitting Condor Node clean_up_local_level_6_1 job(s)...
+05/23/16 03:03:20 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:03:20 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:03:20 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:03:20 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_6_1 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_6_1 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"averageratio_3_ID0000017,averageratio_2_ID0000016,averageratio_0_ID0000014,averageratio_8_ID0000022" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never clean_up_local_level_6_1.sub
+05/23/16 03:03:20 From submit: Submitting job(s).
+05/23/16 03:03:20 From submit: 1 job(s) submitted to cluster 4490.
+05/23/16 03:03:20 	assigned Condor ID (4490.0.0)
+05/23/16 03:03:20 Just submitted 2 jobs this cycle...
+05/23/16 03:03:20 Currently monitoring 1 Condor log file(s)
+05/23/16 03:03:20 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_6_0 (4488.0.0)
+05/23/16 03:03:20 Number of idle job procs: 0
+05/23/16 03:03:20 Node clean_up_local_level_6_0 job proc (4488.0.0) completed successfully.
+05/23/16 03:03:20 Node clean_up_local_level_6_0 job completed
+05/23/16 03:03:20 Running POST script of Node clean_up_local_level_6_0...
+05/23/16 03:03:20 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:03:20 Reassigning the id of job maxminratio_0_ID0000023 from (4489.0.0) to (4489.0.0)
+05/23/16 03:03:20 Event: ULOG_SUBMIT for Condor Node maxminratio_0_ID0000023 (4489.0.0)
+05/23/16 03:03:20 Number of idle job procs: 1
+05/23/16 03:03:20 Reassigning the id of job clean_up_local_level_6_1 from (4490.0.0) to (4490.0.0)
+05/23/16 03:03:20 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_6_1 (4490.0.0)
+05/23/16 03:03:20 Number of idle job procs: 2
+05/23/16 03:03:20 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:03:20 Of 49 nodes total:
+05/23/16 03:03:20  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:03:20   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:03:20    44       0        2       1       0          2        0
+05/23/16 03:03:20 0 job proc(s) currently held
+05/23/16 03:03:20 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4488.0.0)
+05/23/16 03:03:25 Currently monitoring 1 Condor log file(s)
+05/23/16 03:03:25 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_6_0 (4488.0.0)
+05/23/16 03:03:25 POST Script of Node clean_up_local_level_6_0 completed successfully.
+05/23/16 03:03:25 Event: ULOG_EXECUTE for Condor Node maxminratio_0_ID0000023 (4489.0.0)
+05/23/16 03:03:25 Number of idle job procs: 1
+05/23/16 03:03:25 Event: ULOG_JOB_TERMINATED for Condor Node maxminratio_0_ID0000023 (4489.0.0)
+05/23/16 03:03:25 Number of idle job procs: 1
+05/23/16 03:03:25 Node maxminratio_0_ID0000023 job proc (4489.0.0) completed successfully.
+05/23/16 03:03:25 Node maxminratio_0_ID0000023 job completed
+05/23/16 03:03:25 Running POST script of Node maxminratio_0_ID0000023...
+05/23/16 03:03:25 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:03:25 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_6_1 (4490.0.0)
+05/23/16 03:03:25 Number of idle job procs: 0
+05/23/16 03:03:25 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:03:25 Of 49 nodes total:
+05/23/16 03:03:25  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:03:25   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:03:25    45       0        1       1       0          2        0
+05/23/16 03:03:25 0 job proc(s) currently held
+05/23/16 03:03:25 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4489.0.0)
+05/23/16 03:03:30 Currently monitoring 1 Condor log file(s)
+05/23/16 03:03:30 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node maxminratio_0_ID0000023 (4489.0.0)
+05/23/16 03:03:30 POST Script of Node maxminratio_0_ID0000023 completed successfully.
+05/23/16 03:03:30 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:03:30 Of 49 nodes total:
+05/23/16 03:03:30  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:03:30   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:03:30    46       0        1       0       1          1        0
+05/23/16 03:03:30 0 job proc(s) currently held
+05/23/16 03:03:35 Submitting Condor Node clean_up_local_level_7_0 job(s)...
+05/23/16 03:03:35 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:03:35 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:03:35 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:03:35 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_7_0 -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_7_0 -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"maxminratio_0_ID0000023" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never clean_up_local_level_7_0.sub
+05/23/16 03:03:35 From submit: Submitting job(s).
+05/23/16 03:03:35 From submit: 1 job(s) submitted to cluster 4491.
+05/23/16 03:03:35 	assigned Condor ID (4491.0.0)
+05/23/16 03:03:35 Just submitted 1 job this cycle...
+05/23/16 03:03:35 Currently monitoring 1 Condor log file(s)
+05/23/16 03:03:35 Reassigning the id of job clean_up_local_level_7_0 from (4491.0.0) to (4491.0.0)
+05/23/16 03:03:35 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_7_0 (4491.0.0)
+05/23/16 03:03:35 Number of idle job procs: 1
+05/23/16 03:03:35 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:03:35 Of 49 nodes total:
+05/23/16 03:03:35  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:03:35   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:03:35    46       0        2       0       0          1        0
+05/23/16 03:03:35 0 job proc(s) currently held
+05/23/16 03:03:40 Currently monitoring 1 Condor log file(s)
+05/23/16 03:03:40 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_7_0 (4491.0.0)
+05/23/16 03:03:40 Number of idle job procs: 0
+05/23/16 03:03:40 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_7_0 (4491.0.0)
+05/23/16 03:03:40 Number of idle job procs: 0
+05/23/16 03:03:40 Node clean_up_local_level_7_0 job proc (4491.0.0) completed successfully.
+05/23/16 03:03:40 Node clean_up_local_level_7_0 job completed
+05/23/16 03:03:40 Running POST script of Node clean_up_local_level_7_0...
+05/23/16 03:03:40 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:03:40 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:03:40 Of 49 nodes total:
+05/23/16 03:03:40  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:03:40   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:03:40    46       0        1       1       0          1        0
+05/23/16 03:03:40 0 job proc(s) currently held
+05/23/16 03:03:40 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4491.0.0)
+05/23/16 03:03:45 Currently monitoring 1 Condor log file(s)
+05/23/16 03:03:45 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_7_0 (4491.0.0)
+05/23/16 03:03:45 POST Script of Node clean_up_local_level_7_0 completed successfully.
+05/23/16 03:03:45 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_6_1 (4490.0.0)
+05/23/16 03:03:45 Number of idle job procs: 0
+05/23/16 03:03:45 Node clean_up_local_level_6_1 job proc (4490.0.0) completed successfully.
+05/23/16 03:03:45 Node clean_up_local_level_6_1 job completed
+05/23/16 03:03:45 Running POST script of Node clean_up_local_level_6_1...
+05/23/16 03:03:45 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:03:45 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:03:45 Of 49 nodes total:
+05/23/16 03:03:45  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:03:45   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:03:45    47       0        0       1       0          1        0
+05/23/16 03:03:45 0 job proc(s) currently held
+05/23/16 03:03:45 Initializing user log writer for /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log, (4490.0.0)
+05/23/16 03:03:50 Currently monitoring 1 Condor log file(s)
+05/23/16 03:03:50 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_6_1 (4490.0.0)
+05/23/16 03:03:50 POST Script of Node clean_up_local_level_6_1 completed successfully.
+05/23/16 03:03:50 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:03:50 Of 49 nodes total:
+05/23/16 03:03:50  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:03:50   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:03:50    48       0        0       0       1          0        0
+05/23/16 03:03:50 0 job proc(s) currently held
+05/23/16 03:03:55 Submitting Condor Node cleanup_example_workflow_0_local job(s)...
+05/23/16 03:03:55 Adding a DAGMan workflow log /home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log
+05/23/16 03:03:55 Masking the events recorded in the DAGMAN workflow log
+05/23/16 03:03:55 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+05/23/16 03:03:55 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'cleanup_example_workflow_0_local -a +DAGManJobId' '=' '4443 -a DAGManJobId' '=' '4443 -a submit_event_notes' '=' 'DAG' 'Node:' 'cleanup_example_workflow_0_local -a dagman_log' '=' '/home/elaine.n.watanabe/sbbd/experiments/4-mongodb-rp-3sh/11_workflow_full_10files_primary_3sh_annot_with_proj_3s_rg/dags/elaine.n.watanabe/pegasus/example_workflow/20160523T015547+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"clean_up_local_level_3_0,clean_up_local_level_4_0,clean_up_local_level_4_1,clean_up_local_level_5_0,clean_up_local_level_5_1,clean_up_local_level_6_0,clean_up_local_level_6_1,clean_up_local_level_7_0" -a notification' '=' 'never cleanup_example_workflow_0_local.sub
+05/23/16 03:03:55 From submit: Submitting job(s).
+05/23/16 03:03:55 From submit: 1 job(s) submitted to cluster 4492.
+05/23/16 03:03:55 	assigned Condor ID (4492.0.0)
+05/23/16 03:03:55 Just submitted 1 job this cycle...
+05/23/16 03:03:55 Currently monitoring 1 Condor log file(s)
+05/23/16 03:03:55 Reassigning the id of job cleanup_example_workflow_0_local from (4492.0.0) to (4492.0.0)
+05/23/16 03:03:55 Event: ULOG_SUBMIT for Condor Node cleanup_example_workflow_0_local (4492.0.0)
+05/23/16 03:03:55 Number of idle job procs: 1
+05/23/16 03:03:55 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:03:55 Of 49 nodes total:
+05/23/16 03:03:55  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:03:55   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:03:55    48       0        1       0       0          0        0
+05/23/16 03:03:55 0 job proc(s) currently held
+05/23/16 03:04:00 Currently monitoring 1 Condor log file(s)
+05/23/16 03:04:00 Event: ULOG_EXECUTE for Condor Node cleanup_example_workflow_0_local (4492.0.0)
+05/23/16 03:04:00 Number of idle job procs: 0
+05/23/16 03:04:00 Event: ULOG_JOB_TERMINATED for Condor Node cleanup_example_workflow_0_local (4492.0.0)
+05/23/16 03:04:00 Number of idle job procs: 0
+05/23/16 03:04:00 Node cleanup_example_workflow_0_local job proc (4492.0.0) completed successfully.
+05/23/16 03:04:00 Node cleanup_example_workflow_0_local job completed
+05/23/16 03:04:00 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:04:00 Of 49 nodes total:
+05/23/16 03:04:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:04:00   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:04:00    49       0        0       0       0          0        0
+05/23/16 03:04:00 0 job proc(s) currently held
+05/23/16 03:04:00 All jobs Completed!
+05/23/16 03:04:00 Note: 0 total job deferrals because of -MaxJobs limit (0)
+05/23/16 03:04:00 Note: 0 total job deferrals because of -MaxIdle limit (1000)
+05/23/16 03:04:00 Note: 0 total job deferrals because of node category throttles
+05/23/16 03:04:00 Note: 0 total PRE script deferrals because of -MaxPre limit (20) or DEFER
+05/23/16 03:04:00 Note: 0 total POST script deferrals because of -MaxPost limit (20) or DEFER
+05/23/16 03:04:00 DAG status: 0 (DAG_STATUS_OK)
+05/23/16 03:04:00 Of 49 nodes total:
+05/23/16 03:04:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+05/23/16 03:04:00   ===     ===      ===     ===     ===        ===      ===
+05/23/16 03:04:00    49       0        0       0       0          0        0
+05/23/16 03:04:00 0 job proc(s) currently held
+05/23/16 03:04:00 Wrote metrics file example_workflow-0.dag.metrics.
+05/23/16 03:04:00 Reporting metrics to Pegasus metrics server(s); output is in example_workflow-0.dag.metrics.out.
+05/23/16 03:04:00 Running command </usr/lib/condor/libexec/condor_dagman_metrics_reporter -f example_workflow-0.dag.metrics -t 100>
+05/23/16 03:04:00 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+05/23/16 03:04:00 **** condor_scheduniv_exec.4443.0 (condor_DAGMAN) pid 93937 EXITING WITH STATUS 0

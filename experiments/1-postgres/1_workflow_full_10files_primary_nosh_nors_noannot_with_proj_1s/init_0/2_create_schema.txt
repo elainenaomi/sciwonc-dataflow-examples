@@ -1,0 +1,70 @@
+DROP TABLE IF EXISTS average_cpu CASCADE;
+DROP TABLE IF EXISTS maxmin_cpu CASCADE;
+DROP TABLE IF EXISTS median_cpu CASCADE;
+
+CREATE TABLE IF NOT EXISTS average_cpu
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_sum_cpu character varying(255) NOT NULL,
+  g_sum_variance character varying(255) NOT NULL,  
+  g_total_valid_tasks character varying(255) NOT NULL,
+  g_total_tasks character varying(255) NOT NULL,
+  g_average_cpu character varying(255) NOT NULL,
+  g_variance_cpu character varying(255) NOT NULL,
+  PRIMARY KEY  (g_filepath, g_numline)
+);
+
+CREATE TABLE IF NOT EXISTS maxmin_cpu
+(
+    g_filepath character varying(255) NOT NULL,
+    g_numline character varying(255) NOT NULL,
+    g_max_cpu character varying(255) NOT NULL,
+    g_min_cpu character varying(255) NOT NULL,
+    PRIMARY KEY  (g_filepath, g_numline)
+);
+
+CREATE TABLE IF NOT EXISTS median_cpu
+(
+    g_filepath character varying(255) NOT NULL,
+    g_numline character varying(255) NOT NULL,
+    g_median_cpu character varying(255) NOT NULL,
+    PRIMARY KEY  (g_filepath, g_numline)
+);
+
+DROP TABLE IF EXISTS ratio CASCADE;
+DROP TABLE IF EXISTS average_ratio CASCADE;
+DROP TABLE IF EXISTS analysis_ratio CASCADE;
+
+CREATE TABLE IF NOT EXISTS ratio(
+  g_filepath varchar(255),
+  g_numline varchar(255),
+  g_job_ID varchar(255),
+  g_task_index varchar(255),
+  g_event_type varchar(255),
+  g_time varchar(255),
+  g_ratio_cpu_memory  varchar(255),
+  primary key(g_filepath, g_numline)
+);
+
+CREATE TABLE IF NOT EXISTS average_ratio(
+  g_filepath varchar(255),
+  g_numline varchar(255),
+  g_event_type varchar(255),
+  g_sum_ratio_cpu_memory varchar(255),
+  g_total_valid_tasks varchar(255),
+  g_total_tasks varchar(255),
+  g_mean_ratio_cpu_memory  varchar(255),
+  primary key(g_filepath, g_numline)
+);
+
+
+CREATE TABLE IF NOT EXISTS analysis_ratio(
+  g_filepath varchar(255),
+  g_numline varchar(255),
+  g_event_type_max varchar(255),
+  g_ratio_max varchar(255),
+  g_event_type_min varchar(255),
+  g_ratio_min varchar(255),
+  primary key(g_filepath, g_numline)
+);
