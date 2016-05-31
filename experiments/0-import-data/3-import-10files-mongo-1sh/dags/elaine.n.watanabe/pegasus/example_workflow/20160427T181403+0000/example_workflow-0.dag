@@ -1,0 +1,141 @@
+######################################################################
+# PEGASUS WMS GENERATED DAG FILE
+# DAG example_workflow
+# Index = 0, Count = 1
+######################################################################
+MAXJOBS cleanup 4
+
+JOB create_dir_example_workflow_0_local create_dir_example_workflow_0_local.sub
+SCRIPT POST create_dir_example_workflow_0_local /usr/bin/pegasus-exitcode  -r $RETURN /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/create_dir_example_workflow_0_local.out
+RETRY create_dir_example_workflow_0_local 1
+
+JOB stage_worker_local_example_workflow_0_local stage_worker_local_example_workflow_0_local.sub
+RETRY stage_worker_local_example_workflow_0_local 1
+CATEGORY stage_worker_local_example_workflow_0_local stage-in
+
+JOB stage_in_local_local_0_1 stage_in_local_local_0_1.sub
+SCRIPT POST stage_in_local_local_0_1 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/stage_in_local_local_0_1.out
+RETRY stage_in_local_local_0_1 1
+CATEGORY stage_in_local_local_0_1 stage-in
+
+JOB stage_in_local_local_0_0 stage_in_local_local_0_0.sub
+SCRIPT POST stage_in_local_local_0_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/stage_in_local_local_0_0.out
+RETRY stage_in_local_local_0_0 1
+CATEGORY stage_in_local_local_0_0 stage-in
+
+JOB stage_in_remote_local_0_1 stage_in_remote_local_0_1.sub
+SCRIPT POST stage_in_remote_local_0_1 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/stage_in_remote_local_0_1.out
+RETRY stage_in_remote_local_0_1 1
+CATEGORY stage_in_remote_local_0_1 stage-in
+
+JOB stage_in_remote_local_0_0 stage_in_remote_local_0_0.sub
+SCRIPT POST stage_in_remote_local_0_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/stage_in_remote_local_0_0.out
+RETRY stage_in_remote_local_0_0 1
+CATEGORY stage_in_remote_local_0_0 stage-in
+
+JOB import_1_ID0000002 import_1_ID0000002.sub
+SCRIPT POST import_1_ID0000002 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/import_1_ID0000002.out
+RETRY import_1_ID0000002 1
+
+JOB import_6_ID0000007 import_6_ID0000007.sub
+SCRIPT POST import_6_ID0000007 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/import_6_ID0000007.out
+RETRY import_6_ID0000007 1
+
+JOB import_7_ID0000008 import_7_ID0000008.sub
+SCRIPT POST import_7_ID0000008 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/import_7_ID0000008.out
+RETRY import_7_ID0000008 1
+
+JOB import_0_ID0000001 import_0_ID0000001.sub
+SCRIPT POST import_0_ID0000001 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/import_0_ID0000001.out
+RETRY import_0_ID0000001 1
+
+JOB import_4_ID0000005 import_4_ID0000005.sub
+SCRIPT POST import_4_ID0000005 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/import_4_ID0000005.out
+RETRY import_4_ID0000005 1
+
+JOB import_8_ID0000009 import_8_ID0000009.sub
+SCRIPT POST import_8_ID0000009 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/import_8_ID0000009.out
+RETRY import_8_ID0000009 1
+
+JOB import_5_ID0000006 import_5_ID0000006.sub
+SCRIPT POST import_5_ID0000006 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/import_5_ID0000006.out
+RETRY import_5_ID0000006 1
+
+JOB import_3_ID0000004 import_3_ID0000004.sub
+SCRIPT POST import_3_ID0000004 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/import_3_ID0000004.out
+RETRY import_3_ID0000004 1
+
+JOB import_2_ID0000003 import_2_ID0000003.sub
+SCRIPT POST import_2_ID0000003 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/import_2_ID0000003.out
+RETRY import_2_ID0000003 1
+
+JOB import_9_ID0000010 import_9_ID0000010.sub
+SCRIPT POST import_9_ID0000010 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0  /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/import_9_ID0000010.out
+RETRY import_9_ID0000010 1
+
+JOB clean_up_local_level_3_0 clean_up_local_level_3_0.sub
+SCRIPT POST clean_up_local_level_3_0 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/clean_up_local_level_3_0.out
+RETRY clean_up_local_level_3_0 1
+CATEGORY clean_up_local_level_3_0 cleanup
+
+JOB clean_up_local_level_3_1 clean_up_local_level_3_1.sub
+SCRIPT POST clean_up_local_level_3_1 /usr/bin/pegasus-exitcode   /home/elaine.n.watanabe/sciwonc-dataflow-examples/import/import_10files_mongo_1sh/dags/elaine.n.watanabe/pegasus/example_workflow/20160427T181403+0000/clean_up_local_level_3_1.out
+RETRY clean_up_local_level_3_1 1
+CATEGORY clean_up_local_level_3_1 cleanup
+
+JOB cleanup_example_workflow_0_local cleanup_example_workflow_0_local.sub
+RETRY cleanup_example_workflow_0_local 1
+
+PARENT  stage_in_local_local_0_1 CHILD import_6_ID0000007
+PARENT  stage_in_local_local_0_1 CHILD import_0_ID0000001
+PARENT  stage_in_local_local_0_1 CHILD import_8_ID0000009
+PARENT  stage_in_local_local_0_1 CHILD import_3_ID0000004
+PARENT  stage_in_local_local_0_1 CHILD import_9_ID0000010
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_0_1
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_0_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_remote_local_0_1
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_remote_local_0_0
+PARENT  import_6_ID0000007 CHILD clean_up_local_level_3_0
+PARENT  stage_in_local_local_0_0 CHILD import_1_ID0000002
+PARENT  stage_in_local_local_0_0 CHILD import_7_ID0000008
+PARENT  stage_in_local_local_0_0 CHILD import_4_ID0000005
+PARENT  stage_in_local_local_0_0 CHILD import_5_ID0000006
+PARENT  stage_in_local_local_0_0 CHILD import_2_ID0000003
+PARENT  import_4_ID0000005 CHILD clean_up_local_level_3_0
+PARENT  import_8_ID0000009 CHILD clean_up_local_level_3_1
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_local_local_0_1
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_local_local_0_0
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_remote_local_0_1
+PARENT  stage_worker_local_example_workflow_0_local CHILD stage_in_remote_local_0_0
+PARENT  import_5_ID0000006 CHILD clean_up_local_level_3_1
+PARENT  import_9_ID0000010 CHILD clean_up_local_level_3_1
+PARENT  import_1_ID0000002 CHILD clean_up_local_level_3_0
+PARENT  clean_up_local_level_3_0 CHILD cleanup_example_workflow_0_local
+PARENT  import_7_ID0000008 CHILD clean_up_local_level_3_0
+PARENT  import_0_ID0000001 CHILD clean_up_local_level_3_0
+PARENT  stage_in_remote_local_0_1 CHILD import_1_ID0000002
+PARENT  stage_in_remote_local_0_1 CHILD import_6_ID0000007
+PARENT  stage_in_remote_local_0_1 CHILD import_7_ID0000008
+PARENT  stage_in_remote_local_0_1 CHILD import_0_ID0000001
+PARENT  stage_in_remote_local_0_1 CHILD import_4_ID0000005
+PARENT  stage_in_remote_local_0_1 CHILD import_8_ID0000009
+PARENT  stage_in_remote_local_0_1 CHILD import_5_ID0000006
+PARENT  stage_in_remote_local_0_1 CHILD import_3_ID0000004
+PARENT  stage_in_remote_local_0_1 CHILD import_2_ID0000003
+PARENT  stage_in_remote_local_0_1 CHILD import_9_ID0000010
+PARENT  clean_up_local_level_3_1 CHILD cleanup_example_workflow_0_local
+PARENT  stage_in_remote_local_0_0 CHILD import_1_ID0000002
+PARENT  stage_in_remote_local_0_0 CHILD import_6_ID0000007
+PARENT  stage_in_remote_local_0_0 CHILD import_7_ID0000008
+PARENT  stage_in_remote_local_0_0 CHILD import_0_ID0000001
+PARENT  stage_in_remote_local_0_0 CHILD import_4_ID0000005
+PARENT  stage_in_remote_local_0_0 CHILD import_8_ID0000009
+PARENT  stage_in_remote_local_0_0 CHILD import_5_ID0000006
+PARENT  stage_in_remote_local_0_0 CHILD import_3_ID0000004
+PARENT  stage_in_remote_local_0_0 CHILD import_2_ID0000003
+PARENT  stage_in_remote_local_0_0 CHILD import_9_ID0000010
+PARENT  import_2_ID0000003 CHILD clean_up_local_level_3_1
+PARENT  import_3_ID0000004 CHILD clean_up_local_level_3_1
+######################################################################
+# End of DAG
+######################################################################
