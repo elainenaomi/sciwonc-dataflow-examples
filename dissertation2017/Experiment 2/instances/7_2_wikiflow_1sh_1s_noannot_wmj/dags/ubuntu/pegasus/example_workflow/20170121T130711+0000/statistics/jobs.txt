@@ -1,0 +1,48 @@
+
+# Job            - name of the job
+# Try            - number representing the job instance run count
+# Site           - site where the job ran
+# Kickstart      - actual duration of the job instance in seconds on the
+#                  remote compute node
+# Mult           - multiplier factor specified by the user
+# Kickstart-Mult - Kickstart time multiplied by the multiplier factor
+# CPU-Time       - remote cpu time computed as the stime + utime
+# Post           - postscript time as reported by DAGMan
+# CondorQTime    - time between submission by DAGMan and the remote Grid
+#                  submission. It is an estimate of the time spent in the
+#                  condor q on the submit node
+# Resource       - time between the remote Grid submission and start of
+#                  remote execution. It is an estimate of the time job
+#                  spent in the remote queue
+# Runtime        - time spent on the resource as seen by Condor DAGMan.
+#                  Is always >= Kickstart
+# Seqexec        - time taken for the completion of a clustered job
+# Seqexec-Delay  - time difference between the time for the completion
+#                  of a clustered job and sum of all the individual
+#                  tasks Kickstart time
+# Exitcode       - exitcode for this job
+# Hostname       - name of the host where the job ran, as reported by
+#                  Kickstart
+# 879a6970-f134-4890-a3ff-8b428e3ee74e (example_workflow)
+Job                                 Try Site       Kickstart Mult Kickstart-Mult CPU-Time Post CondorQTime Resource Runtime Seqexec Seqexec-Delay Exitcode Hostname                                    
+create_dir_example_workflow_0_local 1   local      0.0       1    0.0            -        5.0  5.0         -        0.0     -       -             0        None                                        
+stage_in_local_local_0_0            1   local      2.409     1    2.409          0.159    5.0  0.0         -        5.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+stage_in_local_local_4_0            1   local      2.33      1    2.33           0.165    5.0  0.0         -        5.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+stage_in_local_local_1_0            1   local      2.406     1    2.406          0.142    5.0  5.0         -        0.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+stage_in_local_local_2_0            1   local      2.321     1    2.321          0.109    5.0  5.0         -        0.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+stage_in_remote_local_1_0           1   local      2.44      1    2.44           0.176    5.0  5.0         -        0.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+stage_in_local_local_3_0            1   local      2.422     1    2.422          0.146    5.0  0.0         -        5.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+stage_in_remote_local_3_0           1   local      2.319     1    2.319          0.124    5.0  5.0         -        0.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+init_0_ID0000001                    1   condorpool 535.799   1    535.799        0.328    5.0  10.0        -        535.0   -       -             0        ip-172-31-2-76.us-west-2.compute.internal   
+clean_up_local_level_3_0            1   local      2.195     1    2.195          0.141    5.0  0.0         -        5.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+computeusergroup_0_ID0000002        1   condorpool 6144.131  1    6144.131       317.874  5.0  5.0         -        6141.0  -       -             0        ip-172-31-2-76.us-west-2.compute.internal   
+clean_up_local_level_4_0            1   local      4.359     1    4.359          0.167    5.0  0.0         -        5.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+stage_out_local_local_1_0           1   local      2.311     1    2.311          0.161    5.0  5.0         -        5.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+sessioncompute_0_ID0000003          1   condorpool 1466.856  1    1466.856       956.194  5.0  25.0        -        1467.0  -       -             0        ip-172-31-2-76.us-west-2.compute.internal   
+longestsession_0_ID0000004          1   condorpool 19.718    1    19.718         6.242    5.0  5.0         -        20.0    -       -             0        ip-172-31-2-76.us-west-2.compute.internal   
+clean_up_local_level_5_0            1   local      2.259     1    2.259          0.165    5.0  10.0        -        0.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+clean_up_local_level_5_1            1   local      2.234     1    2.234          0.117    5.0  10.0        -        0.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+terminate_0_ID0000005               1   condorpool 0.645     1    0.645          0.196    5.0  5.0         -        0.0     -       -             0        ip-172-31-2-76.us-west-2.compute.internal   
+clean_up_local_level_6_0            1   local      4.155     1    4.155          0.152    5.0  5.0         -        0.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+clean_up_local_level_7_0            1   local      2.154     1    2.154          0.15     5.0  5.0         -        0.0     -       -             0        ip-172-31-10-230.us-west-1.compute.internal 
+cleanup_example_workflow_0_local    1   local      0.0       1    0.0            -        -    5.0         -        0.0     -       -             0        None                                        

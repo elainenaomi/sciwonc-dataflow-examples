@@ -1,0 +1,39 @@
+######################################################################
+# PEGASUS WMS GENERATED SUBMIT FILE
+# DAG : example_workflow, Index = 0, Count = 1
+# SUBMIT FILE NAME : cleanup_example_workflow_0_local.sub
+######################################################################
+stream_error  = false
+stream_output = false
+environment = "CONDOR_JOBID=$(cluster).$(process) PEGASUS_WF_UUID=c2c30026-5042-44af-8e1e-587ef4027422 PEGASUS_WF_LABEL=example_workflow PEGASUS_DAG_JOB_ID=cleanup_example_workflow_0_local PEGASUS_SITE=local "
+copy_to_spool = false
+error = /home/ubuntu/wikiflow/7_2_wikiflow_1sh_1s_noannot_wmj/dags/ubuntu/pegasus/example_workflow/20170121T013654+0000//00/00/cleanup_example_workflow_0_local.err
+executable = /usr/bin/pegasus-transfer
+input = /home/ubuntu/wikiflow/7_2_wikiflow_1sh_1s_noannot_wmj/dags/ubuntu/pegasus/example_workflow/20170121T013654+0000//00/00/cleanup_example_workflow_0_local.in
+log = /home/ubuntu/wikiflow/7_2_wikiflow_1sh_1s_noannot_wmj/dags/ubuntu/pegasus/example_workflow/20170121T013654+0000/example_workflow-0.log
+notification = NEVER
+output = /home/ubuntu/wikiflow/7_2_wikiflow_1sh_1s_noannot_wmj/dags/ubuntu/pegasus/example_workflow/20170121T013654+0000//00/00/cleanup_example_workflow_0_local.out
+periodic_release = False
+periodic_remove = (JobStatus == 5) && ((CurrentTime - EnteredCurrentStatus) > 1800)
+priority = 1000
+submit_event_user_notes = pool:local
+transfer_executable = false
+universe = local
++pegasus_generator = "Pegasus"
++pegasus_root_wf_uuid = "c2c30026-5042-44af-8e1e-587ef4027422"
++pegasus_wf_uuid = "c2c30026-5042-44af-8e1e-587ef4027422"
++pegasus_version = "4.7.0"
++pegasus_wf_name = "example_workflow-0"
++pegasus_wf_time = "20170121T013654+0000"
++pegasus_wf_xformation = "pegasus::cleanup"
++pegasus_wf_dax_job_id = "null"
++pegasus_wf_dag_job_id = "cleanup_example_workflow_0_local"
++pegasus_job_class = 8
++pegasus_site = "local"
++pegasus_job_runtime = 0
++pegasus_cores = 1
++pegasus_cluster_size = 1
+queue
+######################################################################
+# END OF SUBMIT FILE
+######################################################################

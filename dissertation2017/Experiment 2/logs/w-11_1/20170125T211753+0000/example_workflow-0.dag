@@ -1,0 +1,374 @@
+######################################################################
+# PEGASUS WMS GENERATED DAG FILE
+# DAG example_workflow
+# Index = 0, Count = 1
+######################################################################
+MAXJOBS cleanup 4
+
+JOB create_dir_example_workflow_0_local 00/00/create_dir_example_workflow_0_local.sub
+SCRIPT POST create_dir_example_workflow_0_local /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log -r $RETURN .//00/00/create_dir_example_workflow_0_local.out
+RETRY create_dir_example_workflow_0_local 1
+
+JOB stage_in_local_local_0_0 00/00/stage_in_local_local_0_0.sub
+SCRIPT POST stage_in_local_local_0_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/stage_in_local_local_0_0.out
+RETRY stage_in_local_local_0_0 1
+CATEGORY stage_in_local_local_0_0 stage-in
+
+JOB stage_in_local_local_4_0 00/00/stage_in_local_local_4_0.sub
+SCRIPT POST stage_in_local_local_4_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/stage_in_local_local_4_0.out
+RETRY stage_in_local_local_4_0 1
+CATEGORY stage_in_local_local_4_0 stage-in
+
+JOB stage_in_local_local_1_0 00/00/stage_in_local_local_1_0.sub
+SCRIPT POST stage_in_local_local_1_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/stage_in_local_local_1_0.out
+RETRY stage_in_local_local_1_0 1
+CATEGORY stage_in_local_local_1_0 stage-in
+
+JOB stage_in_local_local_2_0 00/00/stage_in_local_local_2_0.sub
+SCRIPT POST stage_in_local_local_2_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/stage_in_local_local_2_0.out
+RETRY stage_in_local_local_2_0 1
+CATEGORY stage_in_local_local_2_0 stage-in
+
+JOB stage_in_local_local_2_1 00/00/stage_in_local_local_2_1.sub
+SCRIPT POST stage_in_local_local_2_1 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/stage_in_local_local_2_1.out
+RETRY stage_in_local_local_2_1 1
+CATEGORY stage_in_local_local_2_1 stage-in
+
+JOB stage_in_remote_local_1_0 00/00/stage_in_remote_local_1_0.sub
+SCRIPT POST stage_in_remote_local_1_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/stage_in_remote_local_1_0.out
+RETRY stage_in_remote_local_1_0 1
+CATEGORY stage_in_remote_local_1_0 stage-in
+
+JOB stage_in_local_local_3_1 00/00/stage_in_local_local_3_1.sub
+SCRIPT POST stage_in_local_local_3_1 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/stage_in_local_local_3_1.out
+RETRY stage_in_local_local_3_1 1
+CATEGORY stage_in_local_local_3_1 stage-in
+
+JOB stage_in_local_local_3_0 00/00/stage_in_local_local_3_0.sub
+SCRIPT POST stage_in_local_local_3_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/stage_in_local_local_3_0.out
+RETRY stage_in_local_local_3_0 1
+CATEGORY stage_in_local_local_3_0 stage-in
+
+JOB stage_in_remote_local_3_1 00/00/stage_in_remote_local_3_1.sub
+SCRIPT POST stage_in_remote_local_3_1 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/stage_in_remote_local_3_1.out
+RETRY stage_in_remote_local_3_1 1
+CATEGORY stage_in_remote_local_3_1 stage-in
+
+JOB stage_in_remote_local_3_0 00/00/stage_in_remote_local_3_0.sub
+SCRIPT POST stage_in_remote_local_3_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/stage_in_remote_local_3_0.out
+RETRY stage_in_remote_local_3_0 1
+CATEGORY stage_in_remote_local_3_0 stage-in
+
+JOB init_0_ID0000001 00/00/init_0_ID0000001.sub
+SCRIPT POST init_0_ID0000001 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/init_0_ID0000001.out
+RETRY init_0_ID0000001 1
+
+JOB clean_up_local_level_3_0 00/00/clean_up_local_level_3_0.sub
+SCRIPT POST clean_up_local_level_3_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/clean_up_local_level_3_0.out
+RETRY clean_up_local_level_3_0 1
+CATEGORY clean_up_local_level_3_0 cleanup
+
+JOB computeusergroup_0_ID0000002 00/00/computeusergroup_0_ID0000002.sub
+SCRIPT POST computeusergroup_0_ID0000002 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/computeusergroup_0_ID0000002.out
+RETRY computeusergroup_0_ID0000002 1
+
+JOB clean_up_local_level_4_0 00/00/clean_up_local_level_4_0.sub
+SCRIPT POST clean_up_local_level_4_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/clean_up_local_level_4_0.out
+RETRY clean_up_local_level_4_0 1
+CATEGORY clean_up_local_level_4_0 cleanup
+
+JOB stage_out_local_local_1_0 00/00/stage_out_local_local_1_0.sub
+SCRIPT POST stage_out_local_local_1_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/stage_out_local_local_1_0.out
+RETRY stage_out_local_local_1_0 1
+CATEGORY stage_out_local_local_1_0 stage-out
+
+JOB stage_out_local_local_1_1 00/00/stage_out_local_local_1_1.sub
+SCRIPT POST stage_out_local_local_1_1 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/stage_out_local_local_1_1.out
+RETRY stage_out_local_local_1_1 1
+CATEGORY stage_out_local_local_1_1 stage-out
+
+JOB sessioncompute_0_ID0000003 00/00/sessioncompute_0_ID0000003.sub
+SCRIPT POST sessioncompute_0_ID0000003 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/sessioncompute_0_ID0000003.out
+RETRY sessioncompute_0_ID0000003 1
+
+JOB sessioncompute_5_ID0000008 00/00/sessioncompute_5_ID0000008.sub
+SCRIPT POST sessioncompute_5_ID0000008 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/sessioncompute_5_ID0000008.out
+RETRY sessioncompute_5_ID0000008 1
+
+JOB sessioncompute_6_ID0000009 00/00/sessioncompute_6_ID0000009.sub
+SCRIPT POST sessioncompute_6_ID0000009 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/sessioncompute_6_ID0000009.out
+RETRY sessioncompute_6_ID0000009 1
+
+JOB sessioncompute_1_ID0000004 00/00/sessioncompute_1_ID0000004.sub
+SCRIPT POST sessioncompute_1_ID0000004 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/sessioncompute_1_ID0000004.out
+RETRY sessioncompute_1_ID0000004 1
+
+JOB sessioncompute_3_ID0000006 00/00/sessioncompute_3_ID0000006.sub
+SCRIPT POST sessioncompute_3_ID0000006 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/sessioncompute_3_ID0000006.out
+RETRY sessioncompute_3_ID0000006 1
+
+JOB sessioncompute_7_ID0000010 00/00/sessioncompute_7_ID0000010.sub
+SCRIPT POST sessioncompute_7_ID0000010 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/sessioncompute_7_ID0000010.out
+RETRY sessioncompute_7_ID0000010 1
+
+JOB sessioncompute_8_ID0000011 00/00/sessioncompute_8_ID0000011.sub
+SCRIPT POST sessioncompute_8_ID0000011 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/sessioncompute_8_ID0000011.out
+RETRY sessioncompute_8_ID0000011 1
+
+JOB sessioncompute_2_ID0000005 00/00/sessioncompute_2_ID0000005.sub
+SCRIPT POST sessioncompute_2_ID0000005 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/sessioncompute_2_ID0000005.out
+RETRY sessioncompute_2_ID0000005 1
+
+JOB sessioncompute_4_ID0000007 00/00/sessioncompute_4_ID0000007.sub
+SCRIPT POST sessioncompute_4_ID0000007 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/sessioncompute_4_ID0000007.out
+RETRY sessioncompute_4_ID0000007 1
+
+JOB longestsession_3_ID0000015 00/00/longestsession_3_ID0000015.sub
+SCRIPT POST longestsession_3_ID0000015 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/longestsession_3_ID0000015.out
+RETRY longestsession_3_ID0000015 1
+
+JOB longestsession_1_ID0000013 00/00/longestsession_1_ID0000013.sub
+SCRIPT POST longestsession_1_ID0000013 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/longestsession_1_ID0000013.out
+RETRY longestsession_1_ID0000013 1
+
+JOB longestsession_6_ID0000018 00/00/longestsession_6_ID0000018.sub
+SCRIPT POST longestsession_6_ID0000018 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/longestsession_6_ID0000018.out
+RETRY longestsession_6_ID0000018 1
+
+JOB longestsession_2_ID0000014 00/00/longestsession_2_ID0000014.sub
+SCRIPT POST longestsession_2_ID0000014 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/longestsession_2_ID0000014.out
+RETRY longestsession_2_ID0000014 1
+
+JOB longestsession_8_ID0000020 00/00/longestsession_8_ID0000020.sub
+SCRIPT POST longestsession_8_ID0000020 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/longestsession_8_ID0000020.out
+RETRY longestsession_8_ID0000020 1
+
+JOB longestsession_7_ID0000019 00/00/longestsession_7_ID0000019.sub
+SCRIPT POST longestsession_7_ID0000019 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/longestsession_7_ID0000019.out
+RETRY longestsession_7_ID0000019 1
+
+JOB clean_up_local_level_5_0 00/00/clean_up_local_level_5_0.sub
+SCRIPT POST clean_up_local_level_5_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/clean_up_local_level_5_0.out
+RETRY clean_up_local_level_5_0 1
+CATEGORY clean_up_local_level_5_0 cleanup
+
+JOB longestsession_0_ID0000012 00/00/longestsession_0_ID0000012.sub
+SCRIPT POST longestsession_0_ID0000012 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/longestsession_0_ID0000012.out
+RETRY longestsession_0_ID0000012 1
+
+JOB longestsession_5_ID0000017 00/00/longestsession_5_ID0000017.sub
+SCRIPT POST longestsession_5_ID0000017 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/longestsession_5_ID0000017.out
+RETRY longestsession_5_ID0000017 1
+
+JOB longestsession_4_ID0000016 00/00/longestsession_4_ID0000016.sub
+SCRIPT POST longestsession_4_ID0000016 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/longestsession_4_ID0000016.out
+RETRY longestsession_4_ID0000016 1
+
+JOB clean_up_local_level_5_1 00/00/clean_up_local_level_5_1.sub
+SCRIPT POST clean_up_local_level_5_1 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/clean_up_local_level_5_1.out
+RETRY clean_up_local_level_5_1 1
+CATEGORY clean_up_local_level_5_1 cleanup
+
+JOB clean_up_local_level_6_0 00/00/clean_up_local_level_6_0.sub
+SCRIPT POST clean_up_local_level_6_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/clean_up_local_level_6_0.out
+RETRY clean_up_local_level_6_0 1
+CATEGORY clean_up_local_level_6_0 cleanup
+
+JOB clean_up_local_level_6_1 00/00/clean_up_local_level_6_1.sub
+SCRIPT POST clean_up_local_level_6_1 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/clean_up_local_level_6_1.out
+RETRY clean_up_local_level_6_1 1
+CATEGORY clean_up_local_level_6_1 cleanup
+
+JOB terminate_0_ID0000021 00/00/terminate_0_ID0000021.sub
+SCRIPT POST terminate_0_ID0000021 /usr/bin/pegasus-exitcode  -s PegasusLite:+exitcode+0 -l example_workflow-0.exitcode.log  .//00/00/terminate_0_ID0000021.out
+RETRY terminate_0_ID0000021 1
+
+JOB clean_up_local_level_7_0 00/00/clean_up_local_level_7_0.sub
+SCRIPT POST clean_up_local_level_7_0 /usr/bin/pegasus-exitcode  -l example_workflow-0.exitcode.log  .//00/00/clean_up_local_level_7_0.out
+RETRY clean_up_local_level_7_0 1
+CATEGORY clean_up_local_level_7_0 cleanup
+
+JOB cleanup_example_workflow_0_local 00/00/cleanup_example_workflow_0_local.sub
+RETRY cleanup_example_workflow_0_local 1
+
+PARENT  clean_up_local_level_4_0 CHILD cleanup_example_workflow_0_local
+PARENT  stage_out_local_local_1_0 CHILD clean_up_local_level_5_0
+PARENT  stage_out_local_local_1_1 CHILD clean_up_local_level_5_0
+PARENT  longestsession_2_ID0000014 CHILD clean_up_local_level_6_0
+PARENT  longestsession_2_ID0000014 CHILD terminate_0_ID0000021
+PARENT  computeusergroup_0_ID0000002 CHILD clean_up_local_level_4_0
+PARENT  computeusergroup_0_ID0000002 CHILD stage_out_local_local_1_0
+PARENT  computeusergroup_0_ID0000002 CHILD stage_out_local_local_1_1
+PARENT  computeusergroup_0_ID0000002 CHILD sessioncompute_0_ID0000003
+PARENT  computeusergroup_0_ID0000002 CHILD sessioncompute_5_ID0000008
+PARENT  computeusergroup_0_ID0000002 CHILD sessioncompute_6_ID0000009
+PARENT  computeusergroup_0_ID0000002 CHILD sessioncompute_1_ID0000004
+PARENT  computeusergroup_0_ID0000002 CHILD sessioncompute_3_ID0000006
+PARENT  computeusergroup_0_ID0000002 CHILD sessioncompute_7_ID0000010
+PARENT  computeusergroup_0_ID0000002 CHILD sessioncompute_8_ID0000011
+PARENT  computeusergroup_0_ID0000002 CHILD sessioncompute_2_ID0000005
+PARENT  computeusergroup_0_ID0000002 CHILD sessioncompute_4_ID0000007
+PARENT  sessioncompute_3_ID0000006 CHILD longestsession_3_ID0000015
+PARENT  sessioncompute_3_ID0000006 CHILD longestsession_1_ID0000013
+PARENT  sessioncompute_3_ID0000006 CHILD longestsession_6_ID0000018
+PARENT  sessioncompute_3_ID0000006 CHILD longestsession_2_ID0000014
+PARENT  sessioncompute_3_ID0000006 CHILD longestsession_8_ID0000020
+PARENT  sessioncompute_3_ID0000006 CHILD longestsession_7_ID0000019
+PARENT  sessioncompute_3_ID0000006 CHILD clean_up_local_level_5_0
+PARENT  sessioncompute_3_ID0000006 CHILD longestsession_0_ID0000012
+PARENT  sessioncompute_3_ID0000006 CHILD longestsession_5_ID0000017
+PARENT  sessioncompute_3_ID0000006 CHILD longestsession_4_ID0000016
+PARENT  longestsession_3_ID0000015 CHILD clean_up_local_level_6_0
+PARENT  longestsession_3_ID0000015 CHILD terminate_0_ID0000021
+PARENT  stage_in_local_local_4_0 CHILD terminate_0_ID0000021
+PARENT  sessioncompute_8_ID0000011 CHILD longestsession_3_ID0000015
+PARENT  sessioncompute_8_ID0000011 CHILD longestsession_1_ID0000013
+PARENT  sessioncompute_8_ID0000011 CHILD longestsession_6_ID0000018
+PARENT  sessioncompute_8_ID0000011 CHILD longestsession_2_ID0000014
+PARENT  sessioncompute_8_ID0000011 CHILD longestsession_8_ID0000020
+PARENT  sessioncompute_8_ID0000011 CHILD longestsession_7_ID0000019
+PARENT  sessioncompute_8_ID0000011 CHILD clean_up_local_level_5_0
+PARENT  sessioncompute_8_ID0000011 CHILD longestsession_0_ID0000012
+PARENT  sessioncompute_8_ID0000011 CHILD longestsession_5_ID0000017
+PARENT  sessioncompute_8_ID0000011 CHILD longestsession_4_ID0000016
+PARENT  longestsession_6_ID0000018 CHILD clean_up_local_level_6_0
+PARENT  longestsession_6_ID0000018 CHILD terminate_0_ID0000021
+PARENT  clean_up_local_level_6_0 CHILD cleanup_example_workflow_0_local
+PARENT  longestsession_7_ID0000019 CHILD clean_up_local_level_6_1
+PARENT  longestsession_7_ID0000019 CHILD terminate_0_ID0000021
+PARENT  longestsession_8_ID0000020 CHILD clean_up_local_level_6_0
+PARENT  longestsession_8_ID0000020 CHILD terminate_0_ID0000021
+PARENT  clean_up_local_level_6_1 CHILD cleanup_example_workflow_0_local
+PARENT  clean_up_local_level_5_0 CHILD cleanup_example_workflow_0_local
+PARENT  clean_up_local_level_5_1 CHILD cleanup_example_workflow_0_local
+PARENT  terminate_0_ID0000021 CHILD clean_up_local_level_7_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_0_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_4_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_1_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_2_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_2_1
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_remote_local_1_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_3_1
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_local_local_3_0
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_remote_local_3_1
+PARENT  create_dir_example_workflow_0_local CHILD stage_in_remote_local_3_0
+PARENT  stage_in_local_local_0_0 CHILD init_0_ID0000001
+PARENT  init_0_ID0000001 CHILD clean_up_local_level_3_0
+PARENT  init_0_ID0000001 CHILD computeusergroup_0_ID0000002
+PARENT  clean_up_local_level_7_0 CHILD cleanup_example_workflow_0_local
+PARENT  stage_in_local_local_2_0 CHILD sessioncompute_1_ID0000004
+PARENT  stage_in_local_local_2_0 CHILD sessioncompute_3_ID0000006
+PARENT  stage_in_local_local_2_0 CHILD sessioncompute_0_ID0000003
+PARENT  stage_in_local_local_2_0 CHILD sessioncompute_4_ID0000007
+PARENT  stage_in_local_local_2_0 CHILD sessioncompute_6_ID0000009
+PARENT  sessioncompute_0_ID0000003 CHILD longestsession_3_ID0000015
+PARENT  sessioncompute_0_ID0000003 CHILD longestsession_1_ID0000013
+PARENT  sessioncompute_0_ID0000003 CHILD longestsession_6_ID0000018
+PARENT  sessioncompute_0_ID0000003 CHILD longestsession_2_ID0000014
+PARENT  sessioncompute_0_ID0000003 CHILD longestsession_8_ID0000020
+PARENT  sessioncompute_0_ID0000003 CHILD longestsession_7_ID0000019
+PARENT  sessioncompute_0_ID0000003 CHILD clean_up_local_level_5_0
+PARENT  sessioncompute_0_ID0000003 CHILD longestsession_0_ID0000012
+PARENT  sessioncompute_0_ID0000003 CHILD longestsession_5_ID0000017
+PARENT  sessioncompute_0_ID0000003 CHILD longestsession_4_ID0000016
+PARENT  sessioncompute_0_ID0000003 CHILD clean_up_local_level_5_1
+PARENT  longestsession_1_ID0000013 CHILD clean_up_local_level_6_0
+PARENT  longestsession_1_ID0000013 CHILD terminate_0_ID0000021
+PARENT  stage_in_local_local_2_1 CHILD sessioncompute_7_ID0000010
+PARENT  stage_in_local_local_2_1 CHILD sessioncompute_8_ID0000011
+PARENT  stage_in_local_local_2_1 CHILD sessioncompute_5_ID0000008
+PARENT  stage_in_local_local_2_1 CHILD sessioncompute_2_ID0000005
+PARENT  sessioncompute_5_ID0000008 CHILD longestsession_3_ID0000015
+PARENT  sessioncompute_5_ID0000008 CHILD longestsession_1_ID0000013
+PARENT  sessioncompute_5_ID0000008 CHILD longestsession_6_ID0000018
+PARENT  sessioncompute_5_ID0000008 CHILD longestsession_2_ID0000014
+PARENT  sessioncompute_5_ID0000008 CHILD longestsession_8_ID0000020
+PARENT  sessioncompute_5_ID0000008 CHILD longestsession_7_ID0000019
+PARENT  sessioncompute_5_ID0000008 CHILD clean_up_local_level_5_0
+PARENT  sessioncompute_5_ID0000008 CHILD longestsession_0_ID0000012
+PARENT  sessioncompute_5_ID0000008 CHILD longestsession_5_ID0000017
+PARENT  sessioncompute_5_ID0000008 CHILD longestsession_4_ID0000016
+PARENT  sessioncompute_5_ID0000008 CHILD clean_up_local_level_5_1
+PARENT  stage_in_local_local_3_1 CHILD longestsession_1_ID0000013
+PARENT  stage_in_local_local_3_1 CHILD longestsession_2_ID0000014
+PARENT  stage_in_local_local_3_1 CHILD longestsession_7_ID0000019
+PARENT  stage_in_local_local_3_1 CHILD longestsession_5_ID0000017
+PARENT  stage_in_remote_local_1_0 CHILD computeusergroup_0_ID0000002
+PARENT  stage_in_local_local_3_0 CHILD longestsession_3_ID0000015
+PARENT  stage_in_local_local_3_0 CHILD longestsession_6_ID0000018
+PARENT  stage_in_local_local_3_0 CHILD longestsession_8_ID0000020
+PARENT  stage_in_local_local_3_0 CHILD longestsession_0_ID0000012
+PARENT  stage_in_local_local_3_0 CHILD longestsession_4_ID0000016
+PARENT  longestsession_0_ID0000012 CHILD clean_up_local_level_6_1
+PARENT  longestsession_0_ID0000012 CHILD terminate_0_ID0000021
+PARENT  sessioncompute_6_ID0000009 CHILD longestsession_3_ID0000015
+PARENT  sessioncompute_6_ID0000009 CHILD longestsession_1_ID0000013
+PARENT  sessioncompute_6_ID0000009 CHILD longestsession_6_ID0000018
+PARENT  sessioncompute_6_ID0000009 CHILD longestsession_2_ID0000014
+PARENT  sessioncompute_6_ID0000009 CHILD longestsession_8_ID0000020
+PARENT  sessioncompute_6_ID0000009 CHILD longestsession_7_ID0000019
+PARENT  sessioncompute_6_ID0000009 CHILD clean_up_local_level_5_0
+PARENT  sessioncompute_6_ID0000009 CHILD longestsession_0_ID0000012
+PARENT  sessioncompute_6_ID0000009 CHILD longestsession_5_ID0000017
+PARENT  sessioncompute_6_ID0000009 CHILD longestsession_4_ID0000016
+PARENT  sessioncompute_6_ID0000009 CHILD clean_up_local_level_5_1
+PARENT  longestsession_4_ID0000016 CHILD clean_up_local_level_6_1
+PARENT  longestsession_4_ID0000016 CHILD terminate_0_ID0000021
+PARENT  sessioncompute_1_ID0000004 CHILD longestsession_3_ID0000015
+PARENT  sessioncompute_1_ID0000004 CHILD longestsession_1_ID0000013
+PARENT  sessioncompute_1_ID0000004 CHILD longestsession_6_ID0000018
+PARENT  sessioncompute_1_ID0000004 CHILD longestsession_2_ID0000014
+PARENT  sessioncompute_1_ID0000004 CHILD longestsession_8_ID0000020
+PARENT  sessioncompute_1_ID0000004 CHILD longestsession_7_ID0000019
+PARENT  sessioncompute_1_ID0000004 CHILD clean_up_local_level_5_0
+PARENT  sessioncompute_1_ID0000004 CHILD longestsession_0_ID0000012
+PARENT  sessioncompute_1_ID0000004 CHILD longestsession_5_ID0000017
+PARENT  sessioncompute_1_ID0000004 CHILD longestsession_4_ID0000016
+PARENT  sessioncompute_7_ID0000010 CHILD longestsession_3_ID0000015
+PARENT  sessioncompute_7_ID0000010 CHILD longestsession_1_ID0000013
+PARENT  sessioncompute_7_ID0000010 CHILD longestsession_6_ID0000018
+PARENT  sessioncompute_7_ID0000010 CHILD longestsession_2_ID0000014
+PARENT  sessioncompute_7_ID0000010 CHILD longestsession_8_ID0000020
+PARENT  sessioncompute_7_ID0000010 CHILD longestsession_7_ID0000019
+PARENT  sessioncompute_7_ID0000010 CHILD clean_up_local_level_5_0
+PARENT  sessioncompute_7_ID0000010 CHILD longestsession_0_ID0000012
+PARENT  sessioncompute_7_ID0000010 CHILD longestsession_5_ID0000017
+PARENT  sessioncompute_7_ID0000010 CHILD longestsession_4_ID0000016
+PARENT  clean_up_local_level_3_0 CHILD cleanup_example_workflow_0_local
+PARENT  stage_in_local_local_1_0 CHILD computeusergroup_0_ID0000002
+PARENT  sessioncompute_4_ID0000007 CHILD longestsession_3_ID0000015
+PARENT  sessioncompute_4_ID0000007 CHILD longestsession_1_ID0000013
+PARENT  sessioncompute_4_ID0000007 CHILD longestsession_6_ID0000018
+PARENT  sessioncompute_4_ID0000007 CHILD longestsession_2_ID0000014
+PARENT  sessioncompute_4_ID0000007 CHILD longestsession_8_ID0000020
+PARENT  sessioncompute_4_ID0000007 CHILD longestsession_7_ID0000019
+PARENT  sessioncompute_4_ID0000007 CHILD clean_up_local_level_5_0
+PARENT  sessioncompute_4_ID0000007 CHILD longestsession_0_ID0000012
+PARENT  sessioncompute_4_ID0000007 CHILD longestsession_5_ID0000017
+PARENT  sessioncompute_4_ID0000007 CHILD longestsession_4_ID0000016
+PARENT  sessioncompute_4_ID0000007 CHILD clean_up_local_level_5_1
+PARENT  sessioncompute_2_ID0000005 CHILD longestsession_3_ID0000015
+PARENT  sessioncompute_2_ID0000005 CHILD longestsession_1_ID0000013
+PARENT  sessioncompute_2_ID0000005 CHILD longestsession_6_ID0000018
+PARENT  sessioncompute_2_ID0000005 CHILD longestsession_2_ID0000014
+PARENT  sessioncompute_2_ID0000005 CHILD longestsession_8_ID0000020
+PARENT  sessioncompute_2_ID0000005 CHILD longestsession_7_ID0000019
+PARENT  sessioncompute_2_ID0000005 CHILD clean_up_local_level_5_0
+PARENT  sessioncompute_2_ID0000005 CHILD longestsession_0_ID0000012
+PARENT  sessioncompute_2_ID0000005 CHILD longestsession_5_ID0000017
+PARENT  sessioncompute_2_ID0000005 CHILD longestsession_4_ID0000016
+PARENT  sessioncompute_2_ID0000005 CHILD clean_up_local_level_5_1
+PARENT  stage_in_remote_local_3_1 CHILD longestsession_1_ID0000013
+PARENT  stage_in_remote_local_3_1 CHILD longestsession_2_ID0000014
+PARENT  stage_in_remote_local_3_1 CHILD longestsession_7_ID0000019
+PARENT  stage_in_remote_local_3_1 CHILD longestsession_5_ID0000017
+PARENT  longestsession_5_ID0000017 CHILD clean_up_local_level_6_1
+PARENT  longestsession_5_ID0000017 CHILD terminate_0_ID0000021
+PARENT  stage_in_remote_local_3_0 CHILD longestsession_3_ID0000015
+PARENT  stage_in_remote_local_3_0 CHILD longestsession_6_ID0000018
+PARENT  stage_in_remote_local_3_0 CHILD longestsession_8_ID0000020
+PARENT  stage_in_remote_local_3_0 CHILD longestsession_0_ID0000012
+PARENT  stage_in_remote_local_3_0 CHILD longestsession_4_ID0000016
+######################################################################
+# End of DAG
+######################################################################

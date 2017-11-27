@@ -1,0 +1,43 @@
+######################################################################
+# PEGASUS WMS GENERATED SUBMIT FILE
+# DAG : example_workflow, Index = 0, Count = 1
+# SUBMIT FILE NAME : averageratioevent_2_ID0000014.sub
+######################################################################
+stream_error  = false
+stream_output = false
+environment = "CONDOR_JOBID=$(cluster).$(process) PEGASUS_WF_UUID=0b779638-3855-436e-99b6-ca8ca1319a07 PEGASUS_WF_LABEL=example_workflow PEGASUS_DAG_JOB_ID=averageratioevent_2_ID0000014 PEGASUS_SITE=condorpool "
++TransferOutput = ""
+copy_to_spool = false
+error = /home/ubuntu/0_experiments/2-mongodb-1sh-1rp-small/6_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161025T080001+0000//00/00/averageratioevent_2_ID0000014.err
+executable = /home/ubuntu/0_experiments/2-mongodb-1sh-1rp-small/6_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161025T080001+0000/00/00/averageratioevent_2_ID0000014.sh
+initialdir = /home/ubuntu/0_experiments/2-mongodb-1sh-1rp-small/6_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/work/ubuntu/pegasus/example_workflow/20161025T080001+0000
+log = /home/ubuntu/0_experiments/2-mongodb-1sh-1rp-small/6_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161025T080001+0000/example_workflow-0.log
+notification = NEVER
+output = /home/ubuntu/0_experiments/2-mongodb-1sh-1rp-small/6_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161025T080001+0000//00/00/averageratioevent_2_ID0000014.out
+periodic_release = False
+periodic_remove = (JobStatus == 5) && ((CurrentTime - EnteredCurrentStatus) > 1800)
+priority = 70
+should_transfer_files = YES
+submit_event_user_notes = pool:condorpool
+transfer_executable = true
+transfer_input_files = example_workflow-averageratioevent_2-1.0,ConfigDB_AverageRatioEvent_2.py,/usr/share/pegasus/sh/pegasus-lite-common.sh,/home/ubuntu/0_experiments/2-mongodb-1sh-1rp-small/6_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161025T080001+0000/pegasus-worker-4.7.0-x86_64_ubuntu_14.tar.gz
+universe = vanilla
+when_to_transfer_output = ON_EXIT
++pegasus_generator = "Pegasus"
++pegasus_root_wf_uuid = "0b779638-3855-436e-99b6-ca8ca1319a07"
++pegasus_wf_uuid = "0b779638-3855-436e-99b6-ca8ca1319a07"
++pegasus_version = "4.7.0"
++pegasus_wf_name = "example_workflow-0"
++pegasus_wf_time = "20161025T080001+0000"
++pegasus_wf_xformation = "example_workflow::averageratioevent_2:1.0"
++pegasus_wf_dax_job_id = "ID0000014"
++pegasus_wf_dag_job_id = "averageratioevent_2_ID0000014"
++pegasus_job_class = 1
++pegasus_site = "condorpool"
++pegasus_job_runtime = 0
++pegasus_cores = 1
++pegasus_cluster_size = 1
+queue
+######################################################################
+# END OF SUBMIT FILE
+######################################################################

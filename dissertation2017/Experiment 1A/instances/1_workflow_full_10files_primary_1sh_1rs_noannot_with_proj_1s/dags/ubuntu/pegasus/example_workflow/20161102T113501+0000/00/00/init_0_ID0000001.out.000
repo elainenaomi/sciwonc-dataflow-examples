@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocation xmlns="http://pegasus.isi.edu/schema/invocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pegasus.isi.edu/schema/invocation http://pegasus.isi.edu/schema/iv-2.3.xsd" version="2.3" start="2016-11-02T11:36:03.143+00:00" duration="182.164" transformation="example_workflow::init_0:1.0" derivation="ID0000001" resource="condorpool" wf-label="example_workflow" wf-stamp="2016-11-02T11:35:01+00:00" interface="eth0" hostaddr="172.31.28.254" hostname="ip-172-31-28-254.us-west-2.compute.internal" pid="10207" uid="65534" user="nobody" gid="65534" group="nogroup" umask="0022">
+  <mainjob start="2016-11-02T11:36:03.156+00:00" duration="182.151" pid="10208">
+    <usage utime="0.063" stime="0.010" maxrss="11852" minflt="3447" majflt="0" nswap="0" inblock="0" outblock="16" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="35" nivcsw="16"/>
+    <status raw="0"><regular exitcode="0"/></status>
+    <statcall error="0">
+      <file name="/var/lib/condor/execute/dir_10127/example_workflow-init_0-1.0">23212F7573722F62696E2F656E762070</file>
+      <statinfo mode="0100755" size="762" inode="524368" nlink="1" blksize="4096" blocks="8" mtime="2016-11-02T11:36:02+00:00" atime="2016-11-02T11:36:02+00:00" ctime="2016-11-02T11:36:03+00:00" uid="65534" user="nobody" gid="65534" group="nogroup"/>
+    </statcall>
+    <argument-vector/>
+  </mainjob>
+  <jobids condor="1850.0"/>
+  <cwd>/var/lib/condor/execute/dir_10127</cwd>
+  <usage utime="0.000" stime="0.013" maxrss="828" minflt="523" majflt="0" nswap="0" inblock="0" outblock="0" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="1" nivcsw="2"/>
+  <machine page-size="4096">
+    <stamp>2016-11-02T11:36:03.143+00:00</stamp>
+    <uname system="linux" nodename="ip-172-31-28-254" release="3.13.0-92-generic" machine="x86_64">#139-Ubuntu SMP Tue Jun 28 20:42:26 UTC 2016</uname>
+    <linux>
+      <ram total="3854828" free="3382880" shared="0" buffer="108664"/>
+      <swap total="0" free="0"/>
+      <boot idle="126158.350">2016-11-01T00:05:02.034+00:00</boot>
+      <cpu count="1" speed="2494" vendor="GenuineIntel">Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz</cpu>
+      <load min1="0.00" min5="0.01" min15="0.05"/>
+      <procs total="100" running="1" sleeping="99" vmsize="912880" rss="49392"/>
+      <task total="103" running="1" sleeping="102"/>
+    </linux>
+  </machine>
+  <statcall error="0" id="stdin">
+    <file name="/dev/null"/>
+    <statinfo mode="020666" size="0" inode="5430" nlink="1" blksize="4096" blocks="0" mtime="2016-11-01T00:05:07+00:00" atime="2016-11-01T00:05:07+00:00" ctime="2016-11-01T00:05:07+00:00" uid="0" user="root" gid="0" group="root"/>
+  </statcall>
+  <statcall error="0" id="stdout">
+    <temporary name="/var/lib/condor/execute/dir_10127/ks.out.d4lk9F" descriptor="3"/>
+    <statinfo mode="0100600" size="4665" inode="524371" nlink="1" blksize="4096" blocks="16" mtime="2016-11-02T11:39:05+00:00" atime="2016-11-02T11:36:03+00:00" ctime="2016-11-02T11:39:05+00:00" uid="65534" user="nobody" gid="65534" group="nogroup"/>
+    <data>/var/lib/condor/execute/dir_10127/2_create_schema.txt
+STATEMENT: DROP TABLE IF EXISTS analysis_ratio CASCADE
+STATEMENT: 
+CREATE TABLE IF NOT EXISTS analysis_ratio
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_event_type varchar(255),
+  g_task_type varchar(255),
+  g_total_task_type varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+)
+STATEMENT: 
+CREATE INDEX ON analysis_ratio(g_filepath, g_numline)
+STATEMENT: 
+
+DROP TABLE IF EXISTS average_ratioevent CASCADE
+STATEMENT: 
+CREATE TABLE IF NOT EXISTS average_ratioevent
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_total_cpu_task varchar(255),
+  g_event_type varchar(255),
+  g_total_balanced_task varchar(255),
+  g_total_memory_task varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+)
+STATEMENT: 
+CREATE INDEX ON average_ratioevent(g_filepath, g_numline)
+STATEMENT: 
+
+DROP TABLE IF EXISTS general_info CASCADE
+STATEMENT: 
+CREATE TABLE IF NOT EXISTS general_info
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_interval_seconds varchar(255),
+  g_min_timestamp varchar(255),
+  g_max_timestamp varchar(255),
+  g_total_items varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+)
+STATEMENT: 
+CREATE INDEX ON general_info(g_filepath, g_numline)
+STATEMENT: 
+
+DROP TABLE IF EXISTS median_cpu CASCADE
+STATEMENT: 
+CREATE TABLE IF NOT EXISTS median_cpu
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_median_cpu varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+)
+STATEMENT: 
+CREATE INDEX ON median_cpu(g_filepath, g_numline)
+STATEMENT: 
+
+DROP TABLE IF EXISTS median_memory CASCADE
+STATEMENT: 
+CREATE TABLE IF NOT EXISTS median_memory
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_median_memory varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+)
+STATEMENT: 
+CREATE INDEX ON median_memory(g_filepath, g_numline)
+STATEMENT: 
+
+DROP TABLE IF EXISTS ratio CASCADE
+STATEMENT: 
+CREATE TABLE IF NOT EXISTS ratio
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_sds_from_event_avg_ratio varchar(255),
+  g_sds_from_all_avg_cpu varchar(255),
+  g_sds_from_event_avg_memory varchar(255),
+  g_ratio_cpu_memory varchar(255),
+  g_sds_from_all_avg_memory varchar(255),
+  g_job_ID varchar(255),
+  g_sds_from_event_avg_cpu varchar(255),
+  g_sds_from_all_avg_ratio varchar(255),
+  g_time varchar(255),
+  g_event_type varchar(255),
+  g_task_index varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+)
+STATEMENT: 
+CREATE INDEX ON ratio(g_filepath, g_numline)
+STATEMENT: 
+
+DROP TABLE IF EXISTS stats_cpumemory CASCADE
+STATEMENT: 
+CREATE TABLE IF NOT EXISTS stats_cpumemory
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_sum_cpu varchar(255),
+  g_sum_ratio varchar(255),
+  g_variance_cpu varchar(255),
+  g_average_ratio varchar(255),
+  g_sum_variance_cpu varchar(255),
+  g_standard_deviation_ratio varchar(255),
+  g_sum_variance_ratio varchar(255),
+  g_total_tasks varchar(255),
+  g_average_cpu varchar(255),
+  g_standard_deviation_cpu varchar(255),
+  g_sum_memory varchar(255),
+  g_variance_ratio varchar(255),
+  g_variance_memory varchar(255),
+  g_sum_variance_memory varchar(255),
+  g_average_memory varchar(255),
+  g_total_valid_tasks varchar(255),
+  g_standard_deviation_memory varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+)
+STATEMENT: 
+CREATE INDEX ON stats_cpumemory(g_filepath, g_numline)
+STATEMENT: 
+
+DROP TABLE IF EXISTS task_events_info CASCADE
+STATEMENT: 
+CREATE TABLE IF NOT EXISTS task_events_info
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_sum_cpu varchar(255),
+  g_sum_ratio varchar(255),
+  g_sds_from_avg_cpu varchar(255),
+  g_variance_cpu varchar(255),
+  g_average_cpu varchar(255),
+  g_total_tasks varchar(255),
+  g_standard_deviation_ratio varchar(255),
+  g_variance_memory varchar(255),
+  g_average_ratio varchar(255),
+  g_standard_deviation_cpu varchar(255),
+  g_sum_memory varchar(255),
+  g_standard_deviation_memory varchar(255),
+  g_sds_from_avg_memory varchar(255),
+  g_total_valid_tasks varchar(255),
+  g_average_memory varchar(255),
+  g_event_type varchar(255),
+  g_percentagem_from_total varchar(255),
+  g_variance_ratio varchar(255),
+  g_sds_from_avg_ratio varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+)
+STATEMENT: 
+CREATE INDEX ON task_events_info(g_filepath, g_numline)
+STATEMENT: 
+
+CREATE INDEX ON task_events(g_cpu_request)
+STATEMENT: 
+CREATE INDEX ON task_events(g_memory_request)
+</data>
+  </statcall>
+  <statcall error="0" id="stderr">
+    <temporary name="/var/lib/condor/execute/dir_10127/ks.err.WdUtG1" descriptor="4"/>
+    <statinfo mode="0100600" size="0" inode="524673" nlink="1" blksize="4096" blocks="0" mtime="2016-11-02T11:36:03+00:00" atime="2016-11-02T11:36:03+00:00" ctime="2016-11-02T11:36:03+00:00" uid="65534" user="nobody" gid="65534" group="nogroup"/>
+  </statcall>
+  <statcall error="0" id="metadata">
+    <temporary name="/var/lib/condor/execute/dir_10127/ks.meta.XIuDdn" descriptor="5"/>
+    <statinfo mode="0100600" size="0" inode="524674" nlink="1" blksize="4096" blocks="0" mtime="2016-11-02T11:36:03+00:00" atime="2016-11-02T11:36:03+00:00" ctime="2016-11-02T11:36:03+00:00" uid="65534" user="nobody" gid="65534" group="nogroup"/>
+  </statcall>
+</invocation>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocation xmlns="http://pegasus.isi.edu/schema/invocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pegasus.isi.edu/schema/invocation http://pegasus.isi.edu/schema/iv-2.3.xsd" version="2.3" start="2016-12-02T06:04:54.224+00:00" duration="0.712" transformation="example_workflow::calculateratio_6:1.0" derivation="ID0000021" resource="condorpool" wf-label="example_workflow" wf-stamp="2016-12-02T01:43:15+00:00" interface="eth0" hostaddr="172.31.29.108" hostname="ip-172-31-29-108.us-west-2.compute.internal" pid="77364" uid="65534" user="nobody" gid="65534" group="nogroup" umask="0022">
+  <mainjob start="2016-12-02T06:04:54.237+00:00" duration="0.699" pid="77365">
+    <usage utime="0.092" stime="0.056" maxrss="13640" minflt="5779" majflt="0" nswap="0" inblock="0" outblock="40" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="269" nivcsw="138"/>
+    <status raw="0"><regular exitcode="0"/></status>
+    <statcall error="0">
+      <file name="/var/lib/condor/execute/dir_77284/example_workflow-calculateratio_6-1.0">23212F7573722F62696E2F656E762070</file>
+      <statinfo mode="0100755" size="4757" inode="524446" nlink="1" blksize="4096" blocks="16" mtime="2016-12-02T06:04:53+00:00" atime="2016-12-02T06:04:53+00:00" ctime="2016-12-02T06:04:54+00:00" uid="65534" user="nobody" gid="65534" group="nogroup"/>
+    </statcall>
+    <argument-vector/>
+  </mainjob>
+  <jobids condor="7861.0"/>
+  <cwd>/var/lib/condor/execute/dir_77284</cwd>
+  <usage utime="0.000" stime="0.013" maxrss="820" minflt="544" majflt="0" nswap="0" inblock="0" outblock="0" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="1" nivcsw="2"/>
+  <machine page-size="4096">
+    <stamp>2016-12-02T06:04:54.224+00:00</stamp>
+    <uname system="linux" nodename="ip-172-31-29-108" release="3.13.0-92-generic" machine="x86_64">#139-Ubuntu SMP Tue Jun 28 20:42:26 UTC 2016</uname>
+    <linux>
+      <ram total="3854828" free="3526428" shared="0" buffer="108100"/>
+      <swap total="0" free="0"/>
+      <boot idle="928424.780">2016-11-19T01:12:38.214+00:00</boot>
+      <cpu count="1" speed="2494" vendor="GenuineIntel">Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz</cpu>
+      <load min1="0.73" min5="0.92" min15="0.93"/>
+      <procs total="101" running="1" sleeping="100" vmsize="1248236" rss="154812"/>
+      <task total="123" running="1" sleeping="122"/>
+    </linux>
+  </machine>
+  <statcall error="0" id="stdin">
+    <file name="/dev/null"/>
+    <statinfo mode="020666" size="0" inode="5430" nlink="1" blksize="4096" blocks="0" mtime="2016-11-19T01:12:43+00:00" atime="2016-11-19T01:12:43+00:00" ctime="2016-11-19T01:12:43+00:00" uid="0" user="root" gid="0" group="root"/>
+  </statcall>
+  <statcall error="0" id="stdout">
+    <temporary name="/var/lib/condor/execute/dir_77284/ks.out.x0WD2a" descriptor="3"/>
+    <statinfo mode="0100600" size="6264" inode="524451" nlink="1" blksize="4096" blocks="16" mtime="2016-12-02T06:04:54+00:00" atime="2016-12-02T06:04:54+00:00" ctime="2016-12-02T06:04:54+00:00" uid="65534" user="nobody" gid="65534" group="nogroup"/>
+    <data>Init DataStore
+Getting data from server
+Init MongoDB
+Getting data from MongoDB ALL
+Query:{}
+{&apos;average cpu&apos;: &apos;true&apos;, &apos;standard deviation ratio&apos;: &apos;true&apos;, &apos;average ratio&apos;: &apos;true&apos;, &apos;standard deviation cpu&apos;: &apos;true&apos;, &apos;average memory&apos;: &apos;true&apos;, &apos;standard deviation memory&apos;: &apos;true&apos;}
+I am a MongoDB Connection
+&lt;class &apos;collections.OrderedDict&apos;&gt;
+mongodb://ip-172-31-29-102.us-west-2.compute.internal:27017,ip-172-31-29-103.us-west-2.compute.internal:27017,ip-172-31-29-104.us-west-2.compute.internal:27017,ip-172-31-29-105.us-west-2.compute.internal:27017,ip-172-31-29-101.us-west-2.compute.internal:27017,ip-172-31-29-106.us-west-2.compute.internal:27017,ip-172-31-29-107.us-west-2.compute.internal:27017,ip-172-31-29-108.us-west-2.compute.internal:27017,ip-172-31-29-109.us-west-2.compute.internal:27017
+primary
+Primary()
+Init DataStore
+Getting data from server
+Init MongoDB
+
+Getting data from MongoDB Group By Column
+Query:{&apos;event type&apos;: &apos;0&apos;}
+PROJ - {&apos;average cpu&apos;: &apos;true&apos;, &apos;standard deviation ratio&apos;: &apos;true&apos;, &apos;average ratio&apos;: &apos;true&apos;, &apos;standard deviation cpu&apos;: &apos;true&apos;, &apos;average memory&apos;: &apos;true&apos;, &apos;event type&apos;: &apos;true&apos;, &apos;standard deviation memory&apos;: &apos;true&apos;}
+SORT - [(&apos;_id.filepath&apos;, 1), (&apos;_id.numline&apos;, 1)]
+I am a MongoDB Connection
+&lt;class &apos;collections.OrderedDict&apos;&gt;
+mongodb://ip-172-31-29-102.us-west-2.compute.internal:27017,ip-172-31-29-103.us-west-2.compute.internal:27017,ip-172-31-29-104.us-west-2.compute.internal:27017,ip-172-31-29-105.us-west-2.compute.internal:27017,ip-172-31-29-101.us-west-2.compute.internal:27017,ip-172-31-29-106.us-west-2.compute.internal:27017,ip-172-31-29-107.us-west-2.compute.internal:27017,ip-172-31-29-108.us-west-2.compute.internal:27017,ip-172-31-29-109.us-west-2.compute.internal:27017
+primary
+Primary()
+
+Getting data from MongoDB Group By Column
+Query:{&apos;event type&apos;: &apos;1&apos;}
+PROJ - {&apos;average cpu&apos;: &apos;true&apos;, &apos;standard deviation ratio&apos;: &apos;true&apos;, &apos;average ratio&apos;: &apos;true&apos;, &apos;standard deviation cpu&apos;: &apos;true&apos;, &apos;average memory&apos;: &apos;true&apos;, &apos;event type&apos;: &apos;true&apos;, &apos;standard deviation memory&apos;: &apos;true&apos;}
+SORT - [(&apos;_id.filepath&apos;, 1), (&apos;_id.numline&apos;, 1)]
+I am a MongoDB Connection
+&lt;class &apos;collections.OrderedDict&apos;&gt;
+
+Getting data from MongoDB Group By Column
+Query:{&apos;event type&apos;: &apos;2&apos;}
+PROJ - {&apos;average cpu&apos;: &apos;true&apos;, &apos;standard deviation ratio&apos;: &apos;true&apos;, &apos;average ratio&apos;: &apos;true&apos;, &apos;standard deviation cpu&apos;: &apos;true&apos;, &apos;average memory&apos;: &apos;true&apos;, &apos;event type&apos;: &apos;true&apos;, &apos;standard deviation memory&apos;: &apos;true&apos;}
+SORT - [(&apos;_id.filepath&apos;, 1), (&apos;_id.numline&apos;, 1)]
+I am a MongoDB Connection
+&lt;class &apos;collections.OrderedDict&apos;&gt;
+
+Getting data from MongoDB Group By Column
+Query:{&apos;event type&apos;: &apos;3&apos;}
+PROJ - {&apos;average cpu&apos;: &apos;true&apos;, &apos;standard deviation ratio&apos;: &apos;true&apos;, &apos;average ratio&apos;: &apos;true&apos;, &apos;standard deviation cpu&apos;: &apos;true&apos;, &apos;average memory&apos;: &apos;true&apos;, &apos;event type&apos;: &apos;true&apos;, &apos;standard deviation memory&apos;: &apos;true&apos;}
+SORT - [(&apos;_id.filepath&apos;, 1), (&apos;_id.numline&apos;, 1)]
+I am a MongoDB Connection
+&lt;class &apos;collections.OrderedDict&apos;&gt;
+
+Getting data from MongoDB Group By Column
+Query:{&apos;event type&apos;: &apos;4&apos;}
+PROJ - {&apos;average cpu&apos;: &apos;true&apos;, &apos;standard deviation ratio&apos;: &apos;true&apos;, &apos;average ratio&apos;: &apos;true&apos;, &apos;standard deviation cpu&apos;: &apos;true&apos;, &apos;average memory&apos;: &apos;true&apos;, &apos;event type&apos;: &apos;true&apos;, &apos;standard deviation memory&apos;: &apos;true&apos;}
+SORT - [(&apos;_id.filepath&apos;, 1), (&apos;_id.numline&apos;, 1)]
+I am a MongoDB Connection
+&lt;class &apos;collections.OrderedDict&apos;&gt;
+
+Getting data from MongoDB Group By Column
+Query:{&apos;event type&apos;: &apos;5&apos;}
+PROJ - {&apos;average cpu&apos;: &apos;true&apos;, &apos;standard deviation ratio&apos;: &apos;true&apos;, &apos;average ratio&apos;: &apos;true&apos;, &apos;standard deviation cpu&apos;: &apos;true&apos;, &apos;average memory&apos;: &apos;true&apos;, &apos;event type&apos;: &apos;true&apos;, &apos;standard deviation memory&apos;: &apos;true&apos;}
+SORT - [(&apos;_id.filepath&apos;, 1), (&apos;_id.numline&apos;, 1)]
+I am a MongoDB Connection
+&lt;class &apos;collections.OrderedDict&apos;&gt;
+
+Getting data from MongoDB Group By Column
+Query:{&apos;event type&apos;: &apos;6&apos;}
+PROJ - {&apos;average cpu&apos;: &apos;true&apos;, &apos;standard deviation ratio&apos;: &apos;true&apos;, &apos;average ratio&apos;: &apos;true&apos;, &apos;standard deviation cpu&apos;: &apos;true&apos;, &apos;average memory&apos;: &apos;true&apos;, &apos;event type&apos;: &apos;true&apos;, &apos;standard deviation memory&apos;: &apos;true&apos;}
+SORT - [(&apos;_id.filepath&apos;, 1), (&apos;_id.numline&apos;, 1)]
+I am a MongoDB Connection
+&lt;class &apos;collections.OrderedDict&apos;&gt;
+
+Getting data from MongoDB Group By Column
+Query:{&apos;event type&apos;: &apos;7&apos;}
+PROJ - {&apos;average cpu&apos;: &apos;true&apos;, &apos;standard deviation ratio&apos;: &apos;true&apos;, &apos;average ratio&apos;: &apos;true&apos;, &apos;standard deviation cpu&apos;: &apos;true&apos;, &apos;average memory&apos;: &apos;true&apos;, &apos;event type&apos;: &apos;true&apos;, &apos;standard deviation memory&apos;: &apos;true&apos;}
+SORT - [(&apos;_id.filepath&apos;, 1), (&apos;_id.numline&apos;, 1)]
+I am a MongoDB Connection
+&lt;class &apos;collections.OrderedDict&apos;&gt;
+
+Getting data from MongoDB Group By Column
+Query:{&apos;event type&apos;: &apos;8&apos;}
+PROJ - {&apos;average cpu&apos;: &apos;true&apos;, &apos;standard deviation ratio&apos;: &apos;true&apos;, &apos;average ratio&apos;: &apos;true&apos;, &apos;standard deviation cpu&apos;: &apos;true&apos;, &apos;average memory&apos;: &apos;true&apos;, &apos;event type&apos;: &apos;true&apos;, &apos;standard deviation memory&apos;: &apos;true&apos;}
+SORT - [(&apos;_id.filepath&apos;, 1), (&apos;_id.numline&apos;, 1)]
+I am a MongoDB Connection
+&lt;class &apos;collections.OrderedDict&apos;&gt;
+Init DataStore
+Getting data from server
+Init MongoDB
+OrderedDict([(&apos;filepath&apos;, &apos;part-00100-of-00500.csv.gz&apos;), (&apos;numline&apos;, 1)])
+OrderedDict([(&apos;filepath&apos;, &apos;part-00116-of-00500.csv.gz&apos;), (&apos;numline&apos;, 192864)])
+OrderedDict([(&apos;_id&apos;, OrderedDict([(&apos;$lte&apos;, OrderedDict([(&apos;filepath&apos;, &apos;part-00116-of-00500.csv.gz&apos;), (&apos;numline&apos;, 192864)])), (&apos;$gte&apos;, OrderedDict([(&apos;filepath&apos;, &apos;part-00100-of-00500.csv.gz&apos;), (&apos;numline&apos;, 1)]))]))])
+Getting data from MongoDB
+Unit Method
+{&apos;CPU request&apos;: &apos;true&apos;, &apos;job ID&apos;: &apos;true&apos;, &apos;memory request&apos;: &apos;true&apos;, &apos;time&apos;: &apos;true&apos;, &apos;event type&apos;: &apos;true&apos;, &apos;task index&apos;: &apos;true&apos;}
+Query - OrderedDict([(&apos;_id&apos;, OrderedDict([(&apos;$lte&apos;, OrderedDict([(&apos;filepath&apos;, &apos;part-00116-of-00500.csv.gz&apos;), (&apos;numline&apos;, 192864)])), (&apos;$gte&apos;, OrderedDict([(&apos;filepath&apos;, &apos;part-00100-of-00500.csv.gz&apos;), (&apos;numline&apos;, 1)]))]))])
+[(&apos;_id.filepath&apos;, 1), (&apos;_id.numline&apos;, 1)]
+
+
+I am a MongoDB Connection
+&lt;class &apos;collections.OrderedDict&apos;&gt;
+mongodb://ip-172-31-29-102.us-west-2.compute.internal:27017,ip-172-31-29-103.us-west-2.compute.internal:27017,ip-172-31-29-104.us-west-2.compute.internal:27017,ip-172-31-29-105.us-west-2.compute.internal:27017,ip-172-31-29-101.us-west-2.compute.internal:27017,ip-172-31-29-106.us-west-2.compute.internal:27017,ip-172-31-29-107.us-west-2.compute.internal:27017,ip-172-31-29-108.us-west-2.compute.internal:27017,ip-172-31-29-109.us-west-2.compute.internal:27017
+primary
+Primary()
+=================
+finish
+[]
+0
+1
+</data>
+  </statcall>
+  <statcall error="0" id="stderr">
+    <temporary name="/var/lib/condor/execute/dir_77284/ks.err.qCnkjT" descriptor="4"/>
+    <statinfo mode="0100600" size="0" inode="524764" nlink="1" blksize="4096" blocks="0" mtime="2016-12-02T06:04:54+00:00" atime="2016-12-02T06:04:54+00:00" ctime="2016-12-02T06:04:54+00:00" uid="65534" user="nobody" gid="65534" group="nogroup"/>
+  </statcall>
+  <statcall error="0" id="metadata">
+    <temporary name="/var/lib/condor/execute/dir_77284/ks.meta.2Tq0zB" descriptor="5"/>
+    <statinfo mode="0100600" size="0" inode="524765" nlink="1" blksize="4096" blocks="0" mtime="2016-12-02T06:04:54+00:00" atime="2016-12-02T06:04:54+00:00" ctime="2016-12-02T06:04:54+00:00" uid="65534" user="nobody" gid="65534" group="nogroup"/>
+  </statcall>
+</invocation>

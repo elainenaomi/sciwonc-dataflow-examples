@@ -1,0 +1,79 @@
+
+# Job            - name of the job
+# Try            - number representing the job instance run count
+# Site           - site where the job ran
+# Kickstart      - actual duration of the job instance in seconds on the
+#                  remote compute node
+# Mult           - multiplier factor specified by the user
+# Kickstart-Mult - Kickstart time multiplied by the multiplier factor
+# CPU-Time       - remote cpu time computed as the stime + utime
+# Post           - postscript time as reported by DAGMan
+# CondorQTime    - time between submission by DAGMan and the remote Grid
+#                  submission. It is an estimate of the time spent in the
+#                  condor q on the submit node
+# Resource       - time between the remote Grid submission and start of
+#                  remote execution. It is an estimate of the time job
+#                  spent in the remote queue
+# Runtime        - time spent on the resource as seen by Condor DAGMan.
+#                  Is always >= Kickstart
+# Seqexec        - time taken for the completion of a clustered job
+# Seqexec-Delay  - time difference between the time for the completion
+#                  of a clustered job and sum of all the individual
+#                  tasks Kickstart time
+# Exitcode       - exitcode for this job
+# Hostname       - name of the host where the job ran, as reported by
+#                  Kickstart
+# 5e7e2581-c98a-4ddd-9b12-3f335003f2a7 (example_workflow)
+Job                                 Try Site       Kickstart Mult Kickstart-Mult CPU-Time Post CondorQTime Resource Runtime Seqexec Seqexec-Delay Exitcode Hostname                                    
+create_dir_example_workflow_0_local 1   local      0.0       1    0.0            -        5.0  5.0         -        0.0     -       -             0        None                                        
+stage_in_local_local_0_0            1   local      2.238     1    2.238          0.157    5.0  0.0         -        6.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_local_local_6_0            1   local      2.599     1    2.599          0.163    5.0  6.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_remote_local_2_1           1   local      2.432     1    2.432          0.113    5.0  6.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_remote_local_5_1           1   local      2.461     1    2.461          0.157    5.0  6.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_remote_local_5_0           1   local      4.416     1    4.416          0.11     5.0  6.0         -        5.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_local_local_2_0            1   local      4.331     1    4.331          0.122    5.0  0.0         -        5.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_local_local_2_1            1   local      2.31      1    2.31           0.146    5.0  0.0         -        5.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_local_local_3_1            1   local      2.296     1    2.296          0.103    5.0  5.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_remote_local_1_0           1   local      2.421     1    2.421          0.166    5.0  5.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_local_local_3_0            1   local      4.367     1    4.367          0.142    6.0  5.0         -        5.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_local_local_5_0            1   local      4.561     1    4.561          0.139    5.0  5.0         -        6.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_local_local_5_1            1   local      2.497     1    2.497          0.108    6.0  5.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_local_local_4_0            1   local      4.596     1    4.596          0.169    5.0  5.0         -        6.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_local_local_1_0            1   local      2.589     1    2.589          0.134    6.0  5.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_local_local_7_0            1   local      2.716     1    2.716          0.17     6.0  5.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_local_local_4_1            1   local      2.765     1    2.765          0.158    5.0  6.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_remote_local_4_1           1   local      4.583     1    4.583          0.119    5.0  6.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_remote_local_4_0           1   local      4.708     1    4.708          0.145    5.0  6.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_remote_local_2_0           1   local      4.628     1    4.628          0.132    5.0  6.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_remote_local_3_1           1   local      4.683     1    4.683          0.187    5.0  6.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_remote_local_3_0           1   local      4.428     1    4.428          0.17     5.0  0.0         -        5.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+stage_in_remote_local_6_0           1   local      2.291     1    2.291          0.123    5.0  0.0         -        5.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+init_0_ID0000001                    1   condorpool 42.17     1    42.17          0.122    5.0  20.0        -        45.0    -       -             0        ip-172-31-24-255.us-west-2.compute.internal 
+clean_up_local_level_3_0            1   local      2.166     1    2.166          0.103    5.0  0.0         -        5.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+generalinfo_0_ID0000002             1   condorpool 249.812   1    249.812        239.905  5.0  5.0         -        250.0   -       -             0        ip-172-31-24-255.us-west-2.compute.internal 
+clean_up_local_level_4_0            1   local      4.24      1    4.24           0.123    5.0  0.0         -        5.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+statscpumemory_0_ID0000003          1   condorpool 520.986   1    520.986        501.835  5.0  5.0         -        521.0   -       -             0        ip-172-31-24-255.us-west-2.compute.internal 
+medianmemory_0_ID0000005            1   condorpool 516.036   1    516.036        498.17   5.0  20.0        -        516.0   -       -             0        ip-172-31-25-0.us-west-2.compute.internal   
+mediancpu_0_ID0000004               1   condorpool 560.347   1    560.347        543.004  5.0  20.0        -        561.0   -       -             0        ip-172-31-20-25.us-west-2.compute.internal  
+clean_up_local_level_5_0            1   local      8.307     1    8.307          0.178    5.0  5.0         -        5.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+taskevent_0_ID0000006               1   condorpool 572.267   1    572.267        372.74   5.0  5.0         -        570.0   -       -             0        ip-172-31-20-25.us-west-2.compute.internal  
+taskevent_1_ID0000007               1   condorpool 362.649   1    362.649        144.402  5.0  25.0        -        360.0   -       -             0        ip-172-31-24-255.us-west-2.compute.internal 
+taskevent_2_ID0000008               1   condorpool 224.488   1    224.488        13.58    5.0  25.0        -        225.0   -       -             0        ip-172-31-25-0.us-west-2.compute.internal   
+clean_up_local_level_5_1            1   local      4.136     1    4.136          0.138    5.0  10.0        -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+clean_up_local_level_6_1            1   local      8.141     1    8.141          0.143    5.0  5.0         -        5.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+clean_up_local_level_6_0            1   local      16.275    1    16.275         0.183    5.0  0.0         -        20.0    -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+calculateratio_2_ID0000011          1   condorpool 284.681   1    284.681        150.119  5.0  5.0         -        285.0   -       -             0        ip-172-31-20-25.us-west-2.compute.internal  
+calculateratio_1_ID0000010          1   condorpool 316.81    1    316.81         155.446  5.0  20.0        -        315.0   -       -             0        ip-172-31-24-255.us-west-2.compute.internal 
+calculateratio_0_ID0000009          1   condorpool 289.725   1    289.725        143.05   5.0  20.0        -        290.0   -       -             0        ip-172-31-25-0.us-west-2.compute.internal   
+clean_up_local_level_7_1            1   local      8.139     1    8.139          0.142    5.0  5.0         -        5.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+clean_up_local_level_7_0            1   local      16.263    1    16.263         0.152    5.0  0.0         -        20.0    -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+averageratioevent_1_ID0000013       1   condorpool 40.906    1    40.906         36.235   5.0  5.0         -        40.0    -       -             0        ip-172-31-24-255.us-west-2.compute.internal 
+averageratioevent_0_ID0000012       1   condorpool 32.79     1    32.79          18.115   5.0  10.0        -        35.0    -       -             0        ip-172-31-25-0.us-west-2.compute.internal   
+averageratioevent_2_ID0000014       1   condorpool 4.291     1    4.291          0.12     5.0  15.0        -        0.0     -       -             0        ip-172-31-20-25.us-west-2.compute.internal  
+clean_up_local_level_8_1            1   local      4.134     1    4.134          0.136    5.0  5.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+clean_up_local_level_8_0            1   local      8.428     1    8.428          0.191    5.0  0.0         -        10.0    -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+analysisevent_0_ID0000015           1   condorpool 0.651     1    0.651          0.116    5.0  5.0         -        0.0     -       -             0        ip-172-31-25-0.us-west-2.compute.internal   
+terminate_0_ID0000016               1   condorpool 0.632     1    0.632          0.106    5.0  5.0         -        0.0     -       -             0        ip-172-31-25-0.us-west-2.compute.internal   
+clean_up_local_level_9_0            1   local      4.133     1    4.133          0.133    5.0  10.0        -        5.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+clean_up_local_level_10_0           1   local      2.176     1    2.176          0.136    5.0  5.0         -        0.0     -       -             0        ip-172-31-29-196.us-west-1.compute.internal 
+cleanup_example_workflow_0_local    1   local      0.0       1    0.0            -        -    5.0         -        0.0     -       -             0        None                                        

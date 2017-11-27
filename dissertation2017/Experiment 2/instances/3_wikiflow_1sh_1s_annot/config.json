@@ -1,0 +1,50 @@
+{
+    "namespace":"wikiflow",
+    "os":"linux",
+    "arch":"x86_64",
+    "tasks":[
+        {
+          "taskName": "DataStoreInit",
+          "prefixFolder" : "init_",
+          "prefixTask": "DataStoreInit",
+          "prefixConfig": "Config",
+	  "fileInput": ["2_create_schema.txt"]
+        },
+        {
+            "taskName": "ComputeUserGroup",
+            "typeOperation": "ALL",
+            "prefixFolder" : "computeusergroup_",
+            "prefixTask": "ComputeUserGroup",
+            "prefixConfig": "Config",
+            "dependency": ["init_"],
+            "outputPrefixFile": "ConfigDB_SessionCompute",
+            "totalSlaves": 3
+        },
+        {
+            "taskName": "SessionCompute",
+            "typeOperation": "ALL",
+            "prefixFolder" : "sessioncompute_",
+            "prefixTask": "SessionCompute",
+            "prefixConfig": "Config",
+            "dynamicInputFile": "ConfigDB_SessionCompute",
+            "totalSlaves": 3,
+            "dependency": ["computeusergroup_"]
+        },
+        {
+            "taskName": "LongestSession",
+            "typeOperation": "ALL",
+            "prefixFolder" : "longestsession_",
+            "prefixTask": "LongestSession",
+            "prefixConfig": "Config",
+            "dependency": ["sessioncompute_"]
+        },
+        {
+          "taskName": "DataStoreReset",
+          "prefixFolder" : "terminate_",
+          "prefixTask": "DataStoreReset",
+          "prefixConfig": "Config",
+          "dependency": ["longestsession_"],
+	  "fileInput": ["2_reset_schema.txt"]
+        }
+    ]
+}

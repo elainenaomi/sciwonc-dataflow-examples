@@ -1,0 +1,134 @@
+DROP TABLE IF EXISTS analysis_ratio CASCADE;
+CREATE TABLE IF NOT EXISTS analysis_ratio
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_event_type varchar(255),
+  g_task_type varchar(255),
+  g_total_task_type varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+);
+CREATE INDEX ON analysis_ratio(g_filepath, g_numline);
+
+DROP TABLE IF EXISTS average_ratioevent CASCADE;
+CREATE TABLE IF NOT EXISTS average_ratioevent
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_total_cpu_task varchar(255),
+  g_event_type varchar(255),
+  g_total_balanced_task varchar(255),
+  g_total_memory_task varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+);
+CREATE INDEX ON average_ratioevent(g_filepath, g_numline);
+
+DROP TABLE IF EXISTS general_info CASCADE;
+CREATE TABLE IF NOT EXISTS general_info
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_interval_seconds varchar(255),
+  g_min_timestamp varchar(255),
+  g_max_timestamp varchar(255),
+  g_total_items varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+);
+CREATE INDEX ON general_info(g_filepath, g_numline);
+
+DROP TABLE IF EXISTS median_cpu CASCADE;
+CREATE TABLE IF NOT EXISTS median_cpu
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_median_cpu varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+);
+CREATE INDEX ON median_cpu(g_filepath, g_numline);
+
+DROP TABLE IF EXISTS median_memory CASCADE;
+CREATE TABLE IF NOT EXISTS median_memory
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_median_memory varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+);
+CREATE INDEX ON median_memory(g_filepath, g_numline);
+
+DROP TABLE IF EXISTS ratio CASCADE;
+CREATE TABLE IF NOT EXISTS ratio
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_sds_from_event_avg_ratio varchar(255),
+  g_sds_from_all_avg_cpu varchar(255),
+  g_sds_from_event_avg_memory varchar(255),
+  g_ratio_cpu_memory varchar(255),
+  g_sds_from_all_avg_memory varchar(255),
+  g_job_ID varchar(255),
+  g_sds_from_event_avg_cpu varchar(255),
+  g_sds_from_all_avg_ratio varchar(255),
+  g_time varchar(255),
+  g_event_type varchar(255),
+  g_task_index varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+);
+CREATE INDEX ON ratio(g_filepath, g_numline);
+
+DROP TABLE IF EXISTS stats_cpumemory CASCADE;
+CREATE TABLE IF NOT EXISTS stats_cpumemory
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_sum_cpu varchar(255),
+  g_sum_ratio varchar(255),
+  g_variance_cpu varchar(255),
+  g_average_ratio varchar(255),
+  g_sum_variance_cpu varchar(255),
+  g_standard_deviation_ratio varchar(255),
+  g_sum_variance_ratio varchar(255),
+  g_total_tasks varchar(255),
+  g_average_cpu varchar(255),
+  g_standard_deviation_cpu varchar(255),
+  g_sum_memory varchar(255),
+  g_variance_ratio varchar(255),
+  g_variance_memory varchar(255),
+  g_sum_variance_memory varchar(255),
+  g_average_memory varchar(255),
+  g_total_valid_tasks varchar(255),
+  g_standard_deviation_memory varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+);
+CREATE INDEX ON stats_cpumemory(g_filepath, g_numline);
+
+DROP TABLE IF EXISTS task_events_info CASCADE;
+CREATE TABLE IF NOT EXISTS task_events_info
+(
+  g_filepath character varying(255) NOT NULL,
+  g_numline character varying(255) NOT NULL,
+  g_sum_cpu varchar(255),
+  g_sum_ratio varchar(255),
+  g_sds_from_avg_cpu varchar(255),
+  g_variance_cpu varchar(255),
+  g_average_cpu varchar(255),
+  g_total_tasks varchar(255),
+  g_standard_deviation_ratio varchar(255),
+  g_variance_memory varchar(255),
+  g_average_ratio varchar(255),
+  g_standard_deviation_cpu varchar(255),
+  g_sum_memory varchar(255),
+  g_standard_deviation_memory varchar(255),
+  g_sds_from_avg_memory varchar(255),
+  g_total_valid_tasks varchar(255),
+  g_average_memory varchar(255),
+  g_event_type varchar(255),
+  g_percentagem_from_total varchar(255),
+  g_variance_ratio varchar(255),
+  g_sds_from_avg_ratio varchar(255),
+  PRIMARY KEY  (g_filepath, g_numline)
+);
+CREATE INDEX ON task_events_info(g_filepath, g_numline);
+
+CREATE INDEX ON task_events(g_cpu_request);
+CREATE INDEX ON task_events(g_memory_request);

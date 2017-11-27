@@ -1,0 +1,1853 @@
+11/01/16 06:05:06 ******************************************************
+11/01/16 06:05:06 ** condor_scheduniv_exec.1115.0 (CONDOR_DAGMAN) STARTING UP
+11/01/16 06:05:06 ** /usr/bin/condor_dagman
+11/01/16 06:05:06 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+11/01/16 06:05:06 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+11/01/16 06:05:06 ** $CondorVersion: 8.4.8 Jun 30 2016 BuildID: 373513 $
+11/01/16 06:05:06 ** $CondorPlatform: x86_64_Ubuntu14 $
+11/01/16 06:05:06 ** PID = 10383
+11/01/16 06:05:06 ** Log last touched time unavailable (No such file or directory)
+11/01/16 06:05:06 ******************************************************
+11/01/16 06:05:06 Using config source: /etc/condor/condor_config
+11/01/16 06:05:06 Using local config sources: 
+11/01/16 06:05:06    /etc/condor/condor_config.local
+11/01/16 06:05:06 config Macros = 63, Sorted = 63, StringBytes = 2029, TablesBytes = 2308
+11/01/16 06:05:06 CLASSAD_CACHING is ENABLED
+11/01/16 06:05:06 Daemon Log is logging: D_ALWAYS D_ERROR
+11/01/16 06:05:06 DaemonCore: No command port requested.
+11/01/16 06:05:06 DAGMAN_USE_STRICT setting: 1
+11/01/16 06:05:06 DAGMAN_VERBOSITY setting: 3
+11/01/16 06:05:06 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+11/01/16 06:05:06 DAGMAN_DEBUG_CACHE_ENABLE setting: False
+11/01/16 06:05:06 DAGMAN_SUBMIT_DELAY setting: 0
+11/01/16 06:05:06 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+11/01/16 06:05:06 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+11/01/16 06:05:06 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 5
+11/01/16 06:05:06 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+11/01/16 06:05:06 DAGMAN_DEFAULT_PRIORITY setting: 0
+11/01/16 06:05:06 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+11/01/16 06:05:06 allow_events (DAGMAN_ALLOW_EVENTS) setting: 114
+11/01/16 06:05:06 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+11/01/16 06:05:06 DAGMAN_RETRY_NODE_FIRST setting: False
+11/01/16 06:05:06 DAGMAN_MAX_JOBS_IDLE setting: 1000
+11/01/16 06:05:06 DAGMAN_MAX_JOBS_SUBMITTED setting: 0
+11/01/16 06:05:06 DAGMAN_MAX_PRE_SCRIPTS setting: 20
+11/01/16 06:05:06 DAGMAN_MAX_POST_SCRIPTS setting: 20
+11/01/16 06:05:06 DAGMAN_ALLOW_LOG_ERROR setting: False
+11/01/16 06:05:06 DAGMAN_MUNGE_NODE_NAMES setting: True
+11/01/16 06:05:06 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+11/01/16 06:05:06 DAGMAN_SUBMIT_DEPTH_FIRST setting: False
+11/01/16 06:05:06 DAGMAN_ALWAYS_RUN_POST setting: True
+11/01/16 06:05:06 DAGMAN_ABORT_DUPLICATES setting: True
+11/01/16 06:05:06 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+11/01/16 06:05:06 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+11/01/16 06:05:06 DAGMAN_AUTO_RESCUE setting: True
+11/01/16 06:05:06 DAGMAN_MAX_RESCUE_NUM setting: 100
+11/01/16 06:05:06 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+11/01/16 06:05:06 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+11/01/16 06:05:06 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+11/01/16 06:05:06 DAGMAN_MAX_JOB_HOLDS setting: 100
+11/01/16 06:05:06 DAGMAN_HOLD_CLAIM_TIME setting: 20
+11/01/16 06:05:06 ALL_DEBUG setting: 
+11/01/16 06:05:06 DAGMAN_DEBUG setting: 
+11/01/16 06:05:06 DAGMAN_SUPPRESS_JOB_LOGS setting: False
+11/01/16 06:05:06 argv[0] == "condor_scheduniv_exec.1115.0"
+11/01/16 06:05:06 argv[1] == "-Lockfile"
+11/01/16 06:05:06 argv[2] == "example_workflow-0.dag.lock"
+11/01/16 06:05:06 argv[3] == "-AutoRescue"
+11/01/16 06:05:06 argv[4] == "1"
+11/01/16 06:05:06 argv[5] == "-DoRescueFrom"
+11/01/16 06:05:06 argv[6] == "0"
+11/01/16 06:05:06 argv[7] == "-Dag"
+11/01/16 06:05:06 argv[8] == "example_workflow-0.dag"
+11/01/16 06:05:06 argv[9] == "-MaxPost"
+11/01/16 06:05:06 argv[10] == "20"
+11/01/16 06:05:06 argv[11] == "-Suppress_notification"
+11/01/16 06:05:06 argv[12] == "-CsdVersion"
+11/01/16 06:05:06 argv[13] == "$CondorVersion: 8.4.8 Jun 30 2016 BuildID: 373513 $"
+11/01/16 06:05:06 argv[14] == "-Dagman"
+11/01/16 06:05:06 argv[15] == "/usr/bin/condor_dagman"
+11/01/16 06:05:06 Warning: failed to get attribute DAGNodeName
+11/01/16 06:05:06 DAGMAN_LOG_ON_NFS_IS_ERROR setting: False
+11/01/16 06:05:06 Default node log file is: </home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log>
+11/01/16 06:05:06 DAG Lockfile will be written to example_workflow-0.dag.lock
+11/01/16 06:05:06 DAG Input file is example_workflow-0.dag
+11/01/16 06:05:06 Parsing 1 dagfiles
+11/01/16 06:05:06 Parsing example_workflow-0.dag ...
+11/01/16 06:05:06 Warning: category stage-in has no throttle value set
+11/01/16 06:05:06 Dag contains 54 total jobs
+11/01/16 06:05:06 Sleeping for 3 seconds to ensure ProcessId uniqueness
+11/01/16 06:05:09 Bootstrapping...
+11/01/16 06:05:09 Number of pre-completed nodes: 0
+11/01/16 06:05:09 MultiLogFiles: truncating log file /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:09 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:05:09 Of 54 nodes total:
+11/01/16 06:05:09  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:05:09   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:05:09     0       0        0       0       1         53        0
+11/01/16 06:05:09 0 job proc(s) currently held
+11/01/16 06:05:09 Registering condor_event_timer...
+11/01/16 06:05:10 Submitting Condor Node create_dir_example_workflow_0_local job(s)...
+11/01/16 06:05:10 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:10 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:10 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:10 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'create_dir_example_workflow_0_local -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'create_dir_example_workflow_0_local -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/create_dir_example_workflow_0_local.sub
+11/01/16 06:05:10 From submit: Submitting job(s).
+11/01/16 06:05:10 From submit: 1 job(s) submitted to cluster 1116.
+11/01/16 06:05:10 	assigned Condor ID (1116.0.0)
+11/01/16 06:05:10 Just submitted 1 job this cycle...
+11/01/16 06:05:10 Currently monitoring 1 Condor log file(s)
+11/01/16 06:05:10 Reassigning the id of job create_dir_example_workflow_0_local from (1116.0.0) to (1116.0.0)
+11/01/16 06:05:10 Event: ULOG_SUBMIT for Condor Node create_dir_example_workflow_0_local (1116.0.0)
+11/01/16 06:05:10 Number of idle job procs: 1
+11/01/16 06:05:10 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:05:10 Of 54 nodes total:
+11/01/16 06:05:10  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:05:10   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:05:10     0       0        1       0       0         53        0
+11/01/16 06:05:10 0 job proc(s) currently held
+11/01/16 06:05:15 Currently monitoring 1 Condor log file(s)
+11/01/16 06:05:15 Event: ULOG_EXECUTE for Condor Node create_dir_example_workflow_0_local (1116.0.0)
+11/01/16 06:05:15 Number of idle job procs: 0
+11/01/16 06:05:15 Event: ULOG_JOB_TERMINATED for Condor Node create_dir_example_workflow_0_local (1116.0.0)
+11/01/16 06:05:15 Number of idle job procs: 0
+11/01/16 06:05:15 Node create_dir_example_workflow_0_local job proc (1116.0.0) completed successfully.
+11/01/16 06:05:15 Node create_dir_example_workflow_0_local job completed
+11/01/16 06:05:15 Running POST script of Node create_dir_example_workflow_0_local...
+11/01/16 06:05:15 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:15 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:05:15 Of 54 nodes total:
+11/01/16 06:05:15  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:05:15   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:05:15     0       0        0       1       0         53        0
+11/01/16 06:05:15 0 job proc(s) currently held
+11/01/16 06:05:15 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1116.0.0)
+11/01/16 06:05:20 Currently monitoring 1 Condor log file(s)
+11/01/16 06:05:20 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node create_dir_example_workflow_0_local (1116.0.0)
+11/01/16 06:05:20 POST Script of Node create_dir_example_workflow_0_local completed successfully.
+11/01/16 06:05:20 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:05:20 Of 54 nodes total:
+11/01/16 06:05:20  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:05:20   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:05:20     1       0        0       0      24         29        0
+11/01/16 06:05:20 0 job proc(s) currently held
+11/01/16 06:05:25 Submitting Condor Node stage_in_local_local_0_0 job(s)...
+11/01/16 06:05:25 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:25 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:25 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:25 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_0_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_0_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_local_local_0_0.sub
+11/01/16 06:05:25 From submit: Submitting job(s).
+11/01/16 06:05:25 From submit: 1 job(s) submitted to cluster 1117.
+11/01/16 06:05:25 	assigned Condor ID (1117.0.0)
+11/01/16 06:05:25 Submitting Condor Node stage_in_local_local_6_0 job(s)...
+11/01/16 06:05:25 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:25 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:25 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:25 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_6_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_6_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_local_local_6_0.sub
+11/01/16 06:05:26 From submit: Submitting job(s).
+11/01/16 06:05:26 From submit: 1 job(s) submitted to cluster 1118.
+11/01/16 06:05:26 	assigned Condor ID (1118.0.0)
+11/01/16 06:05:26 Submitting Condor Node stage_in_remote_local_2_1 job(s)...
+11/01/16 06:05:26 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:26 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:26 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:26 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_2_1 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_2_1 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_remote_local_2_1.sub
+11/01/16 06:05:26 From submit: Submitting job(s).
+11/01/16 06:05:26 From submit: 1 job(s) submitted to cluster 1119.
+11/01/16 06:05:26 	assigned Condor ID (1119.0.0)
+11/01/16 06:05:26 Submitting Condor Node stage_in_remote_local_5_1 job(s)...
+11/01/16 06:05:26 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:26 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:26 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:26 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_5_1 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_5_1 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_remote_local_5_1.sub
+11/01/16 06:05:26 From submit: Submitting job(s).
+11/01/16 06:05:26 From submit: 1 job(s) submitted to cluster 1120.
+11/01/16 06:05:26 	assigned Condor ID (1120.0.0)
+11/01/16 06:05:26 Submitting Condor Node stage_in_remote_local_5_0 job(s)...
+11/01/16 06:05:26 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:26 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:26 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:26 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_5_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_5_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_remote_local_5_0.sub
+11/01/16 06:05:26 From submit: Submitting job(s).
+11/01/16 06:05:26 From submit: 1 job(s) submitted to cluster 1121.
+11/01/16 06:05:26 	assigned Condor ID (1121.0.0)
+11/01/16 06:05:26 Just submitted 5 jobs this cycle...
+11/01/16 06:05:26 Currently monitoring 1 Condor log file(s)
+11/01/16 06:05:26 Reassigning the id of job stage_in_local_local_0_0 from (1117.0.0) to (1117.0.0)
+11/01/16 06:05:26 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_0_0 (1117.0.0)
+11/01/16 06:05:26 Number of idle job procs: 1
+11/01/16 06:05:26 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_0_0 (1117.0.0)
+11/01/16 06:05:26 Number of idle job procs: 0
+11/01/16 06:05:26 Reassigning the id of job stage_in_local_local_6_0 from (1118.0.0) to (1118.0.0)
+11/01/16 06:05:26 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_6_0 (1118.0.0)
+11/01/16 06:05:26 Number of idle job procs: 1
+11/01/16 06:05:26 Reassigning the id of job stage_in_remote_local_2_1 from (1119.0.0) to (1119.0.0)
+11/01/16 06:05:26 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_2_1 (1119.0.0)
+11/01/16 06:05:26 Number of idle job procs: 2
+11/01/16 06:05:26 Reassigning the id of job stage_in_remote_local_5_1 from (1120.0.0) to (1120.0.0)
+11/01/16 06:05:26 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_5_1 (1120.0.0)
+11/01/16 06:05:26 Number of idle job procs: 3
+11/01/16 06:05:26 Reassigning the id of job stage_in_remote_local_5_0 from (1121.0.0) to (1121.0.0)
+11/01/16 06:05:26 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_5_0 (1121.0.0)
+11/01/16 06:05:26 Number of idle job procs: 4
+11/01/16 06:05:26 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:05:26 Of 54 nodes total:
+11/01/16 06:05:26  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:05:26   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:05:26     1       0        5       0      19         29        0
+11/01/16 06:05:26 0 job proc(s) currently held
+11/01/16 06:05:31 Submitting Condor Node stage_in_local_local_2_0 job(s)...
+11/01/16 06:05:31 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:31 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:31 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:31 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_2_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_2_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_local_local_2_0.sub
+11/01/16 06:05:31 From submit: Submitting job(s).
+11/01/16 06:05:31 From submit: 1 job(s) submitted to cluster 1122.
+11/01/16 06:05:31 	assigned Condor ID (1122.0.0)
+11/01/16 06:05:31 Submitting Condor Node stage_in_local_local_2_1 job(s)...
+11/01/16 06:05:31 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:31 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:31 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:31 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_2_1 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_2_1 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_local_local_2_1.sub
+11/01/16 06:05:31 From submit: Submitting job(s).
+11/01/16 06:05:31 From submit: 1 job(s) submitted to cluster 1123.
+11/01/16 06:05:31 	assigned Condor ID (1123.0.0)
+11/01/16 06:05:31 Submitting Condor Node stage_in_local_local_3_1 job(s)...
+11/01/16 06:05:31 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:31 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:31 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:31 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_3_1 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_3_1 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_local_local_3_1.sub
+11/01/16 06:05:31 From submit: Submitting job(s).
+11/01/16 06:05:31 From submit: 1 job(s) submitted to cluster 1124.
+11/01/16 06:05:31 	assigned Condor ID (1124.0.0)
+11/01/16 06:05:31 Submitting Condor Node stage_in_remote_local_1_0 job(s)...
+11/01/16 06:05:31 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:31 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:31 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:31 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_1_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_1_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_remote_local_1_0.sub
+11/01/16 06:05:31 From submit: Submitting job(s).
+11/01/16 06:05:31 From submit: 1 job(s) submitted to cluster 1125.
+11/01/16 06:05:31 	assigned Condor ID (1125.0.0)
+11/01/16 06:05:31 Submitting Condor Node stage_in_local_local_3_0 job(s)...
+11/01/16 06:05:31 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:31 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:31 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:31 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_3_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_3_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_local_local_3_0.sub
+11/01/16 06:05:31 From submit: Submitting job(s).
+11/01/16 06:05:31 From submit: 1 job(s) submitted to cluster 1126.
+11/01/16 06:05:31 	assigned Condor ID (1126.0.0)
+11/01/16 06:05:31 Just submitted 5 jobs this cycle...
+11/01/16 06:05:31 Currently monitoring 1 Condor log file(s)
+11/01/16 06:05:31 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_0_0 (1117.0.0)
+11/01/16 06:05:31 Number of idle job procs: 4
+11/01/16 06:05:31 Node stage_in_local_local_0_0 job proc (1117.0.0) completed successfully.
+11/01/16 06:05:31 Node stage_in_local_local_0_0 job completed
+11/01/16 06:05:31 Running POST script of Node stage_in_local_local_0_0...
+11/01/16 06:05:31 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:31 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_2_1 (1119.0.0)
+11/01/16 06:05:31 Number of idle job procs: 3
+11/01/16 06:05:31 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_6_0 (1118.0.0)
+11/01/16 06:05:31 Number of idle job procs: 2
+11/01/16 06:05:31 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_5_0 (1121.0.0)
+11/01/16 06:05:31 Number of idle job procs: 1
+11/01/16 06:05:31 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_5_1 (1120.0.0)
+11/01/16 06:05:31 Number of idle job procs: 0
+11/01/16 06:05:31 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_5_1 (1120.0.0)
+11/01/16 06:05:31 Number of idle job procs: 0
+11/01/16 06:05:31 Node stage_in_remote_local_5_1 job proc (1120.0.0) completed successfully.
+11/01/16 06:05:31 Node stage_in_remote_local_5_1 job completed
+11/01/16 06:05:31 Running POST script of Node stage_in_remote_local_5_1...
+11/01/16 06:05:31 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:31 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_6_0 (1118.0.0)
+11/01/16 06:05:31 Number of idle job procs: 0
+11/01/16 06:05:31 Node stage_in_local_local_6_0 job proc (1118.0.0) completed successfully.
+11/01/16 06:05:31 Node stage_in_local_local_6_0 job completed
+11/01/16 06:05:31 Running POST script of Node stage_in_local_local_6_0...
+11/01/16 06:05:31 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:31 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_2_1 (1119.0.0)
+11/01/16 06:05:31 Number of idle job procs: 0
+11/01/16 06:05:31 Node stage_in_remote_local_2_1 job proc (1119.0.0) completed successfully.
+11/01/16 06:05:31 Node stage_in_remote_local_2_1 job completed
+11/01/16 06:05:31 Running POST script of Node stage_in_remote_local_2_1...
+11/01/16 06:05:31 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:31 Reassigning the id of job stage_in_local_local_2_0 from (1122.0.0) to (1122.0.0)
+11/01/16 06:05:31 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_2_0 (1122.0.0)
+11/01/16 06:05:31 Number of idle job procs: 1
+11/01/16 06:05:31 Reassigning the id of job stage_in_local_local_2_1 from (1123.0.0) to (1123.0.0)
+11/01/16 06:05:31 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_2_1 (1123.0.0)
+11/01/16 06:05:31 Number of idle job procs: 2
+11/01/16 06:05:31 Reassigning the id of job stage_in_local_local_3_1 from (1124.0.0) to (1124.0.0)
+11/01/16 06:05:31 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_3_1 (1124.0.0)
+11/01/16 06:05:31 Number of idle job procs: 3
+11/01/16 06:05:31 Reassigning the id of job stage_in_remote_local_1_0 from (1125.0.0) to (1125.0.0)
+11/01/16 06:05:31 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_1_0 (1125.0.0)
+11/01/16 06:05:31 Number of idle job procs: 4
+11/01/16 06:05:31 Reassigning the id of job stage_in_local_local_3_0 from (1126.0.0) to (1126.0.0)
+11/01/16 06:05:31 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_3_0 (1126.0.0)
+11/01/16 06:05:31 Number of idle job procs: 5
+11/01/16 06:05:31 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:05:31 Of 54 nodes total:
+11/01/16 06:05:31  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:05:31   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:05:31     1       0        6       4      14         29        0
+11/01/16 06:05:31 0 job proc(s) currently held
+11/01/16 06:05:32 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1118.0.0)
+11/01/16 06:05:32 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1120.0.0)
+11/01/16 06:05:32 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1117.0.0)
+11/01/16 06:05:32 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1119.0.0)
+11/01/16 06:05:36 Submitting Condor Node stage_in_local_local_5_0 job(s)...
+11/01/16 06:05:36 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:36 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:36 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:36 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_5_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_5_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_local_local_5_0.sub
+11/01/16 06:05:36 From submit: Submitting job(s).
+11/01/16 06:05:36 From submit: 1 job(s) submitted to cluster 1127.
+11/01/16 06:05:36 	assigned Condor ID (1127.0.0)
+11/01/16 06:05:36 Submitting Condor Node stage_in_local_local_5_1 job(s)...
+11/01/16 06:05:36 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:36 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:36 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:36 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_5_1 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_5_1 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_local_local_5_1.sub
+11/01/16 06:05:36 From submit: Submitting job(s).
+11/01/16 06:05:36 From submit: 1 job(s) submitted to cluster 1128.
+11/01/16 06:05:36 	assigned Condor ID (1128.0.0)
+11/01/16 06:05:36 Submitting Condor Node stage_in_remote_local_7_0 job(s)...
+11/01/16 06:05:36 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:36 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:36 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:36 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_7_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_7_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_remote_local_7_0.sub
+11/01/16 06:05:36 From submit: Submitting job(s).
+11/01/16 06:05:36 From submit: 1 job(s) submitted to cluster 1129.
+11/01/16 06:05:36 	assigned Condor ID (1129.0.0)
+11/01/16 06:05:36 Submitting Condor Node stage_in_local_local_4_0 job(s)...
+11/01/16 06:05:36 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:36 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:36 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:36 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_4_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_4_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_local_local_4_0.sub
+11/01/16 06:05:36 From submit: Submitting job(s).
+11/01/16 06:05:36 From submit: 1 job(s) submitted to cluster 1130.
+11/01/16 06:05:36 	assigned Condor ID (1130.0.0)
+11/01/16 06:05:36 Submitting Condor Node stage_in_local_local_1_0 job(s)...
+11/01/16 06:05:36 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:36 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:36 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:36 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_1_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_1_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_local_local_1_0.sub
+11/01/16 06:05:36 From submit: Submitting job(s).
+11/01/16 06:05:36 From submit: 1 job(s) submitted to cluster 1131.
+11/01/16 06:05:36 	assigned Condor ID (1131.0.0)
+11/01/16 06:05:36 Just submitted 5 jobs this cycle...
+11/01/16 06:05:36 Currently monitoring 1 Condor log file(s)
+11/01/16 06:05:36 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_6_0 (1118.0.0)
+11/01/16 06:05:36 POST Script of Node stage_in_local_local_6_0 completed successfully.
+11/01/16 06:05:36 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_5_1 (1120.0.0)
+11/01/16 06:05:36 POST Script of Node stage_in_remote_local_5_1 completed successfully.
+11/01/16 06:05:36 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_0_0 (1117.0.0)
+11/01/16 06:05:36 POST Script of Node stage_in_local_local_0_0 completed successfully.
+11/01/16 06:05:36 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_2_1 (1119.0.0)
+11/01/16 06:05:36 POST Script of Node stage_in_remote_local_2_1 completed successfully.
+11/01/16 06:05:36 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_5_0 (1121.0.0)
+11/01/16 06:05:36 Number of idle job procs: 5
+11/01/16 06:05:36 Node stage_in_remote_local_5_0 job proc (1121.0.0) completed successfully.
+11/01/16 06:05:36 Node stage_in_remote_local_5_0 job completed
+11/01/16 06:05:36 Running POST script of Node stage_in_remote_local_5_0...
+11/01/16 06:05:36 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:36 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_1_0 (1125.0.0)
+11/01/16 06:05:36 Number of idle job procs: 4
+11/01/16 06:05:36 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_2_0 (1122.0.0)
+11/01/16 06:05:36 Number of idle job procs: 3
+11/01/16 06:05:36 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_3_1 (1124.0.0)
+11/01/16 06:05:36 Number of idle job procs: 2
+11/01/16 06:05:36 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_3_0 (1126.0.0)
+11/01/16 06:05:36 Number of idle job procs: 1
+11/01/16 06:05:36 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_2_1 (1123.0.0)
+11/01/16 06:05:36 Number of idle job procs: 0
+11/01/16 06:05:36 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_3_1 (1124.0.0)
+11/01/16 06:05:36 Number of idle job procs: 0
+11/01/16 06:05:36 Node stage_in_local_local_3_1 job proc (1124.0.0) completed successfully.
+11/01/16 06:05:36 Node stage_in_local_local_3_1 job completed
+11/01/16 06:05:36 Running POST script of Node stage_in_local_local_3_1...
+11/01/16 06:05:36 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:36 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_1_0 (1125.0.0)
+11/01/16 06:05:36 Number of idle job procs: 0
+11/01/16 06:05:36 Node stage_in_remote_local_1_0 job proc (1125.0.0) completed successfully.
+11/01/16 06:05:36 Node stage_in_remote_local_1_0 job completed
+11/01/16 06:05:36 Running POST script of Node stage_in_remote_local_1_0...
+11/01/16 06:05:36 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:36 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_2_1 (1123.0.0)
+11/01/16 06:05:36 Number of idle job procs: 0
+11/01/16 06:05:36 Node stage_in_local_local_2_1 job proc (1123.0.0) completed successfully.
+11/01/16 06:05:36 Node stage_in_local_local_2_1 job completed
+11/01/16 06:05:36 Running POST script of Node stage_in_local_local_2_1...
+11/01/16 06:05:36 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:36 Reassigning the id of job stage_in_local_local_5_0 from (1127.0.0) to (1127.0.0)
+11/01/16 06:05:36 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_5_0 (1127.0.0)
+11/01/16 06:05:36 Number of idle job procs: 1
+11/01/16 06:05:36 Reassigning the id of job stage_in_local_local_5_1 from (1128.0.0) to (1128.0.0)
+11/01/16 06:05:36 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_5_1 (1128.0.0)
+11/01/16 06:05:36 Number of idle job procs: 2
+11/01/16 06:05:36 Reassigning the id of job stage_in_remote_local_7_0 from (1129.0.0) to (1129.0.0)
+11/01/16 06:05:36 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_7_0 (1129.0.0)
+11/01/16 06:05:36 Number of idle job procs: 3
+11/01/16 06:05:36 Reassigning the id of job stage_in_local_local_4_0 from (1130.0.0) to (1130.0.0)
+11/01/16 06:05:36 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_4_0 (1130.0.0)
+11/01/16 06:05:36 Number of idle job procs: 4
+11/01/16 06:05:36 Reassigning the id of job stage_in_local_local_1_0 from (1131.0.0) to (1131.0.0)
+11/01/16 06:05:36 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_1_0 (1131.0.0)
+11/01/16 06:05:36 Number of idle job procs: 5
+11/01/16 06:05:36 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:05:36 Of 54 nodes total:
+11/01/16 06:05:36  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:05:36   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:05:36     5       0        7       4       9         29        0
+11/01/16 06:05:36 0 job proc(s) currently held
+11/01/16 06:05:36 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1124.0.0)
+11/01/16 06:05:36 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1121.0.0)
+11/01/16 06:05:36 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1125.0.0)
+11/01/16 06:05:36 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1123.0.0)
+11/01/16 06:05:41 Submitting Condor Node stage_in_local_local_7_0 job(s)...
+11/01/16 06:05:41 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:41 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:41 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:41 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_7_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_7_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_local_local_7_0.sub
+11/01/16 06:05:41 From submit: Submitting job(s).
+11/01/16 06:05:41 From submit: 1 job(s) submitted to cluster 1132.
+11/01/16 06:05:41 	assigned Condor ID (1132.0.0)
+11/01/16 06:05:41 Submitting Condor Node stage_in_local_local_4_1 job(s)...
+11/01/16 06:05:41 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:41 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:41 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:41 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_local_local_4_1 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_local_local_4_1 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_local_local_4_1.sub
+11/01/16 06:05:41 From submit: Submitting job(s).
+11/01/16 06:05:41 From submit: 1 job(s) submitted to cluster 1133.
+11/01/16 06:05:42 	assigned Condor ID (1133.0.0)
+11/01/16 06:05:42 Submitting Condor Node stage_in_remote_local_4_1 job(s)...
+11/01/16 06:05:42 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:42 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:42 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:42 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_4_1 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_4_1 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_remote_local_4_1.sub
+11/01/16 06:05:42 From submit: Submitting job(s).
+11/01/16 06:05:42 From submit: 1 job(s) submitted to cluster 1134.
+11/01/16 06:05:42 	assigned Condor ID (1134.0.0)
+11/01/16 06:05:42 Submitting Condor Node stage_in_remote_local_4_0 job(s)...
+11/01/16 06:05:42 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:42 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:42 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:42 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_4_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_4_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_remote_local_4_0.sub
+11/01/16 06:05:42 From submit: Submitting job(s).
+11/01/16 06:05:42 From submit: 1 job(s) submitted to cluster 1135.
+11/01/16 06:05:42 	assigned Condor ID (1135.0.0)
+11/01/16 06:05:42 Submitting Condor Node stage_in_remote_local_0_0 job(s)...
+11/01/16 06:05:42 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:42 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:42 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:42 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_0_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_0_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_remote_local_0_0.sub
+11/01/16 06:05:42 From submit: Submitting job(s).
+11/01/16 06:05:42 From submit: 1 job(s) submitted to cluster 1136.
+11/01/16 06:05:42 	assigned Condor ID (1136.0.0)
+11/01/16 06:05:42 Just submitted 5 jobs this cycle...
+11/01/16 06:05:42 Currently monitoring 1 Condor log file(s)
+11/01/16 06:05:42 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_3_1 (1124.0.0)
+11/01/16 06:05:42 POST Script of Node stage_in_local_local_3_1 completed successfully.
+11/01/16 06:05:42 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_5_0 (1121.0.0)
+11/01/16 06:05:42 POST Script of Node stage_in_remote_local_5_0 completed successfully.
+11/01/16 06:05:42 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_1_0 (1125.0.0)
+11/01/16 06:05:42 POST Script of Node stage_in_remote_local_1_0 completed successfully.
+11/01/16 06:05:42 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_2_1 (1123.0.0)
+11/01/16 06:05:42 POST Script of Node stage_in_local_local_2_1 completed successfully.
+11/01/16 06:05:42 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_2_0 (1122.0.0)
+11/01/16 06:05:42 Number of idle job procs: 5
+11/01/16 06:05:42 Node stage_in_local_local_2_0 job proc (1122.0.0) completed successfully.
+11/01/16 06:05:42 Node stage_in_local_local_2_0 job completed
+11/01/16 06:05:42 Running POST script of Node stage_in_local_local_2_0...
+11/01/16 06:05:42 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:42 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_5_1 (1128.0.0)
+11/01/16 06:05:42 Number of idle job procs: 4
+11/01/16 06:05:42 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_3_0 (1126.0.0)
+11/01/16 06:05:42 Number of idle job procs: 4
+11/01/16 06:05:42 Node stage_in_local_local_3_0 job proc (1126.0.0) completed successfully.
+11/01/16 06:05:42 Node stage_in_local_local_3_0 job completed
+11/01/16 06:05:42 Running POST script of Node stage_in_local_local_3_0...
+11/01/16 06:05:42 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:42 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_1_0 (1131.0.0)
+11/01/16 06:05:42 Number of idle job procs: 3
+11/01/16 06:05:42 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_4_0 (1130.0.0)
+11/01/16 06:05:42 Number of idle job procs: 2
+11/01/16 06:05:42 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_5_0 (1127.0.0)
+11/01/16 06:05:42 Number of idle job procs: 1
+11/01/16 06:05:42 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_7_0 (1129.0.0)
+11/01/16 06:05:42 Number of idle job procs: 0
+11/01/16 06:05:42 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_5_1 (1128.0.0)
+11/01/16 06:05:42 Number of idle job procs: 0
+11/01/16 06:05:42 Node stage_in_local_local_5_1 job proc (1128.0.0) completed successfully.
+11/01/16 06:05:42 Node stage_in_local_local_5_1 job completed
+11/01/16 06:05:42 Running POST script of Node stage_in_local_local_5_1...
+11/01/16 06:05:42 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:42 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_1_0 (1131.0.0)
+11/01/16 06:05:42 Number of idle job procs: 0
+11/01/16 06:05:42 Node stage_in_local_local_1_0 job proc (1131.0.0) completed successfully.
+11/01/16 06:05:42 Node stage_in_local_local_1_0 job completed
+11/01/16 06:05:42 Running POST script of Node stage_in_local_local_1_0...
+11/01/16 06:05:42 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:42 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_7_0 (1129.0.0)
+11/01/16 06:05:42 Number of idle job procs: 0
+11/01/16 06:05:42 Node stage_in_remote_local_7_0 job proc (1129.0.0) completed successfully.
+11/01/16 06:05:42 Node stage_in_remote_local_7_0 job completed
+11/01/16 06:05:42 Running POST script of Node stage_in_remote_local_7_0...
+11/01/16 06:05:42 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:42 Reassigning the id of job stage_in_local_local_7_0 from (1132.0.0) to (1132.0.0)
+11/01/16 06:05:42 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_7_0 (1132.0.0)
+11/01/16 06:05:42 Number of idle job procs: 1
+11/01/16 06:05:42 Reassigning the id of job stage_in_local_local_4_1 from (1133.0.0) to (1133.0.0)
+11/01/16 06:05:42 Event: ULOG_SUBMIT for Condor Node stage_in_local_local_4_1 (1133.0.0)
+11/01/16 06:05:42 Number of idle job procs: 2
+11/01/16 06:05:42 Reassigning the id of job stage_in_remote_local_4_1 from (1134.0.0) to (1134.0.0)
+11/01/16 06:05:42 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_4_1 (1134.0.0)
+11/01/16 06:05:42 Number of idle job procs: 3
+11/01/16 06:05:42 Reassigning the id of job stage_in_remote_local_4_0 from (1135.0.0) to (1135.0.0)
+11/01/16 06:05:42 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_4_0 (1135.0.0)
+11/01/16 06:05:42 Number of idle job procs: 4
+11/01/16 06:05:42 Reassigning the id of job stage_in_remote_local_0_0 from (1136.0.0) to (1136.0.0)
+11/01/16 06:05:42 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_0_0 (1136.0.0)
+11/01/16 06:05:42 Number of idle job procs: 5
+11/01/16 06:05:42 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:05:42 Of 54 nodes total:
+11/01/16 06:05:42  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:05:42   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:05:42     9       0        7       5       4         29        0
+11/01/16 06:05:42 0 job proc(s) currently held
+11/01/16 06:05:43 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1126.0.0)
+11/01/16 06:05:43 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1128.0.0)
+11/01/16 06:05:43 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1129.0.0)
+11/01/16 06:05:43 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1122.0.0)
+11/01/16 06:05:43 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1131.0.0)
+11/01/16 06:05:47 Submitting Condor Node stage_in_remote_local_2_0 job(s)...
+11/01/16 06:05:47 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:47 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:47 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:47 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_2_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_2_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_remote_local_2_0.sub
+11/01/16 06:05:47 From submit: Submitting job(s).
+11/01/16 06:05:47 From submit: 1 job(s) submitted to cluster 1137.
+11/01/16 06:05:47 	assigned Condor ID (1137.0.0)
+11/01/16 06:05:47 Submitting Condor Node stage_in_remote_local_3_1 job(s)...
+11/01/16 06:05:47 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:47 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:47 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:47 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_3_1 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_3_1 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_remote_local_3_1.sub
+11/01/16 06:05:48 From submit: Submitting job(s).
+11/01/16 06:05:48 From submit: 1 job(s) submitted to cluster 1138.
+11/01/16 06:05:48 	assigned Condor ID (1138.0.0)
+11/01/16 06:05:48 Submitting Condor Node stage_in_remote_local_3_0 job(s)...
+11/01/16 06:05:48 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:48 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:48 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:48 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_3_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_3_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_remote_local_3_0.sub
+11/01/16 06:05:48 From submit: Submitting job(s).
+11/01/16 06:05:48 From submit: 1 job(s) submitted to cluster 1139.
+11/01/16 06:05:48 	assigned Condor ID (1139.0.0)
+11/01/16 06:05:48 Submitting Condor Node stage_in_remote_local_6_0 job(s)...
+11/01/16 06:05:48 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:48 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:48 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:48 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'stage_in_remote_local_6_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'stage_in_remote_local_6_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"create_dir_example_workflow_0_local" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/stage_in_remote_local_6_0.sub
+11/01/16 06:05:48 From submit: Submitting job(s).
+11/01/16 06:05:48 From submit: 1 job(s) submitted to cluster 1140.
+11/01/16 06:05:48 	assigned Condor ID (1140.0.0)
+11/01/16 06:05:48 Just submitted 4 jobs this cycle...
+11/01/16 06:05:48 Currently monitoring 1 Condor log file(s)
+11/01/16 06:05:48 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_4_0 (1130.0.0)
+11/01/16 06:05:48 Number of idle job procs: 5
+11/01/16 06:05:48 Node stage_in_local_local_4_0 job proc (1130.0.0) completed successfully.
+11/01/16 06:05:48 Node stage_in_local_local_4_0 job completed
+11/01/16 06:05:48 Running POST script of Node stage_in_local_local_4_0...
+11/01/16 06:05:48 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:48 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_5_0 (1127.0.0)
+11/01/16 06:05:48 Number of idle job procs: 5
+11/01/16 06:05:48 Node stage_in_local_local_5_0 job proc (1127.0.0) completed successfully.
+11/01/16 06:05:48 Node stage_in_local_local_5_0 job completed
+11/01/16 06:05:48 Running POST script of Node stage_in_local_local_5_0...
+11/01/16 06:05:48 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:48 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_4_1 (1134.0.0)
+11/01/16 06:05:48 Number of idle job procs: 4
+11/01/16 06:05:48 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_7_0 (1132.0.0)
+11/01/16 06:05:48 Number of idle job procs: 3
+11/01/16 06:05:48 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_0_0 (1136.0.0)
+11/01/16 06:05:48 Number of idle job procs: 2
+11/01/16 06:05:48 Event: ULOG_EXECUTE for Condor Node stage_in_local_local_4_1 (1133.0.0)
+11/01/16 06:05:48 Number of idle job procs: 1
+11/01/16 06:05:48 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_4_0 (1135.0.0)
+11/01/16 06:05:48 Number of idle job procs: 0
+11/01/16 06:05:48 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_3_0 (1126.0.0)
+11/01/16 06:05:48 POST Script of Node stage_in_local_local_3_0 completed successfully.
+11/01/16 06:05:48 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_5_1 (1128.0.0)
+11/01/16 06:05:48 POST Script of Node stage_in_local_local_5_1 completed successfully.
+11/01/16 06:05:48 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_7_0 (1129.0.0)
+11/01/16 06:05:48 POST Script of Node stage_in_remote_local_7_0 completed successfully.
+11/01/16 06:05:48 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_2_0 (1122.0.0)
+11/01/16 06:05:48 POST Script of Node stage_in_local_local_2_0 completed successfully.
+11/01/16 06:05:48 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_1_0 (1131.0.0)
+11/01/16 06:05:48 POST Script of Node stage_in_local_local_1_0 completed successfully.
+11/01/16 06:05:48 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_7_0 (1132.0.0)
+11/01/16 06:05:48 Number of idle job procs: 0
+11/01/16 06:05:48 Node stage_in_local_local_7_0 job proc (1132.0.0) completed successfully.
+11/01/16 06:05:48 Node stage_in_local_local_7_0 job completed
+11/01/16 06:05:48 Running POST script of Node stage_in_local_local_7_0...
+11/01/16 06:05:48 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:48 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_local_local_4_1 (1133.0.0)
+11/01/16 06:05:48 Number of idle job procs: 0
+11/01/16 06:05:48 Node stage_in_local_local_4_1 job proc (1133.0.0) completed successfully.
+11/01/16 06:05:48 Node stage_in_local_local_4_1 job completed
+11/01/16 06:05:48 Running POST script of Node stage_in_local_local_4_1...
+11/01/16 06:05:48 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:48 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_0_0 (1136.0.0)
+11/01/16 06:05:48 Number of idle job procs: 0
+11/01/16 06:05:48 Node stage_in_remote_local_0_0 job proc (1136.0.0) completed successfully.
+11/01/16 06:05:48 Node stage_in_remote_local_0_0 job completed
+11/01/16 06:05:48 Running POST script of Node stage_in_remote_local_0_0...
+11/01/16 06:05:48 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:48 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_4_1 (1134.0.0)
+11/01/16 06:05:48 Number of idle job procs: 0
+11/01/16 06:05:48 Node stage_in_remote_local_4_1 job proc (1134.0.0) completed successfully.
+11/01/16 06:05:48 Node stage_in_remote_local_4_1 job completed
+11/01/16 06:05:48 Running POST script of Node stage_in_remote_local_4_1...
+11/01/16 06:05:48 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:48 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_4_0 (1135.0.0)
+11/01/16 06:05:48 Number of idle job procs: 0
+11/01/16 06:05:48 Node stage_in_remote_local_4_0 job proc (1135.0.0) completed successfully.
+11/01/16 06:05:48 Node stage_in_remote_local_4_0 job completed
+11/01/16 06:05:48 Running POST script of Node stage_in_remote_local_4_0...
+11/01/16 06:05:48 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:48 Reassigning the id of job stage_in_remote_local_2_0 from (1137.0.0) to (1137.0.0)
+11/01/16 06:05:48 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_2_0 (1137.0.0)
+11/01/16 06:05:48 Number of idle job procs: 1
+11/01/16 06:05:48 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_2_0 (1137.0.0)
+11/01/16 06:05:48 Number of idle job procs: 0
+11/01/16 06:05:48 Reassigning the id of job stage_in_remote_local_3_1 from (1138.0.0) to (1138.0.0)
+11/01/16 06:05:48 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_3_1 (1138.0.0)
+11/01/16 06:05:48 Number of idle job procs: 1
+11/01/16 06:05:48 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_3_1 (1138.0.0)
+11/01/16 06:05:48 Number of idle job procs: 0
+11/01/16 06:05:48 Reassigning the id of job stage_in_remote_local_3_0 from (1139.0.0) to (1139.0.0)
+11/01/16 06:05:48 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_3_0 (1139.0.0)
+11/01/16 06:05:48 Number of idle job procs: 1
+11/01/16 06:05:48 Reassigning the id of job stage_in_remote_local_6_0 from (1140.0.0) to (1140.0.0)
+11/01/16 06:05:48 Event: ULOG_SUBMIT for Condor Node stage_in_remote_local_6_0 (1140.0.0)
+11/01/16 06:05:48 Number of idle job procs: 2
+11/01/16 06:05:48 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:05:48 Of 54 nodes total:
+11/01/16 06:05:48  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:05:48   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:05:48    14       0        4       7       0         29        0
+11/01/16 06:05:48 0 job proc(s) currently held
+11/01/16 06:05:48 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1127.0.0)
+11/01/16 06:05:49 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1135.0.0)
+11/01/16 06:05:49 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1130.0.0)
+11/01/16 06:05:49 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1133.0.0)
+11/01/16 06:05:49 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1132.0.0)
+11/01/16 06:05:49 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1134.0.0)
+11/01/16 06:05:49 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1136.0.0)
+11/01/16 06:05:53 Currently monitoring 1 Condor log file(s)
+11/01/16 06:05:53 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_5_0 (1127.0.0)
+11/01/16 06:05:53 POST Script of Node stage_in_local_local_5_0 completed successfully.
+11/01/16 06:05:53 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_4_0 (1135.0.0)
+11/01/16 06:05:53 POST Script of Node stage_in_remote_local_4_0 completed successfully.
+11/01/16 06:05:53 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_4_0 (1130.0.0)
+11/01/16 06:05:53 POST Script of Node stage_in_local_local_4_0 completed successfully.
+11/01/16 06:05:53 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_4_1 (1133.0.0)
+11/01/16 06:05:53 POST Script of Node stage_in_local_local_4_1 completed successfully.
+11/01/16 06:05:53 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_local_local_7_0 (1132.0.0)
+11/01/16 06:05:53 POST Script of Node stage_in_local_local_7_0 completed successfully.
+11/01/16 06:05:53 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_4_1 (1134.0.0)
+11/01/16 06:05:53 POST Script of Node stage_in_remote_local_4_1 completed successfully.
+11/01/16 06:05:53 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_0_0 (1136.0.0)
+11/01/16 06:05:53 POST Script of Node stage_in_remote_local_0_0 completed successfully.
+11/01/16 06:05:53 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_2_0 (1137.0.0)
+11/01/16 06:05:53 Number of idle job procs: 2
+11/01/16 06:05:53 Node stage_in_remote_local_2_0 job proc (1137.0.0) completed successfully.
+11/01/16 06:05:53 Node stage_in_remote_local_2_0 job completed
+11/01/16 06:05:53 Running POST script of Node stage_in_remote_local_2_0...
+11/01/16 06:05:53 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:53 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_6_0 (1140.0.0)
+11/01/16 06:05:53 Number of idle job procs: 1
+11/01/16 06:05:53 Event: ULOG_EXECUTE for Condor Node stage_in_remote_local_3_0 (1139.0.0)
+11/01/16 06:05:53 Number of idle job procs: 0
+11/01/16 06:05:53 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_3_1 (1138.0.0)
+11/01/16 06:05:53 Number of idle job procs: 0
+11/01/16 06:05:53 Node stage_in_remote_local_3_1 job proc (1138.0.0) completed successfully.
+11/01/16 06:05:53 Node stage_in_remote_local_3_1 job completed
+11/01/16 06:05:53 Running POST script of Node stage_in_remote_local_3_1...
+11/01/16 06:05:53 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:53 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:05:53 Of 54 nodes total:
+11/01/16 06:05:53  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:05:53   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:05:53    21       0        2       2       1         28        0
+11/01/16 06:05:53 0 job proc(s) currently held
+11/01/16 06:05:53 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1138.0.0)
+11/01/16 06:05:53 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1137.0.0)
+11/01/16 06:05:58 Submitting Condor Node init_0_ID0000001 job(s)...
+11/01/16 06:05:58 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:05:58 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:05:58 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:05:58 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'init_0_ID0000001 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'init_0_ID0000001 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_0_0,stage_in_remote_local_0_0" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/init_0_ID0000001.sub
+11/01/16 06:05:58 From submit: Submitting job(s).
+11/01/16 06:05:58 From submit: 1 job(s) submitted to cluster 1141.
+11/01/16 06:05:58 	assigned Condor ID (1141.0.0)
+11/01/16 06:05:58 Just submitted 1 job this cycle...
+11/01/16 06:05:58 Currently monitoring 1 Condor log file(s)
+11/01/16 06:05:58 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_3_1 (1138.0.0)
+11/01/16 06:05:58 POST Script of Node stage_in_remote_local_3_1 completed successfully.
+11/01/16 06:05:58 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_2_0 (1137.0.0)
+11/01/16 06:05:58 POST Script of Node stage_in_remote_local_2_0 completed successfully.
+11/01/16 06:05:58 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_6_0 (1140.0.0)
+11/01/16 06:05:58 Number of idle job procs: 0
+11/01/16 06:05:58 Node stage_in_remote_local_6_0 job proc (1140.0.0) completed successfully.
+11/01/16 06:05:58 Node stage_in_remote_local_6_0 job completed
+11/01/16 06:05:58 Running POST script of Node stage_in_remote_local_6_0...
+11/01/16 06:05:58 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:58 Event: ULOG_JOB_TERMINATED for Condor Node stage_in_remote_local_3_0 (1139.0.0)
+11/01/16 06:05:58 Number of idle job procs: 0
+11/01/16 06:05:58 Node stage_in_remote_local_3_0 job proc (1139.0.0) completed successfully.
+11/01/16 06:05:58 Node stage_in_remote_local_3_0 job completed
+11/01/16 06:05:58 Running POST script of Node stage_in_remote_local_3_0...
+11/01/16 06:05:58 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:05:58 Reassigning the id of job init_0_ID0000001 from (1141.0.0) to (1141.0.0)
+11/01/16 06:05:58 Event: ULOG_SUBMIT for Condor Node init_0_ID0000001 (1141.0.0)
+11/01/16 06:05:58 Number of idle job procs: 1
+11/01/16 06:05:58 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:05:58 Of 54 nodes total:
+11/01/16 06:05:58  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:05:58   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:05:58    23       0        1       2       0         28        0
+11/01/16 06:05:58 0 job proc(s) currently held
+11/01/16 06:05:59 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1139.0.0)
+11/01/16 06:05:59 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1140.0.0)
+11/01/16 06:06:03 Currently monitoring 1 Condor log file(s)
+11/01/16 06:06:03 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_3_0 (1139.0.0)
+11/01/16 06:06:03 POST Script of Node stage_in_remote_local_3_0 completed successfully.
+11/01/16 06:06:03 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node stage_in_remote_local_6_0 (1140.0.0)
+11/01/16 06:06:03 POST Script of Node stage_in_remote_local_6_0 completed successfully.
+11/01/16 06:06:03 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:06:03 Of 54 nodes total:
+11/01/16 06:06:03  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:06:03   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:06:03    25       0        1       0       0         28        0
+11/01/16 06:06:03 0 job proc(s) currently held
+11/01/16 06:06:08 Currently monitoring 1 Condor log file(s)
+11/01/16 06:06:08 Event: ULOG_EXECUTE for Condor Node init_0_ID0000001 (1141.0.0)
+11/01/16 06:06:08 Number of idle job procs: 0
+11/01/16 06:09:13 Currently monitoring 1 Condor log file(s)
+11/01/16 06:09:13 Event: ULOG_JOB_TERMINATED for Condor Node init_0_ID0000001 (1141.0.0)
+11/01/16 06:09:13 Number of idle job procs: 0
+11/01/16 06:09:13 Node init_0_ID0000001 job proc (1141.0.0) completed successfully.
+11/01/16 06:09:13 Node init_0_ID0000001 job completed
+11/01/16 06:09:13 Running POST script of Node init_0_ID0000001...
+11/01/16 06:09:13 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:09:13 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:09:13 Of 54 nodes total:
+11/01/16 06:09:13  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:09:13   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:09:13    25       0        0       1       0         28        0
+11/01/16 06:09:13 0 job proc(s) currently held
+11/01/16 06:09:13 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1141.0.0)
+11/01/16 06:09:18 Currently monitoring 1 Condor log file(s)
+11/01/16 06:09:18 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node init_0_ID0000001 (1141.0.0)
+11/01/16 06:09:18 POST Script of Node init_0_ID0000001 completed successfully.
+11/01/16 06:09:18 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:09:18 Of 54 nodes total:
+11/01/16 06:09:18  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:09:18   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:09:18    26       0        0       0       2         26        0
+11/01/16 06:09:18 0 job proc(s) currently held
+11/01/16 06:09:23 Submitting Condor Node clean_up_local_level_3_0 job(s)...
+11/01/16 06:09:23 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:09:23 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:09:23 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:09:23 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_3_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_3_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"init_0_ID0000001" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/01/clean_up_local_level_3_0.sub
+11/01/16 06:09:23 From submit: Submitting job(s).
+11/01/16 06:09:23 From submit: 1 job(s) submitted to cluster 1142.
+11/01/16 06:09:23 	assigned Condor ID (1142.0.0)
+11/01/16 06:09:23 Submitting Condor Node generalinfo_0_ID0000002 job(s)...
+11/01/16 06:09:23 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:09:23 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:09:23 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:09:23 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'generalinfo_0_ID0000002 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'generalinfo_0_ID0000002 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_1_0,stage_in_local_local_1_0,init_0_ID0000001" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/generalinfo_0_ID0000002.sub
+11/01/16 06:09:23 From submit: Submitting job(s).
+11/01/16 06:09:23 From submit: 1 job(s) submitted to cluster 1143.
+11/01/16 06:09:23 	assigned Condor ID (1143.0.0)
+11/01/16 06:09:23 Just submitted 2 jobs this cycle...
+11/01/16 06:09:23 Currently monitoring 1 Condor log file(s)
+11/01/16 06:09:23 Reassigning the id of job clean_up_local_level_3_0 from (1142.0.0) to (1142.0.0)
+11/01/16 06:09:23 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_3_0 (1142.0.0)
+11/01/16 06:09:23 Number of idle job procs: 1
+11/01/16 06:09:23 Reassigning the id of job generalinfo_0_ID0000002 from (1143.0.0) to (1143.0.0)
+11/01/16 06:09:23 Event: ULOG_SUBMIT for Condor Node generalinfo_0_ID0000002 (1143.0.0)
+11/01/16 06:09:23 Number of idle job procs: 2
+11/01/16 06:09:23 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_3_0 (1142.0.0)
+11/01/16 06:09:23 Number of idle job procs: 1
+11/01/16 06:09:23 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:09:23 Of 54 nodes total:
+11/01/16 06:09:23  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:09:23   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:09:23    26       0        2       0       0         26        0
+11/01/16 06:09:23 0 job proc(s) currently held
+11/01/16 06:09:28 Currently monitoring 1 Condor log file(s)
+11/01/16 06:09:28 Event: ULOG_EXECUTE for Condor Node generalinfo_0_ID0000002 (1143.0.0)
+11/01/16 06:09:28 Number of idle job procs: 0
+11/01/16 06:09:28 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_3_0 (1142.0.0)
+11/01/16 06:09:28 Number of idle job procs: 0
+11/01/16 06:09:28 Node clean_up_local_level_3_0 job proc (1142.0.0) completed successfully.
+11/01/16 06:09:28 Node clean_up_local_level_3_0 job completed
+11/01/16 06:09:28 Running POST script of Node clean_up_local_level_3_0...
+11/01/16 06:09:28 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:09:28 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:09:28 Of 54 nodes total:
+11/01/16 06:09:28  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:09:28   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:09:28    26       0        1       1       0         26        0
+11/01/16 06:09:28 0 job proc(s) currently held
+11/01/16 06:09:28 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1142.0.0)
+11/01/16 06:09:33 Currently monitoring 1 Condor log file(s)
+11/01/16 06:09:33 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_3_0 (1142.0.0)
+11/01/16 06:09:33 POST Script of Node clean_up_local_level_3_0 completed successfully.
+11/01/16 06:09:33 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:09:33 Of 54 nodes total:
+11/01/16 06:09:33  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:09:33   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:09:33    27       0        1       0       0         26        0
+11/01/16 06:09:33 0 job proc(s) currently held
+11/01/16 06:15:34 Currently monitoring 1 Condor log file(s)
+11/01/16 06:15:34 Event: ULOG_JOB_TERMINATED for Condor Node generalinfo_0_ID0000002 (1143.0.0)
+11/01/16 06:15:34 Number of idle job procs: 0
+11/01/16 06:15:34 Node generalinfo_0_ID0000002 job proc (1143.0.0) completed successfully.
+11/01/16 06:15:34 Node generalinfo_0_ID0000002 job completed
+11/01/16 06:15:34 Running POST script of Node generalinfo_0_ID0000002...
+11/01/16 06:15:34 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:15:34 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:15:34 Of 54 nodes total:
+11/01/16 06:15:34  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:15:34   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:15:34    27       0        0       1       0         26        0
+11/01/16 06:15:34 0 job proc(s) currently held
+11/01/16 06:15:34 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1143.0.0)
+11/01/16 06:15:39 Currently monitoring 1 Condor log file(s)
+11/01/16 06:15:39 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node generalinfo_0_ID0000002 (1143.0.0)
+11/01/16 06:15:39 POST Script of Node generalinfo_0_ID0000002 completed successfully.
+11/01/16 06:15:39 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:15:39 Of 54 nodes total:
+11/01/16 06:15:39  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:15:39   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:15:39    28       0        0       0       4         22        0
+11/01/16 06:15:39 0 job proc(s) currently held
+11/01/16 06:15:44 Submitting Condor Node clean_up_local_level_4_0 job(s)...
+11/01/16 06:15:44 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:15:44 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:15:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:15:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_4_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_4_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"generalinfo_0_ID0000002" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/01/clean_up_local_level_4_0.sub
+11/01/16 06:15:44 From submit: Submitting job(s).
+11/01/16 06:15:44 From submit: 1 job(s) submitted to cluster 1144.
+11/01/16 06:15:44 	assigned Condor ID (1144.0.0)
+11/01/16 06:15:44 Submitting Condor Node statscpumemory_0_ID0000003 job(s)...
+11/01/16 06:15:44 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:15:44 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:15:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:15:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'statscpumemory_0_ID0000003 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'statscpumemory_0_ID0000003 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_2_0,stage_in_remote_local_2_0,generalinfo_0_ID0000002" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/statscpumemory_0_ID0000003.sub
+11/01/16 06:15:44 From submit: Submitting job(s).
+11/01/16 06:15:44 From submit: 1 job(s) submitted to cluster 1145.
+11/01/16 06:15:44 	assigned Condor ID (1145.0.0)
+11/01/16 06:15:44 Submitting Condor Node medianmemory_0_ID0000005 job(s)...
+11/01/16 06:15:44 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:15:44 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:15:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:15:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'medianmemory_0_ID0000005 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'medianmemory_0_ID0000005 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_2_1,stage_in_local_local_2_1,generalinfo_0_ID0000002" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/medianmemory_0_ID0000005.sub
+11/01/16 06:15:44 From submit: Submitting job(s).
+11/01/16 06:15:44 From submit: 1 job(s) submitted to cluster 1146.
+11/01/16 06:15:44 	assigned Condor ID (1146.0.0)
+11/01/16 06:15:44 Submitting Condor Node mediancpu_0_ID0000004 job(s)...
+11/01/16 06:15:44 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:15:44 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:15:44 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:15:44 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'mediancpu_0_ID0000004 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'mediancpu_0_ID0000004 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_2_0,stage_in_remote_local_2_0,generalinfo_0_ID0000002" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/mediancpu_0_ID0000004.sub
+11/01/16 06:15:44 From submit: Submitting job(s).
+11/01/16 06:15:44 From submit: 1 job(s) submitted to cluster 1147.
+11/01/16 06:15:44 	assigned Condor ID (1147.0.0)
+11/01/16 06:15:44 Just submitted 4 jobs this cycle...
+11/01/16 06:15:44 Currently monitoring 1 Condor log file(s)
+11/01/16 06:15:44 Reassigning the id of job clean_up_local_level_4_0 from (1144.0.0) to (1144.0.0)
+11/01/16 06:15:44 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_4_0 (1144.0.0)
+11/01/16 06:15:44 Number of idle job procs: 1
+11/01/16 06:15:44 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_4_0 (1144.0.0)
+11/01/16 06:15:44 Number of idle job procs: 0
+11/01/16 06:15:44 Reassigning the id of job statscpumemory_0_ID0000003 from (1145.0.0) to (1145.0.0)
+11/01/16 06:15:44 Event: ULOG_SUBMIT for Condor Node statscpumemory_0_ID0000003 (1145.0.0)
+11/01/16 06:15:44 Number of idle job procs: 1
+11/01/16 06:15:44 Reassigning the id of job medianmemory_0_ID0000005 from (1146.0.0) to (1146.0.0)
+11/01/16 06:15:44 Event: ULOG_SUBMIT for Condor Node medianmemory_0_ID0000005 (1146.0.0)
+11/01/16 06:15:44 Number of idle job procs: 2
+11/01/16 06:15:44 Reassigning the id of job mediancpu_0_ID0000004 from (1147.0.0) to (1147.0.0)
+11/01/16 06:15:44 Event: ULOG_SUBMIT for Condor Node mediancpu_0_ID0000004 (1147.0.0)
+11/01/16 06:15:44 Number of idle job procs: 3
+11/01/16 06:15:44 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:15:44 Of 54 nodes total:
+11/01/16 06:15:44  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:15:44   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:15:44    28       0        4       0       0         22        0
+11/01/16 06:15:44 0 job proc(s) currently held
+11/01/16 06:15:49 Currently monitoring 1 Condor log file(s)
+11/01/16 06:15:49 Event: ULOG_EXECUTE for Condor Node statscpumemory_0_ID0000003 (1145.0.0)
+11/01/16 06:15:49 Number of idle job procs: 2
+11/01/16 06:15:49 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_4_0 (1144.0.0)
+11/01/16 06:15:49 Number of idle job procs: 2
+11/01/16 06:15:49 Node clean_up_local_level_4_0 job proc (1144.0.0) completed successfully.
+11/01/16 06:15:49 Node clean_up_local_level_4_0 job completed
+11/01/16 06:15:49 Running POST script of Node clean_up_local_level_4_0...
+11/01/16 06:15:49 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:15:49 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:15:49 Of 54 nodes total:
+11/01/16 06:15:49  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:15:49   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:15:49    28       0        3       1       0         22        0
+11/01/16 06:15:49 0 job proc(s) currently held
+11/01/16 06:15:50 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1144.0.0)
+11/01/16 06:15:54 Currently monitoring 1 Condor log file(s)
+11/01/16 06:15:54 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_4_0 (1144.0.0)
+11/01/16 06:15:54 POST Script of Node clean_up_local_level_4_0 completed successfully.
+11/01/16 06:15:54 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:15:54 Of 54 nodes total:
+11/01/16 06:15:54  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:15:54   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:15:54    29       0        3       0       0         22        0
+11/01/16 06:15:54 0 job proc(s) currently held
+11/01/16 06:16:14 Currently monitoring 1 Condor log file(s)
+11/01/16 06:16:14 Event: ULOG_EXECUTE for Condor Node mediancpu_0_ID0000004 (1147.0.0)
+11/01/16 06:16:14 Number of idle job procs: 1
+11/01/16 06:16:14 Event: ULOG_EXECUTE for Condor Node medianmemory_0_ID0000005 (1146.0.0)
+11/01/16 06:16:14 Number of idle job procs: 0
+11/01/16 06:24:39 Currently monitoring 1 Condor log file(s)
+11/01/16 06:24:39 Event: ULOG_JOB_TERMINATED for Condor Node mediancpu_0_ID0000004 (1147.0.0)
+11/01/16 06:24:39 Number of idle job procs: 0
+11/01/16 06:24:39 Node mediancpu_0_ID0000004 job proc (1147.0.0) completed successfully.
+11/01/16 06:24:39 Node mediancpu_0_ID0000004 job completed
+11/01/16 06:24:39 Running POST script of Node mediancpu_0_ID0000004...
+11/01/16 06:24:39 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:24:39 Event: ULOG_JOB_TERMINATED for Condor Node medianmemory_0_ID0000005 (1146.0.0)
+11/01/16 06:24:39 Number of idle job procs: 0
+11/01/16 06:24:39 Node medianmemory_0_ID0000005 job proc (1146.0.0) completed successfully.
+11/01/16 06:24:39 Node medianmemory_0_ID0000005 job completed
+11/01/16 06:24:39 Running POST script of Node medianmemory_0_ID0000005...
+11/01/16 06:24:39 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:24:39 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:24:39 Of 54 nodes total:
+11/01/16 06:24:39  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:24:39   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:24:39    29       0        1       2       0         22        0
+11/01/16 06:24:39 0 job proc(s) currently held
+11/01/16 06:24:39 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1146.0.0)
+11/01/16 06:24:39 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1147.0.0)
+11/01/16 06:24:44 Currently monitoring 1 Condor log file(s)
+11/01/16 06:24:44 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node medianmemory_0_ID0000005 (1146.0.0)
+11/01/16 06:24:44 POST Script of Node medianmemory_0_ID0000005 completed successfully.
+11/01/16 06:24:44 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node mediancpu_0_ID0000004 (1147.0.0)
+11/01/16 06:24:44 POST Script of Node mediancpu_0_ID0000004 completed successfully.
+11/01/16 06:24:44 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:24:44 Of 54 nodes total:
+11/01/16 06:24:44  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:24:44   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:24:44    31       0        1       0       1         21        0
+11/01/16 06:24:44 0 job proc(s) currently held
+11/01/16 06:24:49 Submitting Condor Node clean_up_local_level_5_1 job(s)...
+11/01/16 06:24:49 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:24:49 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:24:49 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:24:49 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_5_1 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_5_1 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"mediancpu_0_ID0000004" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/01/clean_up_local_level_5_1.sub
+11/01/16 06:24:49 From submit: Submitting job(s).
+11/01/16 06:24:49 From submit: 1 job(s) submitted to cluster 1148.
+11/01/16 06:24:49 	assigned Condor ID (1148.0.0)
+11/01/16 06:24:49 Just submitted 1 job this cycle...
+11/01/16 06:24:49 Currently monitoring 1 Condor log file(s)
+11/01/16 06:24:49 Reassigning the id of job clean_up_local_level_5_1 from (1148.0.0) to (1148.0.0)
+11/01/16 06:24:49 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_5_1 (1148.0.0)
+11/01/16 06:24:49 Number of idle job procs: 1
+11/01/16 06:24:49 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:24:49 Of 54 nodes total:
+11/01/16 06:24:49  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:24:49   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:24:49    31       0        2       0       0         21        0
+11/01/16 06:24:49 0 job proc(s) currently held
+11/01/16 06:24:55 Currently monitoring 1 Condor log file(s)
+11/01/16 06:24:55 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_5_1 (1148.0.0)
+11/01/16 06:24:55 Number of idle job procs: 0
+11/01/16 06:24:55 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_5_1 (1148.0.0)
+11/01/16 06:24:55 Number of idle job procs: 0
+11/01/16 06:24:55 Node clean_up_local_level_5_1 job proc (1148.0.0) completed successfully.
+11/01/16 06:24:55 Node clean_up_local_level_5_1 job completed
+11/01/16 06:24:55 Running POST script of Node clean_up_local_level_5_1...
+11/01/16 06:24:55 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:24:55 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:24:55 Of 54 nodes total:
+11/01/16 06:24:55  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:24:55   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:24:55    31       0        1       1       0         21        0
+11/01/16 06:24:55 0 job proc(s) currently held
+11/01/16 06:24:55 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1148.0.0)
+11/01/16 06:25:00 Currently monitoring 1 Condor log file(s)
+11/01/16 06:25:00 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_5_1 (1148.0.0)
+11/01/16 06:25:00 POST Script of Node clean_up_local_level_5_1 completed successfully.
+11/01/16 06:25:00 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:25:00 Of 54 nodes total:
+11/01/16 06:25:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:25:00   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:25:00    32       0        1       0       0         21        0
+11/01/16 06:25:00 0 job proc(s) currently held
+11/01/16 06:33:35 Currently monitoring 1 Condor log file(s)
+11/01/16 06:33:35 Event: ULOG_JOB_TERMINATED for Condor Node statscpumemory_0_ID0000003 (1145.0.0)
+11/01/16 06:33:35 Number of idle job procs: 0
+11/01/16 06:33:35 Node statscpumemory_0_ID0000003 job proc (1145.0.0) completed successfully.
+11/01/16 06:33:35 Node statscpumemory_0_ID0000003 job completed
+11/01/16 06:33:35 Running POST script of Node statscpumemory_0_ID0000003...
+11/01/16 06:33:35 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:33:35 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:33:35 Of 54 nodes total:
+11/01/16 06:33:35  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:33:35   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:33:35    32       0        0       1       0         21        0
+11/01/16 06:33:35 0 job proc(s) currently held
+11/01/16 06:33:36 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1145.0.0)
+11/01/16 06:33:40 Currently monitoring 1 Condor log file(s)
+11/01/16 06:33:40 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node statscpumemory_0_ID0000003 (1145.0.0)
+11/01/16 06:33:40 POST Script of Node statscpumemory_0_ID0000003 completed successfully.
+11/01/16 06:33:40 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:33:40 Of 54 nodes total:
+11/01/16 06:33:40  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:33:40   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:33:40    33       0        0       0       4         17        0
+11/01/16 06:33:40 0 job proc(s) currently held
+11/01/16 06:33:45 Submitting Condor Node clean_up_local_level_5_0 job(s)...
+11/01/16 06:33:45 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:33:45 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:33:45 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:33:45 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_5_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_5_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"statscpumemory_0_ID0000003,medianmemory_0_ID0000005" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/01/clean_up_local_level_5_0.sub
+11/01/16 06:33:45 From submit: Submitting job(s).
+11/01/16 06:33:45 From submit: 1 job(s) submitted to cluster 1149.
+11/01/16 06:33:45 	assigned Condor ID (1149.0.0)
+11/01/16 06:33:45 Submitting Condor Node taskevent_0_ID0000006 job(s)...
+11/01/16 06:33:45 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:33:45 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:33:45 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:33:45 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'taskevent_0_ID0000006 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'taskevent_0_ID0000006 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_3_0,stage_in_remote_local_3_1,stage_in_remote_local_3_0,statscpumemory_0_ID0000003,medianmemory_0_ID0000005,mediancpu_0_ID0000004" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/taskevent_0_ID0000006.sub
+11/01/16 06:33:45 From submit: Submitting job(s).
+11/01/16 06:33:45 From submit: 1 job(s) submitted to cluster 1150.
+11/01/16 06:33:45 	assigned Condor ID (1150.0.0)
+11/01/16 06:33:45 Submitting Condor Node taskevent_1_ID0000007 job(s)...
+11/01/16 06:33:45 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:33:45 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:33:45 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:33:45 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'taskevent_1_ID0000007 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'taskevent_1_ID0000007 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_3_1,stage_in_remote_local_3_1,stage_in_remote_local_3_0,statscpumemory_0_ID0000003,medianmemory_0_ID0000005,mediancpu_0_ID0000004" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/taskevent_1_ID0000007.sub
+11/01/16 06:33:45 From submit: Submitting job(s).
+11/01/16 06:33:45 From submit: 1 job(s) submitted to cluster 1151.
+11/01/16 06:33:45 	assigned Condor ID (1151.0.0)
+11/01/16 06:33:45 Submitting Condor Node taskevent_2_ID0000008 job(s)...
+11/01/16 06:33:45 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:33:45 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:33:45 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:33:45 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'taskevent_2_ID0000008 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'taskevent_2_ID0000008 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_3_0,stage_in_remote_local_3_1,stage_in_remote_local_3_0,statscpumemory_0_ID0000003,medianmemory_0_ID0000005,mediancpu_0_ID0000004" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/taskevent_2_ID0000008.sub
+11/01/16 06:33:45 From submit: Submitting job(s).
+11/01/16 06:33:45 From submit: 1 job(s) submitted to cluster 1152.
+11/01/16 06:33:45 	assigned Condor ID (1152.0.0)
+11/01/16 06:33:45 Just submitted 4 jobs this cycle...
+11/01/16 06:33:45 Currently monitoring 1 Condor log file(s)
+11/01/16 06:33:45 Reassigning the id of job clean_up_local_level_5_0 from (1149.0.0) to (1149.0.0)
+11/01/16 06:33:45 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_5_0 (1149.0.0)
+11/01/16 06:33:45 Number of idle job procs: 1
+11/01/16 06:33:45 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_5_0 (1149.0.0)
+11/01/16 06:33:45 Number of idle job procs: 0
+11/01/16 06:33:45 Reassigning the id of job taskevent_0_ID0000006 from (1150.0.0) to (1150.0.0)
+11/01/16 06:33:45 Event: ULOG_SUBMIT for Condor Node taskevent_0_ID0000006 (1150.0.0)
+11/01/16 06:33:45 Number of idle job procs: 1
+11/01/16 06:33:45 Reassigning the id of job taskevent_1_ID0000007 from (1151.0.0) to (1151.0.0)
+11/01/16 06:33:45 Event: ULOG_SUBMIT for Condor Node taskevent_1_ID0000007 (1151.0.0)
+11/01/16 06:33:45 Number of idle job procs: 2
+11/01/16 06:33:45 Reassigning the id of job taskevent_2_ID0000008 from (1152.0.0) to (1152.0.0)
+11/01/16 06:33:45 Event: ULOG_SUBMIT for Condor Node taskevent_2_ID0000008 (1152.0.0)
+11/01/16 06:33:45 Number of idle job procs: 3
+11/01/16 06:33:45 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:33:45 Of 54 nodes total:
+11/01/16 06:33:45  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:33:45   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:33:45    33       0        4       0       0         17        0
+11/01/16 06:33:45 0 job proc(s) currently held
+11/01/16 06:33:55 Currently monitoring 1 Condor log file(s)
+11/01/16 06:33:55 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_5_0 (1149.0.0)
+11/01/16 06:33:55 Number of idle job procs: 3
+11/01/16 06:33:55 Node clean_up_local_level_5_0 job proc (1149.0.0) completed successfully.
+11/01/16 06:33:55 Node clean_up_local_level_5_0 job completed
+11/01/16 06:33:55 Running POST script of Node clean_up_local_level_5_0...
+11/01/16 06:33:55 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:33:55 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:33:55 Of 54 nodes total:
+11/01/16 06:33:55  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:33:55   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:33:55    33       0        3       1       0         17        0
+11/01/16 06:33:55 0 job proc(s) currently held
+11/01/16 06:33:55 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1149.0.0)
+11/01/16 06:34:00 Currently monitoring 1 Condor log file(s)
+11/01/16 06:34:00 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_5_0 (1149.0.0)
+11/01/16 06:34:00 POST Script of Node clean_up_local_level_5_0 completed successfully.
+11/01/16 06:34:00 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:34:00 Of 54 nodes total:
+11/01/16 06:34:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:34:00   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:34:00    34       0        3       0       0         17        0
+11/01/16 06:34:00 0 job proc(s) currently held
+11/01/16 06:34:10 Currently monitoring 1 Condor log file(s)
+11/01/16 06:34:10 Event: ULOG_EXECUTE for Condor Node taskevent_1_ID0000007 (1151.0.0)
+11/01/16 06:34:10 Number of idle job procs: 2
+11/01/16 06:34:10 Event: ULOG_EXECUTE for Condor Node taskevent_0_ID0000006 (1150.0.0)
+11/01/16 06:34:10 Number of idle job procs: 1
+11/01/16 06:34:10 Event: ULOG_EXECUTE for Condor Node taskevent_2_ID0000008 (1152.0.0)
+11/01/16 06:34:10 Number of idle job procs: 0
+11/01/16 06:35:20 Currently monitoring 1 Condor log file(s)
+11/01/16 06:35:20 Event: ULOG_JOB_TERMINATED for Condor Node taskevent_2_ID0000008 (1152.0.0)
+11/01/16 06:35:20 Number of idle job procs: 0
+11/01/16 06:35:20 Node taskevent_2_ID0000008 job proc (1152.0.0) completed successfully.
+11/01/16 06:35:20 Node taskevent_2_ID0000008 job completed
+11/01/16 06:35:20 Running POST script of Node taskevent_2_ID0000008...
+11/01/16 06:35:20 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:35:20 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:35:20 Of 54 nodes total:
+11/01/16 06:35:20  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:35:20   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:35:20    34       0        2       1       0         17        0
+11/01/16 06:35:20 0 job proc(s) currently held
+11/01/16 06:35:20 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1152.0.0)
+11/01/16 06:35:25 Currently monitoring 1 Condor log file(s)
+11/01/16 06:35:25 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node taskevent_2_ID0000008 (1152.0.0)
+11/01/16 06:35:25 POST Script of Node taskevent_2_ID0000008 completed successfully.
+11/01/16 06:35:25 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:35:25 Of 54 nodes total:
+11/01/16 06:35:25  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:35:25   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:35:25    35       0        2       0       1         16        0
+11/01/16 06:35:25 0 job proc(s) currently held
+11/01/16 06:35:30 Submitting Condor Node clean_up_local_level_6_1 job(s)...
+11/01/16 06:35:30 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:35:30 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:35:30 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:35:30 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_6_1 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_6_1 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"taskevent_2_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/01/clean_up_local_level_6_1.sub
+11/01/16 06:35:30 From submit: Submitting job(s).
+11/01/16 06:35:30 From submit: 1 job(s) submitted to cluster 1153.
+11/01/16 06:35:30 	assigned Condor ID (1153.0.0)
+11/01/16 06:35:30 Just submitted 1 job this cycle...
+11/01/16 06:35:30 Currently monitoring 1 Condor log file(s)
+11/01/16 06:35:30 Reassigning the id of job clean_up_local_level_6_1 from (1153.0.0) to (1153.0.0)
+11/01/16 06:35:30 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_6_1 (1153.0.0)
+11/01/16 06:35:30 Number of idle job procs: 1
+11/01/16 06:35:30 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:35:30 Of 54 nodes total:
+11/01/16 06:35:30  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:35:30   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:35:30    35       0        3       0       0         16        0
+11/01/16 06:35:30 0 job proc(s) currently held
+11/01/16 06:35:36 Currently monitoring 1 Condor log file(s)
+11/01/16 06:35:36 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_6_1 (1153.0.0)
+11/01/16 06:35:36 Number of idle job procs: 0
+11/01/16 06:35:41 Currently monitoring 1 Condor log file(s)
+11/01/16 06:35:41 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_6_1 (1153.0.0)
+11/01/16 06:35:41 Number of idle job procs: 0
+11/01/16 06:35:41 Node clean_up_local_level_6_1 job proc (1153.0.0) completed successfully.
+11/01/16 06:35:41 Node clean_up_local_level_6_1 job completed
+11/01/16 06:35:41 Running POST script of Node clean_up_local_level_6_1...
+11/01/16 06:35:41 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:35:41 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:35:41 Of 54 nodes total:
+11/01/16 06:35:41  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:35:41   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:35:41    35       0        2       1       0         16        0
+11/01/16 06:35:41 0 job proc(s) currently held
+11/01/16 06:35:41 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1153.0.0)
+11/01/16 06:35:46 Currently monitoring 1 Condor log file(s)
+11/01/16 06:35:46 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_6_1 (1153.0.0)
+11/01/16 06:35:46 POST Script of Node clean_up_local_level_6_1 completed successfully.
+11/01/16 06:35:46 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:35:46 Of 54 nodes total:
+11/01/16 06:35:46  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:35:46   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:35:46    36       0        2       0       0         16        0
+11/01/16 06:35:46 0 job proc(s) currently held
+11/01/16 06:40:26 Currently monitoring 1 Condor log file(s)
+11/01/16 06:40:26 Event: ULOG_JOB_TERMINATED for Condor Node taskevent_1_ID0000007 (1151.0.0)
+11/01/16 06:40:26 Number of idle job procs: 0
+11/01/16 06:40:26 Node taskevent_1_ID0000007 job proc (1151.0.0) completed successfully.
+11/01/16 06:40:26 Node taskevent_1_ID0000007 job completed
+11/01/16 06:40:26 Running POST script of Node taskevent_1_ID0000007...
+11/01/16 06:40:26 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:40:26 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:40:26 Of 54 nodes total:
+11/01/16 06:40:26  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:40:26   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:40:26    36       0        1       1       0         16        0
+11/01/16 06:40:26 0 job proc(s) currently held
+11/01/16 06:40:26 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1151.0.0)
+11/01/16 06:40:31 Currently monitoring 1 Condor log file(s)
+11/01/16 06:40:31 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node taskevent_1_ID0000007 (1151.0.0)
+11/01/16 06:40:31 POST Script of Node taskevent_1_ID0000007 completed successfully.
+11/01/16 06:40:31 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:40:31 Of 54 nodes total:
+11/01/16 06:40:31  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:40:31   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:40:31    37       0        1       0       0         16        0
+11/01/16 06:40:31 0 job proc(s) currently held
+11/01/16 06:45:36 Currently monitoring 1 Condor log file(s)
+11/01/16 06:45:36 Event: ULOG_JOB_TERMINATED for Condor Node taskevent_0_ID0000006 (1150.0.0)
+11/01/16 06:45:36 Number of idle job procs: 0
+11/01/16 06:45:36 Node taskevent_0_ID0000006 job proc (1150.0.0) completed successfully.
+11/01/16 06:45:36 Node taskevent_0_ID0000006 job completed
+11/01/16 06:45:36 Running POST script of Node taskevent_0_ID0000006...
+11/01/16 06:45:36 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:45:36 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:45:36 Of 54 nodes total:
+11/01/16 06:45:36  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:45:36   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:45:36    37       0        0       1       0         16        0
+11/01/16 06:45:36 0 job proc(s) currently held
+11/01/16 06:45:37 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1150.0.0)
+11/01/16 06:45:41 Currently monitoring 1 Condor log file(s)
+11/01/16 06:45:41 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node taskevent_0_ID0000006 (1150.0.0)
+11/01/16 06:45:41 POST Script of Node taskevent_0_ID0000006 completed successfully.
+11/01/16 06:45:41 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:45:41 Of 54 nodes total:
+11/01/16 06:45:41  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:45:41   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:45:41    38       0        0       0       4         12        0
+11/01/16 06:45:41 0 job proc(s) currently held
+11/01/16 06:45:46 Submitting Condor Node clean_up_local_level_6_0 job(s)...
+11/01/16 06:45:46 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:45:46 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:45:46 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:45:46 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_6_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_6_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"taskevent_0_ID0000006,taskevent_1_ID0000007" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/01/clean_up_local_level_6_0.sub
+11/01/16 06:45:46 From submit: Submitting job(s).
+11/01/16 06:45:46 From submit: 1 job(s) submitted to cluster 1154.
+11/01/16 06:45:46 	assigned Condor ID (1154.0.0)
+11/01/16 06:45:46 Submitting Condor Node calculateratio_2_ID0000011 job(s)...
+11/01/16 06:45:46 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:45:46 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:45:46 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:45:46 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'calculateratio_2_ID0000011 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'calculateratio_2_ID0000011 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_4_0,stage_in_remote_local_4_1,stage_in_remote_local_4_0,taskevent_0_ID0000006,taskevent_1_ID0000007,taskevent_2_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/calculateratio_2_ID0000011.sub
+11/01/16 06:45:46 From submit: Submitting job(s).
+11/01/16 06:45:46 From submit: 1 job(s) submitted to cluster 1155.
+11/01/16 06:45:46 	assigned Condor ID (1155.0.0)
+11/01/16 06:45:46 Submitting Condor Node calculateratio_1_ID0000010 job(s)...
+11/01/16 06:45:46 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:45:46 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:45:46 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:45:46 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'calculateratio_1_ID0000010 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'calculateratio_1_ID0000010 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_4_1,stage_in_remote_local_4_1,stage_in_remote_local_4_0,taskevent_0_ID0000006,taskevent_1_ID0000007,taskevent_2_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/calculateratio_1_ID0000010.sub
+11/01/16 06:45:46 From submit: Submitting job(s).
+11/01/16 06:45:46 From submit: 1 job(s) submitted to cluster 1156.
+11/01/16 06:45:46 	assigned Condor ID (1156.0.0)
+11/01/16 06:45:46 Submitting Condor Node calculateratio_0_ID0000009 job(s)...
+11/01/16 06:45:46 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 06:45:46 Masking the events recorded in the DAGMAN workflow log
+11/01/16 06:45:46 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 06:45:46 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'calculateratio_0_ID0000009 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'calculateratio_0_ID0000009 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_4_0,stage_in_remote_local_4_1,stage_in_remote_local_4_0,taskevent_0_ID0000006,taskevent_1_ID0000007,taskevent_2_ID0000008" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/calculateratio_0_ID0000009.sub
+11/01/16 06:45:46 From submit: Submitting job(s).
+11/01/16 06:45:46 From submit: 1 job(s) submitted to cluster 1157.
+11/01/16 06:45:46 	assigned Condor ID (1157.0.0)
+11/01/16 06:45:46 Just submitted 4 jobs this cycle...
+11/01/16 06:45:46 Currently monitoring 1 Condor log file(s)
+11/01/16 06:45:46 Reassigning the id of job clean_up_local_level_6_0 from (1154.0.0) to (1154.0.0)
+11/01/16 06:45:46 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_6_0 (1154.0.0)
+11/01/16 06:45:46 Number of idle job procs: 1
+11/01/16 06:45:46 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_6_0 (1154.0.0)
+11/01/16 06:45:46 Number of idle job procs: 0
+11/01/16 06:45:46 Reassigning the id of job calculateratio_2_ID0000011 from (1155.0.0) to (1155.0.0)
+11/01/16 06:45:46 Event: ULOG_SUBMIT for Condor Node calculateratio_2_ID0000011 (1155.0.0)
+11/01/16 06:45:46 Number of idle job procs: 1
+11/01/16 06:45:46 Reassigning the id of job calculateratio_1_ID0000010 from (1156.0.0) to (1156.0.0)
+11/01/16 06:45:46 Event: ULOG_SUBMIT for Condor Node calculateratio_1_ID0000010 (1156.0.0)
+11/01/16 06:45:46 Number of idle job procs: 2
+11/01/16 06:45:46 Reassigning the id of job calculateratio_0_ID0000009 from (1157.0.0) to (1157.0.0)
+11/01/16 06:45:46 Event: ULOG_SUBMIT for Condor Node calculateratio_0_ID0000009 (1157.0.0)
+11/01/16 06:45:46 Number of idle job procs: 3
+11/01/16 06:45:46 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:45:46 Of 54 nodes total:
+11/01/16 06:45:46  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:45:46   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:45:46    38       0        4       0       0         12        0
+11/01/16 06:45:46 0 job proc(s) currently held
+11/01/16 06:45:51 Currently monitoring 1 Condor log file(s)
+11/01/16 06:45:51 Event: ULOG_EXECUTE for Condor Node calculateratio_2_ID0000011 (1155.0.0)
+11/01/16 06:45:51 Number of idle job procs: 2
+11/01/16 06:46:06 Currently monitoring 1 Condor log file(s)
+11/01/16 06:46:06 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_6_0 (1154.0.0)
+11/01/16 06:46:06 Number of idle job procs: 2
+11/01/16 06:46:06 Node clean_up_local_level_6_0 job proc (1154.0.0) completed successfully.
+11/01/16 06:46:06 Node clean_up_local_level_6_0 job completed
+11/01/16 06:46:06 Running POST script of Node clean_up_local_level_6_0...
+11/01/16 06:46:06 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 06:46:06 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:46:06 Of 54 nodes total:
+11/01/16 06:46:06  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:46:06   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:46:06    38       0        3       1       0         12        0
+11/01/16 06:46:06 0 job proc(s) currently held
+11/01/16 06:46:06 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1154.0.0)
+11/01/16 06:46:11 Currently monitoring 1 Condor log file(s)
+11/01/16 06:46:11 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_6_0 (1154.0.0)
+11/01/16 06:46:11 POST Script of Node clean_up_local_level_6_0 completed successfully.
+11/01/16 06:46:11 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 06:46:11 Of 54 nodes total:
+11/01/16 06:46:11  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 06:46:11   ===     ===      ===     ===     ===        ===      ===
+11/01/16 06:46:11    39       0        3       0       0         12        0
+11/01/16 06:46:11 0 job proc(s) currently held
+11/01/16 06:46:16 Currently monitoring 1 Condor log file(s)
+11/01/16 06:46:16 Event: ULOG_EXECUTE for Condor Node calculateratio_0_ID0000009 (1157.0.0)
+11/01/16 06:46:16 Number of idle job procs: 1
+11/01/16 06:46:16 Event: ULOG_EXECUTE for Condor Node calculateratio_1_ID0000010 (1156.0.0)
+11/01/16 06:46:16 Number of idle job procs: 0
+11/01/16 06:56:17 601 seconds since last log event
+11/01/16 06:56:17 Pending DAG nodes:
+11/01/16 06:56:17   Node calculateratio_2_ID0000011, Condor ID 1155, status STATUS_SUBMITTED
+11/01/16 06:56:17   Node calculateratio_1_ID0000010, Condor ID 1156, status STATUS_SUBMITTED
+11/01/16 06:56:17   Node calculateratio_0_ID0000009, Condor ID 1157, status STATUS_SUBMITTED
+11/01/16 07:04:57 Currently monitoring 1 Condor log file(s)
+11/01/16 07:04:57 Event: ULOG_JOB_TERMINATED for Condor Node calculateratio_2_ID0000011 (1155.0.0)
+11/01/16 07:04:57 Number of idle job procs: 0
+11/01/16 07:04:57 Node calculateratio_2_ID0000011 job proc (1155.0.0) completed successfully.
+11/01/16 07:04:57 Node calculateratio_2_ID0000011 job completed
+11/01/16 07:04:57 Running POST script of Node calculateratio_2_ID0000011...
+11/01/16 07:04:57 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:04:57 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:04:57 Of 54 nodes total:
+11/01/16 07:04:57  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:04:57   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:04:57    39       0        2       1       0         12        0
+11/01/16 07:04:57 0 job proc(s) currently held
+11/01/16 07:04:57 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1155.0.0)
+11/01/16 07:05:02 Currently monitoring 1 Condor log file(s)
+11/01/16 07:05:02 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node calculateratio_2_ID0000011 (1155.0.0)
+11/01/16 07:05:02 POST Script of Node calculateratio_2_ID0000011 completed successfully.
+11/01/16 07:05:02 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:05:02 Of 54 nodes total:
+11/01/16 07:05:02  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:05:02   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:05:02    40       0        2       0       0         12        0
+11/01/16 07:05:02 0 job proc(s) currently held
+11/01/16 07:05:13 Currently monitoring 1 Condor log file(s)
+11/01/16 07:05:13 Event: ULOG_JOB_TERMINATED for Condor Node calculateratio_0_ID0000009 (1157.0.0)
+11/01/16 07:05:13 Number of idle job procs: 0
+11/01/16 07:05:13 Node calculateratio_0_ID0000009 job proc (1157.0.0) completed successfully.
+11/01/16 07:05:13 Node calculateratio_0_ID0000009 job completed
+11/01/16 07:05:13 Running POST script of Node calculateratio_0_ID0000009...
+11/01/16 07:05:13 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:05:13 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:05:13 Of 54 nodes total:
+11/01/16 07:05:13  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:05:13   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:05:13    40       0        1       1       0         12        0
+11/01/16 07:05:13 0 job proc(s) currently held
+11/01/16 07:05:13 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1157.0.0)
+11/01/16 07:05:18 Currently monitoring 1 Condor log file(s)
+11/01/16 07:05:18 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node calculateratio_0_ID0000009 (1157.0.0)
+11/01/16 07:05:18 POST Script of Node calculateratio_0_ID0000009 completed successfully.
+11/01/16 07:05:18 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:05:18 Of 54 nodes total:
+11/01/16 07:05:18  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:05:18   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:05:18    41       0        1       0       1         11        0
+11/01/16 07:05:18 0 job proc(s) currently held
+11/01/16 07:05:23 Submitting Condor Node clean_up_local_level_7_1 job(s)...
+11/01/16 07:05:23 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 07:05:23 Masking the events recorded in the DAGMAN workflow log
+11/01/16 07:05:23 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 07:05:23 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_7_1 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_7_1 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"calculateratio_0_ID0000009" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/01/clean_up_local_level_7_1.sub
+11/01/16 07:05:23 From submit: Submitting job(s).
+11/01/16 07:05:23 From submit: 1 job(s) submitted to cluster 1158.
+11/01/16 07:05:23 	assigned Condor ID (1158.0.0)
+11/01/16 07:05:23 Just submitted 1 job this cycle...
+11/01/16 07:05:23 Currently monitoring 1 Condor log file(s)
+11/01/16 07:05:23 Reassigning the id of job clean_up_local_level_7_1 from (1158.0.0) to (1158.0.0)
+11/01/16 07:05:23 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_7_1 (1158.0.0)
+11/01/16 07:05:23 Number of idle job procs: 1
+11/01/16 07:05:23 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:05:23 Of 54 nodes total:
+11/01/16 07:05:23  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:05:23   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:05:23    41       0        2       0       0         11        0
+11/01/16 07:05:23 0 job proc(s) currently held
+11/01/16 07:05:28 Currently monitoring 1 Condor log file(s)
+11/01/16 07:05:28 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_7_1 (1158.0.0)
+11/01/16 07:05:28 Number of idle job procs: 0
+11/01/16 07:05:33 Currently monitoring 1 Condor log file(s)
+11/01/16 07:05:33 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_7_1 (1158.0.0)
+11/01/16 07:05:33 Number of idle job procs: 0
+11/01/16 07:05:33 Node clean_up_local_level_7_1 job proc (1158.0.0) completed successfully.
+11/01/16 07:05:33 Node clean_up_local_level_7_1 job completed
+11/01/16 07:05:33 Running POST script of Node clean_up_local_level_7_1...
+11/01/16 07:05:33 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:05:33 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:05:33 Of 54 nodes total:
+11/01/16 07:05:33  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:05:33   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:05:33    41       0        1       1       0         11        0
+11/01/16 07:05:33 0 job proc(s) currently held
+11/01/16 07:05:33 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1158.0.0)
+11/01/16 07:05:38 Currently monitoring 1 Condor log file(s)
+11/01/16 07:05:38 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_7_1 (1158.0.0)
+11/01/16 07:05:38 POST Script of Node clean_up_local_level_7_1 completed successfully.
+11/01/16 07:05:38 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:05:38 Of 54 nodes total:
+11/01/16 07:05:38  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:05:38   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:05:38    42       0        1       0       0         11        0
+11/01/16 07:05:38 0 job proc(s) currently held
+11/01/16 07:07:38 Currently monitoring 1 Condor log file(s)
+11/01/16 07:07:38 Event: ULOG_JOB_TERMINATED for Condor Node calculateratio_1_ID0000010 (1156.0.0)
+11/01/16 07:07:38 Number of idle job procs: 0
+11/01/16 07:07:38 Node calculateratio_1_ID0000010 job proc (1156.0.0) completed successfully.
+11/01/16 07:07:38 Node calculateratio_1_ID0000010 job completed
+11/01/16 07:07:38 Running POST script of Node calculateratio_1_ID0000010...
+11/01/16 07:07:38 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:07:38 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:07:38 Of 54 nodes total:
+11/01/16 07:07:38  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:07:38   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:07:38    42       0        0       1       0         11        0
+11/01/16 07:07:38 0 job proc(s) currently held
+11/01/16 07:07:38 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1156.0.0)
+11/01/16 07:07:43 Currently monitoring 1 Condor log file(s)
+11/01/16 07:07:43 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node calculateratio_1_ID0000010 (1156.0.0)
+11/01/16 07:07:43 POST Script of Node calculateratio_1_ID0000010 completed successfully.
+11/01/16 07:07:43 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:07:43 Of 54 nodes total:
+11/01/16 07:07:43  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:07:43   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:07:43    43       0        0       0       4          7        0
+11/01/16 07:07:43 0 job proc(s) currently held
+11/01/16 07:07:48 Submitting Condor Node clean_up_local_level_7_0 job(s)...
+11/01/16 07:07:48 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 07:07:48 Masking the events recorded in the DAGMAN workflow log
+11/01/16 07:07:48 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 07:07:48 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_7_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_7_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"calculateratio_2_ID0000011,calculateratio_1_ID0000010" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/01/clean_up_local_level_7_0.sub
+11/01/16 07:07:48 From submit: Submitting job(s).
+11/01/16 07:07:48 From submit: 1 job(s) submitted to cluster 1159.
+11/01/16 07:07:48 	assigned Condor ID (1159.0.0)
+11/01/16 07:07:48 Submitting Condor Node averageratioevent_1_ID0000013 job(s)...
+11/01/16 07:07:48 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 07:07:48 Masking the events recorded in the DAGMAN workflow log
+11/01/16 07:07:48 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 07:07:48 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averageratioevent_1_ID0000013 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'averageratioevent_1_ID0000013 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_5_0,stage_in_local_local_5_0,calculateratio_2_ID0000011,calculateratio_1_ID0000010,calculateratio_0_ID0000009" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/averageratioevent_1_ID0000013.sub
+11/01/16 07:07:48 From submit: Submitting job(s).
+11/01/16 07:07:48 From submit: 1 job(s) submitted to cluster 1160.
+11/01/16 07:07:48 	assigned Condor ID (1160.0.0)
+11/01/16 07:07:48 Submitting Condor Node averageratioevent_0_ID0000012 job(s)...
+11/01/16 07:07:48 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 07:07:48 Masking the events recorded in the DAGMAN workflow log
+11/01/16 07:07:48 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 07:07:48 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averageratioevent_0_ID0000012 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'averageratioevent_0_ID0000012 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_5_1,stage_in_local_local_5_1,calculateratio_2_ID0000011,calculateratio_1_ID0000010,calculateratio_0_ID0000009" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/averageratioevent_0_ID0000012.sub
+11/01/16 07:07:48 From submit: Submitting job(s).
+11/01/16 07:07:48 From submit: 1 job(s) submitted to cluster 1161.
+11/01/16 07:07:48 	assigned Condor ID (1161.0.0)
+11/01/16 07:07:48 Submitting Condor Node averageratioevent_2_ID0000014 job(s)...
+11/01/16 07:07:48 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 07:07:48 Masking the events recorded in the DAGMAN workflow log
+11/01/16 07:07:48 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 07:07:48 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'averageratioevent_2_ID0000014 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'averageratioevent_2_ID0000014 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_5_0,stage_in_local_local_5_0,calculateratio_2_ID0000011,calculateratio_1_ID0000010,calculateratio_0_ID0000009" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/averageratioevent_2_ID0000014.sub
+11/01/16 07:07:49 From submit: Submitting job(s).
+11/01/16 07:07:49 From submit: 1 job(s) submitted to cluster 1162.
+11/01/16 07:07:49 	assigned Condor ID (1162.0.0)
+11/01/16 07:07:49 Just submitted 4 jobs this cycle...
+11/01/16 07:07:49 Currently monitoring 1 Condor log file(s)
+11/01/16 07:07:49 Reassigning the id of job clean_up_local_level_7_0 from (1159.0.0) to (1159.0.0)
+11/01/16 07:07:49 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_7_0 (1159.0.0)
+11/01/16 07:07:49 Number of idle job procs: 1
+11/01/16 07:07:49 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_7_0 (1159.0.0)
+11/01/16 07:07:49 Number of idle job procs: 0
+11/01/16 07:07:49 Reassigning the id of job averageratioevent_1_ID0000013 from (1160.0.0) to (1160.0.0)
+11/01/16 07:07:49 Event: ULOG_SUBMIT for Condor Node averageratioevent_1_ID0000013 (1160.0.0)
+11/01/16 07:07:49 Number of idle job procs: 1
+11/01/16 07:07:49 Reassigning the id of job averageratioevent_0_ID0000012 from (1161.0.0) to (1161.0.0)
+11/01/16 07:07:49 Event: ULOG_SUBMIT for Condor Node averageratioevent_0_ID0000012 (1161.0.0)
+11/01/16 07:07:49 Number of idle job procs: 2
+11/01/16 07:07:49 Reassigning the id of job averageratioevent_2_ID0000014 from (1162.0.0) to (1162.0.0)
+11/01/16 07:07:49 Event: ULOG_SUBMIT for Condor Node averageratioevent_2_ID0000014 (1162.0.0)
+11/01/16 07:07:49 Number of idle job procs: 3
+11/01/16 07:07:49 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:07:49 Of 54 nodes total:
+11/01/16 07:07:49  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:07:49   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:07:49    43       0        4       0       0          7        0
+11/01/16 07:07:49 0 job proc(s) currently held
+11/01/16 07:08:09 Currently monitoring 1 Condor log file(s)
+11/01/16 07:08:09 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_7_0 (1159.0.0)
+11/01/16 07:08:09 Number of idle job procs: 3
+11/01/16 07:08:09 Node clean_up_local_level_7_0 job proc (1159.0.0) completed successfully.
+11/01/16 07:08:09 Node clean_up_local_level_7_0 job completed
+11/01/16 07:08:09 Running POST script of Node clean_up_local_level_7_0...
+11/01/16 07:08:09 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:08:09 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:08:09 Of 54 nodes total:
+11/01/16 07:08:09  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:08:09   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:08:09    43       0        3       1       0          7        0
+11/01/16 07:08:09 0 job proc(s) currently held
+11/01/16 07:08:09 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1159.0.0)
+11/01/16 07:08:14 Currently monitoring 1 Condor log file(s)
+11/01/16 07:08:14 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_7_0 (1159.0.0)
+11/01/16 07:08:14 POST Script of Node clean_up_local_level_7_0 completed successfully.
+11/01/16 07:08:14 Event: ULOG_EXECUTE for Condor Node averageratioevent_0_ID0000012 (1161.0.0)
+11/01/16 07:08:14 Number of idle job procs: 2
+11/01/16 07:08:14 Event: ULOG_EXECUTE for Condor Node averageratioevent_1_ID0000013 (1160.0.0)
+11/01/16 07:08:14 Number of idle job procs: 1
+11/01/16 07:08:14 Event: ULOG_EXECUTE for Condor Node averageratioevent_2_ID0000014 (1162.0.0)
+11/01/16 07:08:14 Number of idle job procs: 0
+11/01/16 07:08:14 Event: ULOG_JOB_TERMINATED for Condor Node averageratioevent_2_ID0000014 (1162.0.0)
+11/01/16 07:08:14 Number of idle job procs: 0
+11/01/16 07:08:14 Node averageratioevent_2_ID0000014 job proc (1162.0.0) completed successfully.
+11/01/16 07:08:14 Node averageratioevent_2_ID0000014 job completed
+11/01/16 07:08:14 Running POST script of Node averageratioevent_2_ID0000014...
+11/01/16 07:08:14 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:08:14 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:08:14 Of 54 nodes total:
+11/01/16 07:08:14  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:08:14   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:08:14    44       0        2       1       0          7        0
+11/01/16 07:08:14 0 job proc(s) currently held
+11/01/16 07:08:14 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1162.0.0)
+11/01/16 07:08:19 Currently monitoring 1 Condor log file(s)
+11/01/16 07:08:19 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averageratioevent_2_ID0000014 (1162.0.0)
+11/01/16 07:08:19 POST Script of Node averageratioevent_2_ID0000014 completed successfully.
+11/01/16 07:08:19 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:08:19 Of 54 nodes total:
+11/01/16 07:08:19  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:08:19   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:08:19    45       0        2       0       1          6        0
+11/01/16 07:08:19 0 job proc(s) currently held
+11/01/16 07:08:24 Submitting Condor Node clean_up_local_level_8_1 job(s)...
+11/01/16 07:08:24 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 07:08:24 Masking the events recorded in the DAGMAN workflow log
+11/01/16 07:08:24 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 07:08:24 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_8_1 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_8_1 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"averageratioevent_2_ID0000014" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/clean_up_local_level_8_1.sub
+11/01/16 07:08:24 From submit: Submitting job(s).
+11/01/16 07:08:24 From submit: 1 job(s) submitted to cluster 1163.
+11/01/16 07:08:24 	assigned Condor ID (1163.0.0)
+11/01/16 07:08:24 Just submitted 1 job this cycle...
+11/01/16 07:08:24 Currently monitoring 1 Condor log file(s)
+11/01/16 07:08:24 Reassigning the id of job clean_up_local_level_8_1 from (1163.0.0) to (1163.0.0)
+11/01/16 07:08:24 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_8_1 (1163.0.0)
+11/01/16 07:08:24 Number of idle job procs: 1
+11/01/16 07:08:24 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:08:24 Of 54 nodes total:
+11/01/16 07:08:24  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:08:24   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:08:24    45       0        3       0       0          6        0
+11/01/16 07:08:24 0 job proc(s) currently held
+11/01/16 07:08:29 Currently monitoring 1 Condor log file(s)
+11/01/16 07:08:29 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_8_1 (1163.0.0)
+11/01/16 07:08:29 Number of idle job procs: 0
+11/01/16 07:08:29 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_8_1 (1163.0.0)
+11/01/16 07:08:29 Number of idle job procs: 0
+11/01/16 07:08:29 Node clean_up_local_level_8_1 job proc (1163.0.0) completed successfully.
+11/01/16 07:08:29 Node clean_up_local_level_8_1 job completed
+11/01/16 07:08:29 Running POST script of Node clean_up_local_level_8_1...
+11/01/16 07:08:29 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:08:29 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:08:29 Of 54 nodes total:
+11/01/16 07:08:29  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:08:29   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:08:29    45       0        2       1       0          6        0
+11/01/16 07:08:29 0 job proc(s) currently held
+11/01/16 07:08:29 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1163.0.0)
+11/01/16 07:08:34 Currently monitoring 1 Condor log file(s)
+11/01/16 07:08:34 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_8_1 (1163.0.0)
+11/01/16 07:08:34 POST Script of Node clean_up_local_level_8_1 completed successfully.
+11/01/16 07:08:34 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:08:34 Of 54 nodes total:
+11/01/16 07:08:34  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:08:34   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:08:34    46       0        2       0       0          6        0
+11/01/16 07:08:34 0 job proc(s) currently held
+11/01/16 07:08:59 Currently monitoring 1 Condor log file(s)
+11/01/16 07:08:59 Event: ULOG_JOB_TERMINATED for Condor Node averageratioevent_0_ID0000012 (1161.0.0)
+11/01/16 07:08:59 Number of idle job procs: 0
+11/01/16 07:08:59 Node averageratioevent_0_ID0000012 job proc (1161.0.0) completed successfully.
+11/01/16 07:08:59 Node averageratioevent_0_ID0000012 job completed
+11/01/16 07:08:59 Running POST script of Node averageratioevent_0_ID0000012...
+11/01/16 07:08:59 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:08:59 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:08:59 Of 54 nodes total:
+11/01/16 07:08:59  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:08:59   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:08:59    46       0        1       1       0          6        0
+11/01/16 07:08:59 0 job proc(s) currently held
+11/01/16 07:08:59 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1161.0.0)
+11/01/16 07:09:04 Currently monitoring 1 Condor log file(s)
+11/01/16 07:09:04 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averageratioevent_0_ID0000012 (1161.0.0)
+11/01/16 07:09:04 POST Script of Node averageratioevent_0_ID0000012 completed successfully.
+11/01/16 07:09:04 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:09:04 Of 54 nodes total:
+11/01/16 07:09:04  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:09:04   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:09:04    47       0        1       0       0          6        0
+11/01/16 07:09:04 0 job proc(s) currently held
+11/01/16 07:09:24 Currently monitoring 1 Condor log file(s)
+11/01/16 07:09:24 Event: ULOG_JOB_TERMINATED for Condor Node averageratioevent_1_ID0000013 (1160.0.0)
+11/01/16 07:09:24 Number of idle job procs: 0
+11/01/16 07:09:24 Node averageratioevent_1_ID0000013 job proc (1160.0.0) completed successfully.
+11/01/16 07:09:24 Node averageratioevent_1_ID0000013 job completed
+11/01/16 07:09:24 Running POST script of Node averageratioevent_1_ID0000013...
+11/01/16 07:09:24 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:09:24 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:09:24 Of 54 nodes total:
+11/01/16 07:09:24  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:09:24   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:09:24    47       0        0       1       0          6        0
+11/01/16 07:09:24 0 job proc(s) currently held
+11/01/16 07:09:24 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1160.0.0)
+11/01/16 07:09:29 Currently monitoring 1 Condor log file(s)
+11/01/16 07:09:29 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node averageratioevent_1_ID0000013 (1160.0.0)
+11/01/16 07:09:29 POST Script of Node averageratioevent_1_ID0000013 completed successfully.
+11/01/16 07:09:29 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:09:29 Of 54 nodes total:
+11/01/16 07:09:29  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:09:29   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:09:29    48       0        0       0       2          4        0
+11/01/16 07:09:29 0 job proc(s) currently held
+11/01/16 07:09:34 Submitting Condor Node clean_up_local_level_8_0 job(s)...
+11/01/16 07:09:34 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 07:09:34 Masking the events recorded in the DAGMAN workflow log
+11/01/16 07:09:34 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 07:09:34 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_8_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_8_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"averageratioevent_1_ID0000013,averageratioevent_0_ID0000012" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/clean_up_local_level_8_0.sub
+11/01/16 07:09:35 From submit: Submitting job(s).
+11/01/16 07:09:35 From submit: 1 job(s) submitted to cluster 1164.
+11/01/16 07:09:35 	assigned Condor ID (1164.0.0)
+11/01/16 07:09:35 Submitting Condor Node analysisevent_0_ID0000015 job(s)...
+11/01/16 07:09:35 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 07:09:35 Masking the events recorded in the DAGMAN workflow log
+11/01/16 07:09:35 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 07:09:35 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'analysisevent_0_ID0000015 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'analysisevent_0_ID0000015 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_local_local_6_0,stage_in_remote_local_6_0,averageratioevent_1_ID0000013,averageratioevent_0_ID0000012,averageratioevent_2_ID0000014" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/analysisevent_0_ID0000015.sub
+11/01/16 07:09:45 From submit: Submitting job(s).
+11/01/16 07:09:45 From submit: 1 job(s) submitted to cluster 1165.
+11/01/16 07:09:45 	assigned Condor ID (1165.0.0)
+11/01/16 07:09:45 Just submitted 2 jobs this cycle...
+11/01/16 07:09:45 Currently monitoring 1 Condor log file(s)
+11/01/16 07:09:45 Reassigning the id of job clean_up_local_level_8_0 from (1164.0.0) to (1164.0.0)
+11/01/16 07:09:45 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_8_0 (1164.0.0)
+11/01/16 07:09:45 Number of idle job procs: 1
+11/01/16 07:09:45 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_8_0 (1164.0.0)
+11/01/16 07:09:45 Number of idle job procs: 0
+11/01/16 07:09:45 Reassigning the id of job analysisevent_0_ID0000015 from (1165.0.0) to (1165.0.0)
+11/01/16 07:09:45 Event: ULOG_SUBMIT for Condor Node analysisevent_0_ID0000015 (1165.0.0)
+11/01/16 07:09:45 Number of idle job procs: 1
+11/01/16 07:09:45 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:09:45 Of 54 nodes total:
+11/01/16 07:09:45  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:09:45   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:09:45    48       0        2       0       0          4        0
+11/01/16 07:09:45 0 job proc(s) currently held
+11/01/16 07:09:55 Currently monitoring 1 Condor log file(s)
+11/01/16 07:09:55 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_8_0 (1164.0.0)
+11/01/16 07:09:55 Number of idle job procs: 1
+11/01/16 07:09:55 Node clean_up_local_level_8_0 job proc (1164.0.0) completed successfully.
+11/01/16 07:09:55 Node clean_up_local_level_8_0 job completed
+11/01/16 07:09:55 Running POST script of Node clean_up_local_level_8_0...
+11/01/16 07:09:55 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:09:55 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:09:55 Of 54 nodes total:
+11/01/16 07:09:55  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:09:55   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:09:55    48       0        1       1       0          4        0
+11/01/16 07:09:55 0 job proc(s) currently held
+11/01/16 07:09:55 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1164.0.0)
+11/01/16 07:10:00 Currently monitoring 1 Condor log file(s)
+11/01/16 07:10:00 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_8_0 (1164.0.0)
+11/01/16 07:10:00 POST Script of Node clean_up_local_level_8_0 completed successfully.
+11/01/16 07:10:00 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:10:00 Of 54 nodes total:
+11/01/16 07:10:00  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:10:00   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:10:00    49       0        1       0       0          4        0
+11/01/16 07:10:00 0 job proc(s) currently held
+11/01/16 07:10:10 Currently monitoring 1 Condor log file(s)
+11/01/16 07:10:10 Event: ULOG_EXECUTE for Condor Node analysisevent_0_ID0000015 (1165.0.0)
+11/01/16 07:10:10 Number of idle job procs: 0
+11/01/16 07:10:10 Event: ULOG_JOB_TERMINATED for Condor Node analysisevent_0_ID0000015 (1165.0.0)
+11/01/16 07:10:10 Number of idle job procs: 0
+11/01/16 07:10:10 Node analysisevent_0_ID0000015 job proc (1165.0.0) completed successfully.
+11/01/16 07:10:10 Node analysisevent_0_ID0000015 job completed
+11/01/16 07:10:10 Running POST script of Node analysisevent_0_ID0000015...
+11/01/16 07:10:10 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:10:10 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:10:10 Of 54 nodes total:
+11/01/16 07:10:10  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:10:10   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:10:10    49       0        0       1       0          4        0
+11/01/16 07:10:10 0 job proc(s) currently held
+11/01/16 07:10:11 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1165.0.0)
+11/01/16 07:10:16 Currently monitoring 1 Condor log file(s)
+11/01/16 07:10:16 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node analysisevent_0_ID0000015 (1165.0.0)
+11/01/16 07:10:16 POST Script of Node analysisevent_0_ID0000015 completed successfully.
+11/01/16 07:10:16 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:10:16 Of 54 nodes total:
+11/01/16 07:10:16  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:10:16   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:10:16    50       0        0       0       2          2        0
+11/01/16 07:10:16 0 job proc(s) currently held
+11/01/16 07:10:21 Submitting Condor Node terminate_0_ID0000016 job(s)...
+11/01/16 07:10:21 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 07:10:21 Masking the events recorded in the DAGMAN workflow log
+11/01/16 07:10:21 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 07:10:21 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'terminate_0_ID0000016 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'terminate_0_ID0000016 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"stage_in_remote_local_7_0,stage_in_local_local_7_0,analysisevent_0_ID0000015" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/terminate_0_ID0000016.sub
+11/01/16 07:10:21 From submit: Submitting job(s).
+11/01/16 07:10:21 From submit: 1 job(s) submitted to cluster 1166.
+11/01/16 07:10:21 	assigned Condor ID (1166.0.0)
+11/01/16 07:10:21 Submitting Condor Node clean_up_local_level_9_0 job(s)...
+11/01/16 07:10:21 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 07:10:21 Masking the events recorded in the DAGMAN workflow log
+11/01/16 07:10:21 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 07:10:21 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_9_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_9_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"analysisevent_0_ID0000015" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/clean_up_local_level_9_0.sub
+11/01/16 07:10:21 From submit: Submitting job(s).
+11/01/16 07:10:21 From submit: 1 job(s) submitted to cluster 1167.
+11/01/16 07:10:21 	assigned Condor ID (1167.0.0)
+11/01/16 07:10:21 Just submitted 2 jobs this cycle...
+11/01/16 07:10:21 Currently monitoring 1 Condor log file(s)
+11/01/16 07:10:21 Reassigning the id of job terminate_0_ID0000016 from (1166.0.0) to (1166.0.0)
+11/01/16 07:10:21 Event: ULOG_SUBMIT for Condor Node terminate_0_ID0000016 (1166.0.0)
+11/01/16 07:10:21 Number of idle job procs: 1
+11/01/16 07:10:21 Reassigning the id of job clean_up_local_level_9_0 from (1167.0.0) to (1167.0.0)
+11/01/16 07:10:21 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_9_0 (1167.0.0)
+11/01/16 07:10:21 Number of idle job procs: 2
+11/01/16 07:10:21 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:10:21 Of 54 nodes total:
+11/01/16 07:10:21  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:10:21   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:10:21    50       0        2       0       0          2        0
+11/01/16 07:10:21 0 job proc(s) currently held
+11/01/16 07:10:26 Currently monitoring 1 Condor log file(s)
+11/01/16 07:10:26 Event: ULOG_EXECUTE for Condor Node terminate_0_ID0000016 (1166.0.0)
+11/01/16 07:10:26 Number of idle job procs: 1
+11/01/16 07:10:26 Event: ULOG_JOB_TERMINATED for Condor Node terminate_0_ID0000016 (1166.0.0)
+11/01/16 07:10:26 Number of idle job procs: 1
+11/01/16 07:10:26 Node terminate_0_ID0000016 job proc (1166.0.0) completed successfully.
+11/01/16 07:10:26 Node terminate_0_ID0000016 job completed
+11/01/16 07:10:26 Running POST script of Node terminate_0_ID0000016...
+11/01/16 07:10:26 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:10:26 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_9_0 (1167.0.0)
+11/01/16 07:10:26 Number of idle job procs: 0
+11/01/16 07:10:26 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:10:26 Of 54 nodes total:
+11/01/16 07:10:26  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:10:26   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:10:26    50       0        1       1       0          2        0
+11/01/16 07:10:26 0 job proc(s) currently held
+11/01/16 07:10:26 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1166.0.0)
+11/01/16 07:10:31 Currently monitoring 1 Condor log file(s)
+11/01/16 07:10:31 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node terminate_0_ID0000016 (1166.0.0)
+11/01/16 07:10:31 POST Script of Node terminate_0_ID0000016 completed successfully.
+11/01/16 07:10:31 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_9_0 (1167.0.0)
+11/01/16 07:10:31 Number of idle job procs: 0
+11/01/16 07:10:31 Node clean_up_local_level_9_0 job proc (1167.0.0) completed successfully.
+11/01/16 07:10:31 Node clean_up_local_level_9_0 job completed
+11/01/16 07:10:31 Running POST script of Node clean_up_local_level_9_0...
+11/01/16 07:10:31 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:10:31 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:10:31 Of 54 nodes total:
+11/01/16 07:10:31  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:10:31   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:10:31    51       0        0       1       1          1        0
+11/01/16 07:10:31 0 job proc(s) currently held
+11/01/16 07:10:31 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1167.0.0)
+11/01/16 07:10:36 Submitting Condor Node clean_up_local_level_10_0 job(s)...
+11/01/16 07:10:36 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 07:10:36 Masking the events recorded in the DAGMAN workflow log
+11/01/16 07:10:36 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 07:10:36 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'clean_up_local_level_10_0 -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'clean_up_local_level_10_0 -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"terminate_0_ID0000016" -a +KeepClaimIdle' '=' '20 -a notification' '=' 'never 00/00/clean_up_local_level_10_0.sub
+11/01/16 07:10:36 From submit: Submitting job(s).
+11/01/16 07:10:36 From submit: 1 job(s) submitted to cluster 1168.
+11/01/16 07:10:36 	assigned Condor ID (1168.0.0)
+11/01/16 07:10:36 Just submitted 1 job this cycle...
+11/01/16 07:10:36 Currently monitoring 1 Condor log file(s)
+11/01/16 07:10:36 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_9_0 (1167.0.0)
+11/01/16 07:10:36 POST Script of Node clean_up_local_level_9_0 completed successfully.
+11/01/16 07:10:36 Reassigning the id of job clean_up_local_level_10_0 from (1168.0.0) to (1168.0.0)
+11/01/16 07:10:36 Event: ULOG_SUBMIT for Condor Node clean_up_local_level_10_0 (1168.0.0)
+11/01/16 07:10:36 Number of idle job procs: 1
+11/01/16 07:10:36 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:10:36 Of 54 nodes total:
+11/01/16 07:10:36  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:10:36   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:10:36    52       0        1       0       0          1        0
+11/01/16 07:10:36 0 job proc(s) currently held
+11/01/16 07:10:41 Currently monitoring 1 Condor log file(s)
+11/01/16 07:10:41 Event: ULOG_EXECUTE for Condor Node clean_up_local_level_10_0 (1168.0.0)
+11/01/16 07:10:41 Number of idle job procs: 0
+11/01/16 07:10:41 Event: ULOG_JOB_TERMINATED for Condor Node clean_up_local_level_10_0 (1168.0.0)
+11/01/16 07:10:41 Number of idle job procs: 0
+11/01/16 07:10:41 Node clean_up_local_level_10_0 job proc (1168.0.0) completed successfully.
+11/01/16 07:10:41 Node clean_up_local_level_10_0 job completed
+11/01/16 07:10:41 Running POST script of Node clean_up_local_level_10_0...
+11/01/16 07:10:41 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:10:41 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:10:41 Of 54 nodes total:
+11/01/16 07:10:41  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:10:41   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:10:41    52       0        0       1       0          1        0
+11/01/16 07:10:41 0 job proc(s) currently held
+11/01/16 07:10:41 Initializing user log writer for /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log, (1168.0.0)
+11/01/16 07:10:46 Currently monitoring 1 Condor log file(s)
+11/01/16 07:10:46 Event: ULOG_POST_SCRIPT_TERMINATED for Condor Node clean_up_local_level_10_0 (1168.0.0)
+11/01/16 07:10:46 POST Script of Node clean_up_local_level_10_0 completed successfully.
+11/01/16 07:10:46 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:10:46 Of 54 nodes total:
+11/01/16 07:10:46  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:10:46   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:10:46    53       0        0       0       1          0        0
+11/01/16 07:10:46 0 job proc(s) currently held
+11/01/16 07:10:51 Submitting Condor Node cleanup_example_workflow_0_local job(s)...
+11/01/16 07:10:51 Adding a DAGMan workflow log /home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log
+11/01/16 07:10:51 Masking the events recorded in the DAGMAN workflow log
+11/01/16 07:10:51 Mask for workflow log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+11/01/16 07:10:51 submitting: /usr/bin/condor_submit -a dag_node_name' '=' 'cleanup_example_workflow_0_local -a +DAGManJobId' '=' '1115 -a DAGManJobId' '=' '1115 -a submit_event_notes' '=' 'DAG' 'Node:' 'cleanup_example_workflow_0_local -a dagman_log' '=' '/home/ubuntu/0_experiments/1-postgres-small/3_workflow_full_10files_primary_1sh_1rs_with_annot_with_proj_3s/dags/ubuntu/pegasus/example_workflow/20161101T060502+0000/./example_workflow-0.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"clean_up_local_level_3_0,clean_up_local_level_4_0,clean_up_local_level_5_0,clean_up_local_level_5_1,clean_up_local_level_6_0,clean_up_local_level_6_1,clean_up_local_level_7_0,clean_up_local_level_7_1,clean_up_local_level_8_0,clean_up_local_level_8_1,clean_up_local_level_9_0,clean_up_local_level_10_0" -a notification' '=' 'never 00/01/cleanup_example_workflow_0_local.sub
+11/01/16 07:10:52 From submit: Submitting job(s).
+11/01/16 07:10:52 From submit: 1 job(s) submitted to cluster 1169.
+11/01/16 07:10:52 	assigned Condor ID (1169.0.0)
+11/01/16 07:10:52 Just submitted 1 job this cycle...
+11/01/16 07:10:52 Currently monitoring 1 Condor log file(s)
+11/01/16 07:10:52 Reassigning the id of job cleanup_example_workflow_0_local from (1169.0.0) to (1169.0.0)
+11/01/16 07:10:52 Event: ULOG_SUBMIT for Condor Node cleanup_example_workflow_0_local (1169.0.0)
+11/01/16 07:10:52 Number of idle job procs: 1
+11/01/16 07:10:52 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:10:52 Of 54 nodes total:
+11/01/16 07:10:52  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:10:52   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:10:52    53       0        1       0       0          0        0
+11/01/16 07:10:52 0 job proc(s) currently held
+11/01/16 07:10:57 Currently monitoring 1 Condor log file(s)
+11/01/16 07:10:57 Event: ULOG_EXECUTE for Condor Node cleanup_example_workflow_0_local (1169.0.0)
+11/01/16 07:10:57 Number of idle job procs: 0
+11/01/16 07:10:57 Event: ULOG_JOB_TERMINATED for Condor Node cleanup_example_workflow_0_local (1169.0.0)
+11/01/16 07:10:57 Number of idle job procs: 0
+11/01/16 07:10:57 Node cleanup_example_workflow_0_local job proc (1169.0.0) completed successfully.
+11/01/16 07:10:57 Node cleanup_example_workflow_0_local job completed
+11/01/16 07:10:57 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:10:57 Of 54 nodes total:
+11/01/16 07:10:57  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:10:57   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:10:57    54       0        0       0       0          0        0
+11/01/16 07:10:57 0 job proc(s) currently held
+11/01/16 07:10:57 All jobs Completed!
+11/01/16 07:10:57 Note: 0 total job deferrals because of -MaxJobs limit (0)
+11/01/16 07:10:57 Note: 0 total job deferrals because of -MaxIdle limit (1000)
+11/01/16 07:10:57 Note: 0 total job deferrals because of node category throttles
+11/01/16 07:10:57 Note: 0 total PRE script deferrals because of -MaxPre limit (20) or DEFER
+11/01/16 07:10:57 Note: 0 total POST script deferrals because of -MaxPost limit (20) or DEFER
+11/01/16 07:10:57 DAG status: 0 (DAG_STATUS_OK)
+11/01/16 07:10:57 Of 54 nodes total:
+11/01/16 07:10:57  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+11/01/16 07:10:57   ===     ===      ===     ===     ===        ===      ===
+11/01/16 07:10:57    54       0        0       0       0          0        0
+11/01/16 07:10:57 0 job proc(s) currently held
+11/01/16 07:10:57 Wrote metrics file example_workflow-0.dag.metrics.
+11/01/16 07:10:57 Reporting metrics to Pegasus metrics server(s); output is in example_workflow-0.dag.metrics.out.
+11/01/16 07:10:57 Running command </usr/lib/condor/libexec/condor_dagman_metrics_reporter -f example_workflow-0.dag.metrics -t 100>
+11/01/16 07:10:57 Warning: mysin has length 0 (ignore if produced by DAGMan; see gittrac #4987, #5031)
+11/01/16 07:10:57 **** condor_scheduniv_exec.1115.0 (condor_DAGMAN) pid 10383 EXITING WITH STATUS 0

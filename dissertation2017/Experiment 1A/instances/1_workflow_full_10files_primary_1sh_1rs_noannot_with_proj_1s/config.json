@@ -1,0 +1,86 @@
+{
+    "namespace":"example_workflow",
+    "os":"linux",
+    "arch":"x86_64",
+    "tasks":[
+        {
+          "taskName": "DataStoreInit",
+          "prefixFolder" : "init_",
+          "prefixTask": "DataStoreInit",
+          "prefixConfig": "Config",
+          "fileInput": ["2_create_schema.txt"]
+        },
+        {
+            "taskName": "GeneralInfo",
+            "typeOperation": "ALL",
+            "prefixFolder" : "generalinfo_",
+            "prefixTask": "GeneralInfo",
+            "prefixConfig": "Config",
+            "dependency": ["init_"]
+        },
+        {
+            "taskName": "StatsCPUMemory",
+            "typeOperation": "ALL",
+            "prefixFolder" : "statscpumemory_",
+            "prefixTask": "StatsCPUMemory",
+            "prefixConfig": "Config",
+            "dependency": ["generalinfo_"]
+        },
+        {
+            "taskName": "MedianCPU",
+            "typeOperation": "ALL",
+            "prefixFolder" : "mediancpu_",
+            "prefixTask": "MedianCPU",
+            "prefixConfig": "Config",
+            "dependency": ["generalinfo_"]
+        },
+        {
+            "taskName": "MedianMemory",
+            "typeOperation": "ALL",
+            "prefixFolder" : "medianmemory_",
+            "prefixTask": "MedianMemory",
+            "prefixConfig": "Config",
+            "dependency": ["generalinfo_"]
+        },
+        {
+            "taskName": "TaskEvent",
+            "typeOperation": "BY_COLUMN",
+            "prefixFolder" : "taskevent_",
+            "prefixTask": "TaskEvent",
+            "prefixConfig": "Config",
+            "dependency": ["statscpumemory_", "mediancpu_", "medianmemory_"]
+        },
+        {
+            "taskName": "CalculateRatioCpuMemory",
+            "typeOperation": "BY_UNIT",
+            "prefixFolder" : "calculateratio_",
+            "prefixTask": "CalculateRatioCpuMemory",
+            "prefixConfig": "Config",
+            "dependency": ["taskevent_"]
+        },
+        {
+            "taskName": "AverageRatioEvent",
+            "typeOperation": "BY_COLUMN",
+            "prefixFolder" : "averageratioevent_",
+            "prefixTask": "AverageRatioEvent",
+            "prefixConfig": "Config",
+            "dependency": ["calculateratio_"]
+        },
+        {
+            "taskName": "AnalysisEvent",
+            "typeOperation": "ALL",
+            "prefixFolder" : "analysisevent_",
+            "prefixTask": "AnalysisEvent",
+            "prefixConfig": "Config",
+            "dependency": ["averageratioevent_"]
+        },
+        {
+          "taskName": "DataStoreReset",
+          "prefixFolder" : "terminate_",
+          "prefixTask": "DataStoreReset",
+          "prefixConfig": "Config",
+          "dependency": ["analysisevent_"],
+          "fileInput": ["2_reset_schema.txt"]
+        }
+    ]
+}

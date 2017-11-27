@@ -1,0 +1,40 @@
+######################################################################
+# PEGASUS WMS GENERATED SUBMIT FILE
+# DAG : example_workflow, Index = 0, Count = 1
+# SUBMIT FILE NAME : stage_in_local_local_3_0.sub
+######################################################################
+stream_error  = false
+stream_output = false
+environment = "CONDOR_JOBID=$(cluster).$(process) PEGASUS_WF_UUID=61defb9b-da83-43dc-b915-17215da3a312 PEGASUS_WF_LABEL=example_workflow PEGASUS_DAG_JOB_ID=stage_in_local_local_3_0 PEGASUS_SITE=local "
+arguments = " -n pegasus::transfer -N null -i - -R local  -L example_workflow -T 2016-11-08T16:47:47+00:00 /usr/bin/../bin/pegasus-transfer  --threads 2 "
+copy_to_spool = false
+error = /home/ubuntu/0_experiments/4-mongodb-3sh-3rp-small/0-primary-w1/11_0_workflow_full_10files_primary_3sh_3rs_noannot_with_proj_3s_hash/dags/ubuntu/pegasus/example_workflow/20161108T164747+0000//00/00/stage_in_local_local_3_0.err
+executable = /usr/bin/../bin/pegasus-kickstart
+input = /home/ubuntu/0_experiments/4-mongodb-3sh-3rp-small/0-primary-w1/11_0_workflow_full_10files_primary_3sh_3rs_noannot_with_proj_3s_hash/dags/ubuntu/pegasus/example_workflow/20161108T164747+0000//00/00/stage_in_local_local_3_0.in
+log = /home/ubuntu/0_experiments/4-mongodb-3sh-3rp-small/0-primary-w1/11_0_workflow_full_10files_primary_3sh_3rs_noannot_with_proj_3s_hash/dags/ubuntu/pegasus/example_workflow/20161108T164747+0000/example_workflow-0.log
+notification = NEVER
+output = /home/ubuntu/0_experiments/4-mongodb-3sh-3rp-small/0-primary-w1/11_0_workflow_full_10files_primary_3sh_3rs_noannot_with_proj_3s_hash/dags/ubuntu/pegasus/example_workflow/20161108T164747+0000//00/00/stage_in_local_local_3_0.out
+periodic_release = False
+periodic_remove = (JobStatus == 5) && ((CurrentTime - EnteredCurrentStatus) > 1800)
+priority = 700
+submit_event_user_notes = pool:local
+transfer_executable = false
+universe = local
++pegasus_generator = "Pegasus"
++pegasus_root_wf_uuid = "61defb9b-da83-43dc-b915-17215da3a312"
++pegasus_wf_uuid = "61defb9b-da83-43dc-b915-17215da3a312"
++pegasus_version = "4.7.0"
++pegasus_wf_name = "example_workflow-0"
++pegasus_wf_time = "20161108T164747+0000"
++pegasus_wf_xformation = "pegasus::transfer"
++pegasus_wf_dax_job_id = "null"
++pegasus_wf_dag_job_id = "stage_in_local_local_3_0"
++pegasus_job_class = 2
++pegasus_site = "local"
++pegasus_job_runtime = 0
++pegasus_cores = 1
++pegasus_cluster_size = 1
+queue
+######################################################################
+# END OF SUBMIT FILE
+######################################################################

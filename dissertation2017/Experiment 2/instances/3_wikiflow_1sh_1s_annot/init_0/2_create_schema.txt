@@ -1,0 +1,46 @@
+DROP TABLE IF EXISTS contributors CASCADE;
+CREATE TABLE IF NOT EXISTS contributors
+(
+  w_filepath character varying(255) NOT NULL,
+  w_numline character varying(255) NOT NULL,    
+  w_contributor_username varchar(255),
+  PRIMARY KEY  (w_filepath, w_numline)
+);
+CREATE INDEX ON contributors(w_filepath, w_numline);
+
+DROP TABLE IF EXISTS user_sessions CASCADE;
+CREATE TABLE IF NOT EXISTS user_sessions
+(
+  w_filepath character varying(255) NOT NULL,
+  w_numline character varying(255) NOT NULL,
+  w_contributor_username varchar(255),
+  w_start_time varchar(255),
+  w_end_time varchar(255),
+  w_duration varchar(255),
+  w_edition_counts varchar(255),
+  PRIMARY KEY  (w_filepath, w_numline)
+);
+CREATE INDEX ON user_sessions(w_filepath, w_numline);
+
+
+
+
+DROP TABLE IF EXISTS top_sessions CASCADE;
+CREATE TABLE IF NOT EXISTS top_sessions
+(
+  w_filepath character varying(255) NOT NULL,
+  w_numline character varying(255) NOT NULL,
+  w_longest_session varchar(255),
+  w_top_user varchar(255),
+  w_edition_counts varchar(255),
+  w_window varchar(255),
+  w_h_window varchar(255),
+  w_start_time varchar(255),
+  w_end_time varchar(255),
+  PRIMARY KEY  (w_filepath, w_numline)
+);
+CREATE INDEX ON top_sessions(w_filepath, w_numline);
+
+CREATE INDEX ON sessions(w_contributor_username);
+CREATE INDEX ON sessions(w_timestamp);
+CREATE INDEX ON user_sessions(w_contributor_username);

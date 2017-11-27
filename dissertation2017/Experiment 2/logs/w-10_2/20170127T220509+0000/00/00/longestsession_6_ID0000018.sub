@@ -1,0 +1,43 @@
+######################################################################
+# PEGASUS WMS GENERATED SUBMIT FILE
+# DAG : example_workflow, Index = 0, Count = 1
+# SUBMIT FILE NAME : longestsession_6_ID0000018.sub
+######################################################################
+stream_error  = false
+stream_output = false
+environment = "CONDOR_JOBID=$(cluster).$(process) PEGASUS_WF_UUID=96f95aa3-0f83-4765-b578-9012cdcc5e2a PEGASUS_WF_LABEL=example_workflow PEGASUS_DAG_JOB_ID=longestsession_6_ID0000018 PEGASUS_SITE=condorpool "
++TransferOutput = ""
+copy_to_spool = false
+error = /home/ubuntu/wikiflow/new/10_2_wikiflow_1sh_1s_annot/dags/ubuntu/pegasus/example_workflow/20170127T220509+0000//00/00/longestsession_6_ID0000018.err
+executable = /home/ubuntu/wikiflow/new/10_2_wikiflow_1sh_1s_annot/dags/ubuntu/pegasus/example_workflow/20170127T220509+0000/00/00/longestsession_6_ID0000018.sh
+initialdir = /home/ubuntu/wikiflow/new/10_2_wikiflow_1sh_1s_annot/work/ubuntu/pegasus/example_workflow/20170127T220509+0000
+log = /home/ubuntu/wikiflow/new/10_2_wikiflow_1sh_1s_annot/dags/ubuntu/pegasus/example_workflow/20170127T220509+0000/example_workflow-0.log
+notification = NEVER
+output = /home/ubuntu/wikiflow/new/10_2_wikiflow_1sh_1s_annot/dags/ubuntu/pegasus/example_workflow/20170127T220509+0000//00/00/longestsession_6_ID0000018.out
+periodic_release = False
+periodic_remove = (JobStatus == 5) && ((CurrentTime - EnteredCurrentStatus) > 1800)
+priority = 50
+should_transfer_files = YES
+submit_event_user_notes = pool:condorpool
+transfer_executable = true
+transfer_input_files = ConfigDB_Longest_6.py,wikiflow-longestsession_6-1.0,/usr/share/pegasus/sh/pegasus-lite-common.sh,/home/ubuntu/wikiflow/new/10_2_wikiflow_1sh_1s_annot/dags/ubuntu/pegasus/example_workflow/20170127T220509+0000/pegasus-worker-4.7.0-x86_64_ubuntu_14.tar.gz
+universe = vanilla
+when_to_transfer_output = ON_EXIT
++pegasus_generator = "Pegasus"
++pegasus_root_wf_uuid = "96f95aa3-0f83-4765-b578-9012cdcc5e2a"
++pegasus_wf_uuid = "96f95aa3-0f83-4765-b578-9012cdcc5e2a"
++pegasus_version = "4.7.0"
++pegasus_wf_name = "example_workflow-0"
++pegasus_wf_time = "20170127T220509+0000"
++pegasus_wf_xformation = "wikiflow::longestsession_6:1.0"
++pegasus_wf_dax_job_id = "ID0000018"
++pegasus_wf_dag_job_id = "longestsession_6_ID0000018"
++pegasus_job_class = 1
++pegasus_site = "condorpool"
++pegasus_job_runtime = 0
++pegasus_cores = 1
++pegasus_cluster_size = 1
+queue
+######################################################################
+# END OF SUBMIT FILE
+######################################################################

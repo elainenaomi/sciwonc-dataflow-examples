@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocation xmlns="http://pegasus.isi.edu/schema/invocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pegasus.isi.edu/schema/invocation http://pegasus.isi.edu/schema/iv-2.3.xsd" version="2.3" start="2017-01-19T18:06:35.565+00:00" duration="1001.684" transformation="wikiflow::init_0:1.0" derivation="ID0000001" resource="condorpool" wf-label="example_workflow" wf-stamp="2017-01-19T18:05:36+00:00" interface="eth0" hostaddr="172.31.24.95" hostname="ip-172-31-24-95.us-west-2.compute.internal" pid="84005" uid="65534" user="nobody" gid="65534" group="nogroup" umask="0022">
+  <mainjob start="2017-01-19T18:06:35.579+00:00" duration="1001.669" pid="84006">
+    <usage utime="0.061" stime="0.023" maxrss="11848" minflt="3447" majflt="0" nswap="0" inblock="0" outblock="8" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="21" nivcsw="18"/>
+    <status raw="0"><regular exitcode="0"/></status>
+    <statcall error="0">
+      <file name="/var/lib/condor/execute/dir_83925/wikiflow-init_0-1.0">23212F7573722F62696E2F656E762070</file>
+      <statinfo mode="0100755" size="761" inode="524552" nlink="1" blksize="4096" blocks="8" mtime="2017-01-19T18:06:35+00:00" atime="2017-01-19T18:06:35+00:00" ctime="2017-01-19T18:06:35+00:00" uid="65534" user="nobody" gid="65534" group="nogroup"/>
+    </statcall>
+    <argument-vector/>
+  </mainjob>
+  <jobids condor="9901.0"/>
+  <cwd>/var/lib/condor/execute/dir_83925</cwd>
+  <usage utime="0.000" stime="0.015" maxrss="828" minflt="526" majflt="0" nswap="0" inblock="0" outblock="0" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="1" nivcsw="3"/>
+  <machine page-size="4096">
+    <stamp>2017-01-19T18:06:35.565+00:00</stamp>
+    <uname system="linux" nodename="ip-172-31-24-95" release="3.13.0-92-generic" machine="x86_64">#139-Ubuntu SMP Tue Jun 28 20:42:26 UTC 2016</uname>
+    <linux>
+      <ram total="3854828" free="3304728" shared="0" buffer="156996"/>
+      <swap total="0" free="0"/>
+      <boot idle="828595.640">2017-01-10T02:29:29.735+00:00</boot>
+      <cpu count="1" speed="2500" vendor="GenuineIntel">Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz</cpu>
+      <load min1="0.00" min5="0.01" min15="0.05"/>
+      <procs total="100" running="1" sleeping="99" vmsize="912624" rss="40428"/>
+      <task total="103" running="1" sleeping="102"/>
+    </linux>
+  </machine>
+  <statcall error="0" id="stdin">
+    <file name="/dev/null"/>
+    <statinfo mode="020666" size="0" inode="5430" nlink="1" blksize="4096" blocks="0" mtime="2017-01-10T02:29:35+00:00" atime="2017-01-10T02:29:35+00:00" ctime="2017-01-10T02:29:35+00:00" uid="0" user="root" gid="0" group="root"/>
+  </statcall>
+  <statcall error="0" id="stdout">
+    <temporary name="/var/lib/condor/execute/dir_83925/ks.out.wl69y3" descriptor="3"/>
+    <statinfo mode="0100600" size="1551" inode="524555" nlink="1" blksize="4096" blocks="8" mtime="2017-01-19T18:23:17+00:00" atime="2017-01-19T18:06:35+00:00" ctime="2017-01-19T18:23:17+00:00" uid="65534" user="nobody" gid="65534" group="nogroup"/>
+    <data>/var/lib/condor/execute/dir_83925/2_create_schema.txt
+STATEMENT: DROP TABLE IF EXISTS contributors CASCADE
+STATEMENT: 
+CREATE TABLE IF NOT EXISTS contributors
+(
+  w_filepath character varying(255) NOT NULL,
+  w_numline character varying(255) NOT NULL,    
+  w_contributor_username varchar(255),
+  PRIMARY KEY  (w_filepath, w_numline)
+)
+STATEMENT: 
+CREATE INDEX ON contributors(w_filepath, w_numline)
+STATEMENT: 
+
+DROP TABLE IF EXISTS user_sessions CASCADE
+STATEMENT: 
+CREATE TABLE IF NOT EXISTS user_sessions
+(
+  w_filepath character varying(255) NOT NULL,
+  w_numline character varying(255) NOT NULL,
+  w_contributor_username varchar(255),
+  w_start_time varchar(255),
+  w_end_time varchar(255),
+  w_duration varchar(255),
+  w_edition_counts varchar(255),
+  PRIMARY KEY  (w_filepath, w_numline)
+)
+STATEMENT: 
+CREATE INDEX ON user_sessions(w_filepath, w_numline)
+STATEMENT: 
+
+
+
+
+DROP TABLE IF EXISTS top_sessions CASCADE
+STATEMENT: 
+CREATE TABLE IF NOT EXISTS top_sessions
+(
+  w_filepath character varying(255) NOT NULL,
+  w_numline character varying(255) NOT NULL,
+  w_longest_session varchar(255),
+  w_top_user varchar(255),
+  w_edition_counts varchar(255),
+  w_window varchar(255),
+  w_h_window varchar(255),
+  w_start_time varchar(255),
+  w_end_time varchar(255),
+  PRIMARY KEY  (w_filepath, w_numline)
+)
+STATEMENT: 
+CREATE INDEX ON top_sessions(w_filepath, w_numline)
+STATEMENT: 
+
+CREATE INDEX ON sessions(w_contributor_username)
+STATEMENT: 
+CREATE INDEX ON sessions(w_timestamp)
+STATEMENT: 
+CREATE INDEX ON user_sessions(w_contributor_username)
+</data>
+  </statcall>
+  <statcall error="0" id="stderr">
+    <temporary name="/var/lib/condor/execute/dir_83925/ks.err.7c5w6i" descriptor="4"/>
+    <statinfo mode="0100600" size="0" inode="524873" nlink="1" blksize="4096" blocks="0" mtime="2017-01-19T18:06:35+00:00" atime="2017-01-19T18:06:35+00:00" ctime="2017-01-19T18:06:35+00:00" uid="65534" user="nobody" gid="65534" group="nogroup"/>
+  </statcall>
+  <statcall error="0" id="metadata">
+    <temporary name="/var/lib/condor/execute/dir_83925/ks.meta.R81TDy" descriptor="5"/>
+    <statinfo mode="0100600" size="0" inode="524874" nlink="1" blksize="4096" blocks="0" mtime="2017-01-19T18:06:35+00:00" atime="2017-01-19T18:06:35+00:00" ctime="2017-01-19T18:06:35+00:00" uid="65534" user="nobody" gid="65534" group="nogroup"/>
+  </statcall>
+</invocation>
