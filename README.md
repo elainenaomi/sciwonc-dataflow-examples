@@ -5,7 +5,15 @@ For executing theses examples, please, install the sciwonc-dataflow-connector.
 
 Available on: https://github.com/elainenaomi/sciwonc-dataflow-connector
 
-Input data obtained from: https://github.com/google/cluster-data
+Input data obtained from: 
+
+- https://github.com/google/cluster-data
+- https://github.com/GoogleCloudPlatform/
+
+
+
+
+Information about the sciwonc-dataflow project is available on the website: [sciwonc-dataflow](https://elainenaomi.github.io/sciwonc-dataflow/)
 
 <!--
 # SBBD 2016
