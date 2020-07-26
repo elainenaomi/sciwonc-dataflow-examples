@@ -215,7 +215,7 @@ def parse_pegasus_version(pegasus_version=None):
 
 def all_workflows_db(db, update=True, pegasus_version=None, schema_check=True, force=False):
     """
-    Update/Downgrade all completed workflow databases listed in master_workflow table.
+    Update/Downgrade all completed workflow databases listed in main_workflow table.
     :param db: DB session object
     :param pegasus_version: version of the Pegasus software (e.g., 4.6.0)
     :param schema_check: whether a sanity check of the schema should be performed

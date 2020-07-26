@@ -40,5 +40,5 @@ def authorize_request():
     log.info('Authenticated user %s', g.user.username)
 
     g.username = g.user.username
-    g.master_db_url = g.user.get_master_db_url()
+    g.main_db_url = g.user.get_main_db_url()
 

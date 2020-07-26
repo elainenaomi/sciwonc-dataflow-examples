@@ -286,16 +286,16 @@ def costDB(workflow, runtime_hours):
 
     return
 
-def totalSlave(workflow):
+def totalSubordinate(workflow):
     if workflow in ["w-01","w-04"]: return 1
     if workflow in ["w-02","w-03","w-05","w-06","w-07","w-08"]: return 3
     if workflow in ["w-09","w-10","w-11"]: return 9
 
-def costSlave(total_slaves, runtime_hours):
+def costSubordinate(total_subordinates, runtime_hours):
     total_value_disk_gb = 10 * 0.17
     value_vm_hour = 0.055
 
-    return total_slaves * value_vm_hour * runtime_hours + total_value_disk_gb * total_slaves
+    return total_subordinates * value_vm_hour * runtime_hours + total_value_disk_gb * total_subordinates
 
 #####################################################
 
@@ -319,15 +319,15 @@ def saveMakespanCostDat(stats,type, attribute):
                 runtime_hours = math.ceil(runtime_hours)
 
                 total_db_cost = costDB(workflow,runtime_hours)
-                total_slaves = totalSlave(workflow);
-                total_cost_slaves = costSlave(total_slaves, runtime_hours)
+                total_subordinates = totalSubordinate(workflow);
+                total_cost_subordinates = costSubordinate(total_subordinates, runtime_hours)
 
                 print "DB: "+str(total_db_cost)
-                print "SLAVE: "+str(total_cost_slaves)
-                print total_slaves
+                print "SLAVE: "+str(total_cost_subordinates)
+                print total_subordinates
                 print runtime_hours
 
-                total_cost_execution = total_cost_slaves + total_db_cost
+                total_cost_execution = total_cost_subordinates + total_db_cost
                 print total_cost_execution
 
                 all_values.append(total_cost_execution)

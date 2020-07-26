@@ -198,7 +198,7 @@ def before():
             log.info("Invalid Permissions: Could not create user's pegasus directory.")
             return make_response("Could not find user's Pegasus directory", 404)
 
-    # Set master DB URL for the dashboard
-    # For testing master_db_url would be pre-populated, so let's not overwrite it here.
-    if 'master_db_url' not in g:
-        g.master_db_url = user_info.get_master_db_url()
+    # Set main DB URL for the dashboard
+    # For testing main_db_url would be pre-populated, so let's not overwrite it here.
+    if 'main_db_url' not in g:
+        g.main_db_url = user_info.get_main_db_url()

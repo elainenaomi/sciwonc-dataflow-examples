@@ -526,7 +526,7 @@ orm.mapper(WorkflowFiles, st_workflow_files)
 # ---------------------------------------------
 
 
-pg_workflow = Table('master_workflow', metadata,
+pg_workflow = Table('main_workflow', metadata,
     # ==> Information comes from braindump.txt file
     Column('wf_id', KeyInteger, primary_key=True, nullable=False),
     Column('wf_uuid', VARCHAR(255), nullable=False),
@@ -551,12 +551,12 @@ Index('UNIQUE_MASTER_WF_UUID', pg_workflow.c.wf_uuid, unique=True)
 orm.mapper(DashboardWorkflow, pg_workflow )
 
 
-pg_workflowstate = Table('master_workflowstate', metadata,
+pg_workflowstate = Table('main_workflowstate', metadata,
     # All three columns are marked as primary key to produce the desired
     # effect - ie: it is the combo of the three columns that make a row
     # unique.
-    Column('wf_id', KeyInteger, ForeignKey('master_workflow.wf_id', ondelete='CASCADE'), nullable=False, primary_key=True),
-    Column('state', Enum('WORKFLOW_STARTED', 'WORKFLOW_TERMINATED', name='master_workflow_state'), nullable=False, primary_key=True),
+    Column('wf_id', KeyInteger, ForeignKey('main_workflow.wf_id', ondelete='CASCADE'), nullable=False, primary_key=True),
+    Column('state', Enum('WORKFLOW_STARTED', 'WORKFLOW_TERMINATED', name='main_workflow_state'), nullable=False, primary_key=True),
     Column('timestamp', NUMERIC(precision=16,scale=6), nullable=False, primary_key=True),
     Column('restart_count', INT, nullable=False),
     Column('status', INT, nullable=True),

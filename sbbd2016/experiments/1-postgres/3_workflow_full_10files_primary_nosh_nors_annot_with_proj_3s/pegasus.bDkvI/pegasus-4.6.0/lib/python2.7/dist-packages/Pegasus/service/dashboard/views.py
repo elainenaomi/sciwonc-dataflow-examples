@@ -27,7 +27,7 @@ from Pegasus.tools import utils
 from Pegasus.service import filters
 from Pegasus.service.base import ServiceError, ErrorResponse
 from Pegasus.service.dashboard.dashboard import Dashboard, NoWorkflowsFoundError
-from Pegasus.service.dashboard.queries import MasterDBNotFoundError
+from Pegasus.service.dashboard.queries import MainDBNotFoundError
 from Pegasus.service.dashboard import dashboard_routes
 
 
@@ -39,10 +39,10 @@ def redirect_to_index():
 @dashboard_routes.route('/u/<username>/')
 def index(username):
     """
-    List all workflows from the master database.
+    List all workflows from the main database.
     """
     try:
-        dashboard = Dashboard(g.master_db_url)
+        dashboard = Dashboard(g.main_db_url)
         args = __get_datatables_args()
         if request.is_xhr:
             count, filtered, workflows, totals = dashboard.get_root_workflow_list(**args)
@@ -75,9 +75,9 @@ def workflow(username, root_wf_id, wf_id=None):
         raise ValueError, 'Workflow ID or Workflow UUID is required'
 
     if wf_id:
-        dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id=wf_id)
+        dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id=wf_id)
     else:
-        dashboard = Dashboard(g.master_db_url, root_wf_id)
+        dashboard = Dashboard(g.main_db_url, root_wf_id)
 
     try:
         counts, details, statistics = dashboard.get_workflow_information(wf_id, wf_uuid)
@@ -92,7 +92,7 @@ def sub_workflows(username, root_wf_id, wf_id):
     """
     Get a list of all sub-workflow of a given workflow.
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     sub_workflows = dashboard.get_sub_workflows(wf_id)
 
     # is_xhr = True if it is AJAX request.
@@ -110,7 +110,7 @@ def failed_jobs(username, root_wf_id, wf_id):
     """
     Get a list of all failed jobs of the latest instance for a given workflow.
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     args = __get_datatables_args()
 
     total_count, filtered_count, failed_jobs_list = dashboard.get_failed_jobs(wf_id, **args)
@@ -128,7 +128,7 @@ def running_jobs(username, root_wf_id, wf_id):
     """
     Get a list of all running jobs of the latest instance for a given workflow.
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     args = __get_datatables_args()
 
     total_count, filtered_count, running_jobs_list = dashboard.get_running_jobs(wf_id, **args)
@@ -144,7 +144,7 @@ def successful_jobs(username, root_wf_id, wf_id):
     """
     Get a list of all successful jobs of the latest instance for a given workflow.
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     args = __get_datatables_args()
 
     total_count, filtered_count, successful_jobs_list = dashboard.get_successful_jobs(wf_id, **args)
@@ -161,7 +161,7 @@ def failing_jobs(username, root_wf_id, wf_id):
     """
     Get a list of failing jobs of the latest instance for a given workflow.
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     args = __get_datatables_args()
 
     total_count, filtered_count, failing_jobs_list = dashboard.get_failing_jobs(wf_id, **args)
@@ -179,7 +179,7 @@ def job(username, root_wf_id, wf_id, job_id, job_instance_id):
     """
     Get details of a specific job instance.
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     job = dashboard.get_job_information(wf_id, job_id, job_instance_id)
     job_states = dashboard.get_job_states(wf_id, job_id, job_instance_id)
     job_instances = dashboard.get_job_instances(wf_id, job_id)
@@ -209,7 +209,7 @@ def stdout(username, root_wf_id, wf_id, job_id, job_instance_id):
     """
     Get stdout contents for a specific job instance.
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     text = dashboard.get_stdout(wf_id, job_id, job_instance_id)
 
     if text.stdout_text == None:
@@ -223,7 +223,7 @@ def stderr(username, root_wf_id, wf_id, job_id, job_instance_id):
     """
     Get stderr contents for a specific job instance.
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     text = dashboard.get_stderr(wf_id, job_id, job_instance_id)
 
     if text.stderr_text == None:
@@ -237,7 +237,7 @@ def successful_invocations(username, root_wf_id, wf_id, job_id, job_instance_id)
     """
     Get list of successful invocations for a given job.
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     successful_invocations_list = dashboard.get_successful_job_invocation(wf_id, job_id, job_instance_id)
 
     for item in successful_invocations_list:
@@ -261,7 +261,7 @@ def failed_invocations(username, root_wf_id, wf_id, job_id, job_instance_id):
     """
     Get list of failed invocations for a given job.
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     failed_invocations_list = dashboard.get_failed_job_invocation(wf_id, job_id, job_instance_id)
 
     for item in failed_invocations_list:
@@ -285,7 +285,7 @@ def invocation(username, root_wf_id, wf_id, job_id, job_instance_id, invocation_
     """
     Get detailed invocation information
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     invocation = dashboard.get_invocation_information(wf_id, job_id, job_instance_id, invocation_id)
 
     return render_template('workflow/job/invocation/invocation_details.html', root_wf_id=root_wf_id, wf_id=wf_id,
@@ -298,7 +298,7 @@ def charts(username, root_wf_id, wf_id):
     """
     Get job-distribution information
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     job_dist = dashboard.plots_transformation_statistics(wf_id)
 
     return render_template('workflow/charts.html', root_wf_id=root_wf_id, wf_id=wf_id, job_dist=job_dist)
@@ -309,7 +309,7 @@ def time_chart(username, root_wf_id, wf_id):
     """
     Get job-distribution information
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     time_chart_job, time_chart_invocation = dashboard.plots_time_chart(wf_id)
 
     return render_template('workflow/charts/time_chart.json', root_wf_id=root_wf_id, wf_id=wf_id, time_chart_job=time_chart_job, time_chart_invocation=time_chart_invocation)
@@ -320,7 +320,7 @@ def gantt_chart(username, root_wf_id, wf_id):
     """
     Get information required to generate a Gantt chart.
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     gantt_chart = dashboard.plots_gantt_chart()
     return render_template('workflow/charts/gantt_chart.json', root_wf_id=root_wf_id, wf_id=wf_id, gantt_chart=gantt_chart)
 
@@ -330,7 +330,7 @@ def statistics(username, root_wf_id, wf_id):
     """
     Get workflow statistics information
     """
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     summary_times = dashboard.workflow_summary_stats(wf_id)
 
     for key, value in summary_times.items():
@@ -343,7 +343,7 @@ def statistics(username, root_wf_id, wf_id):
 
 @dashboard_routes.route('/u/<username>/r/<root_wf_id>/w/<wf_id>/statistics/summary', methods=['GET'])
 def workflow_summary_stats(username, root_wf_id, wf_id):
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     summary_times = dashboard.workflow_summary_stats(wf_id)
 
     for key, value in summary_times.items():
@@ -354,25 +354,25 @@ def workflow_summary_stats(username, root_wf_id, wf_id):
 
 @dashboard_routes.route('/u/<username>/r/<root_wf_id>/w/<wf_id>/statistics/workflow', methods=['GET'])
 def workflow_stats(username, root_wf_id, wf_id):
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     return json.dumps(dashboard.workflow_stats())
 
 
 @dashboard_routes.route('/u/<username>/r/<root_wf_id>/w/<wf_id>/statistics/job_breakdown', methods=['GET'])
 def job_breakdown_stats(username, root_wf_id, wf_id):
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     return json.dumps(dashboard.job_breakdown_stats())
 
 
 @dashboard_routes.route('/u/<username>/r/<root_wf_id>/w/<wf_id>/statistics/job', methods=['GET'])
 def job_stats(username, root_wf_id, wf_id):
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
     return json.dumps(dashboard.job_stats())
 
 
 @dashboard_routes.route('/u/<username>/r/<root_wf_id>/w/<wf_id>/statistics/time', methods=['GET'])
 def time_stats(username, root_wf_id, wf_id):
-    dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id)
+    dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id)
 
     return '{}'
 
@@ -380,7 +380,7 @@ def time_stats(username, root_wf_id, wf_id):
 @dashboard_routes.route('/u/<username>/r/<root_wf_id>/w/<wf_id>/browser', methods=['GET'])
 def file_browser(username, root_wf_id, wf_id):
     try:
-        dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id=wf_id)
+        dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id=wf_id)
         details = dashboard.get_workflow_details(wf_id)
         submit_dir = details.submit_dir
 
@@ -399,7 +399,7 @@ def file_browser(username, root_wf_id, wf_id):
 @dashboard_routes.route('/u/<username>/r/<root_wf_id>/w/<wf_id>/files', methods=['GET'])
 def file_list(username, root_wf_id, wf_id):
     try:
-        dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id=wf_id)
+        dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id=wf_id)
         details = dashboard.get_workflow_details(wf_id)
         submit_dir = details.submit_dir
 
@@ -428,7 +428,7 @@ def file_list(username, root_wf_id, wf_id):
 @dashboard_routes.route('/u/<username>/r/<root_wf_id>/w/<wf_id>/file/<path:path>', methods=['GET'])
 def file_view(username, root_wf_id, wf_id, path):
     try:
-        dashboard = Dashboard(g.master_db_url, root_wf_id, wf_id=wf_id)
+        dashboard = Dashboard(g.main_db_url, root_wf_id, wf_id=wf_id)
         details = dashboard.get_workflow_details(wf_id)
         submit_dir = details.submit_dir
 
@@ -539,9 +539,9 @@ def page_not_found(error):
     return render_template('error/404.html')
 
 
-@dashboard_routes.errorhandler(MasterDBNotFoundError)
-def master_database_missing(error):
-    return render_template('error/master_database_missing.html')
+@dashboard_routes.errorhandler(MainDBNotFoundError)
+def main_database_missing(error):
+    return render_template('error/main_database_missing.html')
 
 
 @dashboard_routes.errorhandler(StampedeDBNotFoundError)

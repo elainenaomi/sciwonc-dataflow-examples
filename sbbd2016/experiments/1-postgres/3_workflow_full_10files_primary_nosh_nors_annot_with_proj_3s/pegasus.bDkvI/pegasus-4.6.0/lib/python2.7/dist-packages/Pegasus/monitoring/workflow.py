@@ -969,7 +969,7 @@ class Workflow:
         except:
             pass
 
-        # Add this workflow to Workflow's class master list
+        # Add this workflow to Workflow's class main list
         if not rundir in Workflow.wf_list:
             Workflow.wf_list[rundir] = {"wf_uuid": self._wf_uuid,
                                         "parent_workflow_id": self._parent_workflow_id}

@@ -19,11 +19,11 @@ class User(object):
     def get_ensembles_dir(self):
         return os.path.join(self.homedir, ".pegasus", "ensembles")
 
-    def get_master_db(self):
+    def get_main_db(self):
         return os.path.join(self.homedir, ".pegasus", "workflow.db")
 
-    def get_master_db_url(self):
-        return "sqlite:///%s" % self.get_master_db()
+    def get_main_db_url(self):
+        return "sqlite:///%s" % self.get_main_db()
 
 
 def __user_from_pwd(pw):

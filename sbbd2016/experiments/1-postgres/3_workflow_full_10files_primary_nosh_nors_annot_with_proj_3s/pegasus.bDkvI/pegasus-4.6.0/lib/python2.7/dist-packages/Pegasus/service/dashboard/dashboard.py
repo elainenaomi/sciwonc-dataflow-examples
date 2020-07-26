@@ -38,17 +38,17 @@ class NoWorkflowsFoundError(Exception):
 
 class Dashboard(object):
 
-    def __init__(self, master_db_url, root_wf_id=None, wf_id=None):
-        self._master_db_url = master_db_url
+    def __init__(self, main_db_url, root_wf_id=None, wf_id=None):
+        self._main_db_url = main_db_url
 
         # If the ID is specified, it means that the query is specific to a workflow.
-        # So we will now query the master database to get the connection URL for the workflow.
+        # So we will now query the main database to get the connection URL for the workflow.
         if root_wf_id or wf_id:
             self.initialize(root_wf_id, wf_id)
 
     def initialize(self, root_wf_id, wf_id):
         try:
-            workflow = queries.MasterDatabase(self._master_db_url)
+            workflow = queries.MainDatabase(self._main_db_url)
             self._db_id, self._root_wf_uuid, self._wf_db_url = workflow.get_wf_id_url(root_wf_id)
             self._wf_id = wf_id
         finally:
@@ -75,7 +75,7 @@ class Dashboard(object):
         # Now, let's try to access the database
         try:
             all_workflows = None
-            all_workflows = queries.MasterDatabase(self._master_db_url)
+            all_workflows = queries.MainDatabase(self._main_db_url)
             counts = all_workflows.get_workflow_counts()
 
             if counts_only:

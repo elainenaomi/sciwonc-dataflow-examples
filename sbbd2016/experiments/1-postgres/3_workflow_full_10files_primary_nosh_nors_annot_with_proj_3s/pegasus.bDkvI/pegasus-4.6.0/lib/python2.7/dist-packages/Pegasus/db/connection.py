@@ -20,9 +20,9 @@ log = logging.getLogger(__name__)
 # Connection Properties
 PROP_CATALOG_ALL_TIMEOUT = "pegasus.catalog.*.timeout"
 PROP_CATALOG_ALL_DB_TIMEOUT = "pegasus.catalog.*.db.timeout"
-PROP_CATALOG_MASTER_URL = "pegasus.catalog.master.url"
-PROP_CATALOG_MASTER_TIMEOUT = "pegasus.catalog.master.timeout"
-PROP_CATALOG_MASTER_DB_TIMEOUT = "pegasus.catalog.master.db.timeout"
+PROP_CATALOG_MASTER_URL = "pegasus.catalog.main.url"
+PROP_CATALOG_MASTER_TIMEOUT = "pegasus.catalog.main.timeout"
+PROP_CATALOG_MASTER_DB_TIMEOUT = "pegasus.catalog.main.db.timeout"
 PROP_CATALOG_REPLICA_DB_URL = "pegasus.catalog.replica.db.url"
 PROP_CATALOG_REPLICA_TIMEOUT = "pegasus.catalog.replica.timeout"
 PROP_CATALOG_REPLICA_DB_TIMEOUT = "pegasus.catalog.replica.db.timeout"
@@ -176,7 +176,7 @@ def url_by_properties(config_properties, db_type, submit_dir=None, top_dir=None,
     if db_type.upper() == DBType.JDBCRC:
         dburi = _get_jdbcrc_uri(props)
     elif db_type.upper() == DBType.MASTER:
-        dburi = _get_master_uri(props)
+        dburi = _get_main_uri(props)
     elif db_type.upper() == DBType.WORKFLOW:
         dburi = _get_workflow_uri(props, submit_dir, top_dir)
     else:
@@ -210,15 +210,15 @@ def get_wf_uuid(submit_dir):
     return wf_uuid
     
 
-def connect_to_master_db(user=None):
-    "Connect to 'user's master database"
+def connect_to_main_db(user=None):
+    "Connect to 'user's main database"
 
     if user is None:
         user = getpass.getuser()
 
     u = users.get_user_by_username(user)
 
-    dburi = u.get_master_db_url()
+    dburi = u.get_main_db_url()
 
     return connect(dburi)
 
@@ -289,7 +289,7 @@ def _get_jdbcrc_uri(props=None):
     return None
     
     
-def _get_master_uri(props=None):
+def _get_main_uri(props=None):
     """ Get MASTER URI """
     if props:
         dburi = props.property(PROP_CATALOG_MASTER_URL)

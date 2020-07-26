@@ -519,7 +519,7 @@ class EnsembleManager(threading.Thread):
     def loop_forever(self):
         while True:
             u = user.get_user_by_uid(os.getuid())
-            session = connection.connect(u.get_master_db_url())
+            session = connection.connect(u.get_main_db_url())
             try:
                 dao = Ensembles(session)
                 self.loop_once(dao)

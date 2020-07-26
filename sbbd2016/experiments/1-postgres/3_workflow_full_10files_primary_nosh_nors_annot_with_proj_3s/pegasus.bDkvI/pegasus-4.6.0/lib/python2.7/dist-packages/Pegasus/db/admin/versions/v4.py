@@ -14,15 +14,15 @@ class Version(BaseVersion):
 
 
     def update(self, force=False):
-        "Add archived field to master_workflow table"
+        "Add archived field to main_workflow table"
         log.info("Updating to version %s" % DB_VERSION)
         # TODO We might need to check to see if the field already exists first
         try:
-            self.db.execute("ALTER TABLE master_workflow ADD archived BOOLEAN NOT NULL default 0")
+            self.db.execute("ALTER TABLE main_workflow ADD archived BOOLEAN NOT NULL default 0")
         except (OperationalError, ProgrammingError):
             pass
         except Exception, e:
-            log.error("Error adding archived field to master_workflow table")
+            log.error("Error adding archived field to main_workflow table")
             log.exception(e)
             raise RuntimeError(e)
 

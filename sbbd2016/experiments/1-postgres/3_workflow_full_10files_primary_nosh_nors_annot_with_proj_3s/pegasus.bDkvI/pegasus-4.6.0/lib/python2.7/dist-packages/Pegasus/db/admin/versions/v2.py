@@ -72,7 +72,7 @@ class Version(BaseVersion):
         data = None
         data2 = None
         try:
-            data = self.db.execute("SELECT COUNT(wf_id) FROM master_workflow").first()
+            data = self.db.execute("SELECT COUNT(wf_id) FROM main_workflow").first()
         except (OperationalError, ProgrammingError):
             pass
         except Exception, e:
@@ -80,7 +80,7 @@ class Version(BaseVersion):
             raise DBAdminError(e)
             
         try:
-            data2 = self.db.execute("SELECT COUNT(wf_id) FROM master_workflowstate").first()
+            data2 = self.db.execute("SELECT COUNT(wf_id) FROM main_workflowstate").first()
         except (OperationalError, ProgrammingError):
             pass
         except Exception, e:
@@ -89,22 +89,22 @@ class Version(BaseVersion):
         
         if data2 is not None:
             if data2[0] > 0:
-                raise DBAdminError("Table master_workflowstate already exists and is not empty.")
+                raise DBAdminError("Table main_workflowstate already exists and is not empty.")
             else:
-                self._execute("DROP TABLE master_workflowstate")
+                self._execute("DROP TABLE main_workflowstate")
         if data is not None:
             if data[0] > 0:
-                raise DBAdminError("Table master_workflow already exists and is not empty.")
+                raise DBAdminError("Table main_workflow already exists and is not empty.")
             else:
-                self._execute("DROP TABLE master_workflow")
+                self._execute("DROP TABLE main_workflow")
                
-        self._execute("ALTER TABLE workflowstate RENAME TO master_workflowstate")
+        self._execute("ALTER TABLE workflowstate RENAME TO main_workflowstate")
         self._execute("DROP INDEX UNIQUE_WORKFLOWSTATE")
-        self._execute("CREATE INDEX UNIQUE_MASTER_WORKFLOWSTATE ON master_workflowstate (wf_id, state, timestamp)")
-        self._execute("ALTER TABLE workflow RENAME TO master_workflow")
+        self._execute("CREATE INDEX UNIQUE_MASTER_WORKFLOWSTATE ON main_workflowstate (wf_id, state, timestamp)")
+        self._execute("ALTER TABLE workflow RENAME TO main_workflow")
         self._execute("DROP INDEX wf_id_KEY")
         self._execute("DROP INDEX wf_uuid_UNIQUE")
-        self._execute("CREATE INDEX UNIQUE_MASTER_WF_UUID ON master_workflow (wf_uuid)")
+        self._execute("CREATE INDEX UNIQUE_MASTER_WF_UUID ON main_workflow (wf_uuid)")
 
         self.db.commit()           
 

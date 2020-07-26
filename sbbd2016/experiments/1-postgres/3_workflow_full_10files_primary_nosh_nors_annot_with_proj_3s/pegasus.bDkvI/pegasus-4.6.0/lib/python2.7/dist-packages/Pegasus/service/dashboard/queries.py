@@ -25,11 +25,11 @@ from sqlalchemy.orm.exc import *
 log = logging.getLogger(__name__)
 
 
-class MasterDBNotFoundError (Exception):
+class MainDBNotFoundError (Exception):
     pass
 
 
-class MasterDatabase(SQLAlchemyInit):
+class MainDatabase(SQLAlchemyInit):
 
     def __init__(self, conn_string, debug=False):
         self._dbg = debug
@@ -49,7 +49,7 @@ class MasterDatabase(SQLAlchemyInit):
             if 'attempt to write a readonly database' in message:
                 raise DBAdminError(message)
 
-            raise MasterDBNotFoundError(e)
+            raise MainDBNotFoundError(e)
 
     def close(self):
         log.debug('close')
@@ -57,7 +57,7 @@ class MasterDatabase(SQLAlchemyInit):
 
     def get_wf_db_url(self, wf_id):
         """
-        Given a work-flow UUID, query the master database to get the connection URL for the work-flow's STAMPEDE database.
+        Given a work-flow UUID, query the main database to get the connection URL for the work-flow's STAMPEDE database.
         """
 
         w = orm.aliased(DashboardWorkflow, name='w')
@@ -69,7 +69,7 @@ class MasterDatabase(SQLAlchemyInit):
 
     def get_wf_id_url(self, root_wf_id):
         """
-        Given a work-flow UUID, query the master database to get the connection URL for the work-flow's STAMPEDE database.
+        Given a work-flow UUID, query the main database to get the connection URL for the work-flow's STAMPEDE database.
         """
 
         w = orm.aliased(DashboardWorkflow, name='w')
