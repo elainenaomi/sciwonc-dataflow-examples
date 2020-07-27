@@ -15,11 +15,11 @@ log = logging.getLogger(__name__)
 
 class SubmitDirException(Exception): pass
 
-class MasterDatabase:
+class MainDatabase:
     def __init__(self, session):
         self.session = session
 
-    def get_master_workflow(self, wf_uuid):
+    def get_main_workflow(self, wf_uuid):
         q = self.session.query(DashboardWorkflow)
         q = q.filter(DashboardWorkflow.wf_uuid == wf_uuid)
         wf = q.first()
@@ -30,8 +30,8 @@ class MasterDatabase:
         q = q.filter(EnsembleWorkflow.wf_uuid == wf_uuid)
         return q.first()
 
-    def delete_master_workflow(self, wf_uuid):
-        w = self.get_master_workflow(wf_uuid)
+    def delete_main_workflow(self, wf_uuid):
+        w = self.get_main_workflow(wf_uuid)
         if w is None:
             return
 
@@ -116,10 +116,10 @@ class SubmitDir(object):
         if not self.is_archived():
             raise SubmitDirException("Submit dir not archived")
 
-        # Update record in master db
+        # Update record in main db
         mdbsession = connection.connect_by_submitdir(self.submitdir, connection.DBType.MASTER)
-        mdb = MasterDatabase(mdbsession)
-        wf = mdb.get_master_workflow(self.wf_uuid)
+        mdb = MainDatabase(mdbsession)
+        wf = mdb.get_main_workflow(self.wf_uuid)
         if wf is not None:
             wf.archived = False
 
@@ -138,10 +138,10 @@ class SubmitDir(object):
     def archive(self):
         "Archive a submit dir by adding files to a compressed archive"
 
-        # Update record in master db
+        # Update record in main db
         mdbsession = connection.connect_by_submitdir(self.submitdir, connection.DBType.MASTER)
-        mdb = MasterDatabase(mdbsession)
-        wf = mdb.get_master_workflow(self.wf_uuid)
+        mdb = MainDatabase(mdbsession)
+        wf = mdb.get_main_workflow(self.wf_uuid)
         if wf is not None:
             wf.archived = True
 
@@ -245,32 +245,32 @@ class SubmitDir(object):
         if self.is_subworkflow():
             raise SubmitDirException("Subworkflows cannot be moved independent of the root workflow")
 
-        # Connect to master database
+        # Connect to main database
         mdbsession = connection.connect_by_submitdir(self.submitdir, connection.DBType.MASTER)
-        mdb = MasterDatabase(mdbsession)
+        mdb = MainDatabase(mdbsession)
 
-        # Get the workflow record from the master db
+        # Get the workflow record from the main db
         db_url = None
-        wf = mdb.get_master_workflow(self.wf_uuid)
+        wf = mdb.get_main_workflow(self.wf_uuid)
         if wf is None:
             db_url = connection.url_by_submitdir(self.submitdir, connection.DBType.WORKFLOW)
         else:
             # We found an mdb record, so we need to update it
 
-            # Save the master db's pointer
+            # Save the main db's pointer
             db_url = wf.db_url
 
-            # Update the master db's db_url
+            # Update the main db's db_url
             # Note that this will only update the URL if it is an sqlite file
             # located in the submitdir
-            log.info("Old master db_url: %s" % wf.db_url)
+            log.info("Old main db_url: %s" % wf.db_url)
             wf.db_url = db_url.replace(self.submitdir, dest)
-            log.info("New master db_url: %s" % wf.db_url)
+            log.info("New main db_url: %s" % wf.db_url)
 
-            # Change the master db's submit_dir
-            log.info("Old master submit_dir: %s" % wf.submit_dir)
+            # Change the main db's submit_dir
+            log.info("Old main submit_dir: %s" % wf.submit_dir)
             wf.submit_dir = dest
-            log.info("New master submit_dir: %s" % wf.submit_dir)
+            log.info("New main submit_dir: %s" % wf.submit_dir)
 
         # Update the ensemble record if one exists
         ew = mdb.get_ensemble_workflow(self.wf_uuid)
@@ -305,7 +305,7 @@ class SubmitDir(object):
 
         # TODO We might want to update the braindump files for subworkflows
 
-        # Update master database
+        # Update main database
         mdbsession.commit()
         mdbsession.close()
 
@@ -313,7 +313,7 @@ class SubmitDir(object):
         self.submitdir = dest
 
     def delete(self):
-        "Delete this submit dir and its entry in the master db"
+        "Delete this submit dir and its entry in the main db"
 
         # Verify that we aren't trying to move a subworkflow
         if self.is_subworkflow():
@@ -328,9 +328,9 @@ class SubmitDir(object):
             if answer == "n":
                 return
 
-        # Connect to master database
+        # Connect to main database
         mdbsession = connection.connect_by_submitdir(self.submitdir, connection.DBType.MASTER)
-        mdb = MasterDatabase(mdbsession)
+        mdb = MainDatabase(mdbsession)
 
         # Delete all of the records from the workflow db if they are not using
         # an sqlite db that is in the submit dir.
@@ -343,30 +343,30 @@ class SubmitDir(object):
             dbsession.close()
 
         # Delete the workflow
-        mdb.delete_master_workflow(self.wf_uuid)
+        mdb.delete_main_workflow(self.wf_uuid)
 
         # Remove all the files
         shutil.rmtree(self.submitdir)
 
-        # Update master db
+        # Update main db
         mdbsession.commit()
         mdbsession.close()
 
     def attach(self):
-        "Add a workflow to the master db"
+        "Add a workflow to the main db"
 
         # Verify that we aren't trying to attach a subworkflow
         if self.is_subworkflow():
             raise SubmitDirException("Subworkflows cannot be attached independent of the root workflow")
 
-        # Connect to master database
+        # Connect to main database
         mdbsession = connection.connect_by_submitdir(self.submitdir, connection.DBType.MASTER)
-        mdb = MasterDatabase(mdbsession)
+        mdb = MainDatabase(mdbsession)
 
         # Check to see if it already exists and just update it
-        wf = mdb.get_master_workflow(self.wf_uuid)
+        wf = mdb.get_main_workflow(self.wf_uuid)
         if wf is not None:
-            print "Workflow is already in master db"
+            print "Workflow is already in main db"
             old_submit_dir = wf.submit_dir
             if old_submit_dir != self.submitdir:
                 print "Updating path..."
@@ -391,7 +391,7 @@ class SubmitDir(object):
         wf.submit_dir = self.submitdir
         wf.db_url = db_url
 
-        # Insert workflow record into master db
+        # Insert workflow record into main db
         mwf = DashboardWorkflow()
         mwf.wf_uuid = wf.wf_uuid
         mwf.dax_label = wf.dax_label
@@ -413,7 +413,7 @@ class SubmitDir(object):
         # Query states from workflow database
         states = db.get_workflow_states(wf.wf_id)
 
-        # Insert states into master db
+        # Insert states into main db
         for s in states:
             ms = DashboardWorkflowstate()
             ms.wf_id = mwf.wf_id
@@ -431,25 +431,25 @@ class SubmitDir(object):
         mdbsession.close()
 
     def detach(self):
-        "Remove any master db entries for the given root workflow"
+        "Remove any main db entries for the given root workflow"
 
         # Verify that we aren't trying to detach a subworkflow
         if self.is_subworkflow():
             raise SubmitDirException("Subworkflows cannot be detached independent of the root workflow")
 
-        # Connect to master database
+        # Connect to main database
         mdbsession = connection.connect_by_submitdir(self.submitdir, connection.DBType.MASTER)
-        mdb = MasterDatabase(mdbsession)
+        mdb = MainDatabase(mdbsession)
 
         # Check to see if it even exists
-        wf = mdb.get_master_workflow(self.wf_uuid)
+        wf = mdb.get_main_workflow(self.wf_uuid)
         if wf is None:
-            print "Workflow is not in master DB"
+            print "Workflow is not in main DB"
         else:
-            # Delete the workflow (this will delete the master_workflowstate entries as well)
-            mdb.delete_master_workflow(self.wf_uuid)
+            # Delete the workflow (this will delete the main_workflowstate entries as well)
+            mdb.delete_main_workflow(self.wf_uuid)
 
-        # Update the master db
+        # Update the main db
         mdbsession.commit()
         mdbsession.close()
 
@@ -494,7 +494,7 @@ class DeleteCommand(LoggingCommand):
         SubmitDir(self.args[0]).delete()
 
 class AttachCommand(LoggingCommand):
-    description = "Attach a submit dir to the master db (dashboard)"
+    description = "Attach a submit dir to the main db (dashboard)"
     usage = "Usage: %prog attach SUBMITDIR"
 
     def run(self):
@@ -504,7 +504,7 @@ class AttachCommand(LoggingCommand):
         SubmitDir(self.args[0]).attach()
 
 class DetachCommand(LoggingCommand):
-    description = "Detach a submit dir from the master db (dashboard)"
+    description = "Detach a submit dir from the main db (dashboard)"
     usage = "Usage: %prog detach SUBMITDIR"
 
     def run(self):

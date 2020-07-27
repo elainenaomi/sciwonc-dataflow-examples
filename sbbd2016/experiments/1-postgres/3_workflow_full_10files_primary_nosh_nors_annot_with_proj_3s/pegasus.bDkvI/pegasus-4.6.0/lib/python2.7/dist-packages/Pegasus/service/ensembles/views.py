@@ -12,7 +12,7 @@ log = logging.getLogger(__name__)
 
 def connect():
     log.debug("Connecting to database")
-    g.session = connection.connect(g.master_db_url)
+    g.session = connection.connect(g.main_db_url)
 
 def disconnect():
     if "conn" in g:

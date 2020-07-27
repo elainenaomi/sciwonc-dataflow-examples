@@ -28,7 +28,7 @@ from Pegasus.service import cache
 from Pegasus.service.base import InvalidJSONError, OrderedDict
 from Pegasus.service.monitoring import monitoring_routes
 from Pegasus.service.monitoring.utils import jsonify
-from Pegasus.service.monitoring.queries import MasterWorkflowQueries, StampedeWorkflowQueries
+from Pegasus.service.monitoring.queries import MainWorkflowQueries, StampedeWorkflowQueries
 
 log = logging.getLogger(__name__)
 
@@ -93,7 +93,7 @@ def compute_stampede_db_url():
         return
 
     md5sum = hashlib.md5()
-    md5sum.update(g.master_db_url)
+    md5sum.update(g.main_db_url)
     m_wf_id = g.m_wf_id
 
     def _get_cache_key(key_suffix):
@@ -107,7 +107,7 @@ def compute_stampede_db_url():
 
     else:
         log.debug('Cache Miss: compute_stampede_db_url %s' % cache_key)
-        queries = MasterWorkflowQueries(g.master_db_url)
+        queries = MainWorkflowQueries(g.main_db_url)
         root_workflow = queries.get_root_workflow(m_wf_id)
         queries.close()
 
@@ -215,7 +215,7 @@ def get_root_workflows(username):
     :return type: Collection
     :return resource: Root Workflow
     """
-    queries = MasterWorkflowQueries(g.master_db_url)
+    queries = MainWorkflowQueries(g.main_db_url)
     paged_response = queries.get_root_workflows(**g.query_args)
 
     if paged_response.total_records == 0:
@@ -245,7 +245,7 @@ def get_root_workflow(username, m_wf_id):
     :return type: Record
     :return resource: Root Workflow
     """
-    queries = MasterWorkflowQueries(g.master_db_url)
+    queries = MainWorkflowQueries(g.main_db_url)
     record = queries.get_root_workflow(m_wf_id)
 
     #

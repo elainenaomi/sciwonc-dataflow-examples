@@ -205,7 +205,7 @@ def _validate_conf_type_options(dburi, properties, config_properties, submit_dir
     :param dburi: database URI
     :param config_properties: Pegasus configuration properties file
     :param submit_dir: workflow submit directory
-    :param db_type: database type (workflow, master, or jdbcrc)
+    :param db_type: database type (workflow, main, or jdbcrc)
     """
     if dburi:
         # command-line URI has the highest priority
@@ -254,7 +254,7 @@ def _get_connection(dburi=None, cl_properties=None, config_properties=None, subm
                                                 create=create, force=force)
 
     if not db_type:
-        dburi = connection._get_master_uri()
+        dburi = connection._get_main_uri()
         return connection.connect(dburi, pegasus_version=pegasus_version, schema_check=schema_check, create=create,
                                   force=force)
     return None

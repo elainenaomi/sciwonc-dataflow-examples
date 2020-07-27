@@ -227,7 +227,7 @@ class WorkflowQueries(SQLAlchemyInit):
         return q
 
 
-class MasterWorkflowQueries(WorkflowQueries):
+class MainWorkflowQueries(WorkflowQueries):
     def get_root_workflows(self, start_index=None, max_results=None, query=None, order=None, use_cache=True, **kwargs):
         """
         Returns a collection of the Root Workflow objects.
@@ -255,8 +255,8 @@ class MasterWorkflowQueries(WorkflowQueries):
         #
         # Finish Construction of Base SQLAlchemy Query `q`
         #
-        qws = self._get_max_master_workflow_state()
-        qws = qws.subquery('master_workflowstate')
+        qws = self._get_max_main_workflow_state()
+        qws = qws.subquery('main_workflowstate')
 
         alias = aliased(DashboardWorkflowstate, qws)
 
@@ -319,8 +319,8 @@ class MasterWorkflowQueries(WorkflowQueries):
         #
         # Finish Construction of Base SQLAlchemy Query `q`
         #
-        qws = self._get_max_master_workflow_state(m_wf_id=m_wf_id)
-        qws = qws.subquery('master_workflowstate')
+        qws = self._get_max_main_workflow_state(m_wf_id=m_wf_id)
+        qws = qws.subquery('main_workflowstate')
 
         q = q.outerjoin(qws, DashboardWorkflow.wf_id == qws.c.wf_id)
         q = q.add_entity(aliased(DashboardWorkflowstate, qws))
@@ -335,8 +335,8 @@ class MasterWorkflowQueries(WorkflowQueries):
             log.exception('Not Found: Root Workflow for given m_wf_id (%s)' % m_wf_id)
             raise e
 
-    def _get_max_master_workflow_state(self, m_wf_id=None, mws=DashboardWorkflowstate):
-        qmax = self._get_recent_master_workflow_state(m_wf_id, mws)
+    def _get_max_main_workflow_state(self, m_wf_id=None, mws=DashboardWorkflowstate):
+        qmax = self._get_recent_main_workflow_state(m_wf_id, mws)
         qmax = qmax.subquery('max_timestamp')
 
         q = self.session.query(mws)
@@ -345,7 +345,7 @@ class MasterWorkflowQueries(WorkflowQueries):
 
         return q
 
-    def _get_recent_master_workflow_state(self, m_wf_id=None, mws=DashboardWorkflowstate):
+    def _get_recent_main_workflow_state(self, m_wf_id=None, mws=DashboardWorkflowstate):
         q = self.session.query(mws.wf_id)
         q = q.add_column(func.max(mws.timestamp).label('max_time'))
 
